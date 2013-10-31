@@ -23,7 +23,7 @@
     // Die Datenbank aus dem Bundle in die Documents-Directory kopieren
     NSString *pathInMainBundle = [[NSBundle mainBundle] pathForResource:@"pointOfInterest" ofType:@"sqlite3"];
     if (![fileManager fileExistsAtPath:dbPathString]) {
-        //NSLog(@"Datenabnk noch nicht vorhanden");
+        //NSLog(@"database not existing yet");
         [fileManager copyItemAtPath:pathInMainBundle toPath:dbPathString error:nil];
     }
     
@@ -31,16 +31,16 @@
     int result = sqlite3_open([dbPathString UTF8String], &poiDB);
     if (result != SQLITE_OK) {
         sqlite3_close(poiDB);
-        NSLog(@"Fehler beim Öffnen der Datenbank");
+        NSLog(@"error opening database");
         return false;
     }
-    //NSLog(@"Datenbank erfolgreich geöffnet");
+    //NSLog(@"opened database");
     return true;
 }
 
 -(void) closeDb {
     sqlite3_close(poiDB);
-    //NSLog(@"Datenbank erfolgreich geschlossen");
+    //NSLog(@"closed database");
 }
 
 //CATEGORIE
