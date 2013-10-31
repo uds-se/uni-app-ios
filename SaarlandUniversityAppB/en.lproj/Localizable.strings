@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  SaarlandUniversityApp
+
+  Created by Tom Michels on 22.04.13.
+  Copyright (c) 2013 Universität des Saarlandes. All rights reserved.
+*/
+
+
+"Gebäude" = "Buildings";
+
+"Banken & Bankautomaten" = "Banks & ATMs";
+
+"Bushaltestellen" = "Busstations";
+
+"Friseur" = "Hairdresser";
+
+"Parkplätze" = "Parkings";
+
+"Arzt" = "Doctor";
+
+"Buchhandlungen" = "Bookstore";
+
+"Studentische Einrichtungen" = "Student facilities";
+
+"Dienstleistungen" = "Other services";
+
+"Sport" = "Sports";

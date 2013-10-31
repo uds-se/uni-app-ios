@@ -1,0 +1,91 @@
+/* 
+  Localizable.strings
+  SaarlandUniversityApp
+
+  Created by Tom Michels on 22.04.13.
+  Copyright (c) 2013 Universität des Saarlandes. All rights reserved.
+*/
+
+
+"Connection error" = "Verbindungsfehler";
+
+"No internet conncetion" = "Keine Internetverbindung";
+
+//News error messages
+"News couldn´t be updated. Please check your internet connection and try again" = "Nachrichten konnten nicht aktualisiert werden. Bitte überprüfen Sie ihre Internetverbindung und versuchen Sie es erneut";
+
+"News couldn´t be loaded. Please check your internet connection and try again" = "Nachrichten konnten nicht geladen werden. Bitte überprüfen Sie ihre Internetverbindung und versuchen Sie es nochmal";
+
+
+//Events error messages
+"Events couldn´t be updated. Please check your internet connection and try again" = "Veranstaltungen konnten nicht aktualisiert werden. Bitte überprüfen Sie ihre Internetverbindung und versuchen Sie es nochmal";
+
+"Events couldn´t be loaded. Please check your internet connection and try again" = "Veranstaltungen konnten nicht geladen werden. Bitte überprüfen Sie ihre Internetverbindung und versuchen Sie es nochmal";
+
+
+//News & Events Article Error Message
+"Article couldn´t be loaded. Please check your internet connection and try again" = "Artikel konnten nicht aktualisiert werden. Bitte überprüfen Sie ihre Internetverbindung und versuchen Sie es nochmal";
+ 
+"No Facebook App installed" = "Facebook App nicht vorhanden";
+
+"Please install the Facebook App and try again" = "Bitte installieren Sie die Facebook App und versuchen Sie es erneut";
+
+
+//Mensa error message
+"Restaurant informations couldn't be updated. Please check your internet connection and try again" = "Speiseplan konnte nicht aktualisiert werden. Bitte überprüfen Sie ihre Internetverbindung und versuchen Sie es nochmal";
+
+//
+"Please check your internet connection and try again" = "Bitte überprüfen Sie ihre Internetverbindung und versuchen Sie es erneut";
+
+//Webview error message
+"Website couldn't be loaded. Please check your internet connection and try again" = "Webseite konnte nocht geladen werden. Bitte überprüfen Sie ihre Internetverbindung und versuchen Sie es erneut";
+
+//Search staff
+  //error messages
+    "Empty search field" = "Leeres Suchfeld";
+
+    "Please fill at least one search field" = "Bitte geben Sie Name oder Vorname ein";
+
+    "Staff member not found" = "Suche erfolglos";
+
+    "Unfortunately no staff member matches your search criterias" = "Leider konnte kein Personal gefunden werden, das Ihren Suchkriterien entspricht";
+
+  //Titles
+    "Building" = "Gebäude";
+    "Room" = "Raum";
+    "Phone" = "Telefon";
+    "Gender" = "Geschlecht";
+    "Academic degree" = "Akademischer Grad";
+    "More information" = "Weitere Informationen";
+
+
+
+//Map error messages
+
+"Route feature not available" = "Routenberechnung nicht verfügbar";
+
+"Calculating a route is only available around campus" = "Das Berechnen einer Route ist nur freigeschaltet falls Sie sich in der Nähe vom Campus befinden";
+
+"Route couldn't be calculated. Please check your internet connection and try again" = "Route konnte nicht berechnet werden. Bitte überprüfen sie ihre Internetverbindung und versuchen sie es erneut";
+
+"Location services disabled" = "Ortungsdienste nicht verfügbar";
+
+"Accessing location services not authorized" = "Zugriff auf Ortungsdienste verweigert";
+
+"Please authorize the Saarland University App to access your location services" = "Bitte erlauben die der UdS App Zugriff auf die Ortungsdienste ";
+
+"Please enable the location services in your settings" = "Bitte aktivieren Sie die Ortungsdienste in Ihren Einstellungen";
+
+"Please enable the location services in your settings and authorize the Saarland University App to access them" = "Bitte aktivieren Sie die Ortungsdienste in Ihren Einstellungen und erlauben der UdS App zugriff auf diese";
+
+"Pin All" = "Alle anzeigen";
+
+// Bus Feature
+
+"Search" = "Suche";
+
+"Busstations" = "Bushaltestellen";
+
+"Search a bus" = "Bus Suche";
+
+"At busstation" = "An Haltestelle";
