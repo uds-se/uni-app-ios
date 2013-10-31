@@ -16,7 +16,7 @@
 			<array>
 				<string>appIconSpotlightiPhoneiOS7</string>
 				<string>appIconSpotlightiPhone</string>
-				<string>appIoniOS7</string>
+				<string>appIconiOS7</string>
 				<string>Default-Portrait~ipad.png</string>
 				<string>Default-Portrait@2x~ipad.png</string>
 				<string>Default-Portrait~ipad.png</string>
@@ -28,8 +28,8 @@
 				<string>appIconiPad@2x.png</string>
 				<string>appIconiPhone.png</string>
 				<string>appIconiPhone@2x.png</string>
-				<string>appIoniPad.png</string>
-				<string>appIoniPad@2x.png</string>
+				<string>appIconiPad.png</string>
+				<string>appIconiPad@2x.png</string>
 			</array>
 		</dict>
 	</dict>
@@ -42,7 +42,7 @@
 				<string>appIconiPadSpotlight</string>
 				<string>appIconiPadSpotlightiOS7</string>
 				<string>appIconiPadiOS7</string>
-				<string>appIoniOS7</string>
+				<string>appIconiOS7</string>
 				<string>Default-Portrait~ipad.png</string>
 				<string>Default-Portrait@2x~ipad.png</string>
 				<string>Default-Portrait~ipad.png</string>
@@ -54,8 +54,8 @@
 				<string>appIconiPad@2x.png</string>
 				<string>appIconiPhone.png</string>
 				<string>appIconiPhone@2x.png</string>
-				<string>appIoniPad.png</string>
-				<string>appIoniPad@2x.png</string>
+				<string>appIconiPad.png</string>
+				<string>appIconiPad@2x.png</string>
 			</array>
 		</dict>
 	</dict>
