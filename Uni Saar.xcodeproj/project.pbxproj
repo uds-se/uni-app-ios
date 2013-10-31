@@ -12,6 +12,8 @@
 		97B3500515B3611E00497E7A /* ResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 971EF23E15B059510039B06B /* ResultTableViewController.m */; };
 		97B3500715B3612500497E7A /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 971EF24115B059760039B06B /* ResultTableViewCell.m */; };
 		97F3FBAC15A8208500325941 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F3FBAA15A8208500325941 /* SearchViewController.m */; };
+		AB6CFE961822D3DA0056AFF9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E212C0A1178B4D6300F9B877 /* Default@2x.png */; };
+		AB6CFE971822D3DA0056AFF9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E212C09F178B4D5E00F9B877 /* Default.png */; };
 		E212C094178B4B1300F9B877 /* PartialSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C093178B4B1300F9B877 /* PartialSearchCell.m */; };
 		E212C09A178B4B6700F9B877 /* SearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C099178B4B6700F9B877 /* SearchHistoryCell.m */; };
 		E212C09B178B4B8600F9B877 /* SearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C099178B4B6700F9B877 /* SearchHistoryCell.m */; };
@@ -1316,6 +1318,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB6CFE961822D3DA0056AFF9 /* Default@2x.png in Resources */,
+				AB6CFE971822D3DA0056AFF9 /* Default.png in Resources */,
 				E5EF308C1598F10700D65D13 /* InfoPlist.strings in Resources */,
 				E5EF30981598F10700D65D13 /* MainStoryboard_iPad.storyboard in Resources */,
 				E2F02C461725953800182968 /* MainStoryboard_iPhone.storyboard in Resources */,
