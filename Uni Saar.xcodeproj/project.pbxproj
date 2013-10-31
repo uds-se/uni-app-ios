@@ -623,7 +623,7 @@
 		E546620615A21D5E0015723E /* whitey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitey.png; sourceTree = "<group>"; };
 		E5A63E0E15AF7FF600249724 /* MensaFold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MensaFold.png; sourceTree = "<group>"; };
 		E5B2089915AEBBF40063CC65 /* pageIndicatorBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pageIndicatorBackground.png; sourceTree = "<group>"; };
-		E5EF307D1598F10700D65D13 /* UdS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UdS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5EF307D1598F10700D65D13 /* Uni Saar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uni Saar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5EF30811598F10700D65D13 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E5EF30831598F10700D65D13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E5EF30851598F10700D65D13 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1022,7 +1022,7 @@
 		E5EF307E1598F10700D65D13 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E5EF307D1598F10700D65D13 /* UdS.app */,
+				E5EF307D1598F10700D65D13 /* Uni Saar.app */,
 				E5EF30A11598F10700D65D13 /* Uni SaarTests.octest */,
 			);
 			name = Products;
@@ -1255,7 +1255,7 @@
 			);
 			name = "Uni Saar";
 			productName = SaarlandUniversityAppB;
-			productReference = E5EF307D1598F10700D65D13 /* UdS.app */;
+			productReference = E5EF307D1598F10700D65D13 /* Uni Saar.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E5EF30A01598F10700D65D13 /* Uni SaarTests */ = {
@@ -1286,6 +1286,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Universität des Saarlandes";
+				TargetAttributes = {
+					E5EF307C1598F10700D65D13 = {
+						DevelopmentTeam = MP8ZWZ7G58;
+					};
+				};
 			};
 			buildConfigurationList = E5EF30771598F10700D65D13 /* Build configuration list for PBXProject "Uni Saar" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1753,14 +1758,14 @@
 		E5EF30B41598F10800D65D13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tom Michels (T6D9JH74DS)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SaarlandUniversityAppB/Uni Saar-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "SaarlandUniversityAppB/Uni Saar-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = UdS;
+				PRODUCT_NAME = "Uni Saar";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1771,14 +1776,14 @@
 		E5EF30B51598F10800D65D13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tom Michels (T6D9JH74DS)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SaarlandUniversityAppB/Uni Saar-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "SaarlandUniversityAppB/Uni Saar-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = UdS;
+				PRODUCT_NAME = "Uni Saar";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
