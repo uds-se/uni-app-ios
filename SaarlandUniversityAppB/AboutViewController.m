@@ -30,7 +30,7 @@
     
     self.scrollView.contentSize = CGSizeMake([[UIScreen mainScreen] bounds].size.width, [self bottomOfLowestContent:self.scrollView]+10);
 
-    self.versionLabel.text = [@"Version: " stringByAppendingString: [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
+    self.versionLabel.text = [@"Version: " stringByAppendingString: [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
     
     
     
