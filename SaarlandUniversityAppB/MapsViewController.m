@@ -368,7 +368,7 @@
 
 
 -(void)rightAccessoryButtonTapped:(UIRightPinAccessoryButton *) sender{
-    if ([sender.annotPin.title isEqualToString:@"Mensa"] || 
+    if (([sender.annotPin.title isEqualToString:@"Mensa"] && [sender.annotPin.subtitle isEqualToString:@"Restaurant"]) ||
         [sender.annotPin.title isEqualToString:@"Mensacafé"]) {
         [self performSegueWithIdentifier:@"showMensaMenu" sender:sender];
     } else { 
