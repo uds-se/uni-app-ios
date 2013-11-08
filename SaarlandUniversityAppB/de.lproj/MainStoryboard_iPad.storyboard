@@ -677,7 +677,7 @@ Montag - Freitag
             </objects>
             <point key="canvasLocation" x="-1562" y="1107"/>
         </scene>
-        <!--News Table View Controller-->
+        <!--News Table View Controller - News-->
         <scene sceneID="2rW-gm-Am3">
             <objects>
                 <tableViewController id="ut4-Lc-RRx" customClass="NewsTableViewController" sceneMemberID="viewController">
@@ -722,9 +722,7 @@ Montag - Freitag
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="09c-b4-qJq">
-                        <nil key="title"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="News" id="09c-b4-qJq"/>
                     <connections>
                         <segue destination="F8V-48-57I" kind="push" identifier="showArticle" id="eZT-Ut-xFz"/>
                     </connections>
