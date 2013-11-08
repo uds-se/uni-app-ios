@@ -102,48 +102,48 @@
                                     <segue destination="Mty-s1-wCf" kind="push" id="zP1-c5-aVr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Campus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Dc7-Zi-Q0X">
-                                <rect key="frame" x="295" y="892" width="60" height="23"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Campus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Dc7-Zi-Q0X">
+                                <rect key="frame" x="285" y="892" width="80" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="4"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Restaurant" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="cLy-DO-RwQ">
-                                <rect key="frame" x="404" y="892" width="74" height="23"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mensa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="cLy-DO-RwQ">
+                                <rect key="frame" x="401" y="892" width="80" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="4"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="News" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="jdk-uu-Lgi">
-                                <rect key="frame" x="73" y="892" width="40" height="23"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="News" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="jdk-uu-Lgi">
+                                <rect key="frame" x="53" y="892" width="80" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="4"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Events" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Db3-Ia-pjY">
-                                <rect key="frame" x="183" y="892" width="50" height="23"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Db3-Ia-pjY">
+                                <rect key="frame" x="168" y="892" width="80" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="4"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Search for staff" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="1bD-fd-RNj">
-                                <rect key="frame" x="518" y="892" width="76" height="42"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Staff Search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="1bD-fd-RNj">
+                                <rect key="frame" x="511" y="892" width="90" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="4"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Ifj-my-kgC">
-                                <rect key="frame" x="655" y="892" width="29" height="23"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Ifj-my-kgC">
+                                <rect key="frame" x="629" y="892" width="80" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -205,20 +205,70 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mensacafé" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="GzP-v3-R8P">
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" id="My0-af-tgu" userLabel="Text View - Mensa">
+                                        <rect key="frame" x="165" y="49" width="439" height="260"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">During the semester (main teaching period):
+Set meal and vegetarian meal
+Monday to Thursday: 11.30 am – 2.30 pm
+Friday: 11.30 am – 2.15 pm
+Saturday: 11.30 am – 1.30 pm
+Free-flow area
+Monday to Friday: 11.30 am – 1.45 pm
+Set meal and vegetarian meal
+
+During the semester break:
+Set meal and vegetarian meal
+Monday to Thursday: 11.30 am – 2.15 pm
+Friday: 11.30 am – 2.00 pm
+Free-flow area
+Monday to Friday: 11.30 am – 1.45 pm</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mensa café" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="GzP-v3-R8P">
                                         <rect key="frame" x="244" y="317" width="280" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" id="GVx-1L-Ei2" userLabel="Text View - Mensacafe">
+                                        <rect key="frame" x="223" y="346" width="322" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">During the semester:
+Monday to Friday: 7.45 am – 8.00 pm
+Warm meals all day (until 7.30 pm) 
+During the semester break:
+Monday to Thursday: 7.45 am – 3.00 pm
+Friday: 7.45 Uhr – 2.45 pm</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ausländercafé" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="tmJ-Zr-bLd">
-                                        <rect key="frame" x="244" y="509" width="280" height="21"/>
+                                        <rect key="frame" x="244" y="504" width="280" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" id="uHn-3H-KJL" userLabel="Text View - Ausländercafe">
+                                        <rect key="frame" x="244" y="533" width="280" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">During the semester:
+Monday to Thursday
+9 am – 7 pm
+Friday and days before bank holiday
+9 am – 5 pm
+ 
+During the semester break:
+Monday to Thursday
+9 am – 6 pm
+Friday and days before bank holiday
+9 am – 4 pm</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Juristencafé" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="YJl-4x-oGn">
                                         <rect key="frame" x="244" y="746" width="280" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -226,71 +276,18 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" id="My0-af-tgu" userLabel="Text View - Mensa">
-                                        <rect key="frame" x="165" y="49" width="439" height="260"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Vorlesungszeit:
-Komplett Menü und vegetarisches Menü
-Montag - Donnerstag: 11.30 Uhr - 14.30 Uhr
-Freitag: 11.30 Uhr - 14.15 Uhr
-Free Flow
-Montag - Freitag: 11.30 Uhr - 13.45 Uhr
-Komplett Menü und vegetarisches Menü
-Samstag: 11.30 Uhr - 13.30 Uhr
-
-Vorlesungsfreie Zeit:
-Komplett Menü und vegetarisches Menü
-Montag - Donnerstag: 11.30 Uhr - 14.15 Uhr
-Freitag: 11.30 Uhr - 14.00 Uhr
-Free Flow
-Montag - Freitag 11.30 Uhr - 13.45 Uhr</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" id="GVx-1L-Ei2" userLabel="Text View - Mensacafe">
-                                        <rect key="frame" x="223" y="346" width="322" height="150"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Vorlesungszeit
-Montag - Freitag: 7.45 Uhr - 20.00 Uhr
-Durchgehend warmes Essen
-Abendessen: 17.00 Uhr - 19.30 Uhr
-
-Vorlesungsfreie Zeit
-Montag - Donnerstag: 7.45 Uhr - 15.00 Uhr
-Freitag: 7.45 Uhr - 14.45 Uhr</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" id="uHn-3H-KJL" userLabel="Text View - Ausländercafe">
-                                        <rect key="frame" x="244" y="538" width="280" height="200"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Vorlesungszeit
-Montag bis Donnerstag
-9:00 – 19:00 Uhr
-Freitags und vor Feiertagen
-9:00 – 17:00 Uhr
- 
- 
-Vorlesungsfreie Zeit
-Montag - Donnerstag
-9:00 – 18:00 Uhr
-Freitags 9:00 - 16:00 Uhr</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" id="G3Z-H9-uwa" userLabel="Text View - Juristencafe">
                                         <rect key="frame" x="244" y="775" width="280" height="190"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Vorlesungszeit
-Montag - Donnerstag
-7:00 - 16:00 Uhr
-Freitag
-7:00 - 15:00 Uhr
+                                        <string key="text">During the semester:
+Monday to Thursday
+7 am – 4 pm
+Friday
+7 am – 3 pm
  
- 
-Vorlesungsfreie Zeit
-Montag - Freitag
-7:30 - 15:00 Uhr</string>
+During the semester break:
+Monday to Friday
+7.30 am – 3 pm</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -771,7 +768,7 @@ Montag - Freitag
             </objects>
             <point key="canvasLocation" x="-76" y="-500"/>
         </scene>
-        <!--Mensa View Controller - Restaurant-->
+        <!--Mensa View Controller - Mensa-->
         <scene sceneID="wdX-nt-bgX">
             <objects>
                 <viewController id="e71-1I-kSP" customClass="MensaViewController" sceneMemberID="viewController">
@@ -808,7 +805,7 @@ Montag - Freitag
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Restaurant" id="kd3-7Y-OHG">
+                    <navigationItem key="navigationItem" title="Mensa" id="kd3-7Y-OHG">
                         <barButtonItem key="rightBarButtonItem" title="Opening hours" id="uNh-Lh-Tuq">
                             <connections>
                                 <segue destination="Ety-CV-Oa6" kind="push" id="rq2-ut-siN"/>
@@ -1244,7 +1241,7 @@ Montag - Freitag
             </objects>
             <point key="canvasLocation" x="-545" y="1187"/>
         </scene>
-        <!--Result Table View Controller - Ergebnisse-->
+        <!--Result Table View Controller - Search Results-->
         <scene sceneID="hso-BH-L9F">
             <objects>
                 <viewController id="KpL-l9-kDh" customClass="ResultTableViewController" sceneMemberID="viewController">
@@ -1299,7 +1296,7 @@ Montag - Freitag
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Ergebnisse" id="ftX-Fa-p3E"/>
+                    <navigationItem key="navigationItem" title="Search Results" id="ftX-Fa-p3E"/>
                     <connections>
                         <outlet property="activityIndicator" destination="poO-KA-kKD" id="ice-l7-YvH"/>
                         <outlet property="loadingView" destination="A5E-xp-oYf" id="cu2-DA-sZl"/>
@@ -1402,8 +1399,8 @@ Montag - Freitag
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="Er6-7c-Tcn"/>
         <segue reference="nWS-Tq-KNG"/>
         <segue reference="i8D-N8-vWG"/>
-        <segue reference="E9D-H7-aGw"/>
     </inferredMetricsTieBreakers>
 </document>
