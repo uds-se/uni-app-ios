@@ -27,18 +27,19 @@
 
 - (void)viewDidLoad
 {
-    
-    scrollView.contentSize = CGSizeMake([[UIScreen mainScreen] bounds].size.width, [self bottomOfLowestContent:scrollView]);
+    if (scrollView) {
+        scrollView.contentSize = CGSizeMake([[UIScreen mainScreen] bounds].size.width, [self bottomOfLowestContent:scrollView]);
+    }
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
         NSString *filename = @"HomeScreenBackgroundiPhone.jpg";
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         if (screenRect.size.height == 568.0f)
             filename = [filename stringByReplacingOccurrencesOfString:@".jpg" withString:@"-568@2x.jpg"];
-        
+
         backgroundImageView.image = [UIImage imageNamed:filename];
     }
-    
+
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
