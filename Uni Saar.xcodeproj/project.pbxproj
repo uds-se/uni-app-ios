@@ -14,6 +14,8 @@
 		97F3FBAC15A8208500325941 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F3FBAA15A8208500325941 /* SearchViewController.m */; };
 		AB6CFE961822D3DA0056AFF9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E212C0A1178B4D6300F9B877 /* Default@2x.png */; };
 		AB6CFE971822D3DA0056AFF9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E212C09F178B4D5E00F9B877 /* Default.png */; };
+		ABA0D62E183149C600A10087 /* MensaTabIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA0D62C183149C600A10087 /* MensaTabIcon.png */; };
+		ABA0D62F183149C600A10087 /* MensaTabIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA0D62D183149C600A10087 /* MensaTabIcon@2x.png */; };
 		E212C094178B4B1300F9B877 /* PartialSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C093178B4B1300F9B877 /* PartialSearchCell.m */; };
 		E212C09A178B4B6700F9B877 /* SearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C099178B4B6700F9B877 /* SearchHistoryCell.m */; };
 		E212C09B178B4B8600F9B877 /* SearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C099178B4B6700F9B877 /* SearchHistoryCell.m */; };
@@ -341,6 +343,8 @@
 		971EF24115B059760039B06B /* ResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewCell.m; sourceTree = "<group>"; };
 		97F3FBA915A8208500325941 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		97F3FBAA15A8208500325941 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		ABA0D62C183149C600A10087 /* MensaTabIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MensaTabIcon.png; path = SaarlandUniversityAppB/MensaTabIcon.png; sourceTree = "<group>"; };
+		ABA0D62D183149C600A10087 /* MensaTabIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MensaTabIcon@2x.png"; path = "SaarlandUniversityAppB/MensaTabIcon@2x.png"; sourceTree = "<group>"; };
 		E212C092178B4B1300F9B877 /* PartialSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartialSearchCell.h; sourceTree = "<group>"; };
 		E212C093178B4B1300F9B877 /* PartialSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartialSearchCell.m; sourceTree = "<group>"; };
 		E212C098178B4B6700F9B877 /* SearchHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistoryCell.h; sourceTree = "<group>"; };
@@ -995,6 +999,8 @@
 		E5EF30721598F10700D65D13 = {
 			isa = PBXGroup;
 			children = (
+				ABA0D62C183149C600A10087 /* MensaTabIcon.png */,
+				ABA0D62D183149C600A10087 /* MensaTabIcon@2x.png */,
 				E212C0A7178B4D8600F9B877 /* Default-Portrait@2x~ipad.png */,
 				E212C0A5178B4D7300F9B877 /* Default-Portrait~ipad.png */,
 				E212C0A3178B4D6600F9B877 /* Default-568h@2x.png */,
@@ -1120,16 +1126,16 @@
 			isa = PBXGroup;
 			children = (
 				E22C3F301715564A003C039F /* Panel */,
-				17D4E707159CADDA00876317 /* MensaFeedParser.h */,
-				17D4E708159CADDA00876317 /* MensaFeedParser.m */,
 				1764095D15ACCA9D00BE5FAB /* CafeParser.h */,
 				1764095E15ACCA9D00BE5FAB /* CafeParser.m */,
+				17D4E707159CADDA00876317 /* MensaFeedParser.h */,
+				17D4E708159CADDA00876317 /* MensaFeedParser.m */,
 				E5EF328D1598F21F00D65D13 /* MensaItem.h */,
 				E5EF328E1598F21F00D65D13 /* MensaItem.m */,
-				E5EF328F1598F21F00D65D13 /* MensaViewController.h */,
-				E5EF32901598F21F00D65D13 /* MensaViewController.m */,
 				E22C3F2D17155611003C039F /* MensaView.h */,
 				E22C3F2E17155611003C039F /* MensaView.m */,
+				E5EF328F1598F21F00D65D13 /* MensaViewController.h */,
+				E5EF32901598F21F00D65D13 /* MensaViewController.m */,
 				E545B3F615BEDA6800D862DE /* OpeningHoursViewController.h */,
 				E545B3F715BEDA6800D862DE /* OpeningHoursViewController.m */,
 			);
@@ -1322,6 +1328,7 @@
 				AB6CFE971822D3DA0056AFF9 /* Default.png in Resources */,
 				E5EF308C1598F10700D65D13 /* InfoPlist.strings in Resources */,
 				E5EF30981598F10700D65D13 /* MainStoryboard_iPad.storyboard in Resources */,
+				ABA0D62F183149C600A10087 /* MensaTabIcon@2x.png in Resources */,
 				E2F02C461725953800182968 /* MainStoryboard_iPhone.storyboard in Resources */,
 				E5EF31BA1598F17500D65D13 /* iconGpsPfeil.png in Resources */,
 				E546620715A21D5E0015723E /* blue_stripes.png in Resources */,
@@ -1347,6 +1354,7 @@
 				E256EF5B15B16FBD00F08A50 /* backButton@2x.png in Resources */,
 				E228B1B015B6B671008479CC /* detailDis@2x.png in Resources */,
 				E228B1B115B6B671008479CC /* detailDis.png in Resources */,
+				ABA0D62E183149C600A10087 /* MensaTabIcon.png in Resources */,
 				E27CD78F15B869C900DB7A0E /* iCalEmpty@2x.png in Resources */,
 				E27CD79015B869C900DB7A0E /* iCalEmpty.png in Resources */,
 				E2B4FF3617D5EE80001932BB /* appIconiPadiOS7.png in Resources */,
