@@ -100,14 +100,14 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
-//opens Email dialoge to send feeback to "iosapp@uni-saarland.de"
+//opens Email dialoge to send feeback to "uniApp@uni-saarland.de"
 - (IBAction)feedbackPressed:(id)sender {
     if ([MFMailComposeViewController canSendMail] ) {
         MFMailComposeViewController* mc = [[MFMailComposeViewController alloc] init];
         mc.mailComposeDelegate = self;
         
         // set some recipients ... but you do not need to do this :)
-        [mc setToRecipients:[NSArray arrayWithObjects:@"iosApp@uni-saarland.de", nil]];
+        [mc setToRecipients:[NSArray arrayWithObjects:@"uniApp@uni-saarland.de", nil]];
         
         // displaying our modal view controller on the screen with standard transition
         [self presentModalViewController:mc animated:YES];
