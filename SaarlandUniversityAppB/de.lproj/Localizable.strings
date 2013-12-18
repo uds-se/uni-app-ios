@@ -25,7 +25,7 @@
 
 //News & Events Article Error Message
 "Article couldn´t be loaded. Please check your internet connection and try again" = "Artikel konnten nicht aktualisiert werden. Bitte überprüfen Sie ihre Internetverbindung und versuchen Sie es nochmal";
- 
+
 "No Facebook App installed" = "Facebook App nicht vorhanden";
 
 "Please install the Facebook App and try again" = "Bitte installieren Sie die Facebook App und versuchen Sie es erneut";
@@ -48,7 +48,7 @@
 
     "Staff member not found" = "Suche erfolglos";
 
-    "Unfortunately no staff member matches your search criterias" = "Leider konnte kein Personal gefunden werden, das Ihren Suchkriterien entspricht";
+    "Unfortunately no staff member matches your search criteria" = "Leider konnte kein Personal gefunden werden, das Ihren Suchkriterien entspricht";
 
   //Titles
     "Building" = "Gebäude";
