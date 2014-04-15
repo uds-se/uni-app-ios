@@ -281,11 +281,11 @@
     [self.navigationItem setRightBarButtonItem:nil animated:NO];
     [map removeFromSuperview];
     [self.view addSubview:self.tableView];
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
-        [searchBar setShowsCancelButton:YES animated:YES];
-    }else{
+//    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
+//        [searchBar setShowsCancelButton:YES animated:YES];
+//    }else{
         [self.navigationItem setRightBarButtonItem:cancelBarButton animated:YES];
-    }
+//    }
     [self.tableView setHidden:NO];
     if (searchBar.text.length == 0) {
         partialSearchArr = nil;
@@ -313,11 +313,11 @@
     [map addSubview:self.showPositionButton];
     [map addSubview:self.showMapBackgroundButton];
     map.userInteractionEnabled = YES;
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
-        [searchBar setShowsCancelButton:NO animated:YES];
-    }else{
+//    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
+//        [searchBar setShowsCancelButton:NO animated:YES];
+//    }else{
         [self.navigationItem setRightBarButtonItem:nil animated:YES];
-    }
+//    }
     //[searchBar setShowsCancelButton:NO animated:YES];
     [self.tableView setHidden:YES];
     [self.navigationItem setRightBarButtonItem:listBarButton animated:YES];
