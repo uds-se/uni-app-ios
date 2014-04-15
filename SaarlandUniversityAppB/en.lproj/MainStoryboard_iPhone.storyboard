@@ -8,7 +8,7 @@
         <!--Maps View Controller-->
         <scene sceneID="65X-NH-kto">
             <objects>
-                <viewController id="Yt4-dp-bHi" customClass="MapsViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Yt4-dp-bHi" customClass="MapsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lLM-MT-Ctq">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

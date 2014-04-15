@@ -45,7 +45,7 @@
     NSArray* partialSearchArr;
     //contains NSStrings
     NSMutableArray* searchHistoryArr;
-            
+    CGRect tableViewFrame;
 }
 
 

@@ -38,7 +38,7 @@
 {
     [super viewDidLoad];
     searchBar.tintColor = self.navigationController.navigationBar.tintColor;
-
+    self.automaticallyAdjustsScrollViewInsets = NO;
     backgroundThread = [NSOperationQueue new];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
@@ -106,6 +106,9 @@
     self.navigationController.title = @"";
     self.database = [Database new];
     
+    //Saves the default frame, set by the Interfacebuilder (Storyboard).  Will be read at Searchbar didBeginEditing
+    tableViewFrame = self.tableView.frame;
+
     
 }
 
@@ -280,12 +283,12 @@
 -(void)searchBarTextDidBeginEditing:(UISearchBar *)aSearchBar{
     [self.navigationItem setRightBarButtonItem:nil animated:NO];
     [map removeFromSuperview];
+    
+    // Set the frame of the tableView to the inital frame, calculated by the interface builder
+    self.tableView.frame = tableViewFrame;
     [self.view addSubview:self.tableView];
-//    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
-//        [searchBar setShowsCancelButton:YES animated:YES];
-//    }else{
-        [self.navigationItem setRightBarButtonItem:cancelBarButton animated:YES];
-//    }
+
+    [self.navigationItem setRightBarButtonItem:cancelBarButton animated:YES];
     [self.tableView setHidden:NO];
     if (searchBar.text.length == 0) {
         partialSearchArr = nil;

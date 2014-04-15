@@ -357,7 +357,7 @@
         <!--Maps View Controller-->
         <scene sceneID="9dk-Kb-UqT">
             <objects>
-                <viewController id="ASn-Od-xa6" customClass="MapsViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ASn-Od-xa6" customClass="MapsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AaX-ZC-u0h">
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

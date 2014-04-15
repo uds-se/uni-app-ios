@@ -185,7 +185,7 @@
         <!--Maps View Controller-->
         <scene sceneID="b41-g5-Dz7">
             <objects>
-                <viewController id="Bmi-46-p52" customClass="MapsViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Bmi-46-p52" customClass="MapsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fD8-Lr-xFU">
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
