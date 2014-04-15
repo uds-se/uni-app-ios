@@ -142,19 +142,20 @@
     for (HTMLNode *spanNode in spanNodes) {
         if ([[spanNode getAttributeNamed:@"class"] isEqualToString:@"news-single-item"]) {
             
-            HTMLNode* time = [spanNode findChildWithAttribute:@"class" matchingName:@"news-single-timedata" allowPartial:YES] ;
+            HTMLNode* time = [spanNode findChildWithAttribute:@"class" matchingName:@"news-single-rightbox" allowPartial:YES] ;
             
             if (time) {
-                evePubDate = [evePubDate stringByAppendingString:[time contents]];
+                //evePubDate = [evePubDate stringByAppendingString:[time contents]];
+                evePubDate = [[evePubDate stringByAppendingString:[time contents]] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             }
             // NSLog(@"%@",[time contents]);
             
-            HTMLNode* title = [spanNode findChildTag:@"h2"];
+            HTMLNode* title = [spanNode findChildTag:@"h1"];
             if (title) {
                 eveTitle = [eveTitle stringByAppendingString:[title contents]];
             }
             
-            HTMLNode* subtitle = [spanNode findChildTag:@"h3"];
+            HTMLNode* subtitle = [spanNode findChildTag:@"h2"];
             if (subtitle) {
                 eveSubtitle = [eveSubtitle stringByAppendingString:[subtitle contents]];
             }
@@ -226,14 +227,9 @@
 
 -(void)autoLayoutArticleTextView{
     [evDescriptionTextView setFont:[UIFont systemFontOfSize:startSizeArticle+fontSizeToAdd]];
-    NSString *version = [[UIDevice currentDevice] systemVersion];
-    BOOL isAtLeast7 = [version hasPrefix:@"7."];
-    if (isAtLeast7) {
-        [evDescriptionTextView.layoutManager ensureLayoutForTextContainer:evDescriptionTextView.textContainer];
-        [evDescriptionTextView layoutIfNeeded];
-    }
     CGRect frame = evDescriptionTextView.frame;
-    frame.size.height = evDescriptionTextView.contentSize.height;
+    CGSize size = [evDescriptionTextView sizeThatFits:CGSizeMake(frame.size.width, FLT_MAX)];
+    frame.size.height = size.height;
     frame.origin.y = evSubTitleLabel.frame.origin.y + evSubTitleLabel.frame.size.height + 5;
     evDescriptionTextView.frame = frame;
 }

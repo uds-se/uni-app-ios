@@ -121,24 +121,22 @@
     for (HTMLNode *spanNode in spanNodes) {
         if ([[spanNode getAttributeNamed:@"class"] isEqualToString:@"news-single-item"]) {
             
-            HTMLNode* time = [spanNode findChildWithAttribute:@"class" matchingName:@"news-single-timedata" allowPartial:YES] ;
+            HTMLNode* time = [spanNode findChildWithAttribute:@"class" matchingName:@"news-single-rightbox" allowPartial:YES] ;
             
             if (time) {
-                evPubDate = [evPubDate stringByAppendingString:[time contents]];
+                //evPubDate = [evPubDate stringByAppendingString:[time contents]];
+                 evPubDate = [[evPubDate stringByAppendingString:[time contents]] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             }
-            // NSLog(@"%@",[time contents]);
             
             HTMLNode* title = [spanNode findChildTag:@"h1"];
             if (title) {
                 evTitle = [evTitle stringByAppendingString:[title contents]];
             }
-            //NSLog(@"%@",[arTitle contents]);
             
             HTMLNode* subtitle = [spanNode findChildTag:@"h2"];
             if (subtitle) {
                 evSubtitle = [evSubtitle stringByAppendingString:[subtitle contents]];
             }
-            // NSLog(@"%@",[subtitle contents]);
             
             NSArray *pNodes = [spanNode findChildTags:@"p"];
             if (pNodes) {

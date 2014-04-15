@@ -114,7 +114,7 @@
     [self autoLayoutView];
 }
 
-
+// gets called if article not yet parsed from NewsTableViewController
 -(void) parseNewsArticleWithLink:(NSString*) urlString{
     NSError *error = nil;
     activityIndicatorView.hidden = NO;
@@ -142,18 +142,18 @@
     for (HTMLNode *spanNode in spanNodes) {
         if ([[spanNode getAttributeNamed:@"class"] isEqualToString:@"news-single-item"]) {
             
-            HTMLNode* time = [spanNode findChildWithAttribute:@"class" matchingName:@"news-single-timedata" allowPartial:YES] ;
+            HTMLNode* time = [spanNode findChildWithAttribute:@"class" matchingName:@"news-single-rightbox" allowPartial:YES] ;
             
             if (time) {
-                arPubDate = [arPubDate stringByAppendingString:[time contents]];
+                arPubDate = [[arPubDate stringByAppendingString:[time contents]] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             }
             
-            HTMLNode* title = [spanNode findChildTag:@"h2"];
+            HTMLNode* title = [spanNode findChildTag:@"h1"];
             if (title) {
                 arTitle = [arTitle stringByAppendingString:[title contents]];
             }
             
-            HTMLNode* subtitle = [spanNode findChildTag:@"h3"];
+            HTMLNode* subtitle = [spanNode findChildTag:@"h2"];
             if (subtitle) {
                 arSubtitle = [arSubtitle stringByAppendingString:[subtitle contents]];
             }
@@ -226,17 +226,20 @@
 
 -(void)autoLayoutArticleTextView{
     [arArticleTextView setFont:[UIFont systemFontOfSize:startSizeArticle+fontSizeToAdd]];
-    NSString *version = [[UIDevice currentDevice] systemVersion];
-    BOOL isAtLeast7 = [version hasPrefix:@"7."];
-    if (isAtLeast7) {
-        [arArticleTextView.layoutManager ensureLayoutForTextContainer:arArticleTextView.textContainer];
-        [arArticleTextView layoutIfNeeded];
-    }
+//    NSString *version = [[UIDevice currentDevice] systemVersion];
+//    BOOL isAtLeast7 = [version hasPrefix:@"7."];
+//    if (isAtLeast7) {
+//        [arArticleTextView.layoutManager ensureLayoutForTextContainer:arArticleTextView.textContainer];
+//        [arArticleTextView layoutIfNeeded];
+//
+//    }
     CGRect frame = arArticleTextView.frame;
-    frame.size.height = arArticleTextView.contentSize.height;
-    //NSLog(@"%f",frame.size.height);
+    CGSize size = [arArticleTextView sizeThatFits:CGSizeMake(frame.size.width, FLT_MAX)];
+    frame.size.height = size.height;
+    //frame.size.height = arArticleTextView.contentSize.height;
     frame.origin.y = arSubtitleLabel.frame.origin.y + arSubtitleLabel.frame.size.height + 5;
     arArticleTextView.frame = frame;
+
 }
 
 -(void)autoLayoutDateLabel{

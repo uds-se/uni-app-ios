@@ -146,10 +146,10 @@
     for (HTMLNode *spanNode in spanNodes) {
         if ([[spanNode getAttributeNamed:@"class"] isEqualToString:@"news-single-item"]) {
             
-            HTMLNode* time = [spanNode findChildWithAttribute:@"class" matchingName:@"news-single-timedata" allowPartial:YES] ;
+            HTMLNode* time = [spanNode findChildWithAttribute:@"class" matchingName:@"news-single-rightbox" allowPartial:YES] ;
             
             if (time) {
-                arPubDate = [arPubDate stringByAppendingString:[time contents]];
+                arPubDate = [[arPubDate stringByAppendingString:[time contents]] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             }
            // NSLog(@"%@",[time contents]);
             

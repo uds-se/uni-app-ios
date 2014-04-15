@@ -1292,6 +1292,7 @@
 		E5EF30741598F10700D65D13 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Universität des Saarlandes";
 				TargetAttributes = {
