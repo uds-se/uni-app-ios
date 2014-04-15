@@ -969,6 +969,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="HomeScreenBackgroundiPad.jpg" id="YxE-f2-ZZv">
                                 <rect key="frame" x="0.0" y="66" width="773" height="958"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="rFE-TB-bqA">
                                 <rect key="frame" x="0.0" y="66" width="768" height="958"/>
@@ -1087,10 +1088,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                             </scrollView>
                             <navigationBar contentMode="scaleToFill" translucent="NO" id="QXb-uQ-ejG">
                                 <rect key="frame" x="0.0" y="22" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                 <items>
                                     <navigationItem title="Über diese App" id="Fiu-TA-uRS">
                                         <barButtonItem key="rightBarButtonItem" title="Zurück" style="done" id="cyZ-fc-iZO">

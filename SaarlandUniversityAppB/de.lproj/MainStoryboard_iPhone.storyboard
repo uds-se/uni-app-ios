@@ -947,8 +947,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="HomeScreenBackgroundiPhone.jpg" id="h8k-G9-8IX">
-                                <rect key="frame" x="0.0" y="63" width="320" height="507"/>
+                                <rect key="frame" x="0.0" y="63" width="320" height="505"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Ytq-IV-hOI">
                                 <rect key="frame" x="0.0" y="63" width="320" height="505"/>
@@ -1067,10 +1068,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                             </scrollView>
                             <navigationBar contentMode="scaleToFill" translucent="NO" id="tEQ-Ix-nm8">
                                 <rect key="frame" x="0.0" y="19" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                 <items>
                                     <navigationItem title="Über diese App" id="kov-xo-pWj">
                                         <barButtonItem key="rightBarButtonItem" title="Zurück" style="done" id="pok-AF-zJT">
