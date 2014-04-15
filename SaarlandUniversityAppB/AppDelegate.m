@@ -33,6 +33,10 @@
         [fileManager copyItemAtPath:pathInMainBundle toPath:dbPathString error:nil];
     }
     
+    // avoids black navigation bar while opeing app
+    self.window.backgroundColor = [UIColor whiteColor];
+
+    
     // Override point for customization after application launch.
     return YES;
 }
