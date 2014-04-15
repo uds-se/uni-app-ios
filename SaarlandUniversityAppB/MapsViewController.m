@@ -38,7 +38,6 @@
 {
     [super viewDidLoad];
     searchBar.tintColor = self.navigationController.navigationBar.tintColor;
-    self.automaticallyAdjustsScrollViewInsets = NO;
     backgroundThread = [NSOperationQueue new];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
@@ -316,12 +315,9 @@
     [map addSubview:self.showPositionButton];
     [map addSubview:self.showMapBackgroundButton];
     map.userInteractionEnabled = YES;
-//    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
-//        [searchBar setShowsCancelButton:NO animated:YES];
-//    }else{
-        [self.navigationItem setRightBarButtonItem:nil animated:YES];
-//    }
-    //[searchBar setShowsCancelButton:NO animated:YES];
+
+    [self.navigationItem setRightBarButtonItem:nil animated:YES];
+
     [self.tableView setHidden:YES];
     [self.navigationItem setRightBarButtonItem:listBarButton animated:YES];
     [searchBar sizeToFit];
@@ -499,7 +495,9 @@
 
 }
 
-
+/*
+ * iOS 5 only
+ */
 -(void) showGoogleRoute:(UIButton *)sender{
     if (sender.tag==0) {
         googleRouteLink = @"http://maps.googleapis.com/maps/api/directions/json?origin=%@&destination=%@&mode=walking&sensor=false";

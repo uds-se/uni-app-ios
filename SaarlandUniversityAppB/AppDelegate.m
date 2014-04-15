@@ -30,7 +30,6 @@
     
     NSString *pathInMainBundle = [[NSBundle mainBundle] pathForResource:@"pointOfInterest" ofType:@"sqlite3"];
     if (![fileManager fileExistsAtPath:dbPathString]) {
-        NSLog(@"database not existing yet");
         [fileManager copyItemAtPath:pathInMainBundle toPath:dbPathString error:nil];
     }
     
