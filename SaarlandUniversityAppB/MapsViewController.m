@@ -85,6 +85,14 @@
     if (overlaySport) {
         [map addOverlay:overlaySport];
     }
+    
+    // Initialize the TileOverlay with tiles in the application's bundle's resource directory.
+    // Any valid tiled image directory structure in there will do.
+    NSString *tileDirectoryDudweiler = [[[NSBundle mainBundle]  resourcePath] stringByAppendingPathComponent:@"DudweilerTiles"];
+    TileOverlay *overlayDudweiler = [[TileOverlay alloc] initWithTileDirectory:tileDirectoryDudweiler];
+    if (overlayDudweiler) {
+        [map addOverlay:overlayDudweiler];
+    }
 
     
     // zoom in by a factor of two from the rect that contains the bounds

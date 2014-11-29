@@ -151,6 +151,7 @@ static NSInteger zoomScaleToZoomLevel(MKZoomScale scale) {
             NSInteger flippedY = abs(y + 1 - tilesAtZ);
             
             NSString *tileKey = [[NSString alloc] initWithFormat:@"%d/%d/%d", z, x, flippedY];
+            
             if ([tilePaths containsObject:tileKey]) {
                 if (!tiles) {
                     tiles = [NSMutableArray array];
