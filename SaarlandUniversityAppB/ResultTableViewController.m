@@ -18,7 +18,7 @@ int numberOfResults;
 
 @implementation ResultTableViewController
 
-@synthesize selectedIndexPath,fullURL,backgroudnThread;
+@synthesize selectedIndexPath,fullURL,searchParam,backgroudnThread;
 
 
 
@@ -62,39 +62,28 @@ int numberOfResults;
             return;
         }
         
-        HTMLNode *bodyNode = [parser body];
-        
-        NSArray *spanNodes = [bodyNode findChildTags:@"div"];
-        
         names = [NSMutableArray new];
         links = [NSMutableArray new];
         functions = [NSMutableArray new];
         
-        for (HTMLNode *spanNode in spanNodes) {
-            if ([[spanNode getAttributeNamed:@"class"] isEqualToString:@"erg_list_entry"]) {
-                
-                HTMLNode* detail = [spanNode findChildWithAttribute:@"class" matchingName:@"erg_list_label" allowPartial:YES] ;
-                if([[detail contents] isEqualToString:@"Name:"]){
-                    HTMLNode *nameNode = [spanNode findChildTag:@"a"];
-                    NSString *name = [nameNode contents];
-                    NSURL *link = [NSURL URLWithString:[nameNode getAttributeNamed:@"href"]];
-                    NSCharacterSet *whiteNewLine = [NSCharacterSet whitespaceAndNewlineCharacterSet];
-                    NSPredicate *noEmptyStrings = [NSPredicate predicateWithFormat:@"SELF != ''"];
-                    
-                    NSArray *parts = [name componentsSeparatedByCharactersInSet:whiteNewLine];
-                    NSArray *filteredArray = [parts filteredArrayUsingPredicate:noEmptyStrings];
-                    int length = [filteredArray count];
-                    name = [filteredArray objectAtIndex:(length-1)];
-                    NSString *firstname = [filteredArray objectAtIndex:(length-2)];
-                    
-                    firstname = [firstname stringByAppendingFormat:@" "];
-                    name = [firstname stringByAppendingString:name];
-                    
-                    [names addObject:name];
-                    [links addObject:link];
-                }                
+        [self parseData:parser];
+        
+        if([searchParam isEqualToString:@"Profs"]){
+            self.fullURL = [self.fullURL stringByReplacingOccurrencesOfString:@"171" withString:@"166"];
+            error = nil;
+            html = [NSString stringWithContentsOfURL:[NSURL URLWithString:self.fullURL] encoding:NSUTF8StringEncoding error:NULL];
+            
+            parser = [[HTMLParser alloc] initWithString:html error:&error];
+            
+            if (error) {
+                NSLog(@"Error: %@", error);
+                return;
             }
+            
+            [self parseData:parser];
+            
         }
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
             [self.loadingView setHidden:YES];
@@ -121,6 +110,44 @@ int numberOfResults;
         });
     }
 }
+
+
+-(void)parseData:(HTMLParser *)parser{
+
+    HTMLNode *bodyNode = [parser body];
+    
+    NSArray *spanNodes = [bodyNode findChildTags:@"div"];
+    
+    
+    for (HTMLNode *spanNode in spanNodes) {
+        if ([[spanNode getAttributeNamed:@"class"] isEqualToString:@"erg_list_entry"]) {
+            
+            HTMLNode* detail = [spanNode findChildWithAttribute:@"class" matchingName:@"erg_list_label" allowPartial:YES] ;
+            if([[detail contents] isEqualToString:@"Name:"]){
+                HTMLNode *nameNode = [spanNode findChildTag:@"a"];
+                NSString *name = [nameNode contents];
+                NSURL *link = [NSURL URLWithString:[nameNode getAttributeNamed:@"href"]];
+                NSCharacterSet *whiteNewLine = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+                NSPredicate *noEmptyStrings = [NSPredicate predicateWithFormat:@"SELF != ''"];
+                
+                NSArray *parts = [name componentsSeparatedByCharactersInSet:whiteNewLine];
+                NSArray *filteredArray = [parts filteredArrayUsingPredicate:noEmptyStrings];
+                int length = [filteredArray count];
+                name = [filteredArray objectAtIndex:(length-1)];
+                NSString *firstname = [filteredArray objectAtIndex:(length-2)];
+                
+                firstname = [firstname stringByAppendingFormat:@" "];
+                name = [firstname stringByAppendingString:name];
+                
+                [names addObject:name];
+                [links addObject:link];
+            }
+        }
+    }
+
+
+}
+
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     [self.navigationController popViewControllerAnimated:YES];

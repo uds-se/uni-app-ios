@@ -50,6 +50,13 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     ResultTableViewController* resultVC = segue.destinationViewController;
     [resultVC setFullURL:queryUrl];
+    if (self.segmentedControl.selectedSegmentIndex == 1){
+        [resultVC setSearchParam:@"All"];
+    }
+    else{
+        [resultVC setSearchParam:@"Profs"];
+    }
+    
 }
 
 //search button has been tapped
@@ -75,11 +82,21 @@
             NSString* allQueryUrl = [NSString stringWithFormat: @"https://www.lsf.uni-saarland.de/qisserver/rds?state=wsearchv&search=7&purge=y&moduleParameter=person/person&personal.vorname=%@&personal.nachname=%@&P_start=0&P_anzahl=40&_form=display",firstName,familyName];
             NSString* profQueryUrl = [NSString stringWithFormat: @"https://www.lsf.uni-saarland.de/qisserver/rds?state=wsearchv&search=7&purge=y&moduleParameter=person/person&choice.r_funktion.pfid=y&r_funktion.pfid=171&personal.vorname=%@&personal.nachname=%@&P_start=0&P_anzahl=50&_form=display",firstName,familyName];
             
+            NSString* junProfQueryUrl = [NSString stringWithFormat: @"https://www.lsf.uni-saarland.de/qisserver/rds?state=wsearchv&search=7&purge=y&moduleParameter=person/person&choice.r_funktion.pfid=y&r_funktion.pfid=166&personal.vorname=%@&personal.nachname=%@&P_start=0&P_anzahl=50&_form=display",firstName,familyName];
+            
             if (self.segmentedControl.selectedSegmentIndex == 1) {
                 queryUrl = allQueryUrl;
-            }else{
+            }else if (self.segmentedControl.selectedSegmentIndex == 0){
                 queryUrl = profQueryUrl;
             }
+            
+            
+            
+//            if (self.segmentedControl.selectedSegmentIndex == 1) {
+//                queryUrl = allQueryUrl;
+//            }else{
+//                queryUrl = profQueryUrl;
+//            }
             
             [self performSegueWithIdentifier:@"showResults" sender:self];
         } else {

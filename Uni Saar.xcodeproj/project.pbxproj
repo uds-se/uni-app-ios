@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		172C3EA91A7A4FBD00B85ED7 /* CampusSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 172C3EA81A7A4FBD00B85ED7 /* CampusSelectionViewController.m */; };
 		1764095F15ACCA9D00BE5FAB /* CafeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1764095E15ACCA9D00BE5FAB /* CafeParser.m */; };
-		176F92B01A29560D007E85A0 /* DudweilerTiles in Resources */ = {isa = PBXBuildFile; fileRef = 176F92AF1A29560D007E85A0 /* DudweilerTiles */; };
+		176808B71A45CC630063A986 /* DudweilerTiles in Resources */ = {isa = PBXBuildFile; fileRef = 176808B61A45CC630063A986 /* DudweilerTiles */; };
 		17D4E709159CADDA00876317 /* MensaFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D4E708159CADDA00876317 /* MensaFeedParser.m */; };
 		97B3500515B3611E00497E7A /* ResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 971EF23E15B059510039B06B /* ResultTableViewController.m */; };
 		97B3500715B3612500497E7A /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 971EF24115B059760039B06B /* ResultTableViewCell.m */; };
@@ -334,9 +335,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		172C3EA71A7A4FBD00B85ED7 /* CampusSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampusSelectionViewController.h; sourceTree = "<group>"; };
+		172C3EA81A7A4FBD00B85ED7 /* CampusSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampusSelectionViewController.m; sourceTree = "<group>"; };
 		1764095D15ACCA9D00BE5FAB /* CafeParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CafeParser.h; sourceTree = "<group>"; };
 		1764095E15ACCA9D00BE5FAB /* CafeParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CafeParser.m; sourceTree = "<group>"; };
-		176F92AF1A29560D007E85A0 /* DudweilerTiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DudweilerTiles; sourceTree = "<group>"; };
+		176808B61A45CC630063A986 /* DudweilerTiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DudweilerTiles; sourceTree = "<group>"; };
 		17D4E707159CADDA00876317 /* MensaFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaFeedParser.h; sourceTree = "<group>"; };
 		17D4E708159CADDA00876317 /* MensaFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaFeedParser.m; sourceTree = "<group>"; };
 		971EF23D15B059510039B06B /* ResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewController.h; sourceTree = "<group>"; };
@@ -791,6 +794,8 @@
 				E2F22B6615B2BC53003E8A74 /* SlideShow.m */,
 				E2428B541722F4B700D98047 /* AboutViewController.h */,
 				E2428B551722F4B700D98047 /* AboutViewController.m */,
+				172C3EA71A7A4FBD00B85ED7 /* CampusSelectionViewController.h */,
+				172C3EA81A7A4FBD00B85ED7 /* CampusSelectionViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1090,7 +1095,7 @@
 		E5EF30881598F10700D65D13 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				176F92AF1A29560D007E85A0 /* DudweilerTiles */,
+				176808B61A45CC630063A986 /* DudweilerTiles */,
 				E2FDA325172C5770005924AD /* ODRefreshControl */,
 				E2F02C4E1725C71D00182968 /* settings.plist */,
 				E5EF329A1598F65D00D65D13 /* Images */,
@@ -1361,7 +1366,7 @@
 				ABA0D62E183149C600A10087 /* MensaTabIcon.png in Resources */,
 				E27CD78F15B869C900DB7A0E /* iCalEmpty@2x.png in Resources */,
 				E27CD79015B869C900DB7A0E /* iCalEmpty.png in Resources */,
-				176F92B01A29560D007E85A0 /* DudweilerTiles in Resources */,
+				176808B71A45CC630063A986 /* DudweilerTiles in Resources */,
 				E2B4FF3617D5EE80001932BB /* appIconiPadiOS7.png in Resources */,
 				E22C3F371715D33E003C039F /* carIcon@2x.png in Resources */,
 				E22C3F381715D33E003C039F /* carIcon.png in Resources */,
@@ -1599,6 +1604,7 @@
 				E2428B561722F4B700D98047 /* AboutViewController.m in Sources */,
 				E2FDA328172C5770005924AD /* ODRefreshControl.m in Sources */,
 				E2FDA332172D6FBA005924AD /* NSString+HTMLCleaner.m in Sources */,
+				172C3EA91A7A4FBD00B85ED7 /* CampusSelectionViewController.m in Sources */,
 				E280A12F17352CC200C9719B /* CategorieCell.m in Sources */,
 				E2BF612E173556D100D54CD4 /* HTMLNode.m in Sources */,
 				E2BF612F173556D100D54CD4 /* HTMLParser.m in Sources */,

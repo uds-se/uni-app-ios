@@ -3,8 +3,8 @@
       <Title>myoverlay.vrt</Title>
       <Abstract></Abstract>
       <SRS>EPSG:900913</SRS>
-      <BoundingBox minx="49.27359947432446" miny="7.03730000000000" maxx="49.27580000000000" maxy="7.04069925221573"/>
-      <Origin x="49.27359947432446" y="7.03730000000000"/>
+      <BoundingBox minx="49.27203824203714" miny="7.03356999999999" maxx="49.27706000000002" maxy="7.04334787968225"/>
+      <Origin x="49.27203824203714" y="7.03356999999999"/>
       <TileFormat width="256" height="256" mime-type="image/png" extension="png"/>
       <TileSets profile="mercator">
         <TileSet href="14" units-per-pixel="9.55462853393555" order="14"/>

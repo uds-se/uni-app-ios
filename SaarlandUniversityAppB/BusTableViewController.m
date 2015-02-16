@@ -75,17 +75,25 @@
     [self.database openDb];
     NSMutableArray* tempBusstations = [self.database getPointsOfInterestForCategorieWithID:BusID];
     NSMutableArray* busstationsArr = [NSMutableArray new];
+    NSMutableArray* dudweilerBusstationArr = [NSMutableArray new];
     [self.database closeDb];
     NSMutableArray* busstationtitles = [NSMutableArray new];
     for (PointOfInterest* busstation in tempBusstations) {
         if (![busstationtitles containsObject:busstation.title] ) {
-            [busstationsArr addObject:busstation];
+            if([busstation.title isEqualToString:@"Bürgerhaus"] || [busstation.title isEqualToString:@"Dudweiler Markt"]){
+                
+                [dudweilerBusstationArr addObject:busstation];
+            }
+            else{
+                [busstationsArr addObject:busstation];
+            }
+            
             [busstationtitles addObject:busstation.title];
         }
     }
     
-    busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr, [NSArray arrayWithObjects:NSLocalizedString(@"Search a bus",nil), nil],nil]).mutableCopy;
-    sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations",nil),NSLocalizedString(@"Search",nil), nil];
+    busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr, dudweilerBusstationArr, [NSArray arrayWithObjects:NSLocalizedString(@"Search a bus",nil), nil],nil]).mutableCopy;
+    sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Saarbücken",nil),NSLocalizedString(@"Busstations Dudweiler",nil),NSLocalizedString(@"Search",nil), nil];
     [self updateView];
 }
 
@@ -121,11 +129,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     
-    if (indexPath.section==1) {
+    if (indexPath.section==2) {
         cell.textLabel.text = [[busstations objectAtIndex:indexPath.section]objectAtIndex:indexPath.row];
         
         cell.detailTextLabel.text = @"Bahn.de";
     }else{
+        
         PointOfInterest* poi = ((PointOfInterest*)[[busstations objectAtIndex:indexPath.section]objectAtIndex:indexPath.row]);
         cell.textLabel.text = poi.title;
         
@@ -193,10 +202,15 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     WebViewController* wVC = segue.destinationViewController;
-    if (self.tableView.indexPathForSelectedRow.section==1) {
+    if (self.tableView.indexPathForSelectedRow.section==2) {
         wVC.urlAsString = @"http://mobile.bahn.de/bin/mobil/query.exe/dox?country=DEU&rt=1&use_realtime_filter=1&webview=&searchMode=ADVANCED";
     }else{
-        wVC.urlAsString = ((PointOfInterest*)[[busstations objectAtIndex:0]objectAtIndex: self.tableView.indexPathForSelectedRow.row]).website ;
+        if(self.tableView.indexPathForSelectedRow.section == 0){
+            wVC.urlAsString = ((PointOfInterest*)[[busstations objectAtIndex:0]objectAtIndex: self.tableView.indexPathForSelectedRow.row]).website ;
+        }
+        else{
+            wVC.urlAsString = ((PointOfInterest*)[[busstations objectAtIndex:1]objectAtIndex: self.tableView.indexPathForSelectedRow.row]).website ;
+        }
     }
 }
 

@@ -29,6 +29,7 @@
 
 @property NSIndexPath* selectedIndexPath;
 @property (nonatomic) NSString* fullURL;
+@property (nonatomic) NSString* searchParam;
 @property NSOperationQueue* backgroudnThread;
 
 

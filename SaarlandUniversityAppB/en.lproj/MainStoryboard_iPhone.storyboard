@@ -317,12 +317,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="RE2-dS-ye5" kind="relationship" relationship="rootViewController" id="Eno-4M-vwk"/>
+                        <segue destination="YGc-Nr-mOC" kind="relationship" relationship="rootViewController" id="rBD-Kd-DQc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJf-d0-x7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1707" y="84"/>
+            <point key="canvasLocation" x="-2211" y="74"/>
         </scene>
         <!--Home View Controller - Home-->
         <scene sceneID="56c-3L-Isl">
@@ -505,6 +505,51 @@
             </objects>
             <point key="canvasLocation" x="-1266" y="84"/>
         </scene>
+        <!--Campus Selection Controller-->
+        <scene sceneID="LvG-Nn-CDM">
+            <objects>
+                <viewController id="YGc-Nr-mOC" userLabel="Campus Selection Controller" customClass="CampusSelectionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZZx-BM-VRm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="E8U-9L-iHT">
+                                <rect key="frame" x="20" y="133" width="280" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Saarbrüken"/>
+                                    <segment title="Dudweiler"/>
+                                    <segment title="Homburg"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Select One Campus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RP8-gW-CmY">
+                                <rect key="frame" x="53" y="95" width="214" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This setting customizes Mensa menu, Bus stations and Map." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V92-Al-rl9">
+                                <rect key="frame" x="20" y="169" width="280" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Campus" id="w0f-iB-BTf">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="32p-43-vo5">
+                            <connections>
+                                <segue destination="RE2-dS-ye5" kind="push" id="Qes-ms-dms"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOM-ay-W1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1748" y="74"/>
+        </scene>
         <!--Event Table View Controller - Events-->
         <scene sceneID="UfF-7S-Kan">
             <objects>
@@ -686,10 +731,10 @@
                                 <gestureRecognizers/>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="IDG-Y6-zvJ">
-                                <rect key="frame" x="20" y="100" width="280" height="30"/>
+                                <rect key="frame" x="20" y="100" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Professors only"/>
+                                    <segment title="Professors"/>
                                     <segment title="All"/>
                                 </segments>
                                 <color key="tintColor" red="0.51556158685064946" green="0.64681150181304903" blue="0.8560267857142857" alpha="1" colorSpace="calibratedRGB"/>
@@ -1746,6 +1791,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="Wzj-zy-pYp"/>
         <segue reference="SuY-L1-9Cc"/>
-        <segue reference="Xja-mD-1dO"/>
+        <segue reference="ieF-aG-sOu"/>
     </inferredMetricsTieBreakers>
 </document>
