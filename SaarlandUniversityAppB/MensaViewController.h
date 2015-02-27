@@ -57,7 +57,7 @@
 @property (nonatomic, retain) IBOutlet UIPageControl *pageControl;
 @property (nonatomic, retain) IBOutlet UINavigationItem *navigation;
 @property (nonatomic) IBOutlet UILabel* titleLabel;
-
+@property (nonatomic) NSString* selectedCampus;
 
 
 @property (nonatomic) NSMutableArray *colors;
@@ -74,6 +74,7 @@
 @property NSOperationQueue *priorityQueue;
 
 
+- (IBAction)openingHoursClick:(id)sender;
 -(void)updateModel;
 -(void)updateView;
 -(NSArray *)getSortedByDate;

@@ -1,18 +1,18 @@
 //
-//  CampusSelectionViewController.m
+//  HomburgOpeningHoursViewController.m
 //  Uni Saar
 //
-//  Created by Omer Asif on 1/29/15.
+//  Created by Omer Asif on 2/27/15.
 //  Copyright (c) 2015 Universität des Saarlandes. All rights reserved.
 //
 
-#import "CampusSelectionViewController.h"
+#import "HomburgOpeningHoursViewController.h"
 
-@interface CampusSelectionViewController ()
+@interface HomburgOpeningHoursViewController ()
 
 @end
 
-@implementation CampusSelectionViewController
+@implementation HomburgOpeningHoursViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,20 +34,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-    HomeViewController* homeVC = segue.destinationViewController;
-    
-    if (self.segmentedControl.selectedSegmentIndex == 0){
-        [homeVC setSelectedCampus:@"Saar"];
-    }
-    else{
-        [homeVC setSelectedCampus:@"Homburg"];
-    }
-
-}
-
 
 @end

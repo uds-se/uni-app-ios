@@ -16,6 +16,7 @@
 -(void) closeDb;
 -(NSMutableArray *)getPointsOfInterestForIDs:(NSArray* ) IDs;
 -(NSMutableArray *)getPointsOfInterestForCategorieWithID:(int) ID;
+-(NSMutableArray *)getPointsOfInterestForCategorieWithIDAndCampus:(int) ID campus:(NSString *) campusName;
 -(NSMutableArray *)getPointsOfInterestForCategorie:(NSString*) categorie;
 -(NSMutableArray *)getAllCategorieIDs;
 -(NSMutableArray *)getAllCategorieTitles;

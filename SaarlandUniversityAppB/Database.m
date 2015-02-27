@@ -169,7 +169,41 @@
     return result;
 }
 
+-(NSMutableArray *)getPointsOfInterestForCategorieWithIDAndCampus:(int) ID campus:(NSString *) campusName{
 
+    [self openDb];
+    NSMutableArray* result = [NSMutableArray new];
+    sqlite3_stmt *statement;
+    NSString *qStmt = [NSString stringWithFormat:@"SELECT title,subtitle,canshowleftcallout,canshowrightcallout,color,website,lat,longi,pointOfInterest.ID FROM pointOfInterest  WHERE pointOfInterest.categorieID = '%s' AND pointOfInterest.campus = '%s' ORDER BY title ASC", [[NSString stringWithFormat:@"%d",ID] UTF8String], [[NSString stringWithFormat:@"%@",campusName] UTF8String]];
+    const char *q_Stmt = [qStmt UTF8String];
+    
+    if (sqlite3_prepare_v2(poiDB, q_Stmt, -1, &statement, nil) == SQLITE_OK) {
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            PointOfInterest* poi = [PointOfInterest new];
+            [poi setUTF8Title:(char *)sqlite3_column_text(statement, 0)];
+            [poi setUTF8Subtitle:(char *)sqlite3_column_text(statement, 1)];
+            [poi setUTF8CanShowLeftCallout:(char *)sqlite3_column_text(statement, 2)];
+            [poi setUTF8CanShowRightCallout: (char *)sqlite3_column_text(statement, 3)];
+            [poi setUTF8Color:(char *)sqlite3_column_text(statement, 4)];
+            [poi setUTF8Website:(char *)sqlite3_column_text(statement, 5)];
+            [poi setLatitude:[[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 6)] floatValue]];
+            [poi setLongitude: [[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 7)] floatValue]];
+            [poi setID:[[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 8)] integerValue]];
+            [result addObject:poi];
+        }
+        sqlite3_finalize(statement);
+    }
+    else {
+        NSLog(@"Prepare-error in getPointsOfInterestForCategorieWithID %s", sqlite3_errmsg(poiDB));
+    }
+    [self closeDb];
+    return result;
+
+
+
+
+
+}
 
 
 

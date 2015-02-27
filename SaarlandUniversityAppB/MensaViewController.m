@@ -25,7 +25,7 @@
 @synthesize navigation, dates,/*scrollView,*/ pageControl, colors,
             contentForTables, contentForHeaders, contentForFooters,
             days_dict,  parsingSuccessful, pageControlIsChangingPage,
-            priorityQueue;
+            priorityQueue,selectedCampus;
 
 #define FONT_SIZE 14.0f
 #define CELL_CONTENT_WIDTH 320.0f
@@ -76,7 +76,7 @@
         
         backgroundImageView.image = [UIImage imageNamed:filename];
     }
-    
+    NSLog(@"***** %@",selectedCampus);
     //tries to load data from file system, reloads data for table views only if data was loaded
     if ([self loadData]) {
         [self updateModel];
@@ -105,7 +105,7 @@
     [self updateDayTitle];
     self.pageControl.numberOfPages = [self.contentForTables count];
     self.pageControl.currentPage = self.currentPage;
-    //NSLog(@"number of subviews %d",self.scrollView.subviews.count);
+    NSLog(@"number of subviews %d",self.scrollView.subviews.count);
     for(UIView *subview in self.scrollView.subviews) {
         if ([subview isKindOfClass:[PanelView class]]) {
             [((UITableView*)subview) reloadData];
@@ -371,6 +371,20 @@
  * it transfers the dictionary into different arrays, which are
  * needed to set up the table views
  */
+- (IBAction)openingHoursClick:(id)sender {
+    
+    if([self.selectedCampus isEqualToString:@"Saar"]){
+    
+        [self performSegueWithIdentifier:@"saarMensa" sender:self];
+    }
+    else{
+        
+        [self performSegueWithIdentifier:@"homburgMensa" sender:self];
+    }
+    
+    
+}
+
 - (void)updateModel
 {
     
@@ -518,54 +532,76 @@
 - (void) parseFeeds
 {
     // source urls of menus
-    NSURL *mensaFeed = [[NSURL alloc]
-                        initWithString:@"http://studentenwerk.netzindianer.net/_menu/actual/speiseplan-saarbruecken.xml"];    
-    NSURL *acFeed = [[NSURL alloc]
+    
+    if([selectedCampus isEqualToString:@"Saar"]){
+        NSURL *mensaFeed = [[NSURL alloc]
+                         initWithString:@"http://studentenwerk.netzindianer.net/_menu/actual/speiseplan-saarbruecken.xml"];
+//        NSURL *mensaFeed = [[NSURL alloc]
+//                            initWithString:@"http://studentenwerk.netzindianer.net/_menu/actual/speiseplan-homburg.xml"];
+        NSURL *acFeed = [[NSURL alloc]
                      initWithString:@"http://www.uni-saarland.de/campus/service-und-kultur/gastronomieaufdemcampus/auslaender-cafe.html"];
    
     
-    NSURL *jcFeed = [[NSURL alloc]
+        NSURL *jcFeed = [[NSURL alloc]
                      initWithString:@"http://www.uni-saarland.de/campus/service-und-kultur/gastronomieaufdemcampus/juristen-cafe.html"];
     
     
-    // setup of parsers for above-mentioned urls
-    MensaFeedParser *mensaParser = [MensaFeedParser alloc];
-    CafeParser *acParser = [CafeParser alloc];
-    CafeParser *jcParser = [CafeParser alloc];
+        // setup of parsers for above-mentioned urls
+        MensaFeedParser *mensaParser = [MensaFeedParser alloc];
+        CafeParser *acParser = [CafeParser alloc];
+        CafeParser *jcParser = [CafeParser alloc];
     
-    @try {
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-        [mensaParser initParser:mensaFeed withDict:days_dict andDelegate:self];
-    }
-    @catch (NSException *exception) {
-        parsingSuccessful = NO;
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        NSLog(@"Mensa parser failed");
-    }
+        @try {
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+            [mensaParser initParser:mensaFeed withDict:days_dict andDelegate:self];
+        }
+        @catch (NSException *exception) {
+            parsingSuccessful = NO;
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            NSLog(@"Mensa parser failed");
+        }
     
-    @try {
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-        [acParser initParser:acFeed withCategory:@"Ausländer-Café"
+        @try {
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+            [acParser initParser:acFeed withCategory:@"Ausländer-Café"
                                     withDict:days_dict andDelegate:self];
-    }
-    @catch (NSException *exception) {
-        parsingSuccessful = NO;
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        NSLog(@"Ausländer-Cafe parser failed");
-    }
+        }
+        @catch (NSException *exception) {
+            parsingSuccessful = NO;
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            NSLog(@"Ausländer-Cafe parser failed");
+        }
     
         
-    @try {
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-        [jcParser initParser:jcFeed withCategory:@"Juristencafé"
+        @try {
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+            [jcParser initParser:jcFeed withCategory:@"Juristencafé"
                                     withDict:days_dict andDelegate:self];
+        }
+        @catch (NSException *exception) {
+            parsingSuccessful = NO;
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            NSLog(@"Juristencafe parser failed for Saarbrucken");
+        }
     }
-    @catch (NSException *exception) {
-        parsingSuccessful = NO;
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        NSLog(@"Juristencafe parser failed");
+    else{
+        NSLog(@" INSIDE ELSE");
+        NSURL *mensaFeed = [[NSURL alloc]
+                            initWithString:@"http://studentenwerk.netzindianer.net/_menu/actual/speiseplan-homburg.xml"];
+        MensaFeedParser *mensaParser = [MensaFeedParser alloc];
+        @try {
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+            [mensaParser initParser:mensaFeed withDict:days_dict andDelegate:self];
+        }
+        @catch (NSException *exception) {
+            parsingSuccessful = NO;
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            NSLog(@"Mensa parser failed for Homburg");
+        }
     }
+        
     if (parsingSuccessful) {
+        NSLog(@"***** PARSING SUCCESSFULL ");
         [self performSelectorOnMainThread:@selector(updateModel) withObject:nil waitUntilDone:NO];
     }
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
@@ -658,9 +694,21 @@
     //save in documents folder as plist
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *path = [NSString stringWithFormat:@"%@%@",
-                      documentsDirectory,
-                      @"/days_dict.plist"];
+    
+    NSString *path;
+    
+    if([selectedCampus isEqualToString:@"Saar"]){
+        path = [NSString stringWithFormat:@"%@%@",
+                  documentsDirectory,
+                  @"/days_dict_sb.plist"];
+    }
+    else{
+        path = [NSString stringWithFormat:@"%@%@",
+                documentsDirectory,
+                @"/days_dict_hb.plist"];
+    }
+    
+    
     return path;
 }
 

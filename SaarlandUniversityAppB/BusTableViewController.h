@@ -19,7 +19,7 @@
 }
 
 #define BusID 5
-
+@property (nonatomic) NSString* selectedCampus;
 @property (nonatomic) Database* database;
 
 

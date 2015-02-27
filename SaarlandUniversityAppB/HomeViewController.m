@@ -13,7 +13,7 @@
 @end
 
 @implementation HomeViewController
-@synthesize imageView,slideShow;
+@synthesize imageView,slideShow, selectedCampus, campusLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -45,6 +45,13 @@
             filename = [filename stringByReplacingOccurrencesOfString:@".jpg" withString:@"-568@2x.jpg"];
         
         backgroundImageView.image = [UIImage imageNamed:filename];
+        
+        if( [selectedCampus isEqualToString:@"Saar"]){
+            [campusLabel setText:@"Saarbrücken Campus"];
+        }
+        else{
+            [campusLabel setText:@"Homburg Campus"];
+        }
     } 
    
 }
@@ -57,7 +64,17 @@
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-
+    NSLog(@"%@", segue.identifier);
+    if(segue.identifier !=NULL){
+        if([segue.identifier isEqualToString:@"showMensa"]){
+            MensaViewController *mensaVC = segue.destinationViewController;
+            mensaVC.selectedCampus = self.selectedCampus;
+        }
+        else if([segue.identifier isEqualToString:@"showBuses"]){
+            BusTableViewController *busVC = segue.destinationViewController;
+            busVC.selectedCampus = self.selectedCampus;
+        }
+    }
     
 }
 

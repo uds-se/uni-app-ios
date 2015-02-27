@@ -14,6 +14,8 @@
 
 @implementation BusTableViewController
 
+@synthesize selectedCampus;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -73,27 +75,47 @@
 //update the model/data from database
 -(void)updateModel{
     [self.database openDb];
-    NSMutableArray* tempBusstations = [self.database getPointsOfInterestForCategorieWithID:BusID];
+    NSMutableArray* tempBusstations;
+    if([self.selectedCampus isEqualToString:@"Saar"]){
+        tempBusstations = [self.database getPointsOfInterestForCategorieWithIDAndCampus:BusID campus:@"saar"];
+    }
+    else{
+        tempBusstations = [self.database getPointsOfInterestForCategorieWithIDAndCampus:BusID campus:@"hom"];
+    }
+    
+    NSLog(@"Array size : %d ",[tempBusstations count]);
     NSMutableArray* busstationsArr = [NSMutableArray new];
     NSMutableArray* dudweilerBusstationArr = [NSMutableArray new];
     [self.database closeDb];
     NSMutableArray* busstationtitles = [NSMutableArray new];
     for (PointOfInterest* busstation in tempBusstations) {
         if (![busstationtitles containsObject:busstation.title] ) {
-            if([busstation.title isEqualToString:@"Bürgerhaus"] || [busstation.title isEqualToString:@"Dudweiler Markt"]){
+            if([self.selectedCampus isEqualToString:@"Saar"]){
+                if([busstation.title isEqualToString:@"Bürgerhaus"] || [busstation.title isEqualToString:@"Dudweiler Markt"]){
                 
-                [dudweilerBusstationArr addObject:busstation];
+                    [dudweilerBusstationArr addObject:busstation];
+                }
+                else{
+                    [busstationsArr addObject:busstation];
+                }
             }
             else{
+                
                 [busstationsArr addObject:busstation];
             }
-            
             [busstationtitles addObject:busstation.title];
         }
     }
-    
-    busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr, dudweilerBusstationArr, [NSArray arrayWithObjects:NSLocalizedString(@"Search a bus",nil), nil],nil]).mutableCopy;
-    sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Saarbücken",nil),NSLocalizedString(@"Busstations Dudweiler",nil),NSLocalizedString(@"Search",nil), nil];
+    if([self.selectedCampus isEqualToString:@"Saar"]){
+        
+        busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr, dudweilerBusstationArr, [NSArray arrayWithObjects:NSLocalizedString(@"Search a bus",nil), nil],nil]).mutableCopy;
+        sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Saarbücken",nil),NSLocalizedString(@"Busstations Dudweiler",nil),NSLocalizedString(@"Search",nil), nil];
+    }
+    else{
+        busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr, [NSArray arrayWithObjects:NSLocalizedString(@"Search a bus",nil), nil],nil]).mutableCopy;
+        sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Saarbücken",nil),NSLocalizedString(@"Search",nil), nil];
+        
+    }
     [self updateView];
 }
 
@@ -128,8 +150,15 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
+    int val=0;
+    if([self.selectedCampus isEqualToString:@"Saar"]){
+        val=2;
+    }
+    else{
+        val=1;
+    }
     
-    if (indexPath.section==2) {
+    if (indexPath.section==val) {
         cell.textLabel.text = [[busstations objectAtIndex:indexPath.section]objectAtIndex:indexPath.row];
         
         cell.detailTextLabel.text = @"Bahn.de";
