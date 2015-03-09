@@ -76,11 +76,14 @@
 -(void)updateModel{
     [self.database openDb];
     NSMutableArray* tempBusstations;
+    
     if([self.selectedCampus isEqualToString:@"Saar"]){
         tempBusstations = [self.database getPointsOfInterestForCategorieWithIDAndCampus:BusID campus:@"saar"];
+        NSLog(@"SAAR ");
     }
     else{
         tempBusstations = [self.database getPointsOfInterestForCategorieWithIDAndCampus:BusID campus:@"hom"];
+        NSLog(@"HOMBURG");
     }
     
     NSLog(@"Array size : %d ",[tempBusstations count]);
@@ -113,7 +116,7 @@
     }
     else{
         busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr, [NSArray arrayWithObjects:NSLocalizedString(@"Search a bus",nil), nil],nil]).mutableCopy;
-        sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Saarbücken",nil),NSLocalizedString(@"Search",nil), nil];
+        sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Homburg",nil),NSLocalizedString(@"Search",nil), nil];
         
     }
     [self updateView];

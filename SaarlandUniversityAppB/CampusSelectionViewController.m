@@ -41,9 +41,11 @@
     HomeViewController* homeVC = segue.destinationViewController;
     
     if (self.segmentedControl.selectedSegmentIndex == 0){
+        NSLog(@" SAAR");
         [homeVC setSelectedCampus:@"Saar"];
     }
     else{
+        NSLog(@" HOMBURG");
         [homeVC setSelectedCampus:@"Homburg"];
     }
 
