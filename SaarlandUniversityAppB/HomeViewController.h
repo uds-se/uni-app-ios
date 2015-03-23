@@ -10,6 +10,7 @@
 #import "SlideShow.h"
 #import "MensaViewController.h"
 #import "BusTableViewController.h"
+#import "MapsViewController.h"
 
 @interface HomeViewController : UIViewController{
     

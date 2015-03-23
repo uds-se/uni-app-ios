@@ -42,11 +42,11 @@
     
     if (self.segmentedControl.selectedSegmentIndex == 0){
         NSLog(@" SAAR");
-        [homeVC setSelectedCampus:@"Saar"];
+        [homeVC setSelectedCampus:@"saar"];
     }
     else{
         NSLog(@" HOMBURG");
-        [homeVC setSelectedCampus:@"Homburg"];
+        [homeVC setSelectedCampus:@"hom"];
     }
 
 }

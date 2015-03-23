@@ -76,15 +76,9 @@
 -(void)updateModel{
     [self.database openDb];
     NSMutableArray* tempBusstations;
+    tempBusstations = [self.database getPointsOfInterestForCategorieWithIDAndCampus:BusID campus:self.selectedCampus];
+    NSLog(@"%@",self.selectedCampus);
     
-    if([self.selectedCampus isEqualToString:@"Saar"]){
-        tempBusstations = [self.database getPointsOfInterestForCategorieWithIDAndCampus:BusID campus:@"saar"];
-        NSLog(@"SAAR ");
-    }
-    else{
-        tempBusstations = [self.database getPointsOfInterestForCategorieWithIDAndCampus:BusID campus:@"hom"];
-        NSLog(@"HOMBURG");
-    }
     
     NSLog(@"Array size : %d ",[tempBusstations count]);
     NSMutableArray* busstationsArr = [NSMutableArray new];
@@ -93,7 +87,7 @@
     NSMutableArray* busstationtitles = [NSMutableArray new];
     for (PointOfInterest* busstation in tempBusstations) {
         if (![busstationtitles containsObject:busstation.title] ) {
-            if([self.selectedCampus isEqualToString:@"Saar"]){
+            if([self.selectedCampus isEqualToString:@"saar"]){
                 if([busstation.title isEqualToString:@"Bürgerhaus"] || [busstation.title isEqualToString:@"Dudweiler Markt"]){
                 
                     [dudweilerBusstationArr addObject:busstation];
@@ -109,7 +103,7 @@
             [busstationtitles addObject:busstation.title];
         }
     }
-    if([self.selectedCampus isEqualToString:@"Saar"]){
+    if([self.selectedCampus isEqualToString:@"saar"]){
         
         busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr, dudweilerBusstationArr, [NSArray arrayWithObjects:NSLocalizedString(@"Search a bus",nil), nil],nil]).mutableCopy;
         sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Saarbücken",nil),NSLocalizedString(@"Busstations Dudweiler",nil),NSLocalizedString(@"Search",nil), nil];
@@ -154,7 +148,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     int val=0;
-    if([self.selectedCampus isEqualToString:@"Saar"]){
+    if([self.selectedCampus isEqualToString:@"saar"]){
         val=2;
     }
     else{
@@ -190,7 +184,10 @@
         }
     }
     
-    
+    [cell.textLabel setNumberOfLines:2];
+    [cell.textLabel setFont:[UIFont systemFontOfSize:13]];
+    CGRect cg = [cell.textLabel frame];
+    [cell.textLabel setFrame:CGRectMake(cg.origin.x, cg.origin.y-2, cg.size.width, cg.size.height+6)];
  
 
     

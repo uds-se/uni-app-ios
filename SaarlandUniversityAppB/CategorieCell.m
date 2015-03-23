@@ -15,6 +15,8 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+        //[_categorieTitleLabel setNumberOfLines:2];
+        //[_categorieTitleLabel setFont:[UIFont systemFontOfSize:14]];
     }
     return self;
 }

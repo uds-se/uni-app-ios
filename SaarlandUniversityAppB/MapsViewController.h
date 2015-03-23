@@ -48,7 +48,7 @@
     CGRect tableViewFrame;
 }
 
-
+@property (nonatomic) NSString* selectedCampus;
 @property (nonatomic, strong) IBOutlet MKMapView *map;
 @property (nonatomic, retain) IBOutlet  UISearchBar *searchBar;
 @property (nonatomic) NSMutableData* responseRouteData;

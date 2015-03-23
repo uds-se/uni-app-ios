@@ -46,7 +46,7 @@
         
         backgroundImageView.image = [UIImage imageNamed:filename];
         
-        if( [selectedCampus isEqualToString:@"Saar"]){
+        if( [selectedCampus isEqualToString:@"saar"]){
             [campusLabel setText:@"Saarbrücken Campus"];
         }
         else{
@@ -73,6 +73,10 @@
         else if([segue.identifier isEqualToString:@"showBuses"]){
             BusTableViewController *busVC = segue.destinationViewController;
             busVC.selectedCampus = self.selectedCampus;
+        }
+        else if([segue.identifier isEqualToString:@"showMap"]){
+            MapsViewController *mapVC = segue.destinationViewController;
+            mapVC.selectedCampus = self.selectedCampus;
         }
     }
     

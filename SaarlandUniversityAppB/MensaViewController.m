@@ -373,7 +373,7 @@
  */
 - (IBAction)openingHoursClick:(id)sender {
     
-    if([self.selectedCampus isEqualToString:@"Saar"]){
+    if([self.selectedCampus isEqualToString:@"saar"]){
     
         [self performSegueWithIdentifier:@"saarMensa" sender:self];
     }
@@ -533,7 +533,7 @@
 {
     // source urls of menus
     
-    if([selectedCampus isEqualToString:@"Saar"]){
+    if([selectedCampus isEqualToString:@"saar"]){
         NSURL *mensaFeed = [[NSURL alloc]
                          initWithString:@"http://studentenwerk.netzindianer.net/_menu/actual/speiseplan-saarbruecken.xml"];
 //        NSURL *mensaFeed = [[NSURL alloc]
@@ -697,7 +697,7 @@
     
     NSString *path;
     
-    if([selectedCampus isEqualToString:@"Saar"]){
+    if([selectedCampus isEqualToString:@"saar"]){
         path = [NSString stringWithFormat:@"%@%@",
                   documentsDirectory,
                   @"/days_dict_sb.plist"];

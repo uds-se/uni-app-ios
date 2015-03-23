@@ -14,7 +14,7 @@
 
 @implementation CategorieTableViewController
 
-@synthesize delegate;
+@synthesize delegate, selectedCampus;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -54,6 +54,10 @@
     CategorieCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
    
     cell.categorieTitleLabel.text = NSLocalizedString(((NSString*)[self.categoriesArr objectAtIndex:indexPath.row]),nil);
+    [cell.categorieTitleLabel setNumberOfLines:2];
+    [cell.categorieTitleLabel setFont:[UIFont systemFontOfSize:13]];
+    CGRect cg = [cell.categorieTitleLabel frame];
+    [cell.categorieTitleLabel setFrame:CGRectMake(cg.origin.x, cg.origin.y-2, cg.size.width, cg.size.height+6)];
     // cell text can be overwritten here. Categorie will be pinned using ID
     int ID = [[self.IDArr objectAtIndex:indexPath.row] integerValue];
     cell.tag =  ID;
@@ -74,6 +78,7 @@
     if ([segue.identifier isEqualToString: @"showDetails"]) {
         DetailedPOIListViewController *myDetViewCont = segue.destinationViewController;
         myDetViewCont.delegate = self.delegate;
+        myDetViewCont.selectedCampus = self.selectedCampus;
         NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
 
         int ID = [[self.IDArr objectAtIndex:selectedIndexPath.row] integerValue];

@@ -30,6 +30,7 @@
 @property NSMutableArray *indexArray;
 
 @property NSString* categorieTitle;
+@property (nonatomic) NSString* selectedCampus;
 
 @property BOOL isGrouped;
 

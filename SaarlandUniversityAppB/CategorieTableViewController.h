@@ -21,6 +21,7 @@
     
 }
 
+@property (nonatomic) NSString* selectedCampus;
 @property (nonatomic,weak) id  delegate;
 @property (nonatomic) NSArray* categoriesArr;
 @property (nonatomic) NSArray* IDArr;

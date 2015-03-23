@@ -18,7 +18,7 @@ const int maxAmountForUngroupedList = 15;
 
 @implementation DetailedPOIListViewController
 
-@synthesize arrayOfArraysWithNames, delegate, indexArray, myTableView;
+@synthesize arrayOfArraysWithNames, delegate, indexArray, myTableView, selectedCampus;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -45,7 +45,7 @@ const int maxAmountForUngroupedList = 15;
     }
     
     self.isGrouped = NO;
-    poiArray = [((MapsViewController*) self.delegate).database getPointsOfInterestForCategorieWithID:self.categorieID].mutableCopy;
+    poiArray = [((MapsViewController*) self.delegate).database getPointsOfInterestForCategorieWithIDAndCampus:self.categorieID campus:self.selectedCampus].mutableCopy;
     [poiArray sortUsingSelector:@selector(compare:)];
 
     
@@ -160,7 +160,10 @@ const int maxAmountForUngroupedList = 15;
         
         cell.tag = ((PointOfInterest*)[poiArray objectAtIndex:indexPath.row]).ID;
     }
-    
+    [cell.textLabel setNumberOfLines:2];
+    [cell.textLabel setFont:[UIFont systemFontOfSize:13]];
+    CGRect cg = [cell.textLabel frame];
+    [cell.textLabel setFrame:CGRectMake(cg.origin.x, cg.origin.y-2, cg.size.width, cg.size.height+6)];
     return cell;
 }
 

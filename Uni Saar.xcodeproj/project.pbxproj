@@ -10,6 +10,7 @@
 		172C3EA91A7A4FBD00B85ED7 /* CampusSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 172C3EA81A7A4FBD00B85ED7 /* CampusSelectionViewController.m */; };
 		1764095F15ACCA9D00BE5FAB /* CafeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1764095E15ACCA9D00BE5FAB /* CafeParser.m */; };
 		176808B71A45CC630063A986 /* DudweilerTiles in Resources */ = {isa = PBXBuildFile; fileRef = 176808B61A45CC630063A986 /* DudweilerTiles */; };
+		17758FB21ABCE71D00F0B1F4 /* HomburgTiles in Resources */ = {isa = PBXBuildFile; fileRef = 17758FB11ABCE71D00F0B1F4 /* HomburgTiles */; };
 		17CB17B41AA0884B0073E6EC /* HomburgOpeningHoursViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CB17B31AA0884B0073E6EC /* HomburgOpeningHoursViewController.m */; };
 		17D4E709159CADDA00876317 /* MensaFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D4E708159CADDA00876317 /* MensaFeedParser.m */; };
 		97B3500515B3611E00497E7A /* ResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 971EF23E15B059510039B06B /* ResultTableViewController.m */; };
@@ -341,6 +342,7 @@
 		1764095D15ACCA9D00BE5FAB /* CafeParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CafeParser.h; sourceTree = "<group>"; };
 		1764095E15ACCA9D00BE5FAB /* CafeParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CafeParser.m; sourceTree = "<group>"; };
 		176808B61A45CC630063A986 /* DudweilerTiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DudweilerTiles; sourceTree = "<group>"; };
+		17758FB11ABCE71D00F0B1F4 /* HomburgTiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HomburgTiles; sourceTree = "<group>"; };
 		17CB17B21AA0884B0073E6EC /* HomburgOpeningHoursViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomburgOpeningHoursViewController.h; sourceTree = "<group>"; };
 		17CB17B31AA0884B0073E6EC /* HomburgOpeningHoursViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomburgOpeningHoursViewController.m; sourceTree = "<group>"; };
 		17D4E707159CADDA00876317 /* MensaFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaFeedParser.h; sourceTree = "<group>"; };
@@ -1098,6 +1100,7 @@
 		E5EF30881598F10700D65D13 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				17758FB11ABCE71D00F0B1F4 /* HomburgTiles */,
 				176808B61A45CC630063A986 /* DudweilerTiles */,
 				E2FDA325172C5770005924AD /* ODRefreshControl */,
 				E2F02C4E1725C71D00182968 /* settings.plist */,
@@ -1511,6 +1514,7 @@
 				E225AFB2176213270075D032 /* appIconiPad@2x.png in Resources */,
 				E2AF58B1176A33CC00096CE6 /* EventsIcon@2x.png in Resources */,
 				E2B4FF4517D5F06B001932BB /* appIconiPadSpotlight.png in Resources */,
+				17758FB21ABCE71D00F0B1F4 /* HomburgTiles in Resources */,
 				E2AF58B2176A33CC00096CE6 /* NewsIcon@2x.png in Resources */,
 				E2AF58B3176A33CC00096CE6 /* EventsIcon.png in Resources */,
 				E2AF58B4176A33CC00096CE6 /* NewsIcon.png in Resources */,

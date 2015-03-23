@@ -217,7 +217,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9Ku-0Z-Clp" kind="push" identifier="showBus" id="GsH-Hj-3eH"/>
+                                    <segue destination="9Ku-0Z-Clp" kind="push" identifier="showBuses" id="GsH-Hj-3eH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1385,7 +1385,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="ccW-M0-FrT">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="960.00000000000011"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jrK-U4-N7F">
@@ -1863,8 +1863,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="iTL-DV-ZLV"/>
         <segue reference="NJW-X8-44Z"/>
-        <segue reference="efm-96-XTJ"/>
         <segue reference="MM3-aQ-XT1"/>
     </inferredMetricsTieBreakers>
 </document>

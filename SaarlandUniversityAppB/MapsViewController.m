@@ -20,7 +20,7 @@
 
 
 
-@synthesize map, searchBar, responseRouteData, route, routeDestination, visibleStartRect, backgroundThread,appleMapsDestItem;
+@synthesize map, searchBar, responseRouteData, route, routeDestination, visibleStartRect, backgroundThread,appleMapsDestItem, selectedCampus;
 
 
 
@@ -68,32 +68,43 @@
     //searchHistory contains NSStrings
     searchHistoryArr = [NSMutableArray new];
     [self loadSearchHistory];
+    TileOverlay *overlay;
+    if([self.selectedCampus isEqualToString:@"saar"]){
     
-    // Initialize the TileOverlay with tiles in the application's bundle's resource directory.
-    // Any valid tiled image directory structure in there will do.
-    NSString *tileDirectory = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"OverlayTiles"];
-    TileOverlay *overlay = [[TileOverlay alloc] initWithTileDirectory:tileDirectory];
-    if (overlay) {
-        [map addOverlay:overlay];
+        // Initialize the TileOverlay with tiles in the application's bundle's resource directory.
+        // Any valid tiled image directory structure in there will do.
+        NSString *tileDirectory = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"OverlayTiles"];
+        overlay = [[TileOverlay alloc] initWithTileDirectory:tileDirectory];
+        if (overlay) {
+            [map addOverlay:overlay];
+        }
+    
+    
+        // Initialize the TileOverlay with tiles in the application's bundle's resource directory.
+        // Any valid tiled image directory structure in there will do.
+        NSString *tileDirectorySport = [[[NSBundle mainBundle]  resourcePath] stringByAppendingPathComponent:@"OverlayTilesSport"];
+        TileOverlay *overlaySport = [[TileOverlay alloc] initWithTileDirectory:tileDirectorySport];
+        if (overlaySport) {
+            [map addOverlay:overlaySport];
+        }
+    
+        // Initialize the TileOverlay with tiles in the application's bundle's resource directory.
+        // Any valid tiled image directory structure in there will do.
+        NSString *tileDirectoryDudweiler = [[[NSBundle mainBundle]  resourcePath] stringByAppendingPathComponent:@"DudweilerTiles"];
+        TileOverlay *overlayDudweiler = [[TileOverlay alloc] initWithTileDirectory:tileDirectoryDudweiler];
+        if (overlayDudweiler) {
+            [map addOverlay:overlayDudweiler];
+        }
     }
-    
-    
-    // Initialize the TileOverlay with tiles in the application's bundle's resource directory.
-    // Any valid tiled image directory structure in there will do.
-    NSString *tileDirectorySport = [[[NSBundle mainBundle]  resourcePath] stringByAppendingPathComponent:@"OverlayTilesSport"];
-    TileOverlay *overlaySport = [[TileOverlay alloc] initWithTileDirectory:tileDirectorySport];
-    if (overlaySport) {
-        [map addOverlay:overlaySport];
+    else{
+        // Initialize the TileOverlay with tiles in the application's bundle's resource directory.
+        // Any valid tiled image directory structure in there will do.
+        NSString *tileDirectory = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"HomburgTiles"];
+        overlay = [[TileOverlay alloc] initWithTileDirectory:tileDirectory];
+        if (overlay) {
+            [map addOverlay:overlay];
+        }
     }
-    
-    // Initialize the TileOverlay with tiles in the application's bundle's resource directory.
-    // Any valid tiled image directory structure in there will do.
-    NSString *tileDirectoryDudweiler = [[[NSBundle mainBundle]  resourcePath] stringByAppendingPathComponent:@"DudweilerTiles"];
-    TileOverlay *overlayDudweiler = [[TileOverlay alloc] initWithTileDirectory:tileDirectoryDudweiler];
-    if (overlayDudweiler) {
-        [map addOverlay:overlayDudweiler];
-    }
-
     
     // zoom in by a factor of two from the rect that contains the bounds
     // because MapKit always backs up to get to an integral zoom level so
@@ -159,7 +170,7 @@
     key = [key uppercaseString];
     if (key.length>2) {
         key = [[Database class] changeFormatOfString:key];
-        if([self pinPOIsInArray:[self.database getPointsOfInterestWhereOneOfSearchKeysMatchesKey:key]]){
+        if([self pinPOIsInArray:[self.database getPointsOfInterestWhereOneOfSearchKeysMatchesKeyAndCampus:key campus:self.selectedCampus]]){
             [searchHistoryArr removeObject:capKey];
             [searchHistoryArr insertObject:capKey atIndex:0];
         }
@@ -186,7 +197,7 @@
 }
 
 -(void)pinPOIWithID:(int) ID{
-    [self pinPOIsInArray:[self.database getPointsOfInterestForIDs:[NSArray arrayWithObject:[NSNumber numberWithInt:ID ]]]];
+    [self pinPOIsInArray:[self.database getPointsOfInterestForIDsAndCampus:[NSArray arrayWithObject:[NSNumber numberWithInt:ID ]] campus:self.selectedCampus]];
 }
 
 -(void)setZoomRectAccorindToAnnots{
@@ -309,7 +320,7 @@
     if (searchText.length>0 && searchText.length < 50) {
         NSString* key = searchText.uppercaseString;
         key = [[Database class] changeFormatOfString:key];
-        partialSearchArr = [self.database getPointsOfInterestPartialMatchedForSearchKey:key];
+        partialSearchArr = [self.database getPointsOfInterestPartialMatchedForSearchKeyAndCampus:key campus:self.selectedCampus];
     }
     if (searchText.length == 0) {
         partialSearchArr = nil;
@@ -376,7 +387,7 @@
 
 -(void)rightAccessoryButtonTapped:(UIRightPinAccessoryButton *) sender{
     if (([sender.annotPin.title isEqualToString:@"Mensa"] && [sender.annotPin.subtitle isEqualToString:@"Restaurant"]) ||
-        [sender.annotPin.title isEqualToString:@"Mensacafé"]) {
+        [sender.annotPin.title isEqualToString:@"Mensacafé"]) { // SET CAMPUS FOR MENSA
         [self performSegueWithIdentifier:@"showMensaMenu" sender:sender];
     } else { 
 
@@ -469,7 +480,7 @@
     }
 }
 
-
+// HANDLE BOTH CAMPUSES
 //Checks if User is within a certain area around campus.
 -(BOOL)isUserAroundCampus{
     CLLocationCoordinate2D topLeftCoord = CLLocationCoordinate2DMake(49.28572341,6.98284149);
@@ -792,7 +803,14 @@
 
 -(void) loadSearchHistory{
     NSUserDefaults *currentDefaults = [NSUserDefaults standardUserDefaults];
-    NSData *savedArray = [currentDefaults objectForKey:@"savedSearchHistory"];
+    NSData *savedArray;
+    if([self.selectedCampus isEqualToString:@"saar"]){
+        savedArray = [currentDefaults objectForKey:@"savedSearchHistorySaarbrücken"];
+    }
+    else{
+        savedArray = [currentDefaults objectForKey:@"savedSearchHistoryHomburg"];
+    }
+    
     if (savedArray != nil)
     {
         NSArray *oldArray = [NSKeyedUnarchiver unarchiveObjectWithData:savedArray];
@@ -808,7 +826,14 @@
     if (searchHistoryArr.count > 25) {
         searchHistoryArr = [searchHistoryArr subarrayWithRange:NSMakeRange(0, 24)].mutableCopy;
     }
-    [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:searchHistoryArr] forKey:@"savedSearchHistory"];
+    
+    if([self.selectedCampus isEqualToString:@"saar"]){
+        [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:searchHistoryArr] forKey:@"savedSearchHistorySaarbrücken"];
+    }
+    else{
+        [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:searchHistoryArr] forKey:@"savedSearchHistoryHomburg"];
+    }
+    
 }
 
 
@@ -825,9 +850,10 @@
     if ([segue.identifier isEqualToString: @"showCategoriesList"]) {
         CategorieTableViewController *myCatViewCont = segue.destinationViewController;
         myCatViewCont.delegate = self;
-        myCatViewCont.categoriesArr = [self.database getAllCategorieTitles];
-        myCatViewCont.IDArr = [self.database getAllCategorieIDs];
-    } 
+        myCatViewCont.categoriesArr = [self.database getAllCategorieTitlesForCampus:self.selectedCampus];
+        myCatViewCont.IDArr = [self.database getAllCategorieIDsForCampus:self.selectedCampus];
+        myCatViewCont.selectedCampus = self.selectedCampus;
+    }
     
     if ([segue.identifier isEqualToString: @"showRightAccessoryWebView"]) {
         WebViewController *webViewConroller = segue.destinationViewController ;
