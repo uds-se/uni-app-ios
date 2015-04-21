@@ -14,16 +14,16 @@
 
 @implementation BusTableViewController
 
-@synthesize selectedCampus;
+@synthesize selectedCampus,tableview,searchBusTitle;
 
-- (id)initWithStyle:(UITableViewStyle)style
+/*- (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
     }
     return self;
-}
+}*/
 
 - (CLLocation *)currentUserLocation {
     return locationManager.location;
@@ -44,8 +44,14 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
         filename = @"HomeScreenBackgroundiPad.jpg";
     }
-    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:filename]];
-
+    //self.view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:filename]];
+    searchBusTitle.backgroundColor = [UIColor clearColor];
+	searchBusTitle.opaque = NO;
+	searchBusTitle.font = [UIFont boldSystemFontOfSize:18];
+    searchBusTitle.textColor = [UIColor colorWithRed:(17/255.f) green:(56/255.f) blue:(92/255.f) alpha:1];
+    
+    UIImageView *bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:filename]];
+    [self.tableview setBackgroundView:bg];
     [super viewDidLoad];
     
     
@@ -105,19 +111,25 @@
     }
     if([self.selectedCampus isEqualToString:@"saar"]){
         
-        busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr, dudweilerBusstationArr, [NSArray arrayWithObjects:NSLocalizedString(@"Search a bus",nil), nil],nil]).mutableCopy;
-        sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Saarbücken",nil),NSLocalizedString(@"Busstations Dudweiler",nil),NSLocalizedString(@"Search",nil), nil];
+//        busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr, dudweilerBusstationArr, [NSArray arrayWithObjects:NSLocalizedString(@"Search a bus",nil), nil],nil]).mutableCopy;
+//        sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Saarbücken",nil),NSLocalizedString(@"Busstations Dudweiler",nil),NSLocalizedString(@"Search",nil), nil];
+        
+        busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr, dudweilerBusstationArr,nil]).mutableCopy;
+        sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Saarbücken",nil),NSLocalizedString(@"Busstations Dudweiler",nil), nil];
     }
     else{
-        busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr, [NSArray arrayWithObjects:NSLocalizedString(@"Search a bus",nil), nil],nil]).mutableCopy;
-        sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Homburg",nil),NSLocalizedString(@"Search",nil), nil];
+//        busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr, [NSArray arrayWithObjects:NSLocalizedString(@"Search a bus",nil), nil],nil]).mutableCopy;
+//        sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Homburg",nil),NSLocalizedString(@"Search",nil), nil];
+        
+        busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr,nil]).mutableCopy;
+        sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Homburg",nil), nil];
         
     }
     [self updateView];
 }
 
 -(void)updateView{
-    [self.tableView reloadData];
+    [self.tableview reloadData];
 
 }
 
@@ -128,7 +140,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    //self.tableView.frame = CGRectMake(0,200,320,504);
+}
+
+- (IBAction)searchBusClicked:(id)sender{
+    NSLog(@"******** INSIDE BUTTON CLICK");
+    [self performSegueWithIdentifier:@"searchBus" sender:self];
+
+}
+
+
+
+
 #pragma mark - Table view data source
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -139,6 +167,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
+    NSLog(@"NUM of ROWS: %d",((NSArray*)[busstations objectAtIndex:section]).count);
     return ((NSArray*)[busstations objectAtIndex:section]).count;
 }
 
@@ -185,7 +214,10 @@
     }
     
     [cell.textLabel setNumberOfLines:2];
-    [cell.textLabel setFont:[UIFont systemFontOfSize:13]];
+    [cell.textLabel setFont:[UIFont systemFontOfSize:12]];
+    [cell.detailTextLabel setNumberOfLines:2];
+    [cell.detailTextLabel setFont:[UIFont systemFontOfSize:12]];
+    //cell.detailTextLabel.text = NSLocalizedString(@"At busstation",nil);
     CGRect cg = [cell.textLabel frame];
     [cell.textLabel setFrame:CGRectMake(cg.origin.x, cg.origin.y-2, cg.size.width, cg.size.height+6)];
  
@@ -231,14 +263,16 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     WebViewController* wVC = segue.destinationViewController;
-    if (self.tableView.indexPathForSelectedRow.section==2) {
+    
+    
+    if ([segue.identifier isEqualToString:@"searchBus"]) {
         wVC.urlAsString = @"http://mobile.bahn.de/bin/mobil/query.exe/dox?country=DEU&rt=1&use_realtime_filter=1&webview=&searchMode=ADVANCED";
     }else{
-        if(self.tableView.indexPathForSelectedRow.section == 0){
-            wVC.urlAsString = ((PointOfInterest*)[[busstations objectAtIndex:0]objectAtIndex: self.tableView.indexPathForSelectedRow.row]).website ;
+        if(self.tableview.indexPathForSelectedRow.section == 0){
+            wVC.urlAsString = ((PointOfInterest*)[[busstations objectAtIndex:0]objectAtIndex: self.tableview.indexPathForSelectedRow.row]).website ;
         }
         else{
-            wVC.urlAsString = ((PointOfInterest*)[[busstations objectAtIndex:1]objectAtIndex: self.tableView.indexPathForSelectedRow.row]).website ;
+            wVC.urlAsString = ((PointOfInterest*)[[busstations objectAtIndex:1]objectAtIndex: self.tableview.indexPathForSelectedRow.row]).website ;
         }
     }
 }

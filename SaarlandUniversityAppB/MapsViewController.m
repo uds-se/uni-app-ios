@@ -183,6 +183,7 @@
 
 -(BOOL)pinPOIsInArray:(NSArray *) POIs{
     BOOL res = false;
+    NSLog(@"POI COUNT : %d",POIs.count);
     if (POIs.count > 0) {
         for(PointOfInterest* poi in POIs){
             Annotations *annot = [Annotations new];

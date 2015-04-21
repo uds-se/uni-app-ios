@@ -108,6 +108,7 @@
     NSLog(@"number of subviews %d",self.scrollView.subviews.count);
     for(UIView *subview in self.scrollView.subviews) {
         if ([subview isKindOfClass:[PanelView class]]) {
+            NSLog(@"****** INSIDE RELOAD DATA");
             [((UITableView*)subview) reloadData];
         }
     }

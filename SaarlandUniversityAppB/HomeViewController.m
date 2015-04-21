@@ -46,14 +46,14 @@
         
         backgroundImageView.image = [UIImage imageNamed:filename];
         
-        if( [selectedCampus isEqualToString:@"saar"]){
-            [campusLabel setText:@"Saarbrücken Campus"];
-        }
-        else{
-            [campusLabel setText:@"Homburg Campus"];
-        }
+        
     } 
-   
+    if( [selectedCampus isEqualToString:@"saar"]){
+        [campusLabel setText:@"Saarbrücken Campus"];
+    }
+    else{
+        [campusLabel setText:@"Homburg Campus"];
+    }
 }
 
 
