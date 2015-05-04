@@ -25,6 +25,7 @@
 -(NSMutableArray *)getAllCategorieTitlesForCampus:(NSString *) campus;
 -(NSArray*) getArrayOfArraysWithTitlesAndIDsOfPOIForCategorieID:(int) ID;
 +(NSString *)changeFormatOfString:(NSString *) key;
+-(NSString *)replaceAccentedCharacters:(NSString *) key;
 -(BOOL)isKeyACategorie:(NSString *) key;
 -(NSMutableArray *)getPointsOfInterestPartialMatchedForSearchKey:(NSString *) searchKey;
 -(NSMutableArray *)getPointsOfInterestPartialMatchedForSearchKeyAndCampus:(NSString *) searchKey campus:(NSString *) campusName;

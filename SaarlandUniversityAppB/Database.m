@@ -438,11 +438,22 @@
     [self openDb];
     NSMutableArray* result = [NSMutableArray new];
     sqlite3_stmt *statement;
+    //printf("Search Key : %s",[key cStringUsingEncoding:NSUTF8StringEncoding]);
+//    NSString* sKeyWithPercAtEnd = [key stringByAppendingString:@"%"];
+//    
+//    NSString* sKeyWithPerAtBegEnd = [[@"% " stringByAppendingString:key] stringByAppendingString:@"%"];
+    
+    NSString *searchKey = [self replaceAccentedCharacters:key];
+    printf("Search Key : %s",[searchKey cStringUsingEncoding:NSUTF8StringEncoding]);
+    NSString* searchKeyWithPercAtEnd = [searchKey stringByAppendingString:@"%"];
+    
+    NSString* searchKeyWithPerAtBegEnd = [[@"% " stringByAppendingString:searchKey] stringByAppendingString:@"%"];
+    
     NSString* sKeyWithPercAtEnd = [key stringByAppendingString:@"%"];
     
     NSString* sKeyWithPerAtBegEnd = [[@"% " stringByAppendingString:key] stringByAppendingString:@"%"];
     
-    NSString *qStmt = [NSString stringWithFormat:@"SELECT title,subtitle,canshowleftcallout,canshowrightcallout,color,website,lat,longi,pointOfInterest.ID,categorieID FROM pointOfInterest  WHERE pointOfInterest.campus= '%s' AND ((searchkey LIKE '%s') OR (searchkey LIKE '%s') OR (title LIKE '%s') OR (title LIKE '%s')) ORDER BY title ASC" , [campusName UTF8String],[sKeyWithPercAtEnd UTF8String],[sKeyWithPerAtBegEnd UTF8String],[sKeyWithPercAtEnd UTF8String],[sKeyWithPerAtBegEnd UTF8String]];
+    NSString *qStmt = [NSString stringWithFormat:@"SELECT title,subtitle,canshowleftcallout,canshowrightcallout,color,website,lat,longi,pointOfInterest.ID,categorieID FROM pointOfInterest  WHERE pointOfInterest.campus= '%s' AND ((searchkey LIKE '%s') OR (searchkey LIKE '%s') OR (title LIKE '%s') OR (title LIKE '%s')) ORDER BY title ASC" , [campusName UTF8String],[searchKeyWithPercAtEnd UTF8String],[searchKeyWithPerAtBegEnd UTF8String],[[sKeyWithPercAtEnd.copy capitalizedString] UTF8String],[[sKeyWithPerAtBegEnd.copy capitalizedString] UTF8String]];
     
     const char *q_Stmt = [qStmt UTF8String];
     
@@ -465,7 +476,7 @@
         sqlite3_finalize(statement);
     }
     else {
-        NSLog(@"getPointsOfInterestWhereOneOfSearchKeysMatchesKey: %s", sqlite3_errmsg(poiDB));
+        NSLog(@"getPointsOfInterestWhereOneOfSearchKeysMatchesKeyAndCampus: %s", sqlite3_errmsg(poiDB));
     }
     [self closeDb];
     return result;
@@ -649,6 +660,21 @@
     return key;
 }
 
+-(NSString *)replaceAccentedCharacters:(NSString *) key{
+
+    NSString *searchKey = [key stringByReplacingOccurrencesOfString:@"Ä" withString:@"AE"];
+    searchKey = [searchKey stringByReplacingOccurrencesOfString:@"Ö" withString:@"OE"];
+    searchKey = [searchKey stringByReplacingOccurrencesOfString:@"Ü" withString:@"UE"];
+    searchKey = [searchKey stringByReplacingOccurrencesOfString:@"ß" withString:@"SS"];
+    searchKey = [searchKey stringByReplacingOccurrencesOfString:@"ẞ" withString:@"SS"];
+    searchKey = [searchKey stringByReplacingOccurrencesOfString:@"É" withString:@"E"];
+    
+    searchKey = [searchKey stringByReplacingOccurrencesOfString:@"ö" withString:@"oe"];
+    searchKey = [searchKey stringByReplacingOccurrencesOfString:@"ü" withString:@"ue"];
+    searchKey = [searchKey stringByReplacingOccurrencesOfString:@"ä" withString:@"ae"];
+    searchKey = [searchKey stringByReplacingOccurrencesOfString:@"é" withString:@"e"];
+    return searchKey;
+}
 
 
 

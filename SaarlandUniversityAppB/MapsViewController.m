@@ -166,11 +166,18 @@
 
 
 -(void)pinPOIsThatIncludeSearchKey:(NSString *)key{
-    NSString* capKey = [key.copy capitalizedString];;
+    NSString* capKey = [key.copy capitalizedString];
+    NSLog(@"Before Upper Case : %@",key);
     key = [key uppercaseString];
+    NSLog(@"After Upper Case : %@",key);
     if (key.length>2) {
+        
         key = [[Database class] changeFormatOfString:key];
-        if([self pinPOIsInArray:[self.database getPointsOfInterestWhereOneOfSearchKeysMatchesKeyAndCampus:key campus:self.selectedCampus]]){
+        NSLog(@"After FORMAT CHANGE : %@",key);
+        NSLog(@"**** BEFORE PARTIAL SEARCH CALL");
+        if([self pinPOIsInArray:[self.database getPointsOfInterestWhereOneOfSearchKeysMatchesKeyAndCampus/*getPointsOfInterestPartialMatchedForSearchKeyAndCampus*/:key campus:self.selectedCampus]]){
+//            [searchHistoryArr removeObject:capKey];
+//            [searchHistoryArr insertObject:capKey atIndex:0];
             [searchHistoryArr removeObject:capKey];
             [searchHistoryArr insertObject:capKey atIndex:0];
         }
@@ -748,6 +755,7 @@
         PartialSearchCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         PointOfInterest* poi = ((PointOfInterest*)[partialSearchArr objectAtIndex:indexPath.row]);
         cell.titleLabel.text = poi.title;
+        NSLog(@"%@",poi.title);
         cell.deatailLabel.text = poi.subtitle;
         NSString* imageName = [@"cat" stringByAppendingString:[NSString stringWithFormat:@"%d.png",poi.categorieID]];
         cell.imageView.image = [UIImage imageNamed:imageName ];
@@ -788,6 +796,7 @@
         NSString* searchKey = ((NSString *)[searchHistoryArr objectAtIndex:self.tableView.indexPathForSelectedRow.row]).copy;
         [searchHistoryArr removeObject:searchKey];
         [searchHistoryArr insertObject: searchKey atIndex:0];
+        NSLog(@"Search Key clicked : %@",searchKey);
         //small delay so that the pin will "fly in" when the map is och screen
         //dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.08 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
             [self pinPOIsThatIncludeSearchKey:searchKey];
