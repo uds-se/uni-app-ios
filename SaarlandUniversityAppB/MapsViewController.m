@@ -161,7 +161,7 @@
 }
 
 -(void)pinCategorieWithID:(int)ID{
-    [self pinPOIsInArray:[self.database getPointsOfInterestForCategorieWithID:ID]];
+    [self pinPOIsInArray:[self.database getPointsOfInterestForCategorieWithIDAndCampus:ID campus:self.selectedCampus]];
 }
 
 
@@ -178,7 +178,8 @@
         if([self pinPOIsInArray:[self.database getPointsOfInterestWhereOneOfSearchKeysMatchesKeyAndCampus/*getPointsOfInterestPartialMatchedForSearchKeyAndCampus*/:key campus:self.selectedCampus]]){
 //            [searchHistoryArr removeObject:capKey];
 //            [searchHistoryArr insertObject:capKey atIndex:0];
-            [searchHistoryArr removeObject:capKey];
+            [self removeObjectFromHistoryArray:capKey];
+            //[searchHistoryArr removeObject:capKey];
             [searchHistoryArr insertObject:capKey atIndex:0];
         }
     }
@@ -253,13 +254,14 @@
                 annView.leftCalloutAccessoryView = calcRouteButton;
             } 
                 
-
+            NSLog(@"BEFORE THE CHECK FOR RIGHT ACCESSORY BUTTON");
             //creates custom UIButton to attach annotation information to it
             if (annot.canShowRightCalloutButton && (annot.website.length > 0)) {
                 UIRightPinAccessoryButton *rightAccessoryButton = [[UIRightPinAccessoryButton alloc] initWithFrame: CGRectMake(0, 0, 24, 24)];
                 rightAccessoryButton.annotPin = annot;
                 [rightAccessoryButton addTarget:self action:@selector(rightAccessoryButtonTapped:) forControlEvents: UIControlEventTouchUpInside];
                 annView.rightCalloutAccessoryView = rightAccessoryButton;
+                NSLog(@"INSIDE THE CHECK WEBSITE: %@",annot.website);
             }
         }
             
@@ -788,13 +790,17 @@
                 [self pinPOIWithID:ID];
             //});
 
-            [searchHistoryArr removeObject:title];
+            [self removeObjectFromHistoryArray:title];
+            
+            //[searchHistoryArr removeObject:title];
             [searchHistoryArr insertObject: title atIndex:0];
             
         }
     }else{
         NSString* searchKey = ((NSString *)[searchHistoryArr objectAtIndex:self.tableView.indexPathForSelectedRow.row]).copy;
-        [searchHistoryArr removeObject:searchKey];
+        
+        [self removeObjectFromHistoryArray:searchKey];
+        //[searchHistoryArr removeObject:searchKey];
         [searchHistoryArr insertObject: searchKey atIndex:0];
         NSLog(@"Search Key clicked : %@",searchKey);
         //small delay so that the pin will "fly in" when the map is och screen
@@ -872,6 +878,12 @@
         [webViewConroller setTitle:senderButton.annotPin.title];
     }
     
+    if ([segue.identifier isEqualToString:@"showMensaMenu"]){
+        MensaViewController *mensaVC = segue.destinationViewController;
+        mensaVC.selectedCampus = self.selectedCampus;
+    
+    }
+    
 }
 
 
@@ -902,6 +914,18 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-
+-(void)removeObjectFromHistoryArray:(NSString *)str
+{
+    NSString *s;
+    for(int i=0;i<searchHistoryArr.count;i++){
+        
+        s=[self.database replaceAccentedCharacters:searchHistoryArr[i]];
+        str = [self.database replaceAccentedCharacters:str];
+        if([str caseInsensitiveCompare:s] == NSOrderedSame){
+            [searchHistoryArr removeObjectAtIndex:i];
+        }
+    
+    }
+}
 
 @end

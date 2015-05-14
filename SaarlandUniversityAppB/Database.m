@@ -80,7 +80,7 @@
 }
 
 //returns a NSString array
--(NSMutableArray *)getAllCategorieTitles{
+/*-(NSMutableArray *)getAllCategorieTitles{
     [self openDb];
     NSMutableArray* result = [NSMutableArray new];
     sqlite3_stmt *statement;
@@ -99,7 +99,7 @@
     [self closeDb];
     return result;
 }
-
+*/
 -(NSMutableArray *)getAllCategorieTitlesForCampus:(NSString *) campus{
     [self openDb];
     NSMutableArray* result = [NSMutableArray new];
@@ -121,7 +121,7 @@
 
 }
 
--(NSMutableArray *)getAllCategorieIDs{
+/*-(NSMutableArray *)getAllCategorieIDs{
     [self openDb];
     NSMutableArray* result = [NSMutableArray new];
     sqlite3_stmt *statement;
@@ -139,7 +139,7 @@
     [self closeDb];
     return result;
 }
-
+*/
 -(NSMutableArray *)getAllCategorieIDsForCampus:(NSString *) campus{
     [self openDb];
     NSMutableArray* result = [NSMutableArray new];
@@ -179,7 +179,7 @@
     return res;
 }
 
--(NSMutableArray *)getPointsOfInterestForCategorieWithID:(int) ID{
+/*-(NSMutableArray *)getPointsOfInterestForCategorieWithID:(int) ID{
     [self openDb];
     NSMutableArray* result = [NSMutableArray new];
     sqlite3_stmt *statement;
@@ -208,7 +208,7 @@
     [self closeDb];
     return result;
 }
-
+*/
 -(NSMutableArray *)getPointsOfInterestForCategorieWithIDAndCampus:(int) ID campus:(NSString *) campusName{
 
     [self openDb];
@@ -313,7 +313,7 @@
 */
 
 //Searches POIs that partially match the title, subtitle or key of that POI
--(NSMutableArray *)getPointsOfInterestPartialMatchedForSearchKey:(NSString *) searchKey{
+/*-(NSMutableArray *)getPointsOfInterestPartialMatchedForSearchKey:(NSString *) searchKey{
     [self openDb];
     NSMutableArray* result = [NSMutableArray new];
     sqlite3_stmt *statement;
@@ -351,7 +351,7 @@
     [self closeDb];
     return result;
 }
-
+*/
 
 -(NSMutableArray *)getPointsOfInterestPartialMatchedForSearchKeyAndCampus:(NSString *) searchKey campus:(NSString *) campusName{
 
@@ -396,7 +396,7 @@
 
 
 //Searches POIs where the key is included in the searchKey colum
--(NSMutableArray *)getPointsOfInterestWhereOneOfSearchKeysMatchesKey:(NSString *) key{
+/*-(NSMutableArray *)getPointsOfInterestWhereOneOfSearchKeysMatchesKey:(NSString *) key{
     [self openDb];
     NSMutableArray* result = [NSMutableArray new];
     sqlite3_stmt *statement;
@@ -432,16 +432,12 @@
     [self closeDb];
     return result;
 }
-
+*/
 -(NSMutableArray *)getPointsOfInterestWhereOneOfSearchKeysMatchesKeyAndCampus:(NSString *) key campus:(NSString *) campusName{
 
     [self openDb];
     NSMutableArray* result = [NSMutableArray new];
     sqlite3_stmt *statement;
-    //printf("Search Key : %s",[key cStringUsingEncoding:NSUTF8StringEncoding]);
-//    NSString* sKeyWithPercAtEnd = [key stringByAppendingString:@"%"];
-//    
-//    NSString* sKeyWithPerAtBegEnd = [[@"% " stringByAppendingString:key] stringByAppendingString:@"%"];
     
     NSString *searchKey = [self replaceAccentedCharacters:key];
     printf("Search Key : %s",[searchKey cStringUsingEncoding:NSUTF8StringEncoding]);
@@ -453,7 +449,9 @@
     
     NSString* sKeyWithPerAtBegEnd = [[@"% " stringByAppendingString:key] stringByAppendingString:@"%"];
     
-    NSString *qStmt = [NSString stringWithFormat:@"SELECT title,subtitle,canshowleftcallout,canshowrightcallout,color,website,lat,longi,pointOfInterest.ID,categorieID FROM pointOfInterest  WHERE pointOfInterest.campus= '%s' AND ((searchkey LIKE '%s') OR (searchkey LIKE '%s') OR (title LIKE '%s') OR (title LIKE '%s')) ORDER BY title ASC" , [campusName UTF8String],[searchKeyWithPercAtEnd UTF8String],[searchKeyWithPerAtBegEnd UTF8String],[[sKeyWithPercAtEnd.copy capitalizedString] UTF8String],[[sKeyWithPerAtBegEnd.copy capitalizedString] UTF8String]];
+//    NSString *qStmt = [NSString stringWithFormat:@"SELECT title,subtitle,canshowleftcallout,canshowrightcallout,color,website,lat,longi,pointOfInterest.ID,categorieID FROM pointOfInterest  WHERE pointOfInterest.campus= '%s' AND ((searchkey LIKE '%s') OR (searchkey LIKE '%s') OR (title LIKE '%s') OR (title LIKE '%s')) ORDER BY title ASC" , [campusName UTF8String],[searchKeyWithPercAtEnd UTF8String],[searchKeyWithPerAtBegEnd UTF8String],[[sKeyWithPercAtEnd.copy capitalizedString] UTF8String],[[sKeyWithPerAtBegEnd.copy capitalizedString] UTF8String]];
+    
+    NSString *qStmt = [NSString stringWithFormat:@"SELECT title,subtitle,canshowleftcallout,canshowrightcallout,color,website,lat,longi,pointOfInterest.ID,categorieID FROM pointOfInterest  WHERE pointOfInterest.campus= '%s' AND ((searchkey LIKE '%s') OR (searchkey LIKE '%s') OR (searchkey LIKE '%s') OR (searchkey LIKE '%s') OR (title LIKE '%s') OR (title LIKE '%s')) ORDER BY title ASC" , [campusName UTF8String],[searchKeyWithPercAtEnd UTF8String],[searchKeyWithPerAtBegEnd UTF8String],[[sKeyWithPercAtEnd.copy capitalizedString] UTF8String],[[sKeyWithPerAtBegEnd.copy capitalizedString] UTF8String], [[sKeyWithPercAtEnd.copy capitalizedString] UTF8String],[[sKeyWithPerAtBegEnd.copy capitalizedString] UTF8String]];
     
     const char *q_Stmt = [qStmt UTF8String];
     

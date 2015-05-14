@@ -88,10 +88,13 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
+    
+    [self.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didBecomeActive:)
                                                  name:UIApplicationDidBecomeActiveNotification
                                                object:nil];
+
 }
 
 
@@ -102,13 +105,14 @@
 
 -(void)updateView{
     [super updateScrollViewSize];
+    
     [self updateDayTitle];
     self.pageControl.numberOfPages = [self.contentForTables count];
     self.pageControl.currentPage = self.currentPage;
-    NSLog(@"number of subviews %d",self.scrollView.subviews.count);
+    
     for(UIView *subview in self.scrollView.subviews) {
         if ([subview isKindOfClass:[PanelView class]]) {
-            NSLog(@"****** INSIDE RELOAD DATA");
+           
             [((UITableView*)subview) reloadData];
         }
     }

@@ -80,7 +80,7 @@
 - (void)pageWillAppear
 {
 	[self.tableView reloadData];
-	[self restoreTableviewOffset];
+	//[self restoreTableviewOffset]; /* MY CHANGE TO LOAD TABLEVIEW SCROLL AT TOP EVERYTIME */
 }
 
 - (void)pageDidAppear

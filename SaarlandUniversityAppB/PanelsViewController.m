@@ -81,6 +81,7 @@
 
 	[self.scrollView setContentSize:CGSizeMake(([self panelViewSize].width+2*GAP)*[self numberOfPanels],self.scrollView.frame.size.height)];
     [self tilePages];
+    
 }
 
 

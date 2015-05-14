@@ -22,6 +22,7 @@
 #import "Database.h"
 #import "PartialSearchCell.h"
 #import "SearchHistoryCell.h"
+#import "MensaViewController.h"
 
 
 @class MapBackgroundViewController;
@@ -75,7 +76,7 @@
 - (void)removeAllPins;
 - (void)removeRouteFromMap;
 -(void)pinPOIsThatIncludeSearchKey:(NSString *)key;
-
+-(void)removeObjectFromHistoryArray:(NSString *)str;
 
 
 @end

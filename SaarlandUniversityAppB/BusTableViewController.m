@@ -83,10 +83,10 @@
     [self.database openDb];
     NSMutableArray* tempBusstations;
     tempBusstations = [self.database getPointsOfInterestForCategorieWithIDAndCampus:BusID campus:self.selectedCampus];
-    NSLog(@"%@",self.selectedCampus);
+   
     
     
-    NSLog(@"Array size : %d ",[tempBusstations count]);
+    
     NSMutableArray* busstationsArr = [NSMutableArray new];
     NSMutableArray* dudweilerBusstationArr = [NSMutableArray new];
     [self.database closeDb];
@@ -147,7 +147,6 @@
 }
 
 - (IBAction)searchBusClicked:(id)sender{
-    NSLog(@"******** INSIDE BUTTON CLICK");
     [self performSegueWithIdentifier:@"searchBus" sender:self];
 
 }
@@ -167,7 +166,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"NUM of ROWS: %d",((NSArray*)[busstations objectAtIndex:section]).count);
     return ((NSArray*)[busstations objectAtIndex:section]).count;
 }
 

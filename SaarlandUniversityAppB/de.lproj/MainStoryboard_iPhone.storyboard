@@ -1163,55 +1163,6 @@
             <point key="canvasLocation" x="-1473" y="879"/>
         </scene>
         <!--Bus Table View Controller - Bus-->
-        <scene sceneID="7rK-yF-ijp">
-            <objects>
-                <tableViewController id="7ow-bq-n6K" customClass="BusTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="55" sectionHeaderHeight="10" sectionFooterHeight="10" id="EPy-cw-M6j">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="M83-Ds-KjF" detailTextLabel="1TJ-E6-4gS" rowHeight="55" style="IBUITableViewCellStyleValue1" id="8ff-GY-PBZ">
-                                <rect key="frame" x="0.0" y="55" width="320" height="55"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8ff-GY-PBZ" id="PGU-9M-64K">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="54"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M83-Ds-KjF">
-                                            <rect key="frame" x="15" y="17" width="34" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1TJ-E6-4gS">
-                                            <rect key="frame" x="246" y="19" width="39" height="18"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="7ow-bq-n6K" id="5ur-zd-iXZ"/>
-                            <outlet property="delegate" destination="7ow-bq-n6K" id="CpY-Fg-k4f"/>
-                        </connections>
-                    </tableView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Bus" id="yvB-pW-Ser"/>
-                    <connections>
-                        <segue destination="t6r-0a-nRO" kind="push" identifier="showBusWebview" id="ieF-aG-sOu"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wXf-R4-F37" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-219" y="-308"/>
-        </scene>
-        <!--Bus Table View Controller - Bus-->
         <scene sceneID="elU-g4-Q2Y">
             <objects>
                 <viewController id="XEA-Qm-p7X" customClass="BusTableViewController" sceneMemberID="viewController">
