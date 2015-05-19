@@ -11,7 +11,7 @@
 
 
 @interface CampusSelectionViewController : UIViewController{
-
+__weak IBOutlet UIImageView *backgroundImageView;
 }
 
 @property (nonatomic) IBOutlet UISegmentedControl *segmentedControl;

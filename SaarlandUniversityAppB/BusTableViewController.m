@@ -111,15 +111,11 @@
     }
     if([self.selectedCampus isEqualToString:@"saar"]){
         
-//        busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr, dudweilerBusstationArr, [NSArray arrayWithObjects:NSLocalizedString(@"Search a bus",nil), nil],nil]).mutableCopy;
-//        sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Saarbücken",nil),NSLocalizedString(@"Busstations Dudweiler",nil),NSLocalizedString(@"Search",nil), nil];
-        
         busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr, dudweilerBusstationArr,nil]).mutableCopy;
         sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Saarbücken",nil),NSLocalizedString(@"Busstations Dudweiler",nil), nil];
     }
     else{
-//        busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr, [NSArray arrayWithObjects:NSLocalizedString(@"Search a bus",nil), nil],nil]).mutableCopy;
-//        sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Homburg",nil),NSLocalizedString(@"Search",nil), nil];
+
         
         busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr,nil]).mutableCopy;
         sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Homburg",nil), nil];
@@ -215,7 +211,6 @@
     [cell.textLabel setFont:[UIFont systemFontOfSize:12]];
     [cell.detailTextLabel setNumberOfLines:2];
     [cell.detailTextLabel setFont:[UIFont systemFontOfSize:12]];
-    //cell.detailTextLabel.text = NSLocalizedString(@"At busstation",nil);
     CGRect cg = [cell.textLabel frame];
     [cell.textLabel setFrame:CGRectMake(cg.origin.x, cg.origin.y-2, cg.size.width, cg.size.height+6)];
  

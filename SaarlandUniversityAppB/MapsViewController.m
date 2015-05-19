@@ -167,19 +167,12 @@
 
 -(void)pinPOIsThatIncludeSearchKey:(NSString *)key{
     NSString* capKey = [key.copy capitalizedString];
-    NSLog(@"Before Upper Case : %@",key);
     key = [key uppercaseString];
-    NSLog(@"After Upper Case : %@",key);
     if (key.length>2) {
         
         key = [[Database class] changeFormatOfString:key];
-        NSLog(@"After FORMAT CHANGE : %@",key);
-        NSLog(@"**** BEFORE PARTIAL SEARCH CALL");
-        if([self pinPOIsInArray:[self.database getPointsOfInterestWhereOneOfSearchKeysMatchesKeyAndCampus/*getPointsOfInterestPartialMatchedForSearchKeyAndCampus*/:key campus:self.selectedCampus]]){
-//            [searchHistoryArr removeObject:capKey];
-//            [searchHistoryArr insertObject:capKey atIndex:0];
+        if([self pinPOIsInArray:[self.database getPointsOfInterestPartialMatchedForSearchKeyAndCampus:key campus:self.selectedCampus]]){
             [self removeObjectFromHistoryArray:capKey];
-            //[searchHistoryArr removeObject:capKey];
             [searchHistoryArr insertObject:capKey atIndex:0];
         }
     }
@@ -191,7 +184,6 @@
 
 -(BOOL)pinPOIsInArray:(NSArray *) POIs{
     BOOL res = false;
-    NSLog(@"POI COUNT : %d",POIs.count);
     if (POIs.count > 0) {
         for(PointOfInterest* poi in POIs){
             Annotations *annot = [Annotations new];
@@ -253,15 +245,14 @@
                 [calcRouteButton addTarget:self action:@selector(calcRouteButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
                 annView.leftCalloutAccessoryView = calcRouteButton;
             } 
-                
-            NSLog(@"BEFORE THE CHECK FOR RIGHT ACCESSORY BUTTON");
+            
             //creates custom UIButton to attach annotation information to it
             if (annot.canShowRightCalloutButton && (annot.website.length > 0)) {
                 UIRightPinAccessoryButton *rightAccessoryButton = [[UIRightPinAccessoryButton alloc] initWithFrame: CGRectMake(0, 0, 24, 24)];
                 rightAccessoryButton.annotPin = annot;
                 [rightAccessoryButton addTarget:self action:@selector(rightAccessoryButtonTapped:) forControlEvents: UIControlEventTouchUpInside];
                 annView.rightCalloutAccessoryView = rightAccessoryButton;
-                NSLog(@"INSIDE THE CHECK WEBSITE: %@",annot.website);
+               
             }
         }
             
@@ -397,7 +388,7 @@
 
 -(void)rightAccessoryButtonTapped:(UIRightPinAccessoryButton *) sender{
     if (([sender.annotPin.title isEqualToString:@"Mensa"] && [sender.annotPin.subtitle isEqualToString:@"Restaurant"]) ||
-        [sender.annotPin.title isEqualToString:@"Mensacafé"]) { // SET CAMPUS FOR MENSA
+        [sender.annotPin.title isEqualToString:@"Mensacafé"]) {
         [self performSegueWithIdentifier:@"showMensaMenu" sender:sender];
     } else { 
 
@@ -757,7 +748,11 @@
         PartialSearchCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         PointOfInterest* poi = ((PointOfInterest*)[partialSearchArr objectAtIndex:indexPath.row]);
         cell.titleLabel.text = poi.title;
-        NSLog(@"%@",poi.title);
+        CGRect rect = cell.titleLabel.frame;
+        if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+            [cell.titleLabel setFrame:CGRectMake(rect.origin.x, rect.origin.y, rect.size.width+100, rect.size.height)];
+        }
+
         cell.deatailLabel.text = poi.subtitle;
         NSString* imageName = [@"cat" stringByAppendingString:[NSString stringWithFormat:@"%d.png",poi.categorieID]];
         cell.imageView.image = [UIImage imageNamed:imageName ];
@@ -767,6 +762,10 @@
         static NSString *CellIdentifier = @"histCell";
         SearchHistoryCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         cell.titleLabel.text = [searchHistoryArr objectAtIndex:indexPath.row];
+        CGRect rect = cell.titleLabel.frame;
+        if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+            [cell.titleLabel setFrame:CGRectMake(rect.origin.x, rect.origin.y, rect.size.width+100, rect.size.height)];
+        }
         cell.imageView.image = [UIImage imageNamed:@"searchHistIcon.png"];
         return cell;
     }
@@ -800,9 +799,8 @@
         NSString* searchKey = ((NSString *)[searchHistoryArr objectAtIndex:self.tableView.indexPathForSelectedRow.row]).copy;
         
         [self removeObjectFromHistoryArray:searchKey];
-        //[searchHistoryArr removeObject:searchKey];
         [searchHistoryArr insertObject: searchKey atIndex:0];
-        NSLog(@"Search Key clicked : %@",searchKey);
+
         //small delay so that the pin will "fly in" when the map is och screen
         //dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.08 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
             [self pinPOIsThatIncludeSearchKey:searchKey];

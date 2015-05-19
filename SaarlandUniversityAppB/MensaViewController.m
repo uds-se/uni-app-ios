@@ -76,7 +76,7 @@
         
         backgroundImageView.image = [UIImage imageNamed:filename];
     }
-    NSLog(@"***** %@",selectedCampus);
+   
     //tries to load data from file system, reloads data for table views only if data was loaded
     if ([self loadData]) {
         [self updateModel];
@@ -606,7 +606,7 @@
     }
         
     if (parsingSuccessful) {
-        NSLog(@"***** PARSING SUCCESSFULL ");
+        
         [self performSelectorOnMainThread:@selector(updateModel) withObject:nil waitUntilDone:NO];
     }
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;

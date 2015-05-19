@@ -27,6 +27,20 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    //adjusts the background image if iPhone5
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
+        NSString *filename = @"HomeScreenBackgroundiPhone.jpg";
+        CGRect screenRect = [[UIScreen mainScreen] bounds];
+        
+        //BackgroundImage
+        if (screenRect.size.height == 568.0f)
+            filename = [filename stringByReplacingOccurrencesOfString:@".jpg" withString:@"-568@2x.jpg"];
+        
+        backgroundImageView.image = [UIImage imageNamed:filename];
+        
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,11 +55,11 @@
     HomeViewController* homeVC = segue.destinationViewController;
     
     if (self.segmentedControl.selectedSegmentIndex == 0){
-        NSLog(@" SAAR");
+       
         [homeVC setSelectedCampus:@"saar"];
     }
     else{
-        NSLog(@" HOMBURG");
+        
         [homeVC setSelectedCampus:@"hom"];
     }
 

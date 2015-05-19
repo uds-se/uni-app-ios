@@ -179,36 +179,7 @@
     return res;
 }
 
-/*-(NSMutableArray *)getPointsOfInterestForCategorieWithID:(int) ID{
-    [self openDb];
-    NSMutableArray* result = [NSMutableArray new];
-    sqlite3_stmt *statement;
-    NSString *qStmt = [NSString stringWithFormat:@"SELECT title,subtitle,canshowleftcallout,canshowrightcallout,color,website,lat,longi,pointOfInterest.ID FROM pointOfInterest  WHERE pointOfInterest.categorieID = '%s'", [[NSString stringWithFormat:@"%d",ID] UTF8String]];
-    const char *q_Stmt = [qStmt UTF8String];
-    
-    if (sqlite3_prepare_v2(poiDB, q_Stmt, -1, &statement, nil) == SQLITE_OK) {
-        while (sqlite3_step(statement) == SQLITE_ROW) {
-            PointOfInterest* poi = [PointOfInterest new];
-            [poi setUTF8Title:(char *)sqlite3_column_text(statement, 0)];
-            [poi setUTF8Subtitle:(char *)sqlite3_column_text(statement, 1)];
-            [poi setUTF8CanShowLeftCallout:(char *)sqlite3_column_text(statement, 2)];
-            [poi setUTF8CanShowRightCallout: (char *)sqlite3_column_text(statement, 3)];
-            [poi setUTF8Color:(char *)sqlite3_column_text(statement, 4)];
-            [poi setUTF8Website:(char *)sqlite3_column_text(statement, 5)];
-            [poi setLatitude:[[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 6)] floatValue]];
-            [poi setLongitude: [[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 7)] floatValue]];
-            [poi setID:[[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 8)] integerValue]];
-            [result addObject:poi];
-        }
-        sqlite3_finalize(statement);
-    }
-    else {
-        NSLog(@"Prepare-error in getPointsOfInterestForCategorieWithID %s", sqlite3_errmsg(poiDB));
-    }
-    [self closeDb];
-    return result;
-}
-*/
+
 -(NSMutableArray *)getPointsOfInterestForCategorieWithIDAndCampus:(int) ID campus:(NSString *) campusName{
 
     [self openDb];
@@ -312,57 +283,26 @@
 }
 */
 
+
 //Searches POIs that partially match the title, subtitle or key of that POI
-/*-(NSMutableArray *)getPointsOfInterestPartialMatchedForSearchKey:(NSString *) searchKey{
-    [self openDb];
-    NSMutableArray* result = [NSMutableArray new];
-    sqlite3_stmt *statement;
-    NSString* sKeyWithPercAtEnd = [searchKey stringByAppendingString:@"%"];
-    
-    NSString* sKeyWithPerAtBegEnd = [[@"% " stringByAppendingString:searchKey] stringByAppendingString:@"%"];
-    
-    NSString *qStmt = [NSString stringWithFormat:@"SELECT title,subtitle,canshowleftcallout,canshowrightcallout,color,website,lat,longi,pointOfInterest.ID,categorieID FROM pointOfInterest  WHERE (title LIKE '%s' ) OR (subtitle LIKE '%s')  OR (searchkey LIKE '%s') OR ( title LIKE '%s' ) OR (subtitle LIKE '%s')  OR (searchkey LIKE '%s') ORDER BY title ASC" ,[sKeyWithPercAtEnd UTF8String],[sKeyWithPercAtEnd UTF8String],[sKeyWithPercAtEnd UTF8String],[sKeyWithPerAtBegEnd UTF8String],[sKeyWithPerAtBegEnd UTF8String],[sKeyWithPerAtBegEnd UTF8String]];
-    
-    //NSLog(@"'%s'",[qStmt UTF8String]);
-    
-    const char *q_Stmt = [qStmt UTF8String];
-    
-    if (sqlite3_prepare_v2(poiDB, q_Stmt, -1, &statement, nil) == SQLITE_OK) {
-        while (sqlite3_step(statement) == SQLITE_ROW) {
-            PointOfInterest* poi = [PointOfInterest new];
-            [poi setUTF8Title:(char *)sqlite3_column_text(statement, 0)];
-            [poi setUTF8Subtitle:(char *)sqlite3_column_text(statement, 1)];
-            [poi setUTF8CanShowLeftCallout:(char *)sqlite3_column_text(statement, 2)];
-            [poi setUTF8CanShowRightCallout: (char *)sqlite3_column_text(statement, 3)];
-            [poi setUTF8Color:(char *)sqlite3_column_text(statement, 4)];
-            [poi setUTF8Website:(char *)sqlite3_column_text(statement, 5)];
-            [poi setLatitude:[[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 6)] floatValue]];
-            [poi setLongitude: [[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 7)] floatValue]];
-            [poi setID:[[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 8)] integerValue]];
-            [poi setUTF8CategorieID:(char *)sqlite3_column_text(statement, 9)];
-                        
-            [result addObject:poi];
-        }
-        sqlite3_finalize(statement);
-    }
-    else {
-        NSLog(@"getPointsOfInterestPartialMatchedForSearchKey %s", sqlite3_errmsg(poiDB));
-    }
-    [self closeDb];
-    return result;
-}
-*/
 
 -(NSMutableArray *)getPointsOfInterestPartialMatchedForSearchKeyAndCampus:(NSString *) searchKey campus:(NSString *) campusName{
 
     [self openDb];
     NSMutableArray* result = [NSMutableArray new];
     sqlite3_stmt *statement;
+    
+    NSString *key = [self replaceAccentedCharacters:searchKey];
+    
+    NSString* searchKeyWithPercAtEnd = [key stringByAppendingString:@"%"];
+    
+    NSString* searchKeyWithPerAtBegEnd = [[@"% " stringByAppendingString:key] stringByAppendingString:@"%"];
+    
     NSString* sKeyWithPercAtEnd = [searchKey stringByAppendingString:@"%"];
     
     NSString* sKeyWithPerAtBegEnd = [[@"% " stringByAppendingString:searchKey] stringByAppendingString:@"%"];
     
-    NSString *qStmt = [NSString stringWithFormat:@"SELECT title,subtitle,canshowleftcallout,canshowrightcallout,color,website,lat,longi,pointOfInterest.ID,categorieID FROM pointOfInterest  WHERE pointOfInterest.campus = '%s' AND ((title LIKE '%s' ) OR (subtitle LIKE '%s')  OR (searchkey LIKE '%s') OR ( title LIKE '%s' ) OR (subtitle LIKE '%s')  OR (searchkey LIKE '%s')) ORDER BY title ASC" ,[campusName UTF8String],[sKeyWithPercAtEnd UTF8String],[sKeyWithPercAtEnd UTF8String],[sKeyWithPercAtEnd UTF8String],[sKeyWithPerAtBegEnd UTF8String],[sKeyWithPerAtBegEnd UTF8String],[sKeyWithPerAtBegEnd UTF8String]];
+    NSString *qStmt = [NSString stringWithFormat:@"SELECT title,subtitle,canshowleftcallout,canshowrightcallout,color,website,lat,longi,pointOfInterest.ID,categorieID FROM pointOfInterest  WHERE pointOfInterest.campus = '%s' AND ((title LIKE '%s' ) OR (subtitle LIKE '%s')  OR (searchkey LIKE '%s') OR ( title LIKE '%s' ) OR (subtitle LIKE '%s')  OR (searchkey LIKE '%s') OR (searchkey LIKE '%s') OR (searchkey LIKE '%s') ) ORDER BY title ASC" ,[campusName UTF8String],[sKeyWithPercAtEnd UTF8String],[sKeyWithPercAtEnd UTF8String],[sKeyWithPercAtEnd UTF8String],[sKeyWithPerAtBegEnd UTF8String],[sKeyWithPerAtBegEnd UTF8String],[sKeyWithPerAtBegEnd UTF8String],[searchKeyWithPercAtEnd UTF8String], [searchKeyWithPerAtBegEnd UTF8String]];
     
     //NSLog(@"'%s'",[qStmt UTF8String]);
     
@@ -395,44 +335,9 @@
 }
 
 
+
 //Searches POIs where the key is included in the searchKey colum
-/*-(NSMutableArray *)getPointsOfInterestWhereOneOfSearchKeysMatchesKey:(NSString *) key{
-    [self openDb];
-    NSMutableArray* result = [NSMutableArray new];
-    sqlite3_stmt *statement;
-    NSString* sKeyWithPercAtEnd = [key stringByAppendingString:@"%"];
-    
-    NSString* sKeyWithPerAtBegEnd = [[@"% " stringByAppendingString:key] stringByAppendingString:@"%"];
-    
-    NSString *qStmt = [NSString stringWithFormat:@"SELECT title,subtitle,canshowleftcallout,canshowrightcallout,color,website,lat,longi,pointOfInterest.ID,categorieID FROM pointOfInterest  WHERE (searchkey LIKE '%s') OR (searchkey LIKE '%s') OR (title LIKE '%s') OR (title LIKE '%s') ORDER BY title ASC" ,[sKeyWithPercAtEnd UTF8String],[sKeyWithPerAtBegEnd UTF8String],[sKeyWithPercAtEnd UTF8String],[sKeyWithPerAtBegEnd UTF8String]];
-        
-    const char *q_Stmt = [qStmt UTF8String];
-    
-    if (sqlite3_prepare_v2(poiDB, q_Stmt, -1, &statement, nil) == SQLITE_OK) {
-        while (sqlite3_step(statement) == SQLITE_ROW) {
-            PointOfInterest* poi = [PointOfInterest new];
-            [poi setUTF8Title:(char *)sqlite3_column_text(statement, 0)];
-            [poi setUTF8Subtitle:(char *)sqlite3_column_text(statement, 1)];
-            [poi setUTF8CanShowLeftCallout:(char *)sqlite3_column_text(statement, 2)];
-            [poi setUTF8CanShowRightCallout: (char *)sqlite3_column_text(statement, 3)];
-            [poi setUTF8Color:(char *)sqlite3_column_text(statement, 4)];
-            [poi setUTF8Website:(char *)sqlite3_column_text(statement, 5)];
-            [poi setLatitude:[[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 6)] floatValue]];
-            [poi setLongitude: [[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 7)] floatValue]];
-            [poi setID:[[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 8)] integerValue]];
-            [poi setUTF8CategorieID:(char *)sqlite3_column_text(statement, 9)];
-            
-            [result addObject:poi];
-        }
-        sqlite3_finalize(statement);
-    }
-    else {
-        NSLog(@"getPointsOfInterestWhereOneOfSearchKeysMatchesKey: %s", sqlite3_errmsg(poiDB));
-    }
-    [self closeDb];
-    return result;
-}
-*/
+
 -(NSMutableArray *)getPointsOfInterestWhereOneOfSearchKeysMatchesKeyAndCampus:(NSString *) key campus:(NSString *) campusName{
 
     [self openDb];
@@ -440,7 +345,7 @@
     sqlite3_stmt *statement;
     
     NSString *searchKey = [self replaceAccentedCharacters:key];
-    printf("Search Key : %s",[searchKey cStringUsingEncoding:NSUTF8StringEncoding]);
+    
     NSString* searchKeyWithPercAtEnd = [searchKey stringByAppendingString:@"%"];
     
     NSString* searchKeyWithPerAtBegEnd = [[@"% " stringByAppendingString:searchKey] stringByAppendingString:@"%"];
@@ -449,7 +354,6 @@
     
     NSString* sKeyWithPerAtBegEnd = [[@"% " stringByAppendingString:key] stringByAppendingString:@"%"];
     
-//    NSString *qStmt = [NSString stringWithFormat:@"SELECT title,subtitle,canshowleftcallout,canshowrightcallout,color,website,lat,longi,pointOfInterest.ID,categorieID FROM pointOfInterest  WHERE pointOfInterest.campus= '%s' AND ((searchkey LIKE '%s') OR (searchkey LIKE '%s') OR (title LIKE '%s') OR (title LIKE '%s')) ORDER BY title ASC" , [campusName UTF8String],[searchKeyWithPercAtEnd UTF8String],[searchKeyWithPerAtBegEnd UTF8String],[[sKeyWithPercAtEnd.copy capitalizedString] UTF8String],[[sKeyWithPerAtBegEnd.copy capitalizedString] UTF8String]];
     
     NSString *qStmt = [NSString stringWithFormat:@"SELECT title,subtitle,canshowleftcallout,canshowrightcallout,color,website,lat,longi,pointOfInterest.ID,categorieID FROM pointOfInterest  WHERE pointOfInterest.campus= '%s' AND ((searchkey LIKE '%s') OR (searchkey LIKE '%s') OR (searchkey LIKE '%s') OR (searchkey LIKE '%s') OR (title LIKE '%s') OR (title LIKE '%s')) ORDER BY title ASC" , [campusName UTF8String],[searchKeyWithPercAtEnd UTF8String],[searchKeyWithPerAtBegEnd UTF8String],[[sKeyWithPercAtEnd.copy capitalizedString] UTF8String],[[sKeyWithPerAtBegEnd.copy capitalizedString] UTF8String], [[sKeyWithPercAtEnd.copy capitalizedString] UTF8String],[[sKeyWithPerAtBegEnd.copy capitalizedString] UTF8String]];
     

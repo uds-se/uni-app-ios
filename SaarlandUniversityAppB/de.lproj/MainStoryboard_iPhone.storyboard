@@ -331,7 +331,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="HomeScreenBackgroundiPhone.jpg" id="F0P-OD-G0S">
-                                <rect key="frame" x="0.0" y="32" width="320" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.42492867169999998" green="0.50595266429999997" blue="0.67984693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -368,6 +368,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backgroundImageView" destination="F0P-OD-G0S" id="BYx-v1-ivo"/>
                         <outlet property="segmentedControl" destination="juq-w4-y8R" id="yZn-8v-koh"/>
                     </connections>
                 </viewController>
@@ -1171,7 +1172,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="HomeScreenBackgroundiPhone.jpg" id="ggq-M5-sK0">
-                                <rect key="frame" x="0.0" y="16" width="320" height="552"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                             </imageView>
@@ -1182,22 +1183,36 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="OOx-xH-L28" detailTextLabel="rnK-EK-Hbd" rowHeight="55" style="IBUITableViewCellStyleValue1" id="0wZ-2b-nLg">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="ToQ-9O-67f" detailTextLabel="ORN-QF-tRL" rowHeight="55" style="IBUITableViewCellStyleValue1" id="zL4-Ed-B2k">
                                 <rect key="frame" x="0.0" y="106" width="320" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0wZ-2b-nLg" id="cMf-sP-0Tz">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zL4-Ed-B2k" id="JdU-j0-uLL">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="54"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Bus Suche" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OOx-xH-L28">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Bus Suche" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hw7-0E-PdR">
                                             <rect key="frame" x="15" y="17" width="85" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Bahn.de" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rnK-EK-Hbd">
-                                            <rect key="frame" x="227" y="19" width="58" height="18"/>
+                                        <label hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="ToQ-9O-67f">
+                                            <rect key="frame" x="15" y="17" width="34" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="ORN-QF-tRL">
+                                            <rect key="frame" x="246" y="19" width="39" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Bahn.de" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Inb-ay-n4v">
+                                            <rect key="frame" x="228" y="18" width="58" height="18"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>

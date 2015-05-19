@@ -31,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="HomeScreenBackgroundiPad.jpg" id="39D-Y0-1sQ">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                                <rect key="frame" x="0.0" y="0.0" width="784" height="1032"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -103,7 +103,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="R5a-ql-3qv">
-                                <rect key="frame" x="53" y="804" width="80" height="80"/>
+                                <rect key="frame" x="53" y="804" width="56" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" backgroundImage="NewsIcon.png">
@@ -114,7 +114,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2jQ-Yy-XPH">
-                                <rect key="frame" x="401" y="804" width="80" height="80"/>
+                                <rect key="frame" x="401" y="804" width="56" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="MensaIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -124,7 +124,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HiI-h1-eFU">
-                                <rect key="frame" x="285" y="804" width="80" height="80"/>
+                                <rect key="frame" x="285" y="804" width="56" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" backgroundImage="CampusMapIcon.png">
@@ -135,7 +135,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="V0q-AJ-jZF">
-                                <rect key="frame" x="168" y="804" width="80" height="80"/>
+                                <rect key="frame" x="168" y="804" width="56" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="EventsIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -145,7 +145,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fT4-lG-N19">
-                                <rect key="frame" x="516" y="804" width="80" height="80"/>
+                                <rect key="frame" x="516" y="804" width="56" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="SearchForStaffIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -155,7 +155,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Campus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Dc7-Zi-Q0X">
-                                <rect key="frame" x="285" y="892" width="80" height="23"/>
+                                <rect key="frame" x="273" y="892" width="80" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -163,7 +163,7 @@
                                 <size key="shadowOffset" width="0.0" height="4"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mensa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="cLy-DO-RwQ">
-                                <rect key="frame" x="401" y="892" width="80" height="23"/>
+                                <rect key="frame" x="389" y="892" width="80" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -171,7 +171,7 @@
                                 <size key="shadowOffset" width="0.0" height="4"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="News" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="jdk-uu-Lgi">
-                                <rect key="frame" x="53" y="892" width="80" height="23"/>
+                                <rect key="frame" x="39" y="892" width="80" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -179,7 +179,7 @@
                                 <size key="shadowOffset" width="0.0" height="4"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Db3-Ia-pjY">
-                                <rect key="frame" x="168" y="892" width="80" height="23"/>
+                                <rect key="frame" x="156" y="892" width="80" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -187,7 +187,7 @@
                                 <size key="shadowOffset" width="0.0" height="4"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Staff Search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="1bD-fd-RNj">
-                                <rect key="frame" x="511" y="892" width="90" height="23"/>
+                                <rect key="frame" x="501" y="892" width="90" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -195,7 +195,7 @@
                                 <size key="shadowOffset" width="0.0" height="4"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Ifj-my-kgC">
-                                <rect key="frame" x="629" y="892" width="80" height="23"/>
+                                <rect key="frame" x="617" y="892" width="80" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -211,7 +211,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lG3-iZ-EoN">
-                                <rect key="frame" x="629" y="804" width="80" height="80"/>
+                                <rect key="frame" x="629" y="804" width="56" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" backgroundImage="BusIcon.png">
@@ -1000,7 +1000,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="HomeScreenBackgroundiPad.jpg" id="WiP-mc-3Te">
-                                <rect key="frame" x="0.0" y="65" width="768" height="960"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1025"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -1012,14 +1012,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="SOl-oe-I6k" detailTextLabel="WM2-Fq-iar" rowHeight="55" style="IBUITableViewCellStyleValue1" id="rpx-Mv-R4g">
-                                <rect key="frame" x="0.0" y="106" width="768" height="55"/>
+                                <rect key="frame" x="0.0" y="108" width="768" height="51"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rpx-Mv-R4g" id="lOm-8T-1oJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="735" height="54"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="735" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="SOl-oe-I6k">
-                                            <rect key="frame" x="15" y="17" width="34" height="21"/>
+                                            <rect key="frame" x="15" y="15" width="34" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1033,7 +1033,7 @@
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                         <label hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="WM2-Fq-iar">
-                                            <rect key="frame" x="694" y="19" width="39" height="18"/>
+                                            <rect key="frame" x="694" y="17" width="39" height="18"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -1186,7 +1186,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qTX-xo-V6f">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="960.00000000000011"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wik-KO-1FX">
