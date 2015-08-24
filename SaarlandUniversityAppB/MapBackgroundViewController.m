@@ -74,7 +74,7 @@
     if([self.delegate respondsToSelector:@selector(segmentedControllChangedMapType:)]){
         [self.delegate segmentedControllChangedMapType:mapType];
     }
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
@@ -86,7 +86,7 @@
         [self.delegate removeAllPins];
     }
 
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
@@ -95,7 +95,7 @@
         [self.delegate removeRouteFromMap];
     }
     
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)dealloc{

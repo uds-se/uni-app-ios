@@ -395,6 +395,7 @@
 		17C031D71AD6BE9000BDDF38 /* cat24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cat24@2x.png"; sourceTree = "<group>"; };
 		17C031D81AD6BE9000BDDF38 /* cat25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat25.png; sourceTree = "<group>"; };
 		17C031D91AD6BE9000BDDF38 /* cat25@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cat25@2x.png"; sourceTree = "<group>"; };
+		17C706FC1B1F0BF3004D9950 /* UniSaar-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UniSaar-PrefixHeader.pch"; path = "SaarlandUniversityAppB/UniSaar-PrefixHeader.pch"; sourceTree = "<group>"; };
 		17CB17B21AA0884B0073E6EC /* HomburgOpeningHoursViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomburgOpeningHoursViewController.h; sourceTree = "<group>"; };
 		17CB17B31AA0884B0073E6EC /* HomburgOpeningHoursViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomburgOpeningHoursViewController.m; sourceTree = "<group>"; };
 		17D4E707159CADDA00876317 /* MensaFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaFeedParser.h; sourceTree = "<group>"; };
@@ -1089,6 +1090,7 @@
 		E5EF30721598F10700D65D13 = {
 			isa = PBXGroup;
 			children = (
+				17C706FC1B1F0BF3004D9950 /* UniSaar-PrefixHeader.pch */,
 				ABA0D62C183149C600A10087 /* MensaTabIcon.png */,
 				ABA0D62D183149C600A10087 /* MensaTabIcon@2x.png */,
 				E212C0A7178B4D8600F9B877 /* Default-Portrait@2x~ipad.png */,
@@ -1378,7 +1380,7 @@
 			name = "Uni SaarTests";
 			productName = SaarlandUniversityAppBTests;
 			productReference = E5EF30A11598F10700D65D13 /* Uni SaarTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -1386,8 +1388,8 @@
 		E5EF30741598F10700D65D13 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 0510;
+				LastTestingUpgradeCheck = 0630;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Universität des Saarlandes";
 				TargetAttributes = {
 					E5EF307C1598F10700D65D13 = {
@@ -1834,13 +1836,18 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Tom Michels (RY259T8ZVW)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/UniSaar-PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1854,7 +1861,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "33323842-787B-4E19-89B9-49DE879F1247";
 				SDKROOT = iphoneos;
@@ -1872,11 +1879,16 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Tom Michels (RY259T8ZVW)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/UniSaar-PrefixHeader.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1885,7 +1897,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "33323842-787B-4E19-89B9-49DE879F1247";
 				SDKROOT = iphoneos;

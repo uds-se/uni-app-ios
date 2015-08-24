@@ -52,7 +52,24 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    HomeViewController* homeVC = segue.destinationViewController;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *campusVal;
+    NSString *key = @"selectedCampus"; // the key for the data
+    
+    if (self.segmentedControl.selectedSegmentIndex == 0){
+        
+        campusVal = @"saar";
+    }
+    else{
+        
+        campusVal = @"hom";
+    }
+    
+    [defaults setObject:campusVal forKey:key];
+    [defaults synchronize];
+    
+    /*HomeViewController* homeVC = segue.destinationViewController;
     
     if (self.segmentedControl.selectedSegmentIndex == 0){
        
@@ -61,7 +78,7 @@
     else{
         
         [homeVC setSelectedCampus:@"hom"];
-    }
+    }*/
 
 }
 

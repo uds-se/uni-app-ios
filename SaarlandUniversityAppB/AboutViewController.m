@@ -97,7 +97,7 @@
 
 //done pressed. pops back to Homeviewcontroller
 -(IBAction)donePressed:(id)sender{
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 //opens Email dialoge to send feeback to "uniApp@uni-saarland.de"
@@ -110,7 +110,7 @@
         [mc setToRecipients:[NSArray arrayWithObjects:@"uniApp@uni-saarland.de", nil]];
         
         // displaying our modal view controller on the screen with standard transition
-        [self presentModalViewController:mc animated:YES];
+        [self presentViewController:mc animated:YES completion:nil];
     }
 }
 
@@ -120,7 +120,7 @@
                         error:(NSError*)error
 {
     if(error) NSLog(@"ERROR - mailComposeController: %@", [error localizedDescription]);
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     return;
 }
 

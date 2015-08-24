@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "CampusSelectionViewController.h"
 
 @interface HomeViewController ()
 
@@ -47,7 +48,29 @@
         backgroundImageView.image = [UIImage imageNamed:filename];
         
         
-    } 
+    }
+    
+    id rootController = [self.navigationController.viewControllers firstObject];
+    if([rootController isKindOfClass:[HomeViewController class]]){
+        UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
+                                       initWithTitle:@"Campus"
+                                       style:UIBarButtonItemStyleBordered
+                                       target:self
+                                       action:@selector(showCampusSelection)];
+        self.navigationItem.leftBarButtonItem = backButton;
+        
+    
+    }
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if([[[defaults dictionaryRepresentation] allKeys] containsObject:@"selectedCampus"]){
+        self.selectedCampus = [defaults objectForKey:@"selectedCampus"];
+    }
+    else{
+        
+        self.selectedCampus = @"saar";
+    }
+    
     if( [selectedCampus isEqualToString:@"saar"]){
         [campusLabel setText:@"Saarbrücken Campus"];
     }
@@ -56,7 +79,25 @@
     }
 }
 
+-(IBAction)showCampusSelection{
 
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone"
+                                                             bundle: nil];
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+        mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad"
+                                                   bundle: nil];
+        
+    }
+    else{
+        mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone"
+                                                   bundle: nil];
+    }
+    
+    CampusSelectionViewController *mainViewController = (CampusSelectionViewController*)[mainStoryboard
+                                                                                         instantiateViewControllerWithIdentifier: @"CampusSelectionViewController"];
+    [self.navigationController setViewControllers:[NSArray arrayWithObject:mainViewController] animated:YES];
+
+}
 
 -(void)showNewImage{
     [imageView setImage:[slideShow getRandomImage]];

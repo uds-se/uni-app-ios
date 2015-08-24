@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "CampusSelectionViewController.h"
+#import "HomeViewController.h"
 
 @implementation AppDelegate
 
@@ -32,6 +34,39 @@
     if (![fileManager fileExistsAtPath:dbPathString]) {
         [fileManager copyItemAtPath:pathInMainBundle toPath:dbPathString error:nil];
     }
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone"
+                                                             bundle: nil];
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+        mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad"
+                                                   bundle: nil];
+        
+    }
+    else{
+        mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone"
+                                                   bundle: nil];
+    }
+    
+    
+    
+    NSUserDefaults *defaults= [NSUserDefaults standardUserDefaults];
+    if([[[defaults dictionaryRepresentation] allKeys] containsObject:@"selectedCampus"]){
+        
+        HomeViewController *mainViewController = (HomeViewController*)[mainStoryboard
+                                                                       instantiateViewControllerWithIdentifier: @"HomeViewController"];
+        
+        [(UINavigationController*)self.window.rootViewController pushViewController:mainViewController animated:YES];
+        
+    }
+    else{
+        
+        CampusSelectionViewController *mainViewController = (CampusSelectionViewController*)[mainStoryboard
+                                                                       instantiateViewControllerWithIdentifier: @"CampusSelectionViewController"];
+        [(UINavigationController*)self.window.rootViewController pushViewController:mainViewController animated:YES];
+    }
+    
+    
+    
     
     // avoids black navigation bar while opeing app
     self.window.backgroundColor = [UIColor whiteColor];

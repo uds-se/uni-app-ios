@@ -288,7 +288,7 @@
         [mc setToRecipients:[NSArray arrayWithObjects:[parsedInformations objectAtIndex:indexPath.section], nil]]; 
         
         // displaying our modal view controller on the screen with standard transition  
-        [self presentModalViewController:mc animated:YES];  
+        [self presentViewController:mc animated:YES completion:nil];
     }
     else {
         if ([[heaerforInformations objectAtIndex:indexPath.section] isEqual:NSLocalizedString(@"Building",nil)]) {
@@ -310,7 +310,7 @@
                         error:(NSError*)error 
 { 
     if(error) NSLog(@"ERROR - mailComposeController: %@", [error localizedDescription]);
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     return;
 }
 
@@ -323,7 +323,7 @@
     } else if ([segue.identifier isEqual:@"showBuildingOnMap"]){
         MapsViewController* mapVC =  segue.destinationViewController;
         NSString* building = [selectedBuilding stringByReplacingOccurrencesOfString:@" " withString:@""];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1.0 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1.0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
             [mapVC pinPOIsThatIncludeSearchKey:building];
         });
     }

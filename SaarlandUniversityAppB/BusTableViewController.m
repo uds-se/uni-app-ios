@@ -62,12 +62,26 @@
     locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
     locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
     locationManager.delegate = self;
+    // Check for iOS 8. Without this guard the code will crash with "unknown selector" on iOS 7.
+    if ([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [locationManager requestWhenInUseAuthorization];
+    }
     [locationManager startUpdatingLocation];
+    
+
     busstations = [NSMutableArray new];
     self.database = [Database new];
     
     [self updateModel];
 }
+
+// Location Manager Delegate Methods
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    [self updateView];
+    //NSLog(@"%@", [locations lastObject]);
+}
+
 
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -75,6 +89,35 @@
            fromLocation:(CLLocation *)oldLocation
 {
     [self updateView];
+}
+
+- (void)locationManager:(CLLocationManager*)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    switch (status) {
+        case kCLAuthorizationStatusNotDetermined:
+        case kCLAuthorizationStatusDenied: {
+            NSLog(@"User denied access to location");
+        } break;
+        case kCLAuthorizationStatusAuthorizedWhenInUse:
+        {
+            //NSLog(@" User Allowed when in USE");
+            [locationManager startUpdatingLocation];
+        } break;
+        case kCLAuthorizationStatusAuthorizedAlways:
+        default:
+            break;
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    UIAlertView *errorAlert = [[UIAlertView alloc]
+                               initWithTitle:@"Error"
+                               message:[error localizedFailureReason]
+                               delegate:nil
+                               cancelButtonTitle:@"OK"
+                               otherButtonTitles:nil];
+    [errorAlert show];
 }
 
 
@@ -109,16 +152,17 @@
             [busstationtitles addObject:busstation.title];
         }
     }
+    NSString *localizedStr = NSLocalizedString(@"Busstations", nil);
     if([self.selectedCampus isEqualToString:@"saar"]){
         
         busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr, dudweilerBusstationArr,nil]).mutableCopy;
-        sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Saarbücken",nil),NSLocalizedString(@"Busstations Dudweiler",nil), nil];
+        sectionTitles = [NSArray arrayWithObjects:[localizedStr stringByAppendingString:@" Saarbücken"], [localizedStr stringByAppendingString:@" Dudweiler"], nil];
     }
     else{
 
         
         busstations = ((NSArray*)[NSArray arrayWithObjects:busstationsArr,nil]).mutableCopy;
-        sectionTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Busstations Homburg",nil), nil];
+        sectionTitles = [NSArray arrayWithObjects:[localizedStr stringByAppendingString:@" Homburg"], nil];
         
     }
     [self updateView];
@@ -192,6 +236,7 @@
         CLLocation* busLoc =  [[CLLocation alloc] initWithLatitude:poi.latitude longitude:poi.longitude];
         
         float distanceInM = [busLoc distanceFromLocation:[self currentUserLocation]];
+        //NSLog(@"DISTANCE :: %f", distanceInM);
         if (distanceInM > 1000) {
             cell.detailTextLabel.text = [NSString stringWithFormat:@"%.1f km", distanceInM/1000];
         } else {
@@ -234,7 +279,7 @@
     categoryLabel.textColor = [UIColor colorWithRed:(17/255.f) green:(56/255.f) blue:(92/255.f) alpha:1];
     //position of the lable
 	categoryLabel.frame = CGRectMake(15.0, 15.0, categoryView.frame.size.width, 30.0);
-    categoryLabel.textAlignment = UITextAlignmentLeft;
+    categoryLabel.textAlignment = NSTextAlignmentLeft;
     //set the lable text
 
     categoryLabel.text = [sectionTitles objectAtIndex:section];

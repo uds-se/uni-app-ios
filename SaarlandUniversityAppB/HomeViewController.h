@@ -23,5 +23,5 @@
 @property SlideShow* slideShow ;
 @property (nonatomic) NSString* selectedCampus;
 @property (nonatomic, retain) IBOutlet UILabel* campusLabel;
-
+-(IBAction)showCampusSelection;
 @end

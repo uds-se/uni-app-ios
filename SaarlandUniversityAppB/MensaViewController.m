@@ -216,7 +216,7 @@
     cell.textLabel.numberOfLines = 10;
     //set color of the text box so there is a white box over the background color of the cell
     cell.textLabel.backgroundColor = [UIColor whiteColor];
-    cell.textLabel.textAlignment = UITextAlignmentCenter;
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
     //set content of the cell
     if (contentForTables.count == 0) {
         return cell;
@@ -263,7 +263,7 @@
 	categoryLabel.font = [UIFont boldSystemFontOfSize:18];
     //position of the lable
 	categoryLabel.frame = CGRectMake(0.0, 15.0, categoryView.frame.size.width, 30.0);
-    categoryLabel.textAlignment = UITextAlignmentCenter;
+    categoryLabel.textAlignment = NSTextAlignmentCenter;
     //set the lable text
     if (contentForHeaders.count == 0) {
         return categoryView;
@@ -302,7 +302,7 @@
 	categoryLabel.font = [UIFont systemFontOfSize:11];
     //position of the lable
 	categoryLabel.frame = CGRectMake(0, 0.0, pricesView.frame.size.width, 15.0);
-    categoryLabel.textAlignment = UITextAlignmentCenter;
+    categoryLabel.textAlignment = NSTextAlignmentCenter;
     //set the lable text
     @try {
         NSString *price1 = @"";

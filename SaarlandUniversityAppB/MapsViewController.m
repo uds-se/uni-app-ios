@@ -42,6 +42,9 @@
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillDisappear:) name:UIKeyboardWillHideNotification object:nil];
+    
+    
+    
     map.showsUserLocation = YES;
     map.zoomEnabled = YES;  // enable doubletap zoom
     map.scrollEnabled = YES;
@@ -289,7 +292,7 @@
 - (void) keyboardWillShow:(NSNotification *)nsNotification {
     NSDictionary *userInfo = [nsNotification userInfo];
     CGSize kbSize = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         self.tableView.frame = CGRectMake(self.tableView.frame.origin.x, self.tableView.frame.origin.y, self.tableView.frame.size.width, self.tableView.frame.size.height - kbSize.height);
     });
     
@@ -413,7 +416,17 @@
 -(void)calcRouteButtonTapped:(UILeftPinAccessoryButton *) sender{
     Class itemClass = [MKMapItem class];
     NSString* message;
-    if ([CLLocationManager locationServicesEnabled] && ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized) ) {
+    NSString *version = [[UIDevice currentDevice] systemVersion];
+    BOOL allowedWhenUse = false;
+    if([version hasPrefix:@"8."]){
+    
+        if([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse){
+            allowedWhenUse = true;
+        }
+    
+    }
+    
+    if ([CLLocationManager locationServicesEnabled] && ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized || allowedWhenUse) ) {
         if ([[Reachability class] hasInternetConnection]) {
             UIAlertView *av = [UIAlertView new];
             [av addButtonWithTitle:@""];
@@ -435,9 +448,10 @@
                 [carButton addTarget:self action:@selector(showRouteAppleMaps:) forControlEvents:UIControlEventTouchUpInside];
                 
                 
-                NSString *version = [[UIDevice currentDevice] systemVersion];
-                BOOL isAtLeast7 = [version hasPrefix:@"7."];
+                //NSString *version = [[UIDevice currentDevice] systemVersion];
+                BOOL isAtLeast7 = [version hasPrefix:@"7."] || [version hasPrefix:@"8."];
                 if (isAtLeast7) {
+                    
                     NSDictionary *launchOptions;
                     launchOptions = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving};
                     // Get the "Current User Location" MKMapItem
@@ -582,6 +596,17 @@
 
 
 //gets called when user location is updated
+
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    [self updateRoute];
+    NSLog(@"MAP LOC: %@", [locations lastObject]);
+}
+
+
+
+
 - (void)locationUpdate:(CLLocation *)location{
     @try {
         [self updateRoute];
