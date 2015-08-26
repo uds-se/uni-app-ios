@@ -664,6 +664,11 @@
                         <rect key="frame" x="0.0" y="64" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <webView contentMode="scaleToFill" id="gCJ-ih-ha7">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="980"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="KzN-Yk-1AN">
                                 <rect key="frame" x="0.0" y="980" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -688,6 +693,9 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="pzf-ke-9YW"/>
+                    <connections>
+                        <outlet property="webView" destination="gCJ-ih-ha7" id="kzz-JY-E7G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hqg-Vx-7L1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1037,7 +1045,7 @@
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Bahn.de" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JdU-HV-3D7">
-                                            <rect key="frame" x="651" y="18" width="81" height="18"/>
+                                            <rect key="frame" x="641" y="18" width="81" height="18"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -1105,7 +1113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFv-gm-lsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1410" y="-774"/>
+            <point key="canvasLocation" x="-2060" y="-372"/>
         </scene>
         <!--Article-->
         <scene sceneID="KP7-EA-sJI">
@@ -1924,6 +1932,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="nWS-Tq-KNG"/>
         <segue reference="Er6-7c-Tcn"/>
-        <segue reference="tKC-dC-bTr"/>
+        <segue reference="EJg-YZ-8hX"/>
     </inferredMetricsTieBreakers>
 </document>

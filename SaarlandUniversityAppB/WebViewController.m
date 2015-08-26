@@ -84,7 +84,7 @@
     NSString *message;
     UIAlertView *internetErrorAlert;
     if ([[Reachability class] hasInternetConnection]) {
-        if ([urlAsString rangeOfString:@"saarfahrplan.de"].length > 0 ) {
+        if ([urlAsString rangeOfString:@"saarfahrplan.de"].length > 0) {
             CFTimeZoneRef timeRef= CFTimeZoneCopySystem();
             CFGregorianDate currentDate = CFAbsoluteTimeGetGregorianDate(CFAbsoluteTimeGetCurrent(), timeRef);
             NSString* date = [NSString stringWithFormat:@"%i.%i.%i", (int)currentDate.day, (int)currentDate.month, (int)currentDate.year];
@@ -94,6 +94,7 @@
             [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:newString]]];
             CFRelease(timeRef);
         } else {
+            
             [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlAsString]]];
         }
     } else {

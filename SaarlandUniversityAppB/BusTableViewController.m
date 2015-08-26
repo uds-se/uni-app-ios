@@ -111,13 +111,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
-    UIAlertView *errorAlert = [[UIAlertView alloc]
-                               initWithTitle:@"Error"
-                               message:[error localizedFailureReason]
-                               delegate:nil
-                               cancelButtonTitle:@"OK"
-                               otherButtonTitles:nil];
-    [errorAlert show];
+    NSLog(@"Error occured while accessing the location");
 }
 
 
@@ -304,7 +298,10 @@
     
     
     if ([segue.identifier isEqualToString:@"searchBus"]) {
+        
+        
         wVC.urlAsString = @"http://mobile.bahn.de/bin/mobil/query.exe/dox?country=DEU&rt=1&use_realtime_filter=1&webview=&searchMode=ADVANCED";
+        
     }else{
         if(self.tableview.indexPathForSelectedRow.section == 0){
             wVC.urlAsString = ((PointOfInterest*)[[busstations objectAtIndex:0]objectAtIndex: self.tableview.indexPathForSelectedRow.row]).website ;
@@ -312,6 +309,7 @@
         else{
             wVC.urlAsString = ((PointOfInterest*)[[busstations objectAtIndex:1]objectAtIndex: self.tableview.indexPathForSelectedRow.row]).website ;
         }
+        
     }
 }
 
