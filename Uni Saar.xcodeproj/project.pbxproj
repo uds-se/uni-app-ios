@@ -46,6 +46,7 @@
 		AB6CFE971822D3DA0056AFF9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E212C09F178B4D5E00F9B877 /* Default.png */; };
 		ABA0D62E183149C600A10087 /* MensaTabIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA0D62C183149C600A10087 /* MensaTabIcon.png */; };
 		ABA0D62F183149C600A10087 /* MensaTabIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA0D62D183149C600A10087 /* MensaTabIcon@2x.png */; };
+		ABEB820F1B9840CE00C28AC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABEB820E1B9840CE00C28AC9 /* Images.xcassets */; };
 		E212C094178B4B1300F9B877 /* PartialSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C093178B4B1300F9B877 /* PartialSearchCell.m */; };
 		E212C09A178B4B6700F9B877 /* SearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C099178B4B6700F9B877 /* SearchHistoryCell.m */; };
 		E212C09B178B4B8600F9B877 /* SearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C099178B4B6700F9B877 /* SearchHistoryCell.m */; };
@@ -408,6 +409,7 @@
 		97F3FBAA15A8208500325941 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		ABA0D62C183149C600A10087 /* MensaTabIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MensaTabIcon.png; path = SaarlandUniversityAppB/MensaTabIcon.png; sourceTree = "<group>"; };
 		ABA0D62D183149C600A10087 /* MensaTabIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MensaTabIcon@2x.png"; path = "SaarlandUniversityAppB/MensaTabIcon@2x.png"; sourceTree = "<group>"; };
+		ABEB820E1B9840CE00C28AC9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Uni Saar/Images.xcassets"; sourceTree = "<group>"; };
 		E212C092178B4B1300F9B877 /* PartialSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartialSearchCell.h; sourceTree = "<group>"; };
 		E212C093178B4B1300F9B877 /* PartialSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartialSearchCell.m; sourceTree = "<group>"; };
 		E212C098178B4B6700F9B877 /* SearchHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistoryCell.h; sourceTree = "<group>"; };
@@ -1090,6 +1092,7 @@
 		E5EF30721598F10700D65D13 = {
 			isa = PBXGroup;
 			children = (
+				ABEB820E1B9840CE00C28AC9 /* Images.xcassets */,
 				17C706FC1B1F0BF3004D9950 /* UniSaar-PrefixHeader.pch */,
 				ABA0D62C183149C600A10087 /* MensaTabIcon.png */,
 				ABA0D62D183149C600A10087 /* MensaTabIcon@2x.png */,
@@ -1617,6 +1620,7 @@
 				E2AF58B1176A33CC00096CE6 /* EventsIcon@2x.png in Resources */,
 				E2B4FF4517D5F06B001932BB /* appIconiPadSpotlight.png in Resources */,
 				17C031E21AD6BE9000BDDF38 /* cat17.png in Resources */,
+				ABEB820F1B9840CE00C28AC9 /* Images.xcassets in Resources */,
 				17C031F31AD6BE9000BDDF38 /* cat25@2x.png in Resources */,
 				17758FB21ABCE71D00F0B1F4 /* HomburgTiles in Resources */,
 				E2AF58B2176A33CC00096CE6 /* NewsIcon@2x.png in Resources */,
@@ -1909,6 +1913,8 @@
 		E5EF30B41598F10800D65D13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1927,6 +1933,8 @@
 		E5EF30B51598F10800D65D13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
