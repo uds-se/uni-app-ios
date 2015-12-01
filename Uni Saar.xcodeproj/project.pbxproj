@@ -1493,7 +1493,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0710;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Universität des Saarlandes";
 				TargetAttributes = {
 					6564ED201C0DE9C000FA650D = {
@@ -2038,6 +2038,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -2114,6 +2115,7 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "SaarlandUniversityAppB/Uni Saar-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.uni-saarland.UniApp";
 				PRODUCT_NAME = "Uni Saar";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -2134,6 +2136,7 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "SaarlandUniversityAppB/Uni Saar-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.uni-saarland.UniApp";
 				PRODUCT_NAME = "Uni Saar";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -2153,6 +2156,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SaarlandUniversityAppB/SaarlandUniversityAppB-Prefix.pch";
 				INFOPLIST_FILE = "SaarlandUniversityAppBTests/Uni SaarTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "ios-uni-b.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Uni SaarTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -2170,6 +2174,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SaarlandUniversityAppB/SaarlandUniversityAppB-Prefix.pch";
 				INFOPLIST_FILE = "SaarlandUniversityAppBTests/Uni SaarTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "ios-uni-b.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Uni SaarTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
