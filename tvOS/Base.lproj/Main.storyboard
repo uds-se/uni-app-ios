@@ -17,16 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VN-p4-W6N">
-                                <rect key="frame" x="220" y="200" width="300" height="200"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="7CK-Av-9Zd"/>
-                                    <constraint firstAttribute="width" constant="300" id="Tte-Yp-PLD"/>
-                                </constraints>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="News"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otE-sS-ML1">
                                 <rect key="frame" x="810" y="200" width="300" height="200"/>
                                 <animations/>
@@ -67,6 +57,19 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Staff Search"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VN-p4-W6N">
+                                <rect key="frame" x="220" y="200" width="300" height="200"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="7CK-Av-9Zd"/>
+                                    <constraint firstAttribute="width" constant="300" id="Tte-Yp-PLD"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="News"/>
+                                <connections>
+                                    <segue destination="6Cd-YS-8Yo" kind="show" id="wcO-Zv-wr3"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddR-iE-X4a">
                                 <rect key="frame" x="1400" y="680" width="300" height="200"/>
                                 <animations/>
@@ -98,6 +101,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--NewsListView-->
+        <scene sceneID="yxd-6c-z9h">
+            <objects>
+                <viewController title="NewsListView" id="6Cd-YS-8Yo" customClass="NewsListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="elB-YG-KAO"/>
+                        <viewControllerLayoutGuide type="bottom" id="oOp-75-1Zk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hCQ-5b-wlA">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="rbG-c2-0Lh">
+                                <rect key="frame" x="170" y="100" width="1580" height="880"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewsListCell" textLabel="Pdf-Mp-9Qs" detailTextLabel="ESf-JN-IfN" style="IBUITableViewCellStyleSubtitle" id="X2f-an-jFZ">
+                                        <rect key="frame" x="0.0" y="54" width="1580" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X2f-an-jFZ" id="Zn0-Cd-4hq">
+                                            <rect key="frame" x="0.0" y="0.0" width="1504" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pdf-Mp-9Qs">
+                                                    <rect key="frame" x="20" y="4" width="72" height="46"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ESf-JN-IfN">
+                                                    <rect key="frame" x="20" y="50" width="128" height="46"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6Cd-YS-8Yo" id="fui-LV-mK2"/>
+                                    <outlet property="delegate" destination="6Cd-YS-8Yo" id="pkg-Hn-IXW"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstItem="rbG-c2-0Lh" firstAttribute="top" secondItem="elB-YG-KAO" secondAttribute="bottom" constant="100" id="0MV-SK-stY"/>
+                            <constraint firstItem="rbG-c2-0Lh" firstAttribute="leading" secondItem="hCQ-5b-wlA" secondAttribute="leadingMargin" constant="150" id="H7q-5Z-tN1"/>
+                            <constraint firstItem="oOp-75-1Zk" firstAttribute="top" secondItem="rbG-c2-0Lh" secondAttribute="bottom" constant="100" id="jnV-m0-bR2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rbG-c2-0Lh" secondAttribute="trailing" constant="150" id="jzq-eL-4m6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="NewsListView" destination="rbG-c2-0Lh" id="ahw-aG-mgJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BMc-FY-OTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2724" y="423"/>
         </scene>
     </scenes>
 </document>

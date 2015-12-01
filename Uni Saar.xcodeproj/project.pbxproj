@@ -49,6 +49,9 @@
 		6564ED411C0DFA2800FA650D /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED3D1C0DFA2800FA650D /* TFHppleElement.m */; };
 		6564ED421C0DFA2800FA650D /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED3F1C0DFA2800FA650D /* XPathQuery.m */; };
 		6564ED441C0E01B000FA650D /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6564ED431C0E01B000FA650D /* libxml2.tbd */; };
+		6564ED491C0E112200FA650D /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED481C0E112200FA650D /* NewsListViewController.m */; };
+		6564ED501C0E34D100FA650D /* NewsArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B0EB5015AF6BA500ECC1BD /* NewsArticle.m */; };
+		6564ED511C0E3E6D00FA650D /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B0EB5415AF6BA500ECC1BD /* NewsTableViewCell.m */; };
 		97B3500515B3611E00497E7A /* ResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 971EF23E15B059510039B06B /* ResultTableViewController.m */; };
 		97B3500715B3612500497E7A /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 971EF24115B059760039B06B /* ResultTableViewCell.m */; };
 		97F3FBAC15A8208500325941 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F3FBAA15A8208500325941 /* SearchViewController.m */; };
@@ -428,6 +431,8 @@
 		6564ED3E1C0DFA2800FA650D /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		6564ED3F1C0DFA2800FA650D /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		6564ED431C0E01B000FA650D /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.0.sdk/usr/lib/libxml2.tbd; sourceTree = DEVELOPER_DIR; };
+		6564ED481C0E112200FA650D /* NewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListViewController.m; sourceTree = "<group>"; };
+		6564ED4A1C0E114D00FA650D /* NewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListViewController.h; sourceTree = "<group>"; };
 		971EF23D15B059510039B06B /* ResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewController.h; sourceTree = "<group>"; };
 		971EF23E15B059510039B06B /* ResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewController.m; sourceTree = "<group>"; };
 		971EF24015B059760039B06B /* ResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewCell.h; sourceTree = "<group>"; };
@@ -796,6 +801,7 @@
 			isa = PBXGroup;
 			children = (
 				6564ED391C0DF9B600FA650D /* Parser */,
+				6564ED4B1C0E327000FA650D /* News */,
 				6564ED261C0DE9C000FA650D /* AppDelegate.h */,
 				6564ED271C0DE9C000FA650D /* AppDelegate.m */,
 				6564ED291C0DE9C000FA650D /* ViewController.h */,
@@ -856,6 +862,15 @@
 				6564ED3F1C0DFA2800FA650D /* XPathQuery.m */,
 			);
 			name = Parser;
+			sourceTree = "<group>";
+		};
+		6564ED4B1C0E327000FA650D /* News */ = {
+			isa = PBXGroup;
+			children = (
+				6564ED4A1C0E114D00FA650D /* NewsListViewController.h */,
+				6564ED481C0E112200FA650D /* NewsListViewController.m */,
+			);
+			name = News;
 			sourceTree = "<group>";
 		};
 		E21DC1D715ADCE2200FA1AE4 /* Mensa */ = {
@@ -1790,8 +1805,11 @@
 			files = (
 				6564ED411C0DFA2800FA650D /* TFHppleElement.m in Sources */,
 				6564ED421C0DFA2800FA650D /* XPathQuery.m in Sources */,
+				6564ED501C0E34D100FA650D /* NewsArticle.m in Sources */,
 				6564ED401C0DFA2800FA650D /* TFHpple.m in Sources */,
+				6564ED491C0E112200FA650D /* NewsListViewController.m in Sources */,
 				6564ED2B1C0DE9C000FA650D /* ViewController.m in Sources */,
+				6564ED511C0E3E6D00FA650D /* NewsTableViewCell.m in Sources */,
 				6564ED2E1C0DE9C000FA650D /* tvOS.xcdatamodeld in Sources */,
 				6564ED281C0DE9C000FA650D /* AppDelegate.m in Sources */,
 				6564ED251C0DE9C000FA650D /* main.m in Sources */,

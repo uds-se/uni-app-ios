@@ -18,19 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    NSURL *url = [NSURL URLWithString:@"http://www.uni-saarland.de/aktuelles/presse/pms.html"];
-    NSData  *data      = [NSData dataWithContentsOfURL:url];
-    TFHpple *Parser = [TFHpple hppleWithHTMLData:data];
-    NSString *QueryString = @"//div[@class='news-list-item']//span | //div[@class='news-list-item']//h1 | //div[@class='news-list-item']//p | //div//h1//a/@href";
-    NSArray *Nodes = [Parser searchWithXPathQuery:QueryString];
-    
-    NSMutableArray *Content = [[NSMutableArray alloc] initWithCapacity:0];
-    for (TFHppleElement * elem in Nodes) {
-        [Content addObject:[elem content]];
-    }
-    
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
