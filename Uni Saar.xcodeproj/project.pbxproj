@@ -39,6 +39,12 @@
 		17C031F31AD6BE9000BDDF38 /* cat25@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17C031D91AD6BE9000BDDF38 /* cat25@2x.png */; };
 		17CB17B41AA0884B0073E6EC /* HomburgOpeningHoursViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CB17B31AA0884B0073E6EC /* HomburgOpeningHoursViewController.m */; };
 		17D4E709159CADDA00876317 /* MensaFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D4E708159CADDA00876317 /* MensaFeedParser.m */; };
+		6564ED251C0DE9C000FA650D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED241C0DE9C000FA650D /* main.m */; };
+		6564ED281C0DE9C000FA650D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED271C0DE9C000FA650D /* AppDelegate.m */; };
+		6564ED2B1C0DE9C000FA650D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED2A1C0DE9C000FA650D /* ViewController.m */; };
+		6564ED2E1C0DE9C000FA650D /* tvOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED2C1C0DE9C000FA650D /* tvOS.xcdatamodeld */; };
+		6564ED311C0DE9C000FA650D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6564ED2F1C0DE9C000FA650D /* Main.storyboard */; };
+		6564ED331C0DE9C000FA650D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6564ED321C0DE9C000FA650D /* Assets.xcassets */; };
 		97B3500515B3611E00497E7A /* ResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 971EF23E15B059510039B06B /* ResultTableViewController.m */; };
 		97B3500715B3612500497E7A /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 971EF24115B059760039B06B /* ResultTableViewCell.m */; };
 		97F3FBAC15A8208500325941 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F3FBAA15A8208500325941 /* SearchViewController.m */; };
@@ -401,6 +407,16 @@
 		17CB17B31AA0884B0073E6EC /* HomburgOpeningHoursViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomburgOpeningHoursViewController.m; sourceTree = "<group>"; };
 		17D4E707159CADDA00876317 /* MensaFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaFeedParser.h; sourceTree = "<group>"; };
 		17D4E708159CADDA00876317 /* MensaFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaFeedParser.m; sourceTree = "<group>"; };
+		6564ED211C0DE9C000FA650D /* tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6564ED241C0DE9C000FA650D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6564ED261C0DE9C000FA650D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6564ED271C0DE9C000FA650D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6564ED291C0DE9C000FA650D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6564ED2A1C0DE9C000FA650D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6564ED2D1C0DE9C000FA650D /* tvOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tvOS.xcdatamodel; sourceTree = "<group>"; };
+		6564ED301C0DE9C000FA650D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6564ED321C0DE9C000FA650D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6564ED341C0DE9C000FA650D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		971EF23D15B059510039B06B /* ResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewController.h; sourceTree = "<group>"; };
 		971EF23E15B059510039B06B /* ResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewController.m; sourceTree = "<group>"; };
 		971EF24015B059760039B06B /* ResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewCell.h; sourceTree = "<group>"; };
@@ -721,6 +737,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6564ED1E1C0DE9C000FA650D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5EF307A1598F10700D65D13 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -757,6 +780,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6564ED221C0DE9C000FA650D /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				6564ED261C0DE9C000FA650D /* AppDelegate.h */,
+				6564ED271C0DE9C000FA650D /* AppDelegate.m */,
+				6564ED291C0DE9C000FA650D /* ViewController.h */,
+				6564ED2A1C0DE9C000FA650D /* ViewController.m */,
+				6564ED2F1C0DE9C000FA650D /* Main.storyboard */,
+				6564ED321C0DE9C000FA650D /* Assets.xcassets */,
+				6564ED341C0DE9C000FA650D /* Info.plist */,
+				6564ED2C1C0DE9C000FA650D /* tvOS.xcdatamodeld */,
+				6564ED231C0DE9C000FA650D /* Supporting Files */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
+		6564ED231C0DE9C000FA650D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6564ED241C0DE9C000FA650D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6564ED381C0DEA8B00FA650D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				ABA0D62C183149C600A10087 /* MensaTabIcon.png */,
+				ABA0D62D183149C600A10087 /* MensaTabIcon@2x.png */,
+				E212C0A7178B4D8600F9B877 /* Default-Portrait@2x~ipad.png */,
+				E212C0A5178B4D7300F9B877 /* Default-Portrait~ipad.png */,
+				E212C0A3178B4D6600F9B877 /* Default-568h@2x.png */,
+				E212C0A1178B4D6300F9B877 /* Default@2x.png */,
+				E212C09F178B4D5E00F9B877 /* Default.png */,
+				E225AFB1176213270075D032 /* appIconiPad@2x.png */,
+				E225AFAF176213250075D032 /* appIconiPad.png */,
+				E225AFAD176213200075D032 /* appIconiPhone@2x.png */,
+				E225AFAB1762131C0075D032 /* appIconiPhone.png */,
+				E2B4FF3117D5ED23001932BB /* appIconiOS7.png */,
+				E2B4FF3317D5EE80001932BB /* appIconiPadiOS7@2x.png */,
+				E2B4FF3417D5EE80001932BB /* appIconiPadiOS7.png */,
+				E2B4FF3F17D5F06B001932BB /* appIconiPadSpotlightiOS7.png */,
+				E2B4FF4017D5F06B001932BB /* appIconiPadSpotlightiOS7@2x.png */,
+				E2B4FF4117D5F06B001932BB /* appIconiPadSpotlight.png */,
+				E2B4FF4217D5F06B001932BB /* appIconiPadSpotlight@2x.png */,
+				E2B4FF4717D5F0B6001932BB /* appIconSpotlightiPhoneiOS7.png */,
+				E2B4FF4817D5F0B6001932BB /* appIconSpotlightiPhone@2x.png */,
+				E2B4FF4917D5F0B6001932BB /* appIconSpotlightiPhone.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		E21DC1D715ADCE2200FA1AE4 /* Mensa */ = {
 			isa = PBXGroup;
 			children = (
@@ -1092,31 +1167,12 @@
 		E5EF30721598F10700D65D13 = {
 			isa = PBXGroup;
 			children = (
+				6564ED381C0DEA8B00FA650D /* Images */,
 				ABEB820E1B9840CE00C28AC9 /* Images.xcassets */,
 				17C706FC1B1F0BF3004D9950 /* UniSaar-PrefixHeader.pch */,
-				ABA0D62C183149C600A10087 /* MensaTabIcon.png */,
-				ABA0D62D183149C600A10087 /* MensaTabIcon@2x.png */,
-				E212C0A7178B4D8600F9B877 /* Default-Portrait@2x~ipad.png */,
-				E212C0A5178B4D7300F9B877 /* Default-Portrait~ipad.png */,
-				E212C0A3178B4D6600F9B877 /* Default-568h@2x.png */,
-				E212C0A1178B4D6300F9B877 /* Default@2x.png */,
-				E212C09F178B4D5E00F9B877 /* Default.png */,
-				E225AFB1176213270075D032 /* appIconiPad@2x.png */,
-				E225AFAF176213250075D032 /* appIconiPad.png */,
-				E225AFAD176213200075D032 /* appIconiPhone@2x.png */,
-				E225AFAB1762131C0075D032 /* appIconiPhone.png */,
-				E2B4FF3117D5ED23001932BB /* appIconiOS7.png */,
-				E2B4FF3317D5EE80001932BB /* appIconiPadiOS7@2x.png */,
-				E2B4FF3417D5EE80001932BB /* appIconiPadiOS7.png */,
-				E2B4FF3F17D5F06B001932BB /* appIconiPadSpotlightiOS7.png */,
-				E2B4FF4017D5F06B001932BB /* appIconiPadSpotlightiOS7@2x.png */,
-				E2B4FF4117D5F06B001932BB /* appIconiPadSpotlight.png */,
-				E2B4FF4217D5F06B001932BB /* appIconiPadSpotlight@2x.png */,
-				E2B4FF4717D5F0B6001932BB /* appIconSpotlightiPhoneiOS7.png */,
-				E2B4FF4817D5F0B6001932BB /* appIconSpotlightiPhone@2x.png */,
-				E2B4FF4917D5F0B6001932BB /* appIconSpotlightiPhone.png */,
 				E5EF30871598F10700D65D13 /* SaarlandUniversityAppB */,
 				E5EF30A81598F10700D65D13 /* SaarlandUniversityAppBTests */,
+				6564ED221C0DE9C000FA650D /* tvOS */,
 				E5EF30801598F10700D65D13 /* Frameworks */,
 				E5EF307E1598F10700D65D13 /* Products */,
 			);
@@ -1127,6 +1183,7 @@
 			children = (
 				E5EF307D1598F10700D65D13 /* Uni Saar.app */,
 				E5EF30A11598F10700D65D13 /* Uni SaarTests.octest */,
+				6564ED211C0DE9C000FA650D /* tvOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1347,6 +1404,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6564ED201C0DE9C000FA650D /* tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6564ED371C0DE9C000FA650D /* Build configuration list for PBXNativeTarget "tvOS" */;
+			buildPhases = (
+				6564ED1D1C0DE9C000FA650D /* Sources */,
+				6564ED1E1C0DE9C000FA650D /* Frameworks */,
+				6564ED1F1C0DE9C000FA650D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tvOS;
+			productName = tvOS;
+			productReference = 6564ED211C0DE9C000FA650D /* tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		E5EF307C1598F10700D65D13 /* Uni Saar */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5EF30B31598F10800D65D13 /* Build configuration list for PBXNativeTarget "Uni Saar" */;
@@ -1391,10 +1465,13 @@
 		E5EF30741598F10700D65D13 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastTestingUpgradeCheck = 0630;
+				LastTestingUpgradeCheck = 0710;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Universität des Saarlandes";
 				TargetAttributes = {
+					6564ED201C0DE9C000FA650D = {
+						CreatedOnToolsVersion = 7.1;
+					};
 					E5EF307C1598F10700D65D13 = {
 						DevelopmentTeam = MP8ZWZ7G58;
 					};
@@ -1407,6 +1484,7 @@
 			knownRegions = (
 				en,
 				de,
+				Base,
 			);
 			mainGroup = E5EF30721598F10700D65D13;
 			productRefGroup = E5EF307E1598F10700D65D13 /* Products */;
@@ -1415,11 +1493,21 @@
 			targets = (
 				E5EF307C1598F10700D65D13 /* Uni Saar */,
 				E5EF30A01598F10700D65D13 /* Uni SaarTests */,
+				6564ED201C0DE9C000FA650D /* tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6564ED1F1C0DE9C000FA650D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6564ED331C0DE9C000FA650D /* Assets.xcassets in Resources */,
+				6564ED311C0DE9C000FA650D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5EF307B1598F10700D65D13 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1669,6 +1757,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6564ED1D1C0DE9C000FA650D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6564ED2B1C0DE9C000FA650D /* ViewController.m in Sources */,
+				6564ED2E1C0DE9C000FA650D /* tvOS.xcdatamodeld in Sources */,
+				6564ED281C0DE9C000FA650D /* AppDelegate.m in Sources */,
+				6564ED251C0DE9C000FA650D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5EF30791598F10700D65D13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1782,6 +1881,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6564ED2F1C0DE9C000FA650D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6564ED301C0DE9C000FA650D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		E2F02C481725953800182968 /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1830,6 +1937,57 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6564ED351C0DE9C000FA650D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = tvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = tvos.tvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		6564ED361C0DE9C000FA650D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = tvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = tvos.tvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 		E5EF30B11598F10800D65D13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1851,7 +2009,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/UniSaar-PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SaarlandUniversityAppB/UniSaar-PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1892,7 +2050,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/UniSaar-PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SaarlandUniversityAppB/UniSaar-PrefixHeader.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1987,6 +2145,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6564ED371C0DE9C000FA650D /* Build configuration list for PBXNativeTarget "tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6564ED351C0DE9C000FA650D /* Debug */,
+				6564ED361C0DE9C000FA650D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E5EF30771598F10700D65D13 /* Build configuration list for PBXProject "Uni Saar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2015,6 +2182,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6564ED2C1C0DE9C000FA650D /* tvOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6564ED2D1C0DE9C000FA650D /* tvOS.xcdatamodel */,
+			);
+			currentVersion = 6564ED2D1C0DE9C000FA650D /* tvOS.xcdatamodel */;
+			path = tvOS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E5EF30741598F10700D65D13 /* Project object */;
 }
