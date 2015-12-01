@@ -48,6 +48,7 @@
 		6564ED401C0DFA2800FA650D /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED3B1C0DFA2800FA650D /* TFHpple.m */; };
 		6564ED411C0DFA2800FA650D /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED3D1C0DFA2800FA650D /* TFHppleElement.m */; };
 		6564ED421C0DFA2800FA650D /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED3F1C0DFA2800FA650D /* XPathQuery.m */; };
+		6564ED441C0E01B000FA650D /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6564ED431C0E01B000FA650D /* libxml2.tbd */; };
 		97B3500515B3611E00497E7A /* ResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 971EF23E15B059510039B06B /* ResultTableViewController.m */; };
 		97B3500715B3612500497E7A /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 971EF24115B059760039B06B /* ResultTableViewCell.m */; };
 		97F3FBAC15A8208500325941 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F3FBAA15A8208500325941 /* SearchViewController.m */; };
@@ -426,6 +427,7 @@
 		6564ED3D1C0DFA2800FA650D /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
 		6564ED3E1C0DFA2800FA650D /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		6564ED3F1C0DFA2800FA650D /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		6564ED431C0E01B000FA650D /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.0.sdk/usr/lib/libxml2.tbd; sourceTree = DEVELOPER_DIR; };
 		971EF23D15B059510039B06B /* ResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewController.h; sourceTree = "<group>"; };
 		971EF23E15B059510039B06B /* ResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewController.m; sourceTree = "<group>"; };
 		971EF24015B059760039B06B /* ResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewCell.h; sourceTree = "<group>"; };
@@ -750,6 +752,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6564ED441C0E01B000FA650D /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1214,6 +1217,7 @@
 		E5EF30801598F10700D65D13 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6564ED431C0E01B000FA650D /* libxml2.tbd */,
 				E22C3FD517180F28003C039F /* libsqlite3.0.dylib */,
 				E278E0F715B454C40043DAAA /* MessageUI.framework */,
 				E2B0EB7215AF6D5200ECC1BD /* libxml2.dylib */,
@@ -1966,6 +1970,7 @@
 		6564ED351C0DE9C000FA650D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1977,6 +1982,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";
 				INFOPLIST_FILE = tvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1991,6 +1997,7 @@
 		6564ED361C0DE9C000FA650D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -2003,6 +2010,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";
 				INFOPLIST_FILE = tvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
