@@ -31,7 +31,7 @@
     ContentTextBox.userInteractionEnabled = true;
     ContentTextBox.scrollEnabled = true;
     ContentTextBox.panGestureRecognizer.allowedTouchTypes = @[ @(UITouchTypeIndirect) ];
-  //  ContentTextBox.panGestureRecognizer.allowedTouchTypes = [NSNumber(integer: UITouchType.Indirect.rawValue)];
+
     
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
         NSMutableArray *NewsContent = [Parser parseWithURL:[[self article] article] andWithPath:@"//div[@class='newscontent']"];        
