@@ -13,12 +13,12 @@
 
 #import <UIKit/UIKit.h>
 #import "NewsArticle.h"
-#import "NewsTableViewCell.h"
 
 @interface NewsListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate> {
     
     NSMutableArray *ArticleElements;
     __weak IBOutlet UITableView *NewsListView;
+    __weak IBOutlet UIActivityIndicatorView *AiNewsView;
 }
 
 

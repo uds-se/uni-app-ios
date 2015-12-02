@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "NewsListViewController.h"
 #import "TFHpple.h"
+#import "Parser.h"
+#import "NewsArticleViewController.h"
 
 @interface NewsListViewController ()
 
@@ -21,25 +23,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    [AiNewsView startAnimating];
+    AiNewsView.hidden = false;
+    NewsListView.estimatedRowHeight = 150.0;
+    NewsListView.rowHeight = UITableViewAutomaticDimension;
     
-    NSURL *url = [NSURL URLWithString:@"http://www.uni-saarland.de/aktuelles/presse/pms.html"];
-    NSData  *data      = [NSData dataWithContentsOfURL:url];
-    TFHpple *Parser = [TFHpple hppleWithHTMLData:data];
-    NSString *QueryString = @"//div[@class='news-list-item']//span | //div[@class='news-list-item']//h1 | //div[@class='news-list-item']//p | //div//h1//a/@href";
-    NSArray *Nodes = [Parser searchWithXPathQuery:QueryString];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+        
+        //Background Thread
+        NSMutableArray *NewsElements = [Parser parseWithURL:@"http://www.uni-saarland.de/aktuelles/presse/pms.html" andWithPath:@"//div[@class='news-list-item']//span | //div[@class='news-list-item']//h1 | //div[@class='news-list-item']//p | //div//h1//a/@href"];
+        ArticleElements = [[NSMutableArray alloc] initWithCapacity:0];       
+        for (int i = 0; i < 40; i=i+4) {
+            NewsArticle *article = [[NewsArticle alloc] initWithTitle:[NewsElements objectAtIndex:i+1] subTitle:[NewsElements objectAtIndex:(i+3)] pubDate:[NewsElements objectAtIndex:i] article:[@"https://www.uni-saarland.de/" stringByAppendingString:[NewsElements objectAtIndex:(i+2)]]];
+            [ArticleElements addObject:article];
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            [NewsListView reloadData];
+            [AiNewsView stopAnimating];
+            AiNewsView.hidden = true;
+        });
+    });
     
-    NSMutableArray *NewsElements = [[NSMutableArray alloc] initWithCapacity:0];
-    ArticleElements = [[NSMutableArray alloc] initWithCapacity:0];
-    
-    for (TFHppleElement * elem in Nodes) {
-        [NewsElements addObject:[elem content]];
-    }
-    
-    for (int i = 0; i < 40; i=i+4) {
-        NewsArticle *article = [[NewsArticle alloc] initWithTitle:[NewsElements objectAtIndex:i+1] subTitle:[NewsElements objectAtIndex:(i+3)] pubDate:[NewsElements objectAtIndex:i] article:[NewsElements objectAtIndex:(i+2)]] ;
-        [ArticleElements addObject:article];
-    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,15 +66,18 @@
     
     cell.textLabel.text = [[ArticleElements objectAtIndex:indexPath.row] title];
     cell.detailTextLabel.text = [[ArticleElements objectAtIndex:indexPath.row] pubDate];
-    
-    
-    
-    
-    
+ 
     return cell;
     
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"NewsArticleSegue"]) {
+        NSIndexPath *indexPath = [NewsListView indexPathForSelectedRow];
+        NewsArticleViewController *destViewController = segue.destinationViewController;
+        destViewController.article = [ArticleElements objectAtIndex:indexPath.row];
+    }
+}
 
 
 @end

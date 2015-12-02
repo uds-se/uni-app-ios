@@ -39,6 +39,8 @@
 		17C031F31AD6BE9000BDDF38 /* cat25@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17C031D91AD6BE9000BDDF38 /* cat25@2x.png */; };
 		17CB17B41AA0884B0073E6EC /* HomburgOpeningHoursViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CB17B31AA0884B0073E6EC /* HomburgOpeningHoursViewController.m */; };
 		17D4E709159CADDA00876317 /* MensaFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D4E708159CADDA00876317 /* MensaFeedParser.m */; };
+		6537B9521C0ED3A100B24278 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6537B9511C0ED3A100B24278 /* Parser.m */; };
+		6537B9551C0EDE1900B24278 /* NewsArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6537B9541C0EDE1900B24278 /* NewsArticleViewController.m */; };
 		6564ED251C0DE9C000FA650D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED241C0DE9C000FA650D /* main.m */; };
 		6564ED281C0DE9C000FA650D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED271C0DE9C000FA650D /* AppDelegate.m */; };
 		6564ED2B1C0DE9C000FA650D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED2A1C0DE9C000FA650D /* ViewController.m */; };
@@ -414,6 +416,10 @@
 		17CB17B31AA0884B0073E6EC /* HomburgOpeningHoursViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomburgOpeningHoursViewController.m; sourceTree = "<group>"; };
 		17D4E707159CADDA00876317 /* MensaFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaFeedParser.h; sourceTree = "<group>"; };
 		17D4E708159CADDA00876317 /* MensaFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaFeedParser.m; sourceTree = "<group>"; };
+		6537B9501C0ED3A100B24278 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		6537B9511C0ED3A100B24278 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
+		6537B9531C0EDE1900B24278 /* NewsArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsArticleViewController.h; sourceTree = "<group>"; };
+		6537B9541C0EDE1900B24278 /* NewsArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsArticleViewController.m; sourceTree = "<group>"; };
 		6564ED211C0DE9C000FA650D /* tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6564ED241C0DE9C000FA650D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6564ED261C0DE9C000FA650D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -860,6 +866,8 @@
 				6564ED3D1C0DFA2800FA650D /* TFHppleElement.m */,
 				6564ED3E1C0DFA2800FA650D /* XPathQuery.h */,
 				6564ED3F1C0DFA2800FA650D /* XPathQuery.m */,
+				6537B9501C0ED3A100B24278 /* Parser.h */,
+				6537B9511C0ED3A100B24278 /* Parser.m */,
 			);
 			name = Parser;
 			sourceTree = "<group>";
@@ -869,6 +877,8 @@
 			children = (
 				6564ED4A1C0E114D00FA650D /* NewsListViewController.h */,
 				6564ED481C0E112200FA650D /* NewsListViewController.m */,
+				6537B9531C0EDE1900B24278 /* NewsArticleViewController.h */,
+				6537B9541C0EDE1900B24278 /* NewsArticleViewController.m */,
 			);
 			name = News;
 			sourceTree = "<group>";
@@ -1803,11 +1813,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6537B9521C0ED3A100B24278 /* Parser.m in Sources */,
 				6564ED411C0DFA2800FA650D /* TFHppleElement.m in Sources */,
 				6564ED421C0DFA2800FA650D /* XPathQuery.m in Sources */,
 				6564ED501C0E34D100FA650D /* NewsArticle.m in Sources */,
 				6564ED401C0DFA2800FA650D /* TFHpple.m in Sources */,
 				6564ED491C0E112200FA650D /* NewsListViewController.m in Sources */,
+				6537B9551C0EDE1900B24278 /* NewsArticleViewController.m in Sources */,
 				6564ED2B1C0DE9C000FA650D /* ViewController.m in Sources */,
 				6564ED511C0E3E6D00FA650D /* NewsTableViewCell.m in Sources */,
 				6564ED2E1C0DE9C000FA650D /* tvOS.xcdatamodeld in Sources */,
