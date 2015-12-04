@@ -16,10 +16,12 @@
 
 @interface NewsListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate> {
     
+    int PageCounter;
     NSMutableArray *ArticleElements;
     __weak IBOutlet UITableView *NewsListView;
     __weak IBOutlet UIActivityIndicatorView *AiNewsView;
 }
 
+- (void) loadNews;
 
 @end
