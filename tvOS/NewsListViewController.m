@@ -34,7 +34,7 @@
         //Background Thread
         NSMutableArray *NewsElements = [Parser parseWithURL:@"http://www.uni-saarland.de/aktuelles/presse/pms.html" andWithPath:@"//div[@class='news-list-item']//span | //div[@class='news-list-item']//h1 | //div[@class='news-list-item']//p | //div//h1//a/@href"];
         ArticleElements = [[NSMutableArray alloc] initWithCapacity:0];       
-        for (int i = 0; i < 40; i=i+4) {
+        for (int i = 0; i < [ArticleElements count]; i=i+4) {
             NewsArticle *article = [[NewsArticle alloc] initWithTitle:[NewsElements objectAtIndex:i+1] subTitle:[NewsElements objectAtIndex:(i+3)] pubDate:[NewsElements objectAtIndex:i] article:[@"https://www.uni-saarland.de/" stringByAppendingString:[NewsElements objectAtIndex:(i+2)]]];
             [ArticleElements addObject:article];
         }
@@ -70,6 +70,13 @@
     return cell;
     
 }
+
+/*
+ - (void)tableView:(UITableView *)tableView didUpdateFocusInContext:(UITableViewFocusUpdateContext *)context withAnimationCoordinator:(UIFocusAnimationCoordinator *)coordinator {
+ NSIndexPath *nextIndexPath = [context nextFocusedIndexPath];
+ int i = nextIndexPath.row;
+ }
+ */
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"NewsArticleSegue"]) {

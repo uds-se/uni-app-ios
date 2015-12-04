@@ -31,6 +31,7 @@
     ContentTextBox.userInteractionEnabled = true;
     ContentTextBox.scrollEnabled = true;
     ContentTextBox.panGestureRecognizer.allowedTouchTypes = @[ @(UITouchTypeIndirect) ];
+    ContentTextBox.showsVerticalScrollIndicator = true;
 
     
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){

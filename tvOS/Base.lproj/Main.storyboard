@@ -5,6 +5,33 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="7ez-Y0-7zn">
+            <objects>
+                <viewController id="LUn-xF-lu8" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nyp-wi-WfD"/>
+                        <viewControllerLayoutGuide type="bottom" id="nIu-Wx-eIP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IVy-WD-7Ng">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYS-o7-b5L">
+                                <rect key="frame" x="905" y="472" width="156" height="19"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6pK-pm-iD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="543" y="-737"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -20,14 +47,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ppm-7I-QSZ" userLabel="Header">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="150"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon-1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="ygE-ZZ-d3e">
-                                        <rect key="frame" x="8" y="10" width="130" height="130"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="130" id="EJa-k4-6q3"/>
-                                            <constraint firstAttribute="width" constant="130" id="k3o-un-hnc"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saarland University" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9o-jN-d9a">
                                         <rect key="frame" x="644" y="30" width="633" height="91"/>
                                         <animations/>
@@ -35,212 +54,250 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLa-KG-rRq" userLabel="About">
+                                        <rect key="frame" x="1645" y="25" width="100" height="100"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="6G0-hw-Hr5"/>
+                                            <constraint firstAttribute="width" constant="100" id="EyH-NM-YOn"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" backgroundImage="HomeSettingIcon.png"/>
+                                        <connections>
+                                            <segue destination="LUn-xF-lu8" kind="show" id="Shx-Ht-zU8"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon-1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="ygE-ZZ-d3e">
+                                        <rect key="frame" x="48" y="25" width="100" height="100"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="EJa-k4-6q3"/>
+                                            <constraint firstAttribute="width" constant="100" id="k3o-un-hnc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGc-6V-5zq" userLabel="Settings">
+                                        <rect key="frame" x="1770" y="25" width="100" height="100"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="6aZ-CP-pk4"/>
+                                            <constraint firstAttribute="height" constant="100" id="uf8-5t-Tph"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" backgroundImage="HomeAboutIcon.png"/>
+                                        <connections>
+                                            <segue destination="4bk-Tl-LRK" kind="show" id="r2u-zU-GRI"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.082541909919549086" green="0.27045610768005435" blue="0.42213824838717939" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="MGc-6V-5zq" firstAttribute="leading" secondItem="LLa-KG-rRq" secondAttribute="trailing" constant="25" id="E0W-Yi-Vmr"/>
                                     <constraint firstAttribute="height" constant="150" id="IKx-88-mwf"/>
                                     <constraint firstItem="ygE-ZZ-d3e" firstAttribute="centerY" secondItem="Ppm-7I-QSZ" secondAttribute="centerY" id="Kag-cu-W8s"/>
                                     <constraint firstItem="K9o-jN-d9a" firstAttribute="centerX" secondItem="Ppm-7I-QSZ" secondAttribute="centerX" id="PAz-KG-Hy7"/>
+                                    <constraint firstItem="LLa-KG-rRq" firstAttribute="centerY" secondItem="Ppm-7I-QSZ" secondAttribute="centerY" id="Xy8-33-AEV"/>
+                                    <constraint firstItem="MGc-6V-5zq" firstAttribute="centerY" secondItem="Ppm-7I-QSZ" secondAttribute="centerY" id="jDu-vx-HzV"/>
                                     <constraint firstItem="K9o-jN-d9a" firstAttribute="centerY" secondItem="Ppm-7I-QSZ" secondAttribute="centerY" id="mRT-Wj-TZ7"/>
-                                    <constraint firstItem="ygE-ZZ-d3e" firstAttribute="leading" secondItem="Ppm-7I-QSZ" secondAttribute="leadingMargin" id="o1H-MU-8Ab"/>
+                                    <constraint firstItem="ygE-ZZ-d3e" firstAttribute="leading" secondItem="Ppm-7I-QSZ" secondAttribute="leadingMargin" constant="40" id="o1H-MU-8Ab"/>
+                                    <constraint firstAttribute="trailing" secondItem="MGc-6V-5zq" secondAttribute="trailing" constant="50" id="xzh-JV-8gU"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZL-mF-Efy" userLabel="Body">
                                 <rect key="frame" x="0.0" y="150" width="1920" height="930"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLk-Z8-IXa" userLabel="NewsView">
-                                        <rect key="frame" x="108" y="108" width="300" height="300"/>
+                                        <rect key="frame" x="108" y="83" width="450" height="400"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtU-Wd-dhz">
+                                                <rect key="frame" x="153" y="313" width="145" height="69"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VN-p4-W6N">
-                                                <rect key="frame" x="70" y="18" width="160" height="160"/>
+                                                <rect key="frame" x="25" y="8" width="400" height="300"/>
                                                 <animations/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="160" id="5Jb-uf-HzR"/>
-                                                    <constraint firstAttribute="width" constant="160" id="ZQG-ff-hXx"/>
+                                                    <constraint firstAttribute="height" constant="300" id="5Jb-uf-HzR"/>
+                                                    <constraint firstAttribute="width" constant="400" id="ZQG-ff-hXx"/>
                                                 </constraints>
                                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                                <state key="normal" backgroundImage="NewsIco.png"/>
+                                                <state key="normal" backgroundImage="HomeNewsIcon.png"/>
                                                 <connections>
                                                     <segue destination="6Cd-YS-8Yo" kind="show" id="wcO-Zv-wr3"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtU-Wd-dhz">
-                                                <rect key="frame" x="78" y="198" width="145" height="69"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="7VN-p4-W6N" firstAttribute="top" secondItem="hLk-Z8-IXa" secondAttribute="topMargin" constant="10" id="03E-oI-4ON"/>
-                                            <constraint firstAttribute="width" constant="300" id="SqD-nv-JMk"/>
+                                            <constraint firstItem="7VN-p4-W6N" firstAttribute="top" secondItem="hLk-Z8-IXa" secondAttribute="topMargin" id="03E-oI-4ON"/>
+                                            <constraint firstAttribute="width" constant="450" id="SqD-nv-JMk"/>
                                             <constraint firstItem="7VN-p4-W6N" firstAttribute="centerX" secondItem="hLk-Z8-IXa" secondAttribute="centerX" id="Ut0-9y-RTe"/>
                                             <constraint firstItem="gtU-Wd-dhz" firstAttribute="centerX" secondItem="hLk-Z8-IXa" secondAttribute="centerX" id="cEi-Qc-bhd"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="gtU-Wd-dhz" secondAttribute="bottom" constant="25" id="ddP-2m-6XN"/>
-                                            <constraint firstAttribute="height" constant="300" id="vRg-qL-8Tk"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="gtU-Wd-dhz" secondAttribute="bottom" constant="10" id="ddP-2m-6XN"/>
+                                            <constraint firstAttribute="height" constant="400" id="vRg-qL-8Tk"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rac-6x-MPh" userLabel="MensaView">
-                                        <rect key="frame" x="810" y="108" width="300" height="300"/>
+                                        <rect key="frame" x="735" y="83" width="450" height="400"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otE-sS-ML1">
-                                                <rect key="frame" x="70" y="18" width="160" height="160"/>
-                                                <animations/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="160" id="Gy1-7Y-f9H"/>
-                                                    <constraint firstAttribute="height" constant="160" id="pZd-Jr-gZf"/>
-                                                </constraints>
-                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                                <state key="normal" backgroundImage="MensaIco.png"/>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mensa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loh-zZ-qAc">
-                                                <rect key="frame" x="64" y="198" width="172" height="69"/>
+                                                <rect key="frame" x="139" y="313" width="172" height="69"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otE-sS-ML1">
+                                                <rect key="frame" x="25" y="8" width="400" height="300"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="400" id="Gy1-7Y-f9H"/>
+                                                    <constraint firstAttribute="height" constant="300" id="pZd-Jr-gZf"/>
+                                                </constraints>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" backgroundImage="HomeMensaIcon.png"/>
+                                            </button>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="45d-Ej-sJW"/>
-                                            <constraint firstAttribute="width" constant="300" id="HzO-AK-sKl"/>
+                                            <constraint firstAttribute="height" constant="400" id="45d-Ej-sJW"/>
+                                            <constraint firstAttribute="width" constant="450" id="HzO-AK-sKl"/>
                                             <constraint firstItem="Loh-zZ-qAc" firstAttribute="centerX" secondItem="Rac-6x-MPh" secondAttribute="centerX" id="Ost-gb-I3M"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="Loh-zZ-qAc" secondAttribute="bottom" constant="25" id="Szg-iQ-gGJ"/>
-                                            <constraint firstItem="otE-sS-ML1" firstAttribute="top" secondItem="Rac-6x-MPh" secondAttribute="topMargin" constant="10" id="gGu-r0-Yut"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Loh-zZ-qAc" secondAttribute="bottom" constant="10" id="Szg-iQ-gGJ"/>
+                                            <constraint firstItem="otE-sS-ML1" firstAttribute="top" secondItem="Rac-6x-MPh" secondAttribute="topMargin" id="gGu-r0-Yut"/>
                                             <constraint firstItem="otE-sS-ML1" firstAttribute="centerX" secondItem="Rac-6x-MPh" secondAttribute="centerX" id="goU-Zs-Ig5"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C94-Pl-8Kl" userLabel="MapView">
-                                        <rect key="frame" x="1512" y="108" width="300" height="300"/>
+                                        <rect key="frame" x="1362" y="83" width="450" height="400"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oz-rM-nN4">
-                                                <rect key="frame" x="70" y="18" width="160" height="160"/>
-                                                <animations/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="160" id="HTJ-O3-h8k"/>
-                                                    <constraint firstAttribute="width" constant="160" id="hwe-Cz-FhH"/>
-                                                </constraints>
-                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                                <state key="normal" backgroundImage="CampusMapIco.png"/>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campus Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbB-Ev-zMF">
-                                                <rect key="frame" x="-20" y="198" width="340" height="69"/>
+                                                <rect key="frame" x="55" y="313" width="340" height="69"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oz-rM-nN4">
+                                                <rect key="frame" x="25" y="8" width="400" height="300"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="HTJ-O3-h8k"/>
+                                                    <constraint firstAttribute="width" constant="400" id="hwe-Cz-FhH"/>
+                                                </constraints>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" backgroundImage="HomeMapIcon.png"/>
+                                            </button>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="EDs-yw-S4E"/>
-                                            <constraint firstItem="2oz-rM-nN4" firstAttribute="top" secondItem="C94-Pl-8Kl" secondAttribute="topMargin" constant="10" id="GZs-cj-JnB"/>
+                                            <constraint firstAttribute="width" constant="450" id="EDs-yw-S4E"/>
+                                            <constraint firstItem="2oz-rM-nN4" firstAttribute="top" secondItem="C94-Pl-8Kl" secondAttribute="topMargin" id="GZs-cj-JnB"/>
                                             <constraint firstItem="lbB-Ev-zMF" firstAttribute="centerX" secondItem="C94-Pl-8Kl" secondAttribute="centerX" id="KFS-Ba-0OJ"/>
                                             <constraint firstItem="2oz-rM-nN4" firstAttribute="centerX" secondItem="C94-Pl-8Kl" secondAttribute="centerX" id="PL8-uE-APN"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="lbB-Ev-zMF" secondAttribute="bottom" constant="25" id="dDq-zi-Zgf"/>
-                                            <constraint firstAttribute="height" constant="300" id="yCJ-4r-YSJ"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="lbB-Ev-zMF" secondAttribute="bottom" constant="10" id="dDq-zi-Zgf"/>
+                                            <constraint firstAttribute="height" constant="400" id="yCJ-4r-YSJ"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zul-jX-PE9" userLabel="EventView">
-                                        <rect key="frame" x="108" y="522" width="300" height="300"/>
+                                        <rect key="frame" x="108" y="497" width="450" height="400"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5w-5G-Pkt">
-                                                <rect key="frame" x="70" y="18" width="160" height="160"/>
-                                                <animations/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="160" id="BiP-UO-Kga"/>
-                                                    <constraint firstAttribute="height" constant="160" id="Sw1-bN-g0E"/>
-                                                </constraints>
-                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                                <state key="normal" backgroundImage="EventsIco.png"/>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-9f-Xtm">
-                                                <rect key="frame" x="64" y="198" width="172" height="69"/>
+                                                <rect key="frame" x="139" y="313" width="172" height="69"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5w-5G-Pkt">
+                                                <rect key="frame" x="25" y="8" width="400" height="300"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="400" id="BiP-UO-Kga"/>
+                                                    <constraint firstAttribute="height" constant="300" id="Sw1-bN-g0E"/>
+                                                </constraints>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" backgroundImage="HomeEventIcon.png"/>
+                                            </button>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Lzq-9f-Xtm" firstAttribute="centerX" secondItem="zul-jX-PE9" secondAttribute="centerX" id="NS3-js-vDr"/>
-                                            <constraint firstAttribute="width" constant="300" id="RD9-g4-mxH"/>
-                                            <constraint firstItem="s5w-5G-Pkt" firstAttribute="top" secondItem="zul-jX-PE9" secondAttribute="topMargin" constant="10" id="SdC-Lh-vPH"/>
-                                            <constraint firstAttribute="height" constant="300" id="fux-uB-YLD"/>
+                                            <constraint firstAttribute="width" constant="450" id="RD9-g4-mxH"/>
+                                            <constraint firstItem="s5w-5G-Pkt" firstAttribute="top" secondItem="zul-jX-PE9" secondAttribute="topMargin" id="SdC-Lh-vPH"/>
+                                            <constraint firstAttribute="height" constant="400" id="fux-uB-YLD"/>
                                             <constraint firstItem="s5w-5G-Pkt" firstAttribute="centerX" secondItem="zul-jX-PE9" secondAttribute="centerX" id="nni-9j-CgV"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="Lzq-9f-Xtm" secondAttribute="bottom" constant="25" id="xHZ-7L-czL"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Lzq-9f-Xtm" secondAttribute="bottom" constant="10" id="xHZ-7L-czL"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3z-RU-GfA" userLabel="StaffSearchView">
-                                        <rect key="frame" x="810" y="522" width="300" height="300"/>
+                                        <rect key="frame" x="735" y="497" width="450" height="400"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iz-bb-BvV">
-                                                <rect key="frame" x="70" y="18" width="160" height="160"/>
-                                                <animations/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="160" id="Fvq-Mk-vKo"/>
-                                                    <constraint firstAttribute="width" constant="160" id="cQA-6j-FNO"/>
-                                                </constraints>
-                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                                <state key="normal" backgroundImage="SearchForStaffIco.png"/>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Staff Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8w-bV-7rr">
-                                                <rect key="frame" x="-7" y="198" width="314" height="69"/>
+                                                <rect key="frame" x="68" y="313" width="314" height="69"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iz-bb-BvV">
+                                                <rect key="frame" x="25" y="8" width="400" height="300"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="Fvq-Mk-vKo"/>
+                                                    <constraint firstAttribute="width" constant="400" id="cQA-6j-FNO"/>
+                                                </constraints>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" backgroundImage="HomeStaffIcon.png"/>
+                                            </button>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="0rF-I5-i3c"/>
-                                            <constraint firstItem="0iz-bb-BvV" firstAttribute="top" secondItem="n3z-RU-GfA" secondAttribute="topMargin" constant="10" id="CJ2-cz-IU4"/>
-                                            <constraint firstAttribute="width" constant="300" id="NoF-yx-071"/>
+                                            <constraint firstAttribute="height" constant="400" id="0rF-I5-i3c"/>
+                                            <constraint firstItem="0iz-bb-BvV" firstAttribute="top" secondItem="n3z-RU-GfA" secondAttribute="topMargin" id="CJ2-cz-IU4"/>
+                                            <constraint firstAttribute="width" constant="450" id="NoF-yx-071"/>
                                             <constraint firstItem="u8w-bV-7rr" firstAttribute="centerX" secondItem="n3z-RU-GfA" secondAttribute="centerX" id="Y4Z-JB-hFF"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="u8w-bV-7rr" secondAttribute="bottom" constant="25" id="YBg-Ls-dLJ"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="u8w-bV-7rr" secondAttribute="bottom" constant="10" id="YBg-Ls-dLJ"/>
                                             <constraint firstItem="0iz-bb-BvV" firstAttribute="centerX" secondItem="n3z-RU-GfA" secondAttribute="centerX" id="nQb-1p-4gP"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4P-IU-t8t" userLabel="Kiosk">
-                                        <rect key="frame" x="1512" y="522" width="300" height="300"/>
+                                        <rect key="frame" x="1362" y="497" width="450" height="400"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddR-iE-X4a">
-                                                <rect key="frame" x="70" y="18" width="160" height="160"/>
-                                                <animations/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="160" id="dHs-4a-L0K"/>
-                                                    <constraint firstAttribute="height" constant="160" id="zVX-qD-t3E"/>
-                                                </constraints>
-                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                                <state key="normal" backgroundImage="AppIcon-1024.png"/>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kiosk Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hl2-aN-zvX">
-                                                <rect key="frame" x="1" y="198" width="299" height="69"/>
+                                                <rect key="frame" x="76" y="313" width="299" height="69"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddR-iE-X4a">
+                                                <rect key="frame" x="25" y="8" width="400" height="300"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="400" id="dHs-4a-L0K"/>
+                                                    <constraint firstAttribute="height" constant="300" id="zVX-qD-t3E"/>
+                                                </constraints>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" backgroundImage="HomeKioskIcon.png"/>
+                                            </button>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottomMargin" secondItem="hl2-aN-zvX" secondAttribute="bottom" constant="25" id="042-ks-K29"/>
-                                            <constraint firstAttribute="height" constant="300" id="3cW-Cn-uGa"/>
-                                            <constraint firstAttribute="width" constant="300" id="8jD-fY-l2L"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="hl2-aN-zvX" secondAttribute="bottom" constant="10" id="042-ks-K29"/>
+                                            <constraint firstAttribute="height" constant="400" id="3cW-Cn-uGa"/>
+                                            <constraint firstAttribute="width" constant="450" id="8jD-fY-l2L"/>
                                             <constraint firstItem="hl2-aN-zvX" firstAttribute="centerX" secondItem="N4P-IU-t8t" secondAttribute="centerX" id="HqY-o4-aFy"/>
-                                            <constraint firstItem="ddR-iE-X4a" firstAttribute="top" secondItem="N4P-IU-t8t" secondAttribute="topMargin" constant="10" id="k31-e3-Rgy"/>
+                                            <constraint firstItem="ddR-iE-X4a" firstAttribute="top" secondItem="N4P-IU-t8t" secondAttribute="topMargin" id="k31-e3-Rgy"/>
                                             <constraint firstItem="ddR-iE-X4a" firstAttribute="centerX" secondItem="N4P-IU-t8t" secondAttribute="centerX" id="tDI-CQ-QgG"/>
                                         </constraints>
                                     </view>
@@ -249,15 +306,15 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Rac-6x-MPh" firstAttribute="centerX" secondItem="MZL-mF-Efy" secondAttribute="centerX" id="6dM-j8-Ua1"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="n3z-RU-GfA" secondAttribute="bottom" constant="100" id="9uY-yk-nrB"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="n3z-RU-GfA" secondAttribute="bottom" constant="25" id="9uY-yk-nrB"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="C94-Pl-8Kl" secondAttribute="trailing" constant="100" id="Dzu-1D-p23"/>
                                     <constraint firstItem="zul-jX-PE9" firstAttribute="leading" secondItem="MZL-mF-Efy" secondAttribute="leadingMargin" constant="100" id="H3c-1p-vay"/>
-                                    <constraint firstItem="C94-Pl-8Kl" firstAttribute="top" secondItem="MZL-mF-Efy" secondAttribute="topMargin" constant="100" id="Ops-zj-iOj"/>
+                                    <constraint firstItem="C94-Pl-8Kl" firstAttribute="top" secondItem="MZL-mF-Efy" secondAttribute="topMargin" constant="75" id="Ops-zj-iOj"/>
                                     <constraint firstItem="hLk-Z8-IXa" firstAttribute="leading" secondItem="MZL-mF-Efy" secondAttribute="leadingMargin" constant="100" id="Qum-Dq-u5E"/>
-                                    <constraint firstItem="hLk-Z8-IXa" firstAttribute="top" secondItem="MZL-mF-Efy" secondAttribute="topMargin" constant="100" id="X6A-rC-7eU"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="N4P-IU-t8t" secondAttribute="bottom" constant="100" id="aWp-BV-JQK"/>
-                                    <constraint firstItem="Rac-6x-MPh" firstAttribute="top" secondItem="MZL-mF-Efy" secondAttribute="topMargin" constant="100" id="i44-en-oyw"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="zul-jX-PE9" secondAttribute="bottom" constant="100" id="jku-rs-NW5"/>
+                                    <constraint firstItem="hLk-Z8-IXa" firstAttribute="top" secondItem="MZL-mF-Efy" secondAttribute="topMargin" constant="75" id="X6A-rC-7eU"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="N4P-IU-t8t" secondAttribute="bottom" constant="25" id="aWp-BV-JQK"/>
+                                    <constraint firstItem="Rac-6x-MPh" firstAttribute="top" secondItem="MZL-mF-Efy" secondAttribute="topMargin" constant="75" id="i44-en-oyw"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="zul-jX-PE9" secondAttribute="bottom" constant="25" id="jku-rs-NW5"/>
                                     <constraint firstItem="n3z-RU-GfA" firstAttribute="centerX" secondItem="MZL-mF-Efy" secondAttribute="centerX" id="rYs-Ah-zEB"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="N4P-IU-t8t" secondAttribute="trailing" constant="100" id="wzz-am-UF5"/>
                                 </constraints>
@@ -279,6 +336,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="545" y="431"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="7JE-kj-Rfv">
+            <objects>
+                <viewController id="4bk-Tl-LRK" customClass="AboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dqW-6p-AXG"/>
+                        <viewControllerLayoutGuide type="bottom" id="gfS-C0-ptQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AI5-Pw-b02">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="852-zx-Yw4">
+                                <rect key="frame" x="100" y="100" width="1720" height="880"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Icons made by Freepik (http://www.freepik.com) from www.flaticon.com, licenced by CC BY 3.0 (http://creativecommons.org/licenses/by/3.0/). </string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstItem="852-zx-Yw4" firstAttribute="top" secondItem="dqW-6p-AXG" secondAttribute="bottom" constant="100" id="LIK-4i-FLJ"/>
+                            <constraint firstAttribute="trailing" secondItem="852-zx-Yw4" secondAttribute="trailing" constant="100" id="MvG-TU-zpi"/>
+                            <constraint firstItem="gfS-C0-ptQ" firstAttribute="top" secondItem="852-zx-Yw4" secondAttribute="bottom" constant="100" id="fQy-h6-hZo"/>
+                            <constraint firstItem="852-zx-Yw4" firstAttribute="leading" secondItem="AI5-Pw-b02" secondAttribute="leading" constant="100" id="fxu-DZ-czA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xtW-hT-mWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2719" y="-766"/>
         </scene>
         <!--NewsListView-->
         <scene sceneID="yxd-6c-z9h">
@@ -427,10 +518,13 @@
     </scenes>
     <resources>
         <image name="AppIcon-1024.png" width="1024" height="1024"/>
-        <image name="CampusMapIco.png" width="160" height="160"/>
-        <image name="EventsIco.png" width="160" height="160"/>
-        <image name="MensaIco.png" width="160" height="160"/>
-        <image name="NewsIco.png" width="160" height="160"/>
-        <image name="SearchForStaffIco.png" width="160" height="160"/>
+        <image name="HomeAboutIcon.png" width="100" height="100"/>
+        <image name="HomeEventIcon.png" width="400" height="300"/>
+        <image name="HomeKioskIcon.png" width="400" height="300"/>
+        <image name="HomeMapIcon.png" width="400" height="300"/>
+        <image name="HomeMensaIcon.png" width="400" height="300"/>
+        <image name="HomeNewsIcon.png" width="400" height="300"/>
+        <image name="HomeSettingIcon.png" width="100" height="100"/>
+        <image name="HomeStaffIcon.png" width="400" height="300"/>
     </resources>
 </document>
