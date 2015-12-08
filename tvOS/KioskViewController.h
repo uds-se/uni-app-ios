@@ -9,19 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "NewsArticle.h"
 #import "Parser.h"
+#import "NewsDataSourceAndDelegate.h"
 
-@interface KioskViewController : UIViewController<UITableViewDataSource,UITableViewDelegate> {
+@interface KioskViewController : UIViewController {
     
     __weak IBOutlet UIActivityIndicatorView *AiKiosk;
     __weak IBOutlet UITableView *NewsTableView;
-    NSMutableArray *NewsTableViewContent;
-    NSMutableArray *NewsContent1;
-    NSMutableArray *NewsContent2;
     
+    NewsDataSourceAndDelegate *NewsTable;
+
 }
 
-- (void) loadNews;
 - (void) showNews1;
 - (void) showNews2;
+- (void) switchToNextView:(SEL)selector;
 
 @end

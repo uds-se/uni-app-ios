@@ -64,6 +64,9 @@
 		6564ED491C0E112200FA650D /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED481C0E112200FA650D /* NewsListViewController.m */; };
 		6564ED501C0E34D100FA650D /* NewsArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B0EB5015AF6BA500ECC1BD /* NewsArticle.m */; };
 		6564ED511C0E3E6D00FA650D /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B0EB5415AF6BA500ECC1BD /* NewsTableViewCell.m */; };
+		65F44AC01C16FD9C0036F884 /* NewsDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F44ABF1C16FD9C0036F884 /* NewsDataSourceAndDelegate.m */; };
+		65F44AC31C1701530036F884 /* EventsDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F44AC21C1701530036F884 /* EventsDataSourceAndDelegate.m */; };
+		65F44AC61C1701650036F884 /* MensaDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F44AC51C1701650036F884 /* MensaDataSourceAndDelegate.m */; };
 		65F5343A1C11F9B100433136 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F534391C11F9B100433136 /* AboutViewController.m */; };
 		65F5343D1C11FDD800433136 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F5343C1C11FDD800433136 /* SettingsViewController.m */; };
 		65F534401C1202C500433136 /* HomeAboutIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F5343E1C1202C500433136 /* HomeAboutIcon.png */; };
@@ -462,6 +465,12 @@
 		6564ED431C0E01B000FA650D /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.0.sdk/usr/lib/libxml2.tbd; sourceTree = DEVELOPER_DIR; };
 		6564ED481C0E112200FA650D /* NewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListViewController.m; sourceTree = "<group>"; };
 		6564ED4A1C0E114D00FA650D /* NewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListViewController.h; sourceTree = "<group>"; };
+		65F44ABE1C16FD9C0036F884 /* NewsDataSourceAndDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDataSourceAndDelegate.h; sourceTree = "<group>"; };
+		65F44ABF1C16FD9C0036F884 /* NewsDataSourceAndDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDataSourceAndDelegate.m; sourceTree = "<group>"; };
+		65F44AC11C1701530036F884 /* EventsDataSourceAndDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDataSourceAndDelegate.h; sourceTree = "<group>"; };
+		65F44AC21C1701530036F884 /* EventsDataSourceAndDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsDataSourceAndDelegate.m; sourceTree = "<group>"; };
+		65F44AC41C1701650036F884 /* MensaDataSourceAndDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaDataSourceAndDelegate.h; sourceTree = "<group>"; };
+		65F44AC51C1701650036F884 /* MensaDataSourceAndDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaDataSourceAndDelegate.m; sourceTree = "<group>"; };
 		65F534381C11F9B100433136 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		65F534391C11F9B100433136 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		65F5343B1C11FDD800433136 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -836,6 +845,12 @@
 			children = (
 				6541F23A1C16DED900C6B90A /* KioskViewController.h */,
 				6541F23B1C16DED900C6B90A /* KioskViewController.m */,
+				65F44ABE1C16FD9C0036F884 /* NewsDataSourceAndDelegate.h */,
+				65F44ABF1C16FD9C0036F884 /* NewsDataSourceAndDelegate.m */,
+				65F44AC11C1701530036F884 /* EventsDataSourceAndDelegate.h */,
+				65F44AC21C1701530036F884 /* EventsDataSourceAndDelegate.m */,
+				65F44AC41C1701650036F884 /* MensaDataSourceAndDelegate.h */,
+				65F44AC51C1701650036F884 /* MensaDataSourceAndDelegate.m */,
 			);
 			name = Kiosk;
 			sourceTree = "<group>";
@@ -1896,15 +1911,18 @@
 				6564ED421C0DFA2800FA650D /* XPathQuery.m in Sources */,
 				6564ED501C0E34D100FA650D /* NewsArticle.m in Sources */,
 				6564ED401C0DFA2800FA650D /* TFHpple.m in Sources */,
+				65F44AC61C1701650036F884 /* MensaDataSourceAndDelegate.m in Sources */,
 				6564ED491C0E112200FA650D /* NewsListViewController.m in Sources */,
 				6537B9551C0EDE1900B24278 /* NewsArticleViewController.m in Sources */,
 				6564ED2B1C0DE9C000FA650D /* ViewController.m in Sources */,
 				6564ED511C0E3E6D00FA650D /* NewsTableViewCell.m in Sources */,
 				6564ED2E1C0DE9C000FA650D /* tvOS.xcdatamodeld in Sources */,
 				6564ED281C0DE9C000FA650D /* AppDelegate.m in Sources */,
+				65F44AC01C16FD9C0036F884 /* NewsDataSourceAndDelegate.m in Sources */,
 				65F5343A1C11F9B100433136 /* AboutViewController.m in Sources */,
 				6564ED251C0DE9C000FA650D /* main.m in Sources */,
 				65F5343D1C11FDD800433136 /* SettingsViewController.m in Sources */,
+				65F44AC31C1701530036F884 /* EventsDataSourceAndDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

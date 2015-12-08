@@ -390,10 +390,6 @@
                                         <animations/>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="fCI-qE-vCR" id="XfJ-Ez-Y1M"/>
-                                    <outlet property="delegate" destination="fCI-qE-vCR" id="yTu-zV-T5H"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <animations/>

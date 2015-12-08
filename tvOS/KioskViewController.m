@@ -15,6 +15,11 @@
 @implementation KioskViewController
 
 - (void)viewDidLoad {
+    
+    NewsTable = [[NewsDataSourceAndDelegate alloc]init];
+    NewsTableView.dataSource = NewsTable;
+    NewsTableView.delegate = NewsTable;
+    
     [super viewDidLoad];
     
     NewsTableView.estimatedRowHeight = 150.0;
@@ -23,12 +28,8 @@
     AiKiosk.hidden = false;
     
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
-        
-        NewsContent1 = [[NSMutableArray alloc] initWithCapacity:0];
-        NewsContent2 = [[NSMutableArray alloc] initWithCapacity:0];
-        NewsTableViewContent = [[NSMutableArray alloc] initWithCapacity:0];
-        
-        [self loadNews];
+       
+        [NewsTable loadData];
         
         dispatch_async(dispatch_get_main_queue(), ^(void){
             [AiKiosk startAnimating];
@@ -43,59 +44,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)loadNews {
-    NSMutableArray *NewsElements = [Parser parseWithURL:@"http://www.uni-saarland.de/aktuelles/presse/pms.html" andWithPath:@"//div[@class='news-list-item']//span | //div[@class='news-list-item']//h1 | //div[@class='news-list-item']/p | //div//h1//a/@href"];
-    
-    for (int i = 0; i < ([NewsElements count]/2); i=i+4) {
-        @try {
-            NewsArticle *article = [[NewsArticle alloc] initWithTitle:[NewsElements objectAtIndex:i+1] subTitle:[NewsElements objectAtIndex:(i+3)] pubDate:[NewsElements objectAtIndex:i] article:[@"https://www.uni-saarland.de/" stringByAppendingString:[NewsElements objectAtIndex:(i+2)]]];
-            [NewsContent1 addObject:article];
-        }
-        @catch (NSException *e) {
-        }
-    }
-    
-    for (int i = 20; i < ([NewsElements count]); i=i+4) {
-        @try {
-            NewsArticle *article = [[NewsArticle alloc] initWithTitle:[NewsElements objectAtIndex:i+1] subTitle:[NewsElements objectAtIndex:(i+3)] pubDate:[NewsElements objectAtIndex:i] article:[@"https://www.uni-saarland.de/" stringByAppendingString:[NewsElements objectAtIndex:(i+2)]]];
-            [NewsContent2 addObject:article];
-        }
-        @catch (NSException *e) {
-        }
-    }
-    
-}
-
 - (void)showNews1 {
-    NewsTableViewContent = NewsContent1;
+    [NewsTable setData1];
     [NewsTableView reloadData];
-    
-    [self performSelector:@selector(showNews2) withObject:nil afterDelay:5.0];
+    [self switchToNextView:@selector(showNews2)];
 }
 
-- (void)showNews2 {
-    NewsTableViewContent = NewsContent2;
+- (void)showNews2 {    
+    [NewsTable setData2];
     [NewsTableView reloadData];
-    
-    [self performSelector:@selector(showNews1) withObject:nil afterDelay:5.0];
+    [self switchToNextView:@selector(showNews1)];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [NewsTableViewContent count];
-    
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"NewsTableViewCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    cell.textLabel.text = [[NewsTableViewContent objectAtIndex:indexPath.row] title];
-    cell.detailTextLabel.text = [[NewsTableViewContent objectAtIndex:indexPath.row] pubDate];
-    
-    return cell;
-    
+- (void)switchToNextView:(SEL)selector {
+    [self performSelector:selector withObject:nil afterDelay:5.0];
 }
 
 
