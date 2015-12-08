@@ -27,9 +27,11 @@
     NSMutableArray *NewsElements = [[NSMutableArray alloc] initWithCapacity:0];
     
     for (TFHppleElement * elem in Nodes) {
-        [NewsElements addObject:[elem content]];
+        if (!([[elem content] isEqual:@""])) {
+            [NewsElements addObject:[elem content]];
+        }
     }
-    
+   
     return NewsElements;
 }
 

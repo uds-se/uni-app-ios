@@ -53,7 +53,7 @@
 
 - (void) loadNews {
     NSString *PageCount = [NSString stringWithFormat:@"%d",PageCounter];
-    NSMutableArray *NewsElements = [Parser parseWithURL:[@"http://www.uni-saarland.de/aktuelles/presse/pms.html?tx_ttnews%5Bpointer%5D=" stringByAppendingString:PageCount] andWithPath:@"//div[@class='news-list-item']//span | //div[@class='news-list-item']//h1 | //div[@class='news-list-item']//p | //div//h1//a/@href"];
+    NSMutableArray *NewsElements = [Parser parseWithURL:[@"http://www.uni-saarland.de/aktuelles/presse/pms.html?tx_ttnews%5Bpointer%5D=" stringByAppendingString:PageCount] andWithPath:@"//div[@class='news-list-item']//span | //div[@class='news-list-item']//h1 | //div[@class='news-list-item']/p | //div//h1//a/@href"];
     
     for (int i = 0; i < [NewsElements count]; i=i+4) {
         @try {
@@ -87,7 +87,7 @@
 
  - (void)tableView:(UITableView *)tableView didUpdateFocusInContext:(UITableViewFocusUpdateContext *)context withAnimationCoordinator:(UIFocusAnimationCoordinator *)coordinator {
  NSIndexPath *nextIndexPath = [context nextFocusedIndexPath];
-     if ((nextIndexPath.row == ([ArticleElements count]-1)) && PageCounter < 5) {
+     if ((nextIndexPath.row == ([ArticleElements count]-1)) && PageCounter < 9) {
          PageCounter = PageCounter + 1;
          [AiNewsView startAnimating];
          AiNewsView.hidden = false;
