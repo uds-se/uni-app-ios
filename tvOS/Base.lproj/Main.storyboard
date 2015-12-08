@@ -288,6 +288,9 @@
                                                 </constraints>
                                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                                 <state key="normal" backgroundImage="HomeKioskIcon.png"/>
+                                                <connections>
+                                                    <segue destination="fCI-qE-vCR" kind="show" id="w59-pB-g8g"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <animations/>
@@ -336,6 +339,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="545" y="431"/>
+        </scene>
+        <!--Kiosk View Controller-->
+        <scene sceneID="iZg-nU-oZN">
+            <objects>
+                <viewController id="fCI-qE-vCR" customClass="KioskViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vmk-N7-Wt3"/>
+                        <viewControllerLayoutGuide type="bottom" id="tTd-6b-NIc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wxI-2j-MaF">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="3Eq-xE-6ga">
+                                <rect key="frame" x="928" y="508" width="64" height="64"/>
+                                <animations/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="JMC-vD-pPr">
+                                <rect key="frame" x="90" y="60" width="1740" height="960"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewsTableViewCell" textLabel="qyz-S0-6sH" detailTextLabel="lYz-ea-tSg" style="IBUITableViewCellStyleSubtitle" id="7Mk-BE-UXW">
+                                        <rect key="frame" x="0.0" y="54" width="1740" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Mk-BE-UXW" id="p0m-ny-ywN">
+                                            <rect key="frame" x="0.0" y="0.0" width="1724" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qyz-S0-6sH">
+                                                    <rect key="frame" x="20" y="4" width="72" height="46"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lYz-ea-tSg">
+                                                    <rect key="frame" x="20" y="50" width="128" height="46"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fCI-qE-vCR" id="XfJ-Ez-Y1M"/>
+                                    <outlet property="delegate" destination="fCI-qE-vCR" id="yTu-zV-T5H"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstItem="tTd-6b-NIc" firstAttribute="top" secondItem="JMC-vD-pPr" secondAttribute="bottom" constant="60" id="GQZ-dI-7iL"/>
+                            <constraint firstItem="JMC-vD-pPr" firstAttribute="top" secondItem="vmk-N7-Wt3" secondAttribute="bottom" constant="60" id="NZ1-Od-sey"/>
+                            <constraint firstItem="3Eq-xE-6ga" firstAttribute="centerY" secondItem="wxI-2j-MaF" secondAttribute="centerY" id="cIW-aB-4K8"/>
+                            <constraint firstItem="JMC-vD-pPr" firstAttribute="leading" secondItem="wxI-2j-MaF" secondAttribute="leading" constant="90" id="q6S-0f-MKj"/>
+                            <constraint firstItem="3Eq-xE-6ga" firstAttribute="centerX" secondItem="wxI-2j-MaF" secondAttribute="centerX" id="qLs-mn-4bd"/>
+                            <constraint firstAttribute="trailing" secondItem="JMC-vD-pPr" secondAttribute="trailing" constant="90" id="t2e-gW-YPq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="AiKiosk" destination="3Eq-xE-6ga" id="tT5-WC-Zsc"/>
+                        <outlet property="NewsTableView" destination="JMC-vD-pPr" id="eGx-rL-Vpl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ij-UX-FsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="585" y="1637"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="7JE-kj-Rfv">

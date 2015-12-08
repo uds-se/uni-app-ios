@@ -49,6 +49,7 @@
 		6537C3211C11AC3A00F22518 /* HomeMensaIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6537C31B1C11AC3A00F22518 /* HomeMensaIcon.png */; };
 		6537C3221C11AC3A00F22518 /* HomeNewsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6537C31C1C11AC3A00F22518 /* HomeNewsIcon.png */; };
 		6537C3231C11AC3A00F22518 /* HomeStaffIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6537C31D1C11AC3A00F22518 /* HomeStaffIcon.png */; };
+		6541F23C1C16DED900C6B90A /* KioskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6541F23B1C16DED900C6B90A /* KioskViewController.m */; };
 		655F27D91C0F340300B3C7BE /* AppIcon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 655F27D81C0F340300B3C7BE /* AppIcon-1024.png */; };
 		6564ED251C0DE9C000FA650D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED241C0DE9C000FA650D /* main.m */; };
 		6564ED281C0DE9C000FA650D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED271C0DE9C000FA650D /* AppDelegate.m */; };
@@ -439,6 +440,8 @@
 		6537C31B1C11AC3A00F22518 /* HomeMensaIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeMensaIcon.png; sourceTree = "<group>"; };
 		6537C31C1C11AC3A00F22518 /* HomeNewsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeNewsIcon.png; sourceTree = "<group>"; };
 		6537C31D1C11AC3A00F22518 /* HomeStaffIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeStaffIcon.png; sourceTree = "<group>"; };
+		6541F23A1C16DED900C6B90A /* KioskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KioskViewController.h; sourceTree = "<group>"; };
+		6541F23B1C16DED900C6B90A /* KioskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KioskViewController.m; sourceTree = "<group>"; };
 		655F27D81C0F340300B3C7BE /* AppIcon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-1024.png"; sourceTree = "<group>"; };
 		6564ED211C0DE9C000FA650D /* tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6564ED241C0DE9C000FA650D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -828,6 +831,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6541F2391C16DEC100C6B90A /* Kiosk */ = {
+			isa = PBXGroup;
+			children = (
+				6541F23A1C16DED900C6B90A /* KioskViewController.h */,
+				6541F23B1C16DED900C6B90A /* KioskViewController.m */,
+			);
+			name = Kiosk;
+			sourceTree = "<group>";
+		};
+		6541F23D1C16E9A700C6B90A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		655F27CD1C0F332B00B3C7BE /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -849,6 +868,8 @@
 			children = (
 				655F27CD1C0F332B00B3C7BE /* images */,
 				6564ED391C0DF9B600FA650D /* Parser */,
+				6541F23D1C16E9A700C6B90A /* Settings */,
+				6541F2391C16DEC100C6B90A /* Kiosk */,
 				6564ED4B1C0E327000FA650D /* News */,
 				6564ED261C0DE9C000FA650D /* AppDelegate.h */,
 				6564ED271C0DE9C000FA650D /* AppDelegate.m */,
@@ -1871,6 +1892,7 @@
 			files = (
 				6537B9521C0ED3A100B24278 /* Parser.m in Sources */,
 				6564ED411C0DFA2800FA650D /* TFHppleElement.m in Sources */,
+				6541F23C1C16DED900C6B90A /* KioskViewController.m in Sources */,
 				6564ED421C0DFA2800FA650D /* XPathQuery.m in Sources */,
 				6564ED501C0E34D100FA650D /* NewsArticle.m in Sources */,
 				6564ED401C0DFA2800FA650D /* TFHpple.m in Sources */,
