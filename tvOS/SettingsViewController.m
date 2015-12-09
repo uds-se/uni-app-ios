@@ -13,10 +13,19 @@
 @end
 
 @implementation SettingsViewController
+@synthesize SettingsTableView;
+@synthesize SettingsDetailTableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    SettingItems = [NSArray arrayWithObjects:@"Campus", @"Language", @"Building", nil];
+    MensaItems = [NSArray arrayWithObjects:@"Saarbrücken", @"Homburg", nil];
+    BuildingItems = [NSArray arrayWithObjects:@"Building1", @"Building2", @"Building3", nil];
+    LanguageItems = [NSArray arrayWithObjects:@"Language must be set in device settings", nil];
+    defaults = [NSUserDefaults standardUserDefaults];
+    SettingCurrentItems = [[NSMutableArray alloc] initWithCapacity:0];
+    [self loadCurrentSettings];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +33,106 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (tableView == [self SettingsTableView]) {
+        return [SettingItems count];
+    }
+    else {
+        return [SettingDetailItems count];
+    }    
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == [self SettingsTableView]) {
+        static NSString *CellIdentifier = @"SettingsCell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        cell.textLabel.text = [SettingItems objectAtIndex:indexPath.row];
+        cell.detailTextLabel.text = [SettingCurrentItems objectAtIndex:indexPath.row];
+        return cell;
+    }
+    else {
+        static NSString *CellIdentifier = @"SettingsDetailCell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        cell.textLabel.text = [SettingDetailItems objectAtIndex:indexPath.row];
+        cell.detailTextLabel.text = [SettingDetailItems objectAtIndex:indexPath.row];
+        return cell;
+    }
+
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    if (tableView == [self SettingsTableView]) {
+        SettingCurrentlyAt = indexPath;
+        switch (indexPath.row) {
+            case 0:
+                SettingDetailItems = MensaItems;
+                SettingsDetailTableView.allowsSelection = YES;
+                break;
+            case 1:
+                SettingDetailItems = LanguageItems;
+                SettingsDetailTableView.allowsSelection = NO;
+                break;
+            case 2:
+                SettingDetailItems = BuildingItems;
+                SettingsDetailTableView.allowsSelection = YES;
+            default:
+                break;
+        }
+        [SettingsDetailTableView reloadData];
+    }
+    else {
+        //save setting with SettingCurrentlyAt und SettingDetailItems objectAtIndex:indexPath.row
+        switch (SettingCurrentlyAt.row) {
+            case 0:
+                [self saveCampus:indexPath.row];
+                [self loadCurrentSettings];
+                [SettingsTableView reloadData];
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            default:
+                break;
+        }
+    
+    }
+}
+
+- (void) loadCurrentSettings {
+    NSString *campus_selected = [defaults objectForKey:@"campus_selected"];
+    [SettingCurrentItems removeAllObjects];
+    if (([campus_selected length] > 0) && [campus_selected isEqualToString:@"hom"]) {
+        [SettingCurrentItems addObject:@"Homburg"];
+    }
+    else {
+        [SettingCurrentItems addObject:@"Saarbrücken"];
+    }
+    [SettingCurrentItems addObject:[[NSLocale preferredLanguages] objectAtIndex:0]];
+    [SettingCurrentItems addObject:@"none"];
+}
+
+- (void) saveCampus:(NSInteger)option {
+    if (option == 0) {
+        [defaults setObject:@"saar" forKey:@"campus_selected"];
+        [defaults synchronize];
+    }
+    else {
+        [defaults setObject:@"hom" forKey:@"campus_selected"];
+        [defaults synchronize];
+    }
+}
+
+
 
 @end
+
+
+
+
+
+
+
+

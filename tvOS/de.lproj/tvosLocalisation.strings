@@ -1,0 +1,12 @@
+/* 
+  tvosLocalization.strings
+  Uni Saar
+
+  Created by Daniel on 09/12/15.
+  Copyright © 2015 Universität des Saarlandes. All rights reserved.
+*/
+
+//Kiosk Mode
+"News" = "Aktuelles";
+"Events" = "Veranstaltungen";
+"Mensa" = "Mensa";

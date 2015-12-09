@@ -64,6 +64,7 @@
 		6564ED491C0E112200FA650D /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED481C0E112200FA650D /* NewsListViewController.m */; };
 		6564ED501C0E34D100FA650D /* NewsArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B0EB5015AF6BA500ECC1BD /* NewsArticle.m */; };
 		6564ED511C0E3E6D00FA650D /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B0EB5415AF6BA500ECC1BD /* NewsTableViewCell.m */; };
+		6590D88A1C1853FA00418278 /* tvosLocalisation.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6590D88C1C1853FA00418278 /* tvosLocalisation.strings */; };
 		65F44AC01C16FD9C0036F884 /* NewsDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F44ABF1C16FD9C0036F884 /* NewsDataSourceAndDelegate.m */; };
 		65F44AC31C1701530036F884 /* EventsDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F44AC21C1701530036F884 /* EventsDataSourceAndDelegate.m */; };
 		65F44AC61C1701650036F884 /* MensaDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F44AC51C1701650036F884 /* MensaDataSourceAndDelegate.m */; };
@@ -465,6 +466,9 @@
 		6564ED431C0E01B000FA650D /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.0.sdk/usr/lib/libxml2.tbd; sourceTree = DEVELOPER_DIR; };
 		6564ED481C0E112200FA650D /* NewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListViewController.m; sourceTree = "<group>"; };
 		6564ED4A1C0E114D00FA650D /* NewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListViewController.h; sourceTree = "<group>"; };
+		657469CF1C183AC50039FB7A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		6590D88B1C1853FA00418278 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/tvosLocalisation.strings; sourceTree = "<group>"; };
+		6590D88D1C1853FC00418278 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/tvosLocalisation.strings; sourceTree = "<group>"; };
 		65F44ABE1C16FD9C0036F884 /* NewsDataSourceAndDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDataSourceAndDelegate.h; sourceTree = "<group>"; };
 		65F44ABF1C16FD9C0036F884 /* NewsDataSourceAndDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDataSourceAndDelegate.m; sourceTree = "<group>"; };
 		65F44AC11C1701530036F884 /* EventsDataSourceAndDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDataSourceAndDelegate.h; sourceTree = "<group>"; };
@@ -858,6 +862,8 @@
 		6541F23D1C16E9A700C6B90A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				65F5343B1C11FDD800433136 /* SettingsViewController.h */,
+				65F5343C1C11FDD800433136 /* SettingsViewController.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -890,8 +896,6 @@
 				6564ED271C0DE9C000FA650D /* AppDelegate.m */,
 				65F534381C11F9B100433136 /* AboutViewController.h */,
 				65F534391C11F9B100433136 /* AboutViewController.m */,
-				65F5343B1C11FDD800433136 /* SettingsViewController.h */,
-				65F5343C1C11FDD800433136 /* SettingsViewController.m */,
 				6564ED291C0DE9C000FA650D /* ViewController.h */,
 				6564ED2A1C0DE9C000FA650D /* ViewController.m */,
 				6564ED2F1C0DE9C000FA650D /* Main.storyboard */,
@@ -906,6 +910,7 @@
 		6564ED231C0DE9C000FA650D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6590D88C1C1853FA00418278 /* tvosLocalisation.strings */,
 				6564ED241C0DE9C000FA650D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -1599,7 +1604,7 @@
 		E5EF30741598F10700D65D13 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastTestingUpgradeCheck = 0710;
+				LastTestingUpgradeCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Universität des Saarlandes";
 				TargetAttributes = {
@@ -1644,6 +1649,7 @@
 				6537B9581C0F0ACC00B24278 /* NewsIcon@2x.png in Resources */,
 				6537C31F1C11AC3A00F22518 /* HomeKioskIcon.png in Resources */,
 				65F534411C1202C500433136 /* HomeSettingIcon.png in Resources */,
+				6590D88A1C1853FA00418278 /* tvosLocalisation.strings in Resources */,
 				6537C3211C11AC3A00F22518 /* HomeMensaIcon.png in Resources */,
 				6537C31E1C11AC3A00F22518 /* HomeEventIcon.png in Resources */,
 				6537C3221C11AC3A00F22518 /* HomeNewsIcon.png in Resources */,
@@ -2043,8 +2049,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				6564ED301C0DE9C000FA650D /* Base */,
+				657469CF1C183AC50039FB7A /* de */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6590D88C1C1853FA00418278 /* tvosLocalisation.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6590D88B1C1853FA00418278 /* en */,
+				6590D88D1C1853FC00418278 /* de */,
+			);
+			name = tvosLocalisation.strings;
 			sourceTree = "<group>";
 		};
 		E2F02C481725953800182968 /* MainStoryboard_iPhone.storyboard */ = {

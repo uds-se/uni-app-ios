@@ -8,6 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController<UITableViewDataSource,UITableViewDelegate> {
+    
+    NSArray *SettingItems;
+    NSMutableArray *SettingCurrentItems;
+    NSArray *MensaItems;
+    NSArray *BuildingItems;
+    NSArray *LanguageItems;
+    NSArray *SettingDetailItems;
+    NSIndexPath *SettingCurrentlyAt;
+    NSUserDefaults *defaults;
+    
+}
+
+@property (weak, nonatomic) IBOutlet UITableView *SettingsTableView;
+@property (weak, nonatomic) IBOutlet UITableView *SettingsDetailTableView;
+
+- (void) loadCurrentSettings;
+- (void) saveCampus:(NSInteger)option;
 
 @end

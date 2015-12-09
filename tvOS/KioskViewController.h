@@ -15,6 +15,7 @@
     
     __weak IBOutlet UIActivityIndicatorView *AiKiosk;
     __weak IBOutlet UITableView *NewsTableView;
+    __weak IBOutlet UILabel *KioskModeTitel;
     
     NewsDataSourceAndDelegate *NewsTable;
 

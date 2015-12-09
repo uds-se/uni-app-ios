@@ -26,6 +26,7 @@
     NewsTableView.rowHeight = UITableViewAutomaticDimension;
     [AiKiosk startAnimating];
     AiKiosk.hidden = false;
+    KioskModeTitel.hidden = true;
     
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
        
@@ -35,6 +36,7 @@
             [AiKiosk startAnimating];
             AiKiosk.hidden = true;
             [self showNews1];
+            KioskModeTitel.hidden = false;
         });
     });
 }
@@ -48,12 +50,14 @@
     [NewsTable setData1];
     [NewsTableView reloadData];
     [self switchToNextView:@selector(showNews2)];
+    KioskModeTitel.text = NSLocalizedStringFromTable(@"News", @"tvosLocalisation", nil);
 }
 
 - (void)showNews2 {    
     [NewsTable setData2];
     [NewsTableView reloadData];
     [self switchToNextView:@selector(showNews1)];
+    KioskModeTitel.text = NSLocalizedStringFromTable(@"News", @"tvosLocalisation", nil);
 }
 
 - (void)switchToNextView:(SEL)selector {
