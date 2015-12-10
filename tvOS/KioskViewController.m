@@ -28,6 +28,15 @@
     AiKiosk.hidden = false;
     KioskModeTitel.hidden = true;
     
+    defaults = [NSUserDefaults standardUserDefaults];
+    NSString *interval_selected = [defaults objectForKey:@"interval_selected"];
+    if ([interval_selected length] > 0) {
+        interval = [interval_selected integerValue];
+    }
+    else {
+        interval = 10;
+    }
+    
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
        
         [NewsTable loadData];
@@ -35,8 +44,10 @@
         dispatch_async(dispatch_get_main_queue(), ^(void){
             [AiKiosk startAnimating];
             AiKiosk.hidden = true;
-            [self showNews1];
             KioskModeTitel.hidden = false;
+            KioskModeTitel.alpha = 0;
+            [self showNews1];
+            
         });
     });
 }
@@ -47,21 +58,55 @@
 }
 
 - (void)showNews1 {
-    [NewsTable setData1];
-    [NewsTableView reloadData];
+    
+    [UIView animateWithDuration:1 animations:^(){
+        NewsTableView.alpha = 0;
+        KioskModeTitel.alpha = 0;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [NewsTable setData1];
+            [NewsTableView reloadData];
+            KioskModeTitel.text = NSLocalizedStringFromTable(@"News", @"tvosLocalisation", nil);
+            [UIView animateWithDuration:1 animations:^(){
+                NewsTableView.alpha = 1;
+                KioskModeTitel.alpha = 1;
+            }];
+        }
+    }];
+
+    
+    
+//    [NewsTable setData1];
+//    [NewsTableView reloadData];
     [self switchToNextView:@selector(showNews2)];
-    KioskModeTitel.text = NSLocalizedStringFromTable(@"News", @"tvosLocalisation", nil);
+//    KioskModeTitel.text = NSLocalizedStringFromTable(@"News", @"tvosLocalisation", nil);
 }
 
-- (void)showNews2 {    
-    [NewsTable setData2];
-    [NewsTableView reloadData];
+- (void)showNews2 {
+    
+    [UIView animateWithDuration:1 animations:^(){
+        NewsTableView.alpha = 0;
+        KioskModeTitel.alpha = 0;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [NewsTable setData2];
+            [NewsTableView reloadData];
+            KioskModeTitel.text = NSLocalizedStringFromTable(@"News", @"tvosLocalisation", nil);
+            [UIView animateWithDuration:1 animations:^(){
+                NewsTableView.alpha = 1;
+                KioskModeTitel.alpha = 1;
+            }];
+        }
+    }];
+    
+    //[NewsTable setData2];
+    //[NewsTableView reloadData];
     [self switchToNextView:@selector(showNews1)];
-    KioskModeTitel.text = NSLocalizedStringFromTable(@"News", @"tvosLocalisation", nil);
+    //KioskModeTitel.text = NSLocalizedStringFromTable(@"News", @"tvosLocalisation", nil);
 }
 
 - (void)switchToNextView:(SEL)selector {
-    [self performSelector:selector withObject:nil afterDelay:5.0];
+    [self performSelector:selector withObject:nil afterDelay:interval];
 }
 
 

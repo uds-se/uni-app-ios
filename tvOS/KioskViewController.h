@@ -18,7 +18,8 @@
     __weak IBOutlet UILabel *KioskModeTitel;
     
     NewsDataSourceAndDelegate *NewsTable;
-
+    NSInteger interval;
+    NSUserDefaults *defaults;
 }
 
 - (void) showNews1;

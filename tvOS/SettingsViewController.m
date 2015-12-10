@@ -19,10 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    SettingItems = [NSArray arrayWithObjects:@"Campus", @"Language", @"Building", nil];
+    SettingItems = [NSArray arrayWithObjects:@"Campus", @"Kiosk Mode Interval", @"Language", @"Building", nil];
     MensaItems = [NSArray arrayWithObjects:@"Saarbrücken", @"Homburg", nil];
     BuildingItems = [NSArray arrayWithObjects:@"Building1", @"Building2", @"Building3", nil];
-    LanguageItems = [NSArray arrayWithObjects:@"Language must be set in device settings", nil];
+    LanguageItems = [NSArray arrayWithObjects:@"Automatically chosen depending ", @"on system language.", nil];
+    IntervalItems = [NSArray arrayWithObjects:@"10", @"20", @"30", @"60", nil];
+    //[[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:@"de", nil] forKey:@"AppleLanguages"];
     defaults = [NSUserDefaults standardUserDefaults];
     SettingCurrentItems = [[NSMutableArray alloc] initWithCapacity:0];
     [self loadCurrentSettings];
@@ -71,10 +73,14 @@
                 SettingsDetailTableView.allowsSelection = YES;
                 break;
             case 1:
+                SettingDetailItems = IntervalItems;
+                SettingsDetailTableView.allowsSelection = YES;
+                break;
+            case 2:
                 SettingDetailItems = LanguageItems;
                 SettingsDetailTableView.allowsSelection = NO;
                 break;
-            case 2:
+            case 3:
                 SettingDetailItems = BuildingItems;
                 SettingsDetailTableView.allowsSelection = YES;
             default:
@@ -87,28 +93,38 @@
         switch (SettingCurrentlyAt.row) {
             case 0:
                 [self saveCampus:indexPath.row];
-                [self loadCurrentSettings];
-                [SettingsTableView reloadData];
                 break;
             case 1:
+                [self saveInterval:indexPath.row];
                 break;
             case 2:
+                break;
+            case 3:
                 break;
             default:
                 break;
         }
-    
+        [self loadCurrentSettings];
+        [SettingsTableView reloadData];
+        
     }
 }
 
 - (void) loadCurrentSettings {
     NSString *campus_selected = [defaults objectForKey:@"campus_selected"];
+    NSString *interval_selected = [defaults objectForKey:@"interval_selected"];
     [SettingCurrentItems removeAllObjects];
     if (([campus_selected length] > 0) && [campus_selected isEqualToString:@"hom"]) {
         [SettingCurrentItems addObject:@"Homburg"];
     }
     else {
         [SettingCurrentItems addObject:@"Saarbrücken"];
+    }
+    if ([interval_selected length] > 0) {
+        [SettingCurrentItems addObject:interval_selected];
+    }
+    else {
+        [SettingCurrentItems addObject:@"10"];
     }
     [SettingCurrentItems addObject:[[NSLocale preferredLanguages] objectAtIndex:0]];
     [SettingCurrentItems addObject:@"none"];
@@ -123,6 +139,11 @@
         [defaults setObject:@"hom" forKey:@"campus_selected"];
         [defaults synchronize];
     }
+}
+
+- (void) saveInterval:(NSInteger)option {
+    [defaults setObject:[IntervalItems objectAtIndex:option] forKey:@"interval_selected"];
+    [defaults synchronize];
 }
 
 

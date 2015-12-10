@@ -28,6 +28,7 @@
     AiNewsView.hidden = false;
     NewsListView.estimatedRowHeight = 150.0;
     NewsListView.rowHeight = UITableViewAutomaticDimension;
+    NewsLabel.hidden = true;
     
     PageCounter = 0;
     
@@ -40,6 +41,7 @@
             [NewsListView reloadData];
             [AiNewsView stopAnimating];
             AiNewsView.hidden = true;
+            NewsLabel.hidden = false;
         });
     });
     

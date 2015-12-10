@@ -20,6 +20,7 @@
     NSMutableArray *ArticleElements;
     __weak IBOutlet UITableView *NewsListView;
     __weak IBOutlet UIActivityIndicatorView *AiNewsView;
+    __weak IBOutlet UILabel *NewsLabel;
 }
 
 - (void) loadNews;

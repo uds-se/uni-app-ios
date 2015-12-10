@@ -50,6 +50,7 @@
 		6537C3221C11AC3A00F22518 /* HomeNewsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6537C31C1C11AC3A00F22518 /* HomeNewsIcon.png */; };
 		6537C3231C11AC3A00F22518 /* HomeStaffIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6537C31D1C11AC3A00F22518 /* HomeStaffIcon.png */; };
 		6541F23C1C16DED900C6B90A /* KioskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6541F23B1C16DED900C6B90A /* KioskViewController.m */; };
+		655361861C19A8AD00CBF78B /* AppIcon-1024b.png in Resources */ = {isa = PBXBuildFile; fileRef = 655361851C19A8AD00CBF78B /* AppIcon-1024b.png */; };
 		655F27D91C0F340300B3C7BE /* AppIcon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 655F27D81C0F340300B3C7BE /* AppIcon-1024.png */; };
 		6564ED251C0DE9C000FA650D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED241C0DE9C000FA650D /* main.m */; };
 		6564ED281C0DE9C000FA650D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED271C0DE9C000FA650D /* AppDelegate.m */; };
@@ -446,6 +447,7 @@
 		6537C31D1C11AC3A00F22518 /* HomeStaffIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeStaffIcon.png; sourceTree = "<group>"; };
 		6541F23A1C16DED900C6B90A /* KioskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KioskViewController.h; sourceTree = "<group>"; };
 		6541F23B1C16DED900C6B90A /* KioskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KioskViewController.m; sourceTree = "<group>"; };
+		655361851C19A8AD00CBF78B /* AppIcon-1024b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-1024b.png"; sourceTree = "<group>"; };
 		655F27D81C0F340300B3C7BE /* AppIcon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-1024.png"; sourceTree = "<group>"; };
 		6564ED211C0DE9C000FA650D /* tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6564ED241C0DE9C000FA650D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -871,6 +873,7 @@
 		655F27CD1C0F332B00B3C7BE /* images */ = {
 			isa = PBXGroup;
 			children = (
+				655361851C19A8AD00CBF78B /* AppIcon-1024b.png */,
 				6537C3181C11AC3A00F22518 /* HomeEventIcon.png */,
 				6537C3191C11AC3A00F22518 /* HomeKioskIcon.png */,
 				6537C31A1C11AC3A00F22518 /* HomeMapIcon.png */,
@@ -1642,6 +1645,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				655361861C19A8AD00CBF78B /* AppIcon-1024b.png in Resources */,
 				6537C3231C11AC3A00F22518 /* HomeStaffIcon.png in Resources */,
 				6564ED331C0DE9C000FA650D /* Assets.xcassets in Resources */,
 				6564ED311C0DE9C000FA650D /* Main.storyboard in Resources */,

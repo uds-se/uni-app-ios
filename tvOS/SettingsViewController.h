@@ -15,6 +15,7 @@
     NSArray *MensaItems;
     NSArray *BuildingItems;
     NSArray *LanguageItems;
+    NSArray *IntervalItems;
     NSArray *SettingDetailItems;
     NSIndexPath *SettingCurrentlyAt;
     NSUserDefaults *defaults;
@@ -26,5 +27,6 @@
 
 - (void) loadCurrentSettings;
 - (void) saveCampus:(NSInteger)option;
+- (void) saveInterval:(NSInteger)option;
 
 @end

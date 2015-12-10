@@ -1,6 +1,7 @@
 /* Class = "UITextView"; text = "Icons made by Freepik (http://www.freepik.com) from www.flaticon.com, licenced by CC BY 3.0 (http://creativecommons.org/licenses/by/3.0/). "; ObjectID = "852-zx-Yw4"; */
 "852-zx-Yw4.text" = "Icons made by Freepik (http://www.freepik.com) from www.flaticon.com, licenced by CC BY 3.0 (http://creativecommons.org/licenses/by/3.0/). ";
 
+//Home Screen
 /* Class = "UILabel"; text = "Saarland University"; ObjectID = "K9o-jN-d9a"; */
 "K9o-jN-d9a.text" = "Universität des Saarlandes";
 
@@ -24,3 +25,11 @@
 
 /* Class = "UILabel"; text = "Staff Search"; ObjectID = "u8w-bV-7rr"; */
 "u8w-bV-7rr.text" = "Mitgliedersuche";
+
+//NewsList
+/* Class = "UILabel"; text = "Staff Search"; ObjectID = "clW-gT-xPc"; */
+"clW-gT-xPc.text" = "Aktuelles";
+
+//Settings
+/* Class = "UILabel"; text = "Staff Search"; ObjectID = "oHt-pg-Ff1"; */
+"oHt-pg-Ff1.text" = "Einstellungen";
