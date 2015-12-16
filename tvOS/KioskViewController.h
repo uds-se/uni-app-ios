@@ -19,6 +19,7 @@
     
     NewsDataSourceAndDelegate *NewsTable;
     NSInteger interval;
+    NSInteger animationSpeed;
     NSUserDefaults *defaults;
 }
 

@@ -27,6 +27,7 @@
     [AiKiosk startAnimating];
     AiKiosk.hidden = false;
     KioskModeTitel.hidden = true;
+    animationSpeed = 1;
     
     defaults = [NSUserDefaults standardUserDefaults];
     NSString *interval_selected = [defaults objectForKey:@"interval_selected"];
@@ -59,7 +60,7 @@
 
 - (void)showNews1 {
     
-    [UIView animateWithDuration:1 animations:^(){
+    [UIView animateWithDuration:animationSpeed animations:^(){
         NewsTableView.alpha = 0;
         KioskModeTitel.alpha = 0;
     } completion:^(BOOL finished) {
@@ -67,24 +68,18 @@
             [NewsTable setData1];
             [NewsTableView reloadData];
             KioskModeTitel.text = NSLocalizedStringFromTable(@"News", @"tvosLocalisation", nil);
-            [UIView animateWithDuration:1 animations:^(){
+            [UIView animateWithDuration:animationSpeed animations:^(){
                 NewsTableView.alpha = 1;
                 KioskModeTitel.alpha = 1;
             }];
         }
     }];
-
-    
-    
-//    [NewsTable setData1];
-//    [NewsTableView reloadData];
     [self switchToNextView:@selector(showNews2)];
-//    KioskModeTitel.text = NSLocalizedStringFromTable(@"News", @"tvosLocalisation", nil);
 }
 
 - (void)showNews2 {
     
-    [UIView animateWithDuration:1 animations:^(){
+    [UIView animateWithDuration:animationSpeed animations:^(){
         NewsTableView.alpha = 0;
         KioskModeTitel.alpha = 0;
     } completion:^(BOOL finished) {
@@ -92,17 +87,14 @@
             [NewsTable setData2];
             [NewsTableView reloadData];
             KioskModeTitel.text = NSLocalizedStringFromTable(@"News", @"tvosLocalisation", nil);
-            [UIView animateWithDuration:1 animations:^(){
+//            KioskModeTitel.font = [UIFont systemFontOfSize:76];
+            [UIView animateWithDuration:animationSpeed animations:^(){
                 NewsTableView.alpha = 1;
                 KioskModeTitel.alpha = 1;
             }];
         }
     }];
-    
-    //[NewsTable setData2];
-    //[NewsTableView reloadData];
     [self switchToNextView:@selector(showNews1)];
-    //KioskModeTitel.text = NSLocalizedStringFromTable(@"News", @"tvosLocalisation", nil);
 }
 
 - (void)switchToNextView:(SEL)selector {
