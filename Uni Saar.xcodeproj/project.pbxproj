@@ -51,6 +51,8 @@
 		6537C3231C11AC3A00F22518 /* HomeStaffIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6537C31D1C11AC3A00F22518 /* HomeStaffIcon.png */; };
 		6541F23C1C16DED900C6B90A /* KioskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6541F23B1C16DED900C6B90A /* KioskViewController.m */; };
 		6542B4431C58C74800460FA0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6542B4421C58C74800460FA0 /* Settings.bundle */; };
+		6542B4441C58D8E700460FA0 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = E256EF6315B175BD00F08A50 /* Event.m */; };
+		6542B4491C591D3600460FA0 /* MensaKioskItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6542B4481C591D3600460FA0 /* MensaKioskItem.m */; };
 		655361861C19A8AD00CBF78B /* AppIcon-1024b.png in Resources */ = {isa = PBXBuildFile; fileRef = 655361851C19A8AD00CBF78B /* AppIcon-1024b.png */; };
 		655F27D91C0F340300B3C7BE /* AppIcon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 655F27D81C0F340300B3C7BE /* AppIcon-1024.png */; };
 		6564ED251C0DE9C000FA650D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED241C0DE9C000FA650D /* main.m */; };
@@ -67,7 +69,7 @@
 		6564ED501C0E34D100FA650D /* NewsArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B0EB5015AF6BA500ECC1BD /* NewsArticle.m */; };
 		6564ED511C0E3E6D00FA650D /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B0EB5415AF6BA500ECC1BD /* NewsTableViewCell.m */; };
 		6590D88A1C1853FA00418278 /* tvosLocalisation.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6590D88C1C1853FA00418278 /* tvosLocalisation.strings */; };
-		65F44AC01C16FD9C0036F884 /* NewsDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F44ABF1C16FD9C0036F884 /* NewsDataSourceAndDelegate.m */; };
+		65F44AC01C16FD9C0036F884 /* EventsDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F44ABF1C16FD9C0036F884 /* EventsDataSourceAndDelegate.m */; };
 		65F44AC31C1701530036F884 /* NewsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F44AC21C1701530036F884 /* NewsSource.m */; };
 		65F44AC61C1701650036F884 /* MensaDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F44AC51C1701650036F884 /* MensaDataSourceAndDelegate.m */; };
 		65F5343A1C11F9B100433136 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F534391C11F9B100433136 /* AboutViewController.m */; };
@@ -449,6 +451,8 @@
 		6541F23A1C16DED900C6B90A /* KioskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KioskViewController.h; sourceTree = "<group>"; };
 		6541F23B1C16DED900C6B90A /* KioskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KioskViewController.m; sourceTree = "<group>"; };
 		6542B4421C58C74800460FA0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		6542B4471C591D3600460FA0 /* MensaKioskItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaKioskItem.h; sourceTree = "<group>"; };
+		6542B4481C591D3600460FA0 /* MensaKioskItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaKioskItem.m; sourceTree = "<group>"; };
 		655361851C19A8AD00CBF78B /* AppIcon-1024b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-1024b.png"; sourceTree = "<group>"; };
 		655F27D81C0F340300B3C7BE /* AppIcon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-1024.png"; sourceTree = "<group>"; };
 		6564ED211C0DE9C000FA650D /* tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -473,8 +477,8 @@
 		657469CF1C183AC50039FB7A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		6590D88B1C1853FA00418278 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/tvosLocalisation.strings; sourceTree = "<group>"; };
 		6590D88D1C1853FC00418278 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/tvosLocalisation.strings; sourceTree = "<group>"; };
-		65F44ABE1C16FD9C0036F884 /* NewsDataSourceAndDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDataSourceAndDelegate.h; sourceTree = "<group>"; };
-		65F44ABF1C16FD9C0036F884 /* NewsDataSourceAndDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDataSourceAndDelegate.m; sourceTree = "<group>"; };
+		65F44ABE1C16FD9C0036F884 /* EventsDataSourceAndDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDataSourceAndDelegate.h; sourceTree = "<group>"; };
+		65F44ABF1C16FD9C0036F884 /* EventsDataSourceAndDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsDataSourceAndDelegate.m; sourceTree = "<group>"; };
 		65F44AC11C1701530036F884 /* NewsSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsSource.h; sourceTree = "<group>"; };
 		65F44AC21C1701530036F884 /* NewsSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsSource.m; sourceTree = "<group>"; };
 		65F44AC41C1701650036F884 /* MensaDataSourceAndDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaDataSourceAndDelegate.h; sourceTree = "<group>"; };
@@ -853,12 +857,14 @@
 			children = (
 				6541F23A1C16DED900C6B90A /* KioskViewController.h */,
 				6541F23B1C16DED900C6B90A /* KioskViewController.m */,
-				65F44ABE1C16FD9C0036F884 /* NewsDataSourceAndDelegate.h */,
-				65F44ABF1C16FD9C0036F884 /* NewsDataSourceAndDelegate.m */,
 				65F44AC11C1701530036F884 /* NewsSource.h */,
 				65F44AC21C1701530036F884 /* NewsSource.m */,
+				65F44ABE1C16FD9C0036F884 /* EventsDataSourceAndDelegate.h */,
+				65F44ABF1C16FD9C0036F884 /* EventsDataSourceAndDelegate.m */,
 				65F44AC41C1701650036F884 /* MensaDataSourceAndDelegate.h */,
 				65F44AC51C1701650036F884 /* MensaDataSourceAndDelegate.m */,
+				6542B4471C591D3600460FA0 /* MensaKioskItem.h */,
+				6542B4481C591D3600460FA0 /* MensaKioskItem.m */,
 			);
 			name = Kiosk;
 			sourceTree = "<group>";
@@ -1925,6 +1931,8 @@
 				6564ED421C0DFA2800FA650D /* XPathQuery.m in Sources */,
 				6564ED501C0E34D100FA650D /* NewsArticle.m in Sources */,
 				6564ED401C0DFA2800FA650D /* TFHpple.m in Sources */,
+				6542B4441C58D8E700460FA0 /* Event.m in Sources */,
+				6542B4491C591D3600460FA0 /* MensaKioskItem.m in Sources */,
 				65F44AC61C1701650036F884 /* MensaDataSourceAndDelegate.m in Sources */,
 				6564ED491C0E112200FA650D /* NewsListViewController.m in Sources */,
 				6537B9551C0EDE1900B24278 /* NewsArticleViewController.m in Sources */,
@@ -1932,7 +1940,7 @@
 				6564ED511C0E3E6D00FA650D /* NewsTableViewCell.m in Sources */,
 				6564ED2E1C0DE9C000FA650D /* tvOS.xcdatamodeld in Sources */,
 				6564ED281C0DE9C000FA650D /* AppDelegate.m in Sources */,
-				65F44AC01C16FD9C0036F884 /* NewsDataSourceAndDelegate.m in Sources */,
+				65F44AC01C16FD9C0036F884 /* EventsDataSourceAndDelegate.m in Sources */,
 				65F5343A1C11F9B100433136 /* AboutViewController.m in Sources */,
 				6564ED251C0DE9C000FA650D /* main.m in Sources */,
 				65F5343D1C11FDD800433136 /* SettingsViewController.m in Sources */,

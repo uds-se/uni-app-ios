@@ -9,15 +9,21 @@
 #import <UIKit/UIKit.h>
 #import "NewsArticle.h"
 #import "Parser.h"
-#import "NewsDataSourceAndDelegate.h"
+#import "EventsDataSourceAndDelegate.h"
+#import "MensaDataSourceAndDelegate.h"
+#import "NewsSource.h"
 
 @interface KioskViewController : UIViewController {
     
     __weak IBOutlet UIActivityIndicatorView *AiKiosk;
     __weak IBOutlet UITableView *EventsTableView;
     __weak IBOutlet UILabel *KioskModeTitel;
+    __weak IBOutlet UITextView *NewsTextView;
+    __weak IBOutlet UITableView *MensaTableView;
     
-    NewsDataSourceAndDelegate *NewsTable;
+    EventsDataSourceAndDelegate *EventsTable;
+    MensaDataSourceAndDelegate *MensaTable;
+    NewsSource *NewsTextSource;
     NSInteger interval;
     NSInteger animationSpeed;
     NSUserDefaults *defaults;
@@ -25,6 +31,12 @@
 
 - (void) showNews1;
 - (void) showNews2;
+- (void) showNews3;
+- (void) showEvents1;
+- (void) showEvents2;
+- (void) showMensa1;
+- (void) showMensa2;
+- (void) showMensa3;
 - (void) switchToNextView:(SEL)selector;
 
 @end

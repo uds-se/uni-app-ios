@@ -7,7 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewsArticle.h"
+#import "Parser.h"
 
-@interface NewsSource : UIViewController
+
+@interface NewsSource : NSObject {
+    NSMutableArray *ArticleElements;
+    NSMutableArray *News;
+    NSMutableArray *News1;
+    NSMutableArray *News2;
+    NSMutableArray *News3;
+    NSMutableArray *bla;
+    
+}
+
+-(void)loadData;
+-(NSMutableArray*)getNews1;
+-(NSMutableArray*)getNews2;
+-(NSMutableArray*)getNews3;
+
 
 @end

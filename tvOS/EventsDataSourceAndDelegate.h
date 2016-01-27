@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Parser.h"
-#import "NewsArticle.h"
+#import "Event.h"
 
-@interface NewsDataSourceAndDelegate : UITableView<UITableViewDataSource,UITableViewDelegate> {
+@interface EventsDataSourceAndDelegate : UITableView<UITableViewDataSource,UITableViewDelegate> {
     
-    NSMutableArray *NewsTableViewContent;
-    NSMutableArray *NewsContent1;
-    NSMutableArray *NewsContent2;
+    NSMutableArray *EventsTableViewContent;
+    NSMutableArray *EventsContent1;
+    NSMutableArray *EventsContent2;
 }
 
 - (void) loadData;
