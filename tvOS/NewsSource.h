@@ -1,14 +1,13 @@
 //
-//  EventsDataSourceAndDelegate.m
+//  EventsDataSourceAndDelegate.h
 //  Uni Saar
 //
 //  Created by Daniel on 08/12/15.
 //  Copyright © 2015 Universität des Saarlandes. All rights reserved.
 //
 
-#import "EventsDataSourceAndDelegate.h"
+#import <UIKit/UIKit.h>
 
-@implementation EventsDataSourceAndDelegate
-
+@interface NewsSource : UIViewController
 
 @end

@@ -14,7 +14,7 @@
 @interface KioskViewController : UIViewController {
     
     __weak IBOutlet UIActivityIndicatorView *AiKiosk;
-    __weak IBOutlet UITableView *NewsTableView;
+    __weak IBOutlet UITableView *EventsTableView;
     __weak IBOutlet UILabel *KioskModeTitel;
     
     NewsDataSourceAndDelegate *NewsTable;
