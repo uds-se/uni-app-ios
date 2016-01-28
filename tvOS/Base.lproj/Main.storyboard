@@ -61,10 +61,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="AiEventContent" destination="2ww-L7-vjo" id="NcU-Ze-FBc"/>
-                        <outlet property="ContentView" destination="9g5-BK-ZGM" id="CGj-b1-0a6"/>
-                        <outlet property="SubTitleView" destination="lBf-dy-inW" id="Pjc-4S-b8o"/>
-                        <outlet property="TitleView" destination="g5a-mx-9jW" id="GeG-2x-85a"/>
+                        <outlet property="AiEventContent" destination="2ww-L7-vjo" id="iqu-cn-uDh"/>
+                        <outlet property="ContentView" destination="9g5-BK-ZGM" id="YFL-8L-g6Z"/>
+                        <outlet property="SubTitleView" destination="lBf-dy-inW" id="Df5-6G-rQR"/>
+                        <outlet property="TitleView" destination="g5a-mx-9jW" id="LoY-fE-a0X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rep-R6-Tal" userLabel="First Responder" sceneMemberID="firstResponder"/>
