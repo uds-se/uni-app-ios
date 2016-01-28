@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Parser.h"
 #import "MensaKioskItem.h"
+#import "CustomMensaKioskCell.h"
 
 
 @interface MensaDataSourceAndDelegate : UITableView<UITableViewDataSource,UITableViewDelegate> {

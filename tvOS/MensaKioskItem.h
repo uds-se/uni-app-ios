@@ -15,7 +15,7 @@
     NSString* price1;
     NSString* price2;
     NSString* price3;
-    NSString* color;
+    NSString* high;
 }
 
 @property NSString* category;
@@ -23,8 +23,8 @@
 @property NSString* price1;
 @property NSString* price2;
 @property NSString* price3;
-@property NSString* color;
+@property NSString* high;
 
--(id) initWithFood:(NSString *)aFood category:(NSString *)aCategory price1:(NSString*)aPrice1 price2:(NSString*)aPrice2 price3:(NSString*)aPrice3 color:(NSString*)aColor;
+-(id) initWithFood:(NSString *)aFood category:(NSString *)aCategory price1:(NSString*)aPrice1 price2:(NSString*)aPrice2 price3:(NSString*)aPrice3 high:(NSString*)aColor;
 
 @end

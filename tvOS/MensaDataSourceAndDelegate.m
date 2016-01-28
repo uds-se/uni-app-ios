@@ -8,12 +8,13 @@
 
 #import "MensaDataSourceAndDelegate.h"
 
+
 @implementation MensaDataSourceAndDelegate
+
 
 -(void)loadData {
     
-/*    MensaContent = [Parser parseWithURL:@"http://www.studentenwerk-saarland.de/de/Essen/Essen-in-Saarbrucken/Speiseplan-aktuell" andWithPath:@"//div[@class='desc']/node()[not(self::div)] | //div[@class='category'] | //div[@class='price']"];*/
-    
+   
     
     NSInteger day = [self getDay];
     NSString *day2 = [@(day) stringValue];
@@ -25,7 +26,7 @@
     for (int i = 0; i < [MensaContent count]; i=i+7) {
         NSString *food = [[MensaContent objectAtIndex:i+1] stringByAppendingString:@" "];
         food = [food stringByAppendingString:[MensaContent objectAtIndex:i+2]];
-        [MensaMenus addObject:[[MensaKioskItem alloc] initWithFood:food category:[MensaContent objectAtIndex:i] price1:[MensaContent objectAtIndex:i+3] price2:[MensaContent objectAtIndex:i+4] price3:[MensaContent objectAtIndex:i+5] color:[MensaContent objectAtIndex:i+6]]];
+        [MensaMenus addObject:[[MensaKioskItem alloc] initWithFood:food category:[MensaContent objectAtIndex:i] price1:[@"Student: " stringByAppendingString:[MensaContent objectAtIndex:i+3]] price2:[@"Empolyee: " stringByAppendingString:[MensaContent objectAtIndex:i+4]] price3:[@"Visitor: " stringByAppendingString:[MensaContent objectAtIndex:i+5]] high:[MensaContent objectAtIndex:i+6]]];
     }
     
     
@@ -39,7 +40,11 @@
     [myFormatter setDateFormat:@"c"];
     NSString *dayOfWeek = [myFormatter stringFromDate:today];
     
-    return ([dayOfWeek integerValue]-1);
+    NSInteger day = [dayOfWeek integerValue]-1;
+    if (day == 0 || day == 6) {
+        day = 1;
+    }
+    return day;
 }
 
 - (void) setData1 {
@@ -69,6 +74,7 @@
     while (i < [MensaMenus count]) {
         [Menu3 addObject:[MensaMenus objectAtIndex:i]];
         i++;
+        
     }
 }
 
@@ -81,10 +87,30 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"MensaTableViewCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    CustomMensaKioskCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    cell.textLabel.text = [[CurrentMenus objectAtIndex:indexPath.row] food];
-    cell.detailTextLabel.text = [[CurrentMenus objectAtIndex:indexPath.row] price1];
+    cell.CustomCategory.text = [[CurrentMenus objectAtIndex:indexPath.row] category];
+    cell.CustomFood.text = [[CurrentMenus objectAtIndex:indexPath.row] food];
+    cell.CustomPrice1.text = [[CurrentMenus objectAtIndex:indexPath.row] price1];
+    cell.CustomPrice2.text = [[CurrentMenus objectAtIndex:indexPath.row] price2];
+    cell.CustomPrice3.text = [[CurrentMenus objectAtIndex:indexPath.row] price3];
+    
+    NSString *col = [[CurrentMenus objectAtIndex:indexPath.row] high];
+    if ([col isEqualToString:@"217,38,26"]) {
+        cell.CustomStripe.image = [UIImage imageNamed:@"red.png"];
+    }
+    if ([col isEqualToString:@"21,135,207"]) {
+        cell.CustomStripe.image = [UIImage imageNamed:@"blue.png"];
+    }
+    if ([col isEqualToString:@"245,204,43"]) {
+        cell.CustomStripe.image = [UIImage imageNamed:@"yellow.png"];
+    }
+    if ([col isEqualToString:@"16,107,10"]) {
+        cell.CustomStripe.image = [UIImage imageNamed:@"green.png"];
+    }
+    if ([col isEqualToString:@"135,10,194"]) {
+        cell.CustomStripe.image = [UIImage imageNamed:@"purple.png"];
+    }
     
     return cell;
     

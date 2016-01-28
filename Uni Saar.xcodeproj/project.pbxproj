@@ -53,6 +53,13 @@
 		6542B4431C58C74800460FA0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6542B4421C58C74800460FA0 /* Settings.bundle */; };
 		6542B4441C58D8E700460FA0 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = E256EF6315B175BD00F08A50 /* Event.m */; };
 		6542B4491C591D3600460FA0 /* MensaKioskItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6542B4481C591D3600460FA0 /* MensaKioskItem.m */; };
+		6545C55D1C5A052600E446CA /* campus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6545C55C1C5A052600E446CA /* campus.png */; };
+		6545C5601C5A08D400E446CA /* CustomMensaKioskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545C55F1C5A08D400E446CA /* CustomMensaKioskCell.m */; };
+		6545C5621C5A26EF00E446CA /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 6545C5611C5A26EF00E446CA /* red.png */; };
+		6545C5671C5A2EDF00E446CA /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 6545C5631C5A2EDF00E446CA /* purple.png */; };
+		6545C5681C5A2EDF00E446CA /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 6545C5641C5A2EDF00E446CA /* blue.png */; };
+		6545C5691C5A2EDF00E446CA /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6545C5651C5A2EDF00E446CA /* yellow.png */; };
+		6545C56A1C5A2EDF00E446CA /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 6545C5661C5A2EDF00E446CA /* green.png */; };
 		655361861C19A8AD00CBF78B /* AppIcon-1024b.png in Resources */ = {isa = PBXBuildFile; fileRef = 655361851C19A8AD00CBF78B /* AppIcon-1024b.png */; };
 		655F27D91C0F340300B3C7BE /* AppIcon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 655F27D81C0F340300B3C7BE /* AppIcon-1024.png */; };
 		6564ED251C0DE9C000FA650D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564ED241C0DE9C000FA650D /* main.m */; };
@@ -453,6 +460,14 @@
 		6542B4421C58C74800460FA0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		6542B4471C591D3600460FA0 /* MensaKioskItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaKioskItem.h; sourceTree = "<group>"; };
 		6542B4481C591D3600460FA0 /* MensaKioskItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaKioskItem.m; sourceTree = "<group>"; };
+		6545C55C1C5A052600E446CA /* campus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campus.png; sourceTree = "<group>"; };
+		6545C55E1C5A08D400E446CA /* CustomMensaKioskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMensaKioskCell.h; sourceTree = "<group>"; };
+		6545C55F1C5A08D400E446CA /* CustomMensaKioskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMensaKioskCell.m; sourceTree = "<group>"; };
+		6545C5611C5A26EF00E446CA /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+		6545C5631C5A2EDF00E446CA /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purple.png; sourceTree = "<group>"; };
+		6545C5641C5A2EDF00E446CA /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
+		6545C5651C5A2EDF00E446CA /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
+		6545C5661C5A2EDF00E446CA /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		655361851C19A8AD00CBF78B /* AppIcon-1024b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-1024b.png"; sourceTree = "<group>"; };
 		655F27D81C0F340300B3C7BE /* AppIcon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-1024.png"; sourceTree = "<group>"; };
 		6564ED211C0DE9C000FA650D /* tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -865,6 +880,8 @@
 				65F44AC51C1701650036F884 /* MensaDataSourceAndDelegate.m */,
 				6542B4471C591D3600460FA0 /* MensaKioskItem.h */,
 				6542B4481C591D3600460FA0 /* MensaKioskItem.m */,
+				6545C55E1C5A08D400E446CA /* CustomMensaKioskCell.h */,
+				6545C55F1C5A08D400E446CA /* CustomMensaKioskCell.m */,
 			);
 			name = Kiosk;
 			sourceTree = "<group>";
@@ -881,6 +898,12 @@
 		655F27CD1C0F332B00B3C7BE /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6545C5631C5A2EDF00E446CA /* purple.png */,
+				6545C5641C5A2EDF00E446CA /* blue.png */,
+				6545C5651C5A2EDF00E446CA /* yellow.png */,
+				6545C5661C5A2EDF00E446CA /* green.png */,
+				6545C5611C5A26EF00E446CA /* red.png */,
+				6545C55C1C5A052600E446CA /* campus.png */,
 				655361851C19A8AD00CBF78B /* AppIcon-1024b.png */,
 				6537C3181C11AC3A00F22518 /* HomeEventIcon.png */,
 				6537C3191C11AC3A00F22518 /* HomeKioskIcon.png */,
@@ -1654,19 +1677,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6545C56A1C5A2EDF00E446CA /* green.png in Resources */,
 				655361861C19A8AD00CBF78B /* AppIcon-1024b.png in Resources */,
 				6537C3231C11AC3A00F22518 /* HomeStaffIcon.png in Resources */,
 				6564ED331C0DE9C000FA650D /* Assets.xcassets in Resources */,
 				6564ED311C0DE9C000FA650D /* Main.storyboard in Resources */,
+				6545C5621C5A26EF00E446CA /* red.png in Resources */,
+				6545C5671C5A2EDF00E446CA /* purple.png in Resources */,
 				6537C3201C11AC3A00F22518 /* HomeMapIcon.png in Resources */,
 				6537B9581C0F0ACC00B24278 /* NewsIcon@2x.png in Resources */,
+				6545C55D1C5A052600E446CA /* campus.png in Resources */,
 				6537C31F1C11AC3A00F22518 /* HomeKioskIcon.png in Resources */,
 				6542B4431C58C74800460FA0 /* Settings.bundle in Resources */,
 				65F534411C1202C500433136 /* HomeSettingIcon.png in Resources */,
+				6545C5681C5A2EDF00E446CA /* blue.png in Resources */,
 				6590D88A1C1853FA00418278 /* tvosLocalisation.strings in Resources */,
 				6537C3211C11AC3A00F22518 /* HomeMensaIcon.png in Resources */,
 				6537C31E1C11AC3A00F22518 /* HomeEventIcon.png in Resources */,
 				6537C3221C11AC3A00F22518 /* HomeNewsIcon.png in Resources */,
+				6545C5691C5A2EDF00E446CA /* yellow.png in Resources */,
 				65F534401C1202C500433136 /* HomeAboutIcon.png in Resources */,
 				655F27D91C0F340300B3C7BE /* AppIcon-1024.png in Resources */,
 			);
@@ -1925,6 +1954,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6545C5601C5A08D400E446CA /* CustomMensaKioskCell.m in Sources */,
 				6537B9521C0ED3A100B24278 /* Parser.m in Sources */,
 				6564ED411C0DFA2800FA650D /* TFHppleElement.m in Sources */,
 				6541F23C1C16DED900C6B90A /* KioskViewController.m in Sources */,

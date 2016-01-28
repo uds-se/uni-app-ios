@@ -20,6 +20,7 @@
     __weak IBOutlet UILabel *KioskModeTitel;
     __weak IBOutlet UITextView *NewsTextView;
     __weak IBOutlet UITableView *MensaTableView;
+    __weak IBOutlet UIImageView *CampusImageView;
     
     EventsDataSourceAndDelegate *EventsTable;
     MensaDataSourceAndDelegate *MensaTable;
@@ -37,6 +38,7 @@
 - (void) showMensa1;
 - (void) showMensa2;
 - (void) showMensa3;
+- (void) showMap;
 - (void) switchToNextView:(SEL)selector;
 
 @end

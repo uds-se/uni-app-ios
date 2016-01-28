@@ -28,9 +28,12 @@
     
     EventsTableView.estimatedRowHeight = 150.0;
     EventsTableView.rowHeight = UITableViewAutomaticDimension;
+    MensaTableView.estimatedRowHeight = 150.0;
+    MensaTableView.rowHeight = UITableViewAutomaticDimension;
     [AiKiosk startAnimating];
     AiKiosk.hidden = false;
     KioskModeTitel.hidden = true;
+    CampusImageView.alpha = 0;
     animationSpeed = 1;
     
     defaults = [NSUserDefaults standardUserDefaults];
@@ -55,6 +58,7 @@
             EventsTableView.alpha = 0;
             NewsTextView.alpha = 0;
             MensaTableView.alpha = 0;
+            CampusImageView.alpha = 0;
             [self showNews1];
             
         });
@@ -69,7 +73,7 @@
 - (void) showNews1 {
     
     [UIView animateWithDuration:animationSpeed animations:^(){
-        MensaTableView.alpha = 0;
+        CampusImageView.alpha = 0;
         KioskModeTitel.alpha = 0;
     } completion:^(BOOL finished) {
         if (finished) {
@@ -216,7 +220,24 @@
             }];
         }
     }];
+    [self switchToNextView:@selector(showMap)];
+}
+
+- (void) showMap {
+    
+    
+    [UIView animateWithDuration:animationSpeed animations:^(){
+        MensaTableView.alpha = 0;
+        KioskModeTitel.alpha = 0;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [UIView animateWithDuration:animationSpeed animations:^(){
+                CampusImageView.alpha = 1;                
+            }];
+        }
+    }];
     [self switchToNextView:@selector(showNews1)];
+    
 }
 
 - (void)switchToNextView:(SEL)selector {
