@@ -83,6 +83,9 @@
 		65F5343D1C11FDD800433136 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F5343C1C11FDD800433136 /* SettingsViewController.m */; };
 		65F534401C1202C500433136 /* HomeAboutIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F5343E1C1202C500433136 /* HomeAboutIcon.png */; };
 		65F534411C1202C500433136 /* HomeSettingIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F5343F1C1202C500433136 /* HomeSettingIcon.png */; };
+		65F642381C5A912100E460F3 /* EventContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F642341C5A912100E460F3 /* EventContentViewController.m */; };
+		65F642391C5A912100E460F3 /* EventsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F642361C5A912100E460F3 /* EventsListViewController.m */; };
+		65F6423A1C5A917F00E460F3 /* iCalEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = E27CD78E15B869C900DB7A0E /* iCalEmpty.png */; };
 		97B3500515B3611E00497E7A /* ResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 971EF23E15B059510039B06B /* ResultTableViewController.m */; };
 		97B3500715B3612500497E7A /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 971EF24115B059760039B06B /* ResultTableViewCell.m */; };
 		97F3FBAC15A8208500325941 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F3FBAA15A8208500325941 /* SearchViewController.m */; };
@@ -504,6 +507,10 @@
 		65F5343C1C11FDD800433136 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		65F5343E1C1202C500433136 /* HomeAboutIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeAboutIcon.png; sourceTree = "<group>"; };
 		65F5343F1C1202C500433136 /* HomeSettingIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeSettingIcon.png; sourceTree = "<group>"; };
+		65F642331C5A912100E460F3 /* EventContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventContentViewController.h; sourceTree = "<group>"; };
+		65F642341C5A912100E460F3 /* EventContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventContentViewController.m; sourceTree = "<group>"; };
+		65F642351C5A912100E460F3 /* EventsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsListViewController.h; sourceTree = "<group>"; };
+		65F642361C5A912100E460F3 /* EventsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsListViewController.m; sourceTree = "<group>"; };
 		971EF23D15B059510039B06B /* ResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewController.h; sourceTree = "<group>"; };
 		971EF23E15B059510039B06B /* ResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewController.m; sourceTree = "<group>"; };
 		971EF24015B059760039B06B /* ResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewCell.h; sourceTree = "<group>"; };
@@ -921,6 +928,7 @@
 		6564ED221C0DE9C000FA650D /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
+				65F642371C5A912100E460F3 /* Events */,
 				655F27CD1C0F332B00B3C7BE /* images */,
 				6564ED391C0DF9B600FA650D /* Parser */,
 				6541F23D1C16E9A700C6B90A /* Settings */,
@@ -1003,6 +1011,18 @@
 				6537B9541C0EDE1900B24278 /* NewsArticleViewController.m */,
 			);
 			name = News;
+			sourceTree = "<group>";
+		};
+		65F642371C5A912100E460F3 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				65F642331C5A912100E460F3 /* EventContentViewController.h */,
+				65F642341C5A912100E460F3 /* EventContentViewController.m */,
+				65F642351C5A912100E460F3 /* EventsListViewController.h */,
+				65F642361C5A912100E460F3 /* EventsListViewController.m */,
+			);
+			name = Events;
+			path = "../../../Documents/bring-uni-saar-to-apple-tv/tvOS";
 			sourceTree = "<group>";
 		};
 		E21DC1D715ADCE2200FA1AE4 /* Mensa */ = {
@@ -1689,6 +1709,7 @@
 				6545C55D1C5A052600E446CA /* campus.png in Resources */,
 				6537C31F1C11AC3A00F22518 /* HomeKioskIcon.png in Resources */,
 				6542B4431C58C74800460FA0 /* Settings.bundle in Resources */,
+				65F6423A1C5A917F00E460F3 /* iCalEmpty.png in Resources */,
 				65F534411C1202C500433136 /* HomeSettingIcon.png in Resources */,
 				6545C5681C5A2EDF00E446CA /* blue.png in Resources */,
 				6590D88A1C1853FA00418278 /* tvosLocalisation.strings in Resources */,
@@ -1963,6 +1984,8 @@
 				6564ED401C0DFA2800FA650D /* TFHpple.m in Sources */,
 				6542B4441C58D8E700460FA0 /* Event.m in Sources */,
 				6542B4491C591D3600460FA0 /* MensaKioskItem.m in Sources */,
+				65F642391C5A912100E460F3 /* EventsListViewController.m in Sources */,
+				65F642381C5A912100E460F3 /* EventContentViewController.m in Sources */,
 				65F44AC61C1701650036F884 /* MensaDataSourceAndDelegate.m in Sources */,
 				6564ED491C0E112200FA650D /* NewsListViewController.m in Sources */,
 				6537B9551C0EDE1900B24278 /* NewsArticleViewController.m in Sources */,
