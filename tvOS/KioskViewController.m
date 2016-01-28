@@ -77,8 +77,14 @@
         KioskModeTitel.alpha = 0;
     } completion:^(BOOL finished) {
         if (finished) {
-            NewsTextView.text = [[NewsTextSource getNews1] objectAtIndex:0];
-            KioskModeTitel.text = [[NewsTextSource getNews1] objectAtIndex:1];
+            if ([[NewsTextSource getNews1] count]==2) {
+                NewsTextView.text = [[NewsTextSource getNews1] objectAtIndex:0];
+                KioskModeTitel.text = [[NewsTextSource getNews1] objectAtIndex:1];
+            }
+            else {
+                NewsTextView.text = @" ";
+                KioskModeTitel.text = @" ";
+            }
             [UIView animateWithDuration:animationSpeed animations:^(){
                 NewsTextView.alpha = 1;
                 KioskModeTitel.alpha = 1;
@@ -95,8 +101,14 @@
         KioskModeTitel.alpha = 0;
     } completion:^(BOOL finished) {
         if (finished) {
-            NewsTextView.text = [[NewsTextSource getNews2] objectAtIndex:0];
-            KioskModeTitel.text = [[NewsTextSource getNews2] objectAtIndex:1];
+            if ([[NewsTextSource getNews1] count]==2) {
+                NewsTextView.text = [[NewsTextSource getNews2] objectAtIndex:0];
+                KioskModeTitel.text = [[NewsTextSource getNews2] objectAtIndex:1];
+            }
+            else {
+                NewsTextView.text = @" ";
+                KioskModeTitel.text = @" ";
+            }
             [UIView animateWithDuration:animationSpeed animations:^(){
                 NewsTextView.alpha = 1;
                 KioskModeTitel.alpha = 1;
@@ -113,8 +125,14 @@
         KioskModeTitel.alpha = 0;
     } completion:^(BOOL finished) {
         if (finished) {
-            NewsTextView.text = [[NewsTextSource getNews3] objectAtIndex:0];
-            KioskModeTitel.text = [[NewsTextSource getNews3] objectAtIndex:1];
+            if ([[NewsTextSource getNews1] count]==2) {
+                NewsTextView.text = [[NewsTextSource getNews3] objectAtIndex:0];
+                KioskModeTitel.text = [[NewsTextSource getNews3] objectAtIndex:1];
+            }
+            else {
+                NewsTextView.text = @" ";
+                KioskModeTitel.text = @" ";
+            }
             [UIView animateWithDuration:animationSpeed animations:^(){
                 NewsTextView.alpha = 1;
                 KioskModeTitel.alpha = 1;

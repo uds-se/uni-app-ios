@@ -27,7 +27,7 @@
             
         }
     }
-    
+    @try {
     News = [Parser parseWithURL:[[ArticleElements objectAtIndex:0] article] andWithPath:@"//div[@class='newscontent']/p/b[1]"];
     [News1 addObject:[News objectAtIndex:0]];
     [News1 addObject:[[ArticleElements objectAtIndex:0] title]];
@@ -37,6 +37,10 @@
     News = [Parser parseWithURL:[[ArticleElements objectAtIndex:2] article] andWithPath:@"//div[@class='newscontent']/p/b[1]"];
     [News3 addObject:[News objectAtIndex:0]];
     [News3 addObject:[[ArticleElements objectAtIndex:2] title]];
+    }
+    @catch (NSException *e) {
+        
+    }
     
 }
 

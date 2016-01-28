@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Parser : NSObject
+@interface Parser : NSObject 
+
+
 
 + (NSMutableArray*)parseWithURL:(NSString*)urll andWithPath:(NSString*)path;
 

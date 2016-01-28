@@ -63,11 +63,12 @@
     Menu2 = [[NSMutableArray alloc] initWithCapacity:0];
     Menu3 = [[NSMutableArray alloc] initWithCapacity:0];
     int i = 0;
-    while (i < 5) {
+    
+    while (i < 5 && [MensaMenus count] >= 5) {
         [Menu1 addObject:[MensaMenus objectAtIndex:i]];
         i++;
     }
-    while (i < 10) {
+    while (i < 10 && [MensaMenus count] >= 10) {
         [Menu2 addObject:[MensaMenus objectAtIndex:i]];
         i++;
     }

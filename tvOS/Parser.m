@@ -15,8 +15,17 @@
 + (NSMutableArray*)parseWithURL:(NSString*)urll andWithPath:(NSString*)path {
     
     NSURL *url = [NSURL URLWithString:urll];
-    NSData  *data      = [NSData dataWithContentsOfURL:url];
+    NSMutableArray *NewsElements = [[NSMutableArray alloc] initWithCapacity:0];
+    NSData *data;
+    data = [NSData dataWithContentsOfURL:url];
     
+/*    @try {
+       data = [NSData dataWithContentsOfURL:url];
+    }
+    @catch (NSException *e) {
+        
+    }*/
+ 
     NSString *html = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     html = [html stringByReplacingOccurrencesOfString:@"<br />" withString:@"\r"]; 
     html = [html stringByReplacingOccurrencesOfString:@"\t" withString:@""];
@@ -28,7 +37,6 @@
     
     TFHpple *Parser = [TFHpple hppleWithHTMLData:data];
     NSArray *Nodes = [Parser searchWithXPathQuery:path];
-    NSMutableArray *NewsElements = [[NSMutableArray alloc] initWithCapacity:0];
     
     for (TFHppleElement * elem in Nodes) {
         if (!([[elem content] isEqual:@""])) {

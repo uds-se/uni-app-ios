@@ -68,50 +68,234 @@
 			<key>Titles</key>
 			<array>
 				<string>None</string>
-				<string>A 1.1</string>
-				<string>A 1.2</string>
-				<string>A 1.3</string>
-				<string>A 1.4</string>
-				<string>A 1.5</string>
-				<string>A 1.7</string>
-				<string>A 2.2</string>
-				<string>A 2.3</string>
-				<string>A 2.4</string>
-				<string>A 3.1</string>
-				<string>A 3.2</string>
-				<string>A 3.3</string>
-				<string>A 4.1</string>
-				<string>A 4.2</string>
-				<string>A 4.3</string>
-				<string>A 4.4</string>
-				<string>A 5.1</string>
-				<string>A 5.2</string>
-				<string>A 5.3</string>
-				<string>A 5.4</string>
+				<string>A1 1</string>
+				<string>A1 2</string>
+				<string>A1 3</string>
+				<string>A1 4</string>
+				<string>A1 5</string>
+				<string>A1 7</string>
+				<string>A2 2</string>
+				<string>A2 3</string>
+				<string>A2 4</string>
+				<string>A3 1</string>
+				<string>A3 2</string>
+				<string>A3 3</string>
+				<string>A4 1</string>
+				<string>A4 2</string>
+				<string>A4 3</string>
+				<string>A4 4</string>
+				<string>A5 1</string>
+				<string>A5 2</string>
+				<string>A5 3</string>
+				<string>A5 4</string>
+				<string>B1 1</string>
+				<string>B1 2</string>
+				<string>B2 1</string>
+				<string>B2 2</string>
+				<string>B3 1</string>
+				<string>B3 2</string>
+				<string>B3 3</string>
+				<string>B4 1</string>
+				<string>B4 2</string>
+				<string>B4 3</string>
+				<string>B4 4</string>
+				<string>B5 1</string>
+				<string>B5 2</string>
+				<string>B6 1</string>
+				<string>B6 2</string>
+				<string>B6 3</string>
+				<string>B6 4</string>
+				<string>B6 5</string>
+				<string>B6 6</string>
+				<string>B6 7</string>
+				<string>B6 8</string>
+				<string>B7 1</string>
+				<string>B7 2 </string>
+				<string>B7 3</string>
+				<string>B8 1</string>
+				<string>B8 2</string>
+				<string>B8 3</string>
+				<string>C1 1</string>
+				<string>C1 2</string>
+				<string>C1 3</string>
+				<string>C2 1</string>
+				<string>C2 2</string>
+				<string>C2 3</string>
+				<string>C3 1</string>
+				<string>C4 1</string>
+				<string>C4 2</string>
+				<string>C4 3</string>
+				<string>C4 4</string>
+				<string>C4 5</string>
+				<string>C4 8</string>
+				<string>C5 1</string>
+				<string>C5 2</string>
+				<string>C5 3</string>
+				<string>C5 4</string>
+				<string>C5 5</string>
+				<string>C6 2</string>
+				<string>C6 3</string>
+				<string>C6 4</string>
+				<string>C6 5</string>
+				<string>C7 1</string>
+				<string>C7 1</string>
+				<string>C7 3</string>
+				<string>C7 4</string>
+				<string>C7 5</string>
+				<string>C7 6</string>
+				<string>C7 7</string>
+				<string>C8 1</string>
+				<string>C8 2</string>
+				<string>C8 3</string>
+				<string>C9 1</string>
+				<string>D1 1</string>
+				<string>D1 2</string>
+				<string>D2 1</string>
+				<string>D2 2</string>
+				<string>D2 3</string>
+				<string>D2 4</string>
+				<string>D3 1</string>
+				<string>D3 2</string>
+				<string>D3 3</string>
+				<string>D4 1</string>
+				<string>D4 3</string>
+				<string>D4 4</string>
+				<string>D4 5</string>
+				<string>D5 1</string>
+				<string>E1 1</string>
+				<string>E1 2</string>
+				<string>E1 3</string>
+				<string>E1 4</string>
+				<string>E1 5</string>
+				<string>E1 6</string>
+				<string>E1 7</string>
+				<string>E2 1</string>
+				<string>E2 2</string>
+				<string>E2 3</string>
+				<string>E2 4</string>
+				<string>E2 5</string>
+				<string>E2 6</string>
+				<string>E2 7</string>
+				<string>E2 8</string>
+				<string>E3 1</string>
+				<string>E7 1</string>
+				<string>E7 2</string>
 			</array>
 			<key>Values</key>
 			<array>
 				<string>none</string>
-				<string>A11</string>
-				<string>A12</string>
-				<string>A13</string>
-				<string>A14</string>
-				<string>A15</string>
-				<string>A17</string>
-				<string>A22</string>
-				<string>A23</string>
-				<string>A24</string>
-				<string>A31</string>
-				<string>A32</string>
-				<string>A33</string>
-				<string>A41</string>
-				<string>A42</string>
-				<string>A43</string>
-				<string>A44</string>
-				<string>A51</string>
-				<string>A52</string>
-				<string>A53</string>
-				<string>A54</string>
+				<string>A1 1</string>
+				<string>A1 2</string>
+				<string> A1 3</string>
+				<string>A1 4</string>
+				<string>A1 5</string>
+				<string>A1 7</string>
+				<string>A2 2</string>
+				<string>A2 3</string>
+				<string>A2 4</string>
+				<string>A3 1</string>
+				<string>A3 2</string>
+				<string>A3 3</string>
+				<string>A4 1</string>
+				<string>A4 2 </string>
+				<string>A4 3</string>
+				<string>A4 4</string>
+				<string>A5 1</string>
+				<string>A5 2</string>
+				<string>A5 3</string>
+				<string>A5 4</string>
+				<string>B1 1</string>
+				<string>B1 2</string>
+				<string>B2 1</string>
+				<string>B2 2</string>
+				<string>B3 1</string>
+				<string>B3 2</string>
+				<string>B3 3</string>
+				<string>B4 1</string>
+				<string>B4 2</string>
+				<string>B4 3</string>
+				<string>B4 4</string>
+				<string>B5 1</string>
+				<string>B5 2</string>
+				<string>B6 1</string>
+				<string>B6 2</string>
+				<string>B6 3</string>
+				<string>B6 4</string>
+				<string>B6 5</string>
+				<string>B6 6</string>
+				<string>B6 7</string>
+				<string>B6 8</string>
+				<string>B7 1</string>
+				<string>B7 2</string>
+				<string>B7 3</string>
+				<string>B8 1</string>
+				<string>B8 2</string>
+				<string>B8 3</string>
+				<string>C1 1</string>
+				<string>C1 2</string>
+				<string>C1 3</string>
+				<string>C2 1</string>
+				<string>C2 2</string>
+				<string>C2 3</string>
+				<string>C3 1</string>
+				<string>C4 1</string>
+				<string>C4 2</string>
+				<string>C4 3</string>
+				<string>C4 4</string>
+				<string>C4 5</string>
+				<string>C4 8</string>
+				<string>C5 1</string>
+				<string>C5 2</string>
+				<string>C5 3</string>
+				<string>C5 4</string>
+				<string>C5 5</string>
+				<string>C6 2</string>
+				<string>C6 3</string>
+				<string>C6 4</string>
+				<string>C6 5</string>
+				<string>C7 1</string>
+				<string>C7 2</string>
+				<string>C7 3</string>
+				<string>C7 4</string>
+				<string>C7 5</string>
+				<string>C7 6</string>
+				<string>C7 7</string>
+				<string>C8 1</string>
+				<string>C8 2</string>
+				<string>C8 3</string>
+				<string>C9 1</string>
+				<string>D1 1</string>
+				<string>D1 2</string>
+				<string>D2 1</string>
+				<string>D2 2</string>
+				<string>D2 3</string>
+				<string>D2 4</string>
+				<string>D3 1</string>
+				<string>D3 2</string>
+				<string>D3 3</string>
+				<string>D4 1</string>
+				<string>D4 3</string>
+				<string>D4 4</string>
+				<string>D4 5</string>
+				<string>D5 1</string>
+				<string>E1 1</string>
+				<string>E1 2</string>
+				<string>E1 3</string>
+				<string>E1 4</string>
+				<string>E1 5</string>
+				<string>E1 6</string>
+				<string>E1 7</string>
+				<string>E2 1</string>
+				<string>E2 2</string>
+				<string>E2 3 </string>
+				<string>E2 4</string>
+				<string>E2 5</string>
+				<string>E2 6</string>
+				<string>E2 7</string>
+				<string>E2 8</string>
+				<string>E3 1</string>
+				<string>E7 1</string>
+				<string>E7 2</string>
 			</array>
 		</dict>
 	</array>
