@@ -284,6 +284,9 @@
                                                 </constraints>
                                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                                 <state key="normal" backgroundImage="HomeMapIcon.png"/>
+                                                <connections>
+                                                    <segue destination="wVQ-9s-AY0" kind="show" id="gbl-gD-29k"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -910,6 +913,114 @@
             </objects>
             <point key="canvasLocation" x="-1531" y="449"/>
         </scene>
+        <!--Campus Map View Controller-->
+        <scene sceneID="EHE-Yn-wzD">
+            <objects>
+                <viewController id="wVQ-9s-AY0" customClass="CampusMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QnW-bY-rZd"/>
+                        <viewControllerLayoutGuide type="bottom" id="yFt-aJ-yRR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7MI-aO-Na6">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="saarbruecken-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="NuV-IM-SL8">
+                                <rect key="frame" x="260" y="0.0" width="1660" height="1080"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="locButton.png" translatesAutoresizingMaskIntoConstraints="NO" id="SCX-4o-S6g">
+                                <rect key="frame" x="485" y="141" width="61" height="60"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K6u-8c-nvo">
+                                <rect key="frame" x="598" y="128" width="240" height="128"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="4Ei-MN-Wqv">
+                                <rect key="frame" x="225" y="233" width="159" height="469"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BuildingCell" textLabel="8EG-Ka-hZz" style="IBUITableViewCellStyleDefault" id="hoI-HT-Un5">
+                                        <rect key="frame" x="0.0" y="54" width="159" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hoI-HT-Un5" id="MTi-lh-GES">
+                                            <rect key="frame" x="0.0" y="0.0" width="143" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8EG-Ka-hZz">
+                                                    <rect key="frame" x="20" y="0.0" width="103" height="66"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wVQ-9s-AY0" id="V6J-eA-I47"/>
+                                    <outlet property="delegate" destination="wVQ-9s-AY0" id="mrX-bC-SSD"/>
+                                </connections>
+                            </tableView>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="njF-hj-IfD">
+                                <rect key="frame" x="94" y="233" width="131" height="469"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OverviewCell" textLabel="b0q-zv-x7r" style="IBUITableViewCellStyleDefault" id="wM1-OK-ebk">
+                                        <rect key="frame" x="0.0" y="54" width="131" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wM1-OK-ebk" id="hX3-9d-nYu">
+                                            <rect key="frame" x="0.0" y="0.0" width="115" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b0q-zv-x7r">
+                                                    <rect key="frame" x="20" y="0.0" width="75" height="66"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wVQ-9s-AY0" id="Zkl-kn-Zwf"/>
+                                    <outlet property="delegate" destination="wVQ-9s-AY0" id="IFN-En-219"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Campus Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyY-Nt-YC7">
+                                <rect key="frame" x="213" y="38" width="506" height="98"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuY-Hf-e7v">
+                                <rect key="frame" x="73" y="128" width="370" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Gebäude suchen"/>
+                                <connections>
+                                    <action selector="SearchButton:" destination="wVQ-9s-AY0" eventType="primaryActionTriggered" id="UeP-ok-Mnd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="BuildingsTableView" destination="4Ei-MN-Wqv" id="xAs-rM-wnD"/>
+                        <outlet property="Button" destination="JuY-Hf-e7v" id="Kk5-8I-C6Z"/>
+                        <outlet property="CurrentLocationPointer" destination="K6u-8c-nvo" id="Us0-cr-AZ9"/>
+                        <outlet property="LocationPointer" destination="SCX-4o-S6g" id="I2z-ZM-fUU"/>
+                        <outlet property="MapImage" destination="NuV-IM-SL8" id="dw9-Oc-HLL"/>
+                        <outlet property="OverviewTableView" destination="njF-hj-IfD" id="mmq-lq-YDX"/>
+                        <outlet property="mainView" destination="7MI-aO-Na6" id="Shz-MG-5PX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="341-ZR-yBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2724" y="-1896"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AppIcon-1024.png" width="1024" height="1024"/>
@@ -923,5 +1034,7 @@
         <image name="HomeStaffIcon.png" width="400" height="300"/>
         <image name="campus.png" width="1559" height="1017"/>
         <image name="iCalEmpty.png" width="64" height="64"/>
+        <image name="locButton.png" width="45" height="45"/>
+        <image name="saarbruecken-1.png" width="3309" height="2339"/>
     </resources>
 </document>
