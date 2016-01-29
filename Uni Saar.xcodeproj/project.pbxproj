@@ -106,6 +106,11 @@
 		BAE025521C5B6DBE002EBF3D /* saarbruecken-1.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE0254E1C5B6DBE002EBF3D /* saarbruecken-1.png */; };
 		BAE025531C5B6DBE002EBF3D /* locButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE0254F1C5B6DBE002EBF3D /* locButton.png */; };
 		BAE025541C5B6DBE002EBF3D /* location-151669_640.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE025501C5B6DBE002EBF3D /* location-151669_640.png */; };
+		BAE0255C1C5B6F84002EBF3D /* StaffSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE025571C5B6F83002EBF3D /* StaffSearchViewController.m */; };
+		BAE0255D1C5B6F84002EBF3D /* ResultStaffSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE025591C5B6F83002EBF3D /* ResultStaffSearchViewController.m */; };
+		BAE0255E1C5B6F84002EBF3D /* DetailStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0255B1C5B6F83002EBF3D /* DetailStaff.m */; };
+		BAE0255F1C5B70E3002EBF3D /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BF612B173556D100D54CD4 /* HTMLNode.m */; };
+		BAE025601C5B70E6002EBF3D /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BF612D173556D100D54CD4 /* HTMLParser.m */; };
 		E212C094178B4B1300F9B877 /* PartialSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C093178B4B1300F9B877 /* PartialSearchCell.m */; };
 		E212C09A178B4B6700F9B877 /* SearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C099178B4B6700F9B877 /* SearchHistoryCell.m */; };
 		E212C09B178B4B8600F9B877 /* SearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C099178B4B6700F9B877 /* SearchHistoryCell.m */; };
@@ -544,6 +549,12 @@
 		BAE0254E1C5B6DBE002EBF3D /* saarbruecken-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "saarbruecken-1.png"; sourceTree = "<group>"; };
 		BAE0254F1C5B6DBE002EBF3D /* locButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locButton.png; sourceTree = "<group>"; };
 		BAE025501C5B6DBE002EBF3D /* location-151669_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location-151669_640.png"; sourceTree = "<group>"; };
+		BAE025561C5B6F83002EBF3D /* StaffSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaffSearchViewController.h; sourceTree = "<group>"; };
+		BAE025571C5B6F83002EBF3D /* StaffSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaffSearchViewController.m; sourceTree = "<group>"; };
+		BAE025581C5B6F83002EBF3D /* ResultStaffSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultStaffSearchViewController.h; sourceTree = "<group>"; };
+		BAE025591C5B6F83002EBF3D /* ResultStaffSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultStaffSearchViewController.m; sourceTree = "<group>"; };
+		BAE0255A1C5B6F83002EBF3D /* DetailStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailStaff.h; sourceTree = "<group>"; };
+		BAE0255B1C5B6F83002EBF3D /* DetailStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailStaff.m; sourceTree = "<group>"; };
 		E212C092178B4B1300F9B877 /* PartialSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartialSearchCell.h; sourceTree = "<group>"; };
 		E212C093178B4B1300F9B877 /* PartialSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartialSearchCell.m; sourceTree = "<group>"; };
 		E212C098178B4B6700F9B877 /* SearchHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistoryCell.h; sourceTree = "<group>"; };
@@ -952,6 +963,7 @@
 		6564ED221C0DE9C000FA650D /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
+				BAE025551C5B6F46002EBF3D /* Staff Search */,
 				BAE025481C5B6D4A002EBF3D /* Campus */,
 				BAE0253A1C5B68D5002EBF3D /* Mensa */,
 				65FF57F71C5AA4910051069C /* Events */,
@@ -1082,6 +1094,19 @@
 				BAE025501C5B6DBE002EBF3D /* location-151669_640.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		BAE025551C5B6F46002EBF3D /* Staff Search */ = {
+			isa = PBXGroup;
+			children = (
+				BAE025561C5B6F83002EBF3D /* StaffSearchViewController.h */,
+				BAE025571C5B6F83002EBF3D /* StaffSearchViewController.m */,
+				BAE025581C5B6F83002EBF3D /* ResultStaffSearchViewController.h */,
+				BAE025591C5B6F83002EBF3D /* ResultStaffSearchViewController.m */,
+				BAE0255A1C5B6F83002EBF3D /* DetailStaff.h */,
+				BAE0255B1C5B6F83002EBF3D /* DetailStaff.m */,
+			);
+			name = "Staff Search";
 			sourceTree = "<group>";
 		};
 		E21DC1D715ADCE2200FA1AE4 /* Mensa */ = {
@@ -2048,13 +2073,16 @@
 				6564ED501C0E34D100FA650D /* NewsArticle.m in Sources */,
 				6564ED401C0DFA2800FA650D /* TFHpple.m in Sources */,
 				6542B4441C58D8E700460FA0 /* Event.m in Sources */,
+				BAE0255D1C5B6F84002EBF3D /* ResultStaffSearchViewController.m in Sources */,
 				6542B4491C591D3600460FA0 /* MensaKioskItem.m in Sources */,
 				65FF57FD1C5AA5460051069C /* EventsListViewController.m in Sources */,
 				BAE025431C5B69B5002EBF3D /* Reachability.m in Sources */,
 				65FF57FC1C5AA5460051069C /* EventContentViewController.m in Sources */,
 				BAE025411C5B699E002EBF3D /* MensaFeedParser.m in Sources */,
 				65F44AC61C1701650036F884 /* MensaDataSourceAndDelegate.m in Sources */,
+				BAE0255E1C5B6F84002EBF3D /* DetailStaff.m in Sources */,
 				6564ED491C0E112200FA650D /* NewsListViewController.m in Sources */,
+				BAE0255C1C5B6F84002EBF3D /* StaffSearchViewController.m in Sources */,
 				6537B9551C0EDE1900B24278 /* NewsArticleViewController.m in Sources */,
 				6564ED2B1C0DE9C000FA650D /* ViewController.m in Sources */,
 				BAE0254B1C5B6D97002EBF3D /* CampusMapViewController.m in Sources */,
@@ -2063,10 +2091,12 @@
 				6564ED281C0DE9C000FA650D /* AppDelegate.m in Sources */,
 				65F44AC01C16FD9C0036F884 /* EventsDataSourceAndDelegate.m in Sources */,
 				BAE0253F1C5B6928002EBF3D /* MensaListViewController.m in Sources */,
+				BAE0255F1C5B70E3002EBF3D /* HTMLNode.m in Sources */,
 				65F5343A1C11F9B100433136 /* AboutViewController.m in Sources */,
 				6564ED251C0DE9C000FA650D /* main.m in Sources */,
 				BAE025401C5B6928002EBF3D /* MensaListTableViewCell.m in Sources */,
 				BAE025421C5B69AD002EBF3D /* MensaItem.m in Sources */,
+				BAE025601C5B70E6002EBF3D /* HTMLParser.m in Sources */,
 				65F5343D1C11FDD800433136 /* SettingsViewController.m in Sources */,
 				65F44AC31C1701530036F884 /* NewsSource.m in Sources */,
 			);
