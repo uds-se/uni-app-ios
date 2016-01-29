@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "tv",
+      "filename" : "background-white-logo-mainscreen.png",
       "scale" : "1x"
     }
   ],

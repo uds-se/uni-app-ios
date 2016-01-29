@@ -94,6 +94,13 @@
 		ABA0D62E183149C600A10087 /* MensaTabIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA0D62C183149C600A10087 /* MensaTabIcon.png */; };
 		ABA0D62F183149C600A10087 /* MensaTabIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA0D62D183149C600A10087 /* MensaTabIcon@2x.png */; };
 		ABEB820F1B9840CE00C28AC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABEB820E1B9840CE00C28AC9 /* Images.xcassets */; };
+		BAE0253F1C5B6928002EBF3D /* MensaListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0253C1C5B6928002EBF3D /* MensaListViewController.m */; };
+		BAE025401C5B6928002EBF3D /* MensaListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0253E1C5B6928002EBF3D /* MensaListTableViewCell.m */; };
+		BAE025411C5B699E002EBF3D /* MensaFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D4E708159CADDA00876317 /* MensaFeedParser.m */; };
+		BAE025421C5B69AD002EBF3D /* MensaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EF328E1598F21F00D65D13 /* MensaItem.m */; };
+		BAE025431C5B69B5002EBF3D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BD9A0A1599CD9300432FE9 /* Reachability.m */; };
+		BAE025451C5B6C42002EBF3D /* background-white-logo-mainscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE025441C5B6C42002EBF3D /* background-white-logo-mainscreen.png */; };
+		BAE025471C5B6C57002EBF3D /* small_icon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE025461C5B6C57002EBF3D /* small_icon_2.png */; };
 		E212C094178B4B1300F9B877 /* PartialSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C093178B4B1300F9B877 /* PartialSearchCell.m */; };
 		E212C09A178B4B6700F9B877 /* SearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C099178B4B6700F9B877 /* SearchHistoryCell.m */; };
 		E212C09B178B4B8600F9B877 /* SearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C099178B4B6700F9B877 /* SearchHistoryCell.m */; };
@@ -520,6 +527,12 @@
 		ABA0D62C183149C600A10087 /* MensaTabIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MensaTabIcon.png; path = SaarlandUniversityAppB/MensaTabIcon.png; sourceTree = "<group>"; };
 		ABA0D62D183149C600A10087 /* MensaTabIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MensaTabIcon@2x.png"; path = "SaarlandUniversityAppB/MensaTabIcon@2x.png"; sourceTree = "<group>"; };
 		ABEB820E1B9840CE00C28AC9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Uni Saar/Images.xcassets"; sourceTree = "<group>"; };
+		BAE0253B1C5B6928002EBF3D /* MensaListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaListViewController.h; sourceTree = "<group>"; };
+		BAE0253C1C5B6928002EBF3D /* MensaListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaListViewController.m; sourceTree = "<group>"; };
+		BAE0253D1C5B6928002EBF3D /* MensaListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaListTableViewCell.h; sourceTree = "<group>"; };
+		BAE0253E1C5B6928002EBF3D /* MensaListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaListTableViewCell.m; sourceTree = "<group>"; };
+		BAE025441C5B6C42002EBF3D /* background-white-logo-mainscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-white-logo-mainscreen.png"; sourceTree = "<group>"; };
+		BAE025461C5B6C57002EBF3D /* small_icon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small_icon_2.png; sourceTree = "<group>"; };
 		E212C092178B4B1300F9B877 /* PartialSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartialSearchCell.h; sourceTree = "<group>"; };
 		E212C093178B4B1300F9B877 /* PartialSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartialSearchCell.m; sourceTree = "<group>"; };
 		E212C098178B4B6700F9B877 /* SearchHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistoryCell.h; sourceTree = "<group>"; };
@@ -928,6 +941,7 @@
 		6564ED221C0DE9C000FA650D /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
+				BAE0253A1C5B68D5002EBF3D /* Mensa */,
 				65FF57F71C5AA4910051069C /* Events */,
 				655F27CD1C0F332B00B3C7BE /* images */,
 				6564ED391C0DF9B600FA650D /* Parser */,
@@ -953,6 +967,8 @@
 		6564ED231C0DE9C000FA650D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BAE025441C5B6C42002EBF3D /* background-white-logo-mainscreen.png */,
+				BAE025461C5B6C57002EBF3D /* small_icon_2.png */,
 				6590D88C1C1853FA00418278 /* tvosLocalisation.strings */,
 				6564ED241C0DE9C000FA650D /* main.m */,
 			);
@@ -1022,6 +1038,17 @@
 				65FF57FB1C5AA5460051069C /* EventsListViewController.m */,
 			);
 			name = Events;
+			sourceTree = "<group>";
+		};
+		BAE0253A1C5B68D5002EBF3D /* Mensa */ = {
+			isa = PBXGroup;
+			children = (
+				BAE0253B1C5B6928002EBF3D /* MensaListViewController.h */,
+				BAE0253C1C5B6928002EBF3D /* MensaListViewController.m */,
+				BAE0253D1C5B6928002EBF3D /* MensaListTableViewCell.h */,
+				BAE0253E1C5B6928002EBF3D /* MensaListTableViewCell.m */,
+			);
+			name = Mensa;
 			sourceTree = "<group>";
 		};
 		E21DC1D715ADCE2200FA1AE4 /* Mensa */ = {
@@ -1709,6 +1736,7 @@
 				6537C31F1C11AC3A00F22518 /* HomeKioskIcon.png in Resources */,
 				6542B4431C58C74800460FA0 /* Settings.bundle in Resources */,
 				65F6423A1C5A917F00E460F3 /* iCalEmpty.png in Resources */,
+				BAE025471C5B6C57002EBF3D /* small_icon_2.png in Resources */,
 				65F534411C1202C500433136 /* HomeSettingIcon.png in Resources */,
 				6545C5681C5A2EDF00E446CA /* blue.png in Resources */,
 				6590D88A1C1853FA00418278 /* tvosLocalisation.strings in Resources */,
@@ -1718,6 +1746,7 @@
 				6545C5691C5A2EDF00E446CA /* yellow.png in Resources */,
 				65F534401C1202C500433136 /* HomeAboutIcon.png in Resources */,
 				655F27D91C0F340300B3C7BE /* AppIcon-1024.png in Resources */,
+				BAE025451C5B6C42002EBF3D /* background-white-logo-mainscreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1984,7 +2013,9 @@
 				6542B4441C58D8E700460FA0 /* Event.m in Sources */,
 				6542B4491C591D3600460FA0 /* MensaKioskItem.m in Sources */,
 				65FF57FD1C5AA5460051069C /* EventsListViewController.m in Sources */,
+				BAE025431C5B69B5002EBF3D /* Reachability.m in Sources */,
 				65FF57FC1C5AA5460051069C /* EventContentViewController.m in Sources */,
+				BAE025411C5B699E002EBF3D /* MensaFeedParser.m in Sources */,
 				65F44AC61C1701650036F884 /* MensaDataSourceAndDelegate.m in Sources */,
 				6564ED491C0E112200FA650D /* NewsListViewController.m in Sources */,
 				6537B9551C0EDE1900B24278 /* NewsArticleViewController.m in Sources */,
@@ -1993,8 +2024,11 @@
 				6564ED2E1C0DE9C000FA650D /* tvOS.xcdatamodeld in Sources */,
 				6564ED281C0DE9C000FA650D /* AppDelegate.m in Sources */,
 				65F44AC01C16FD9C0036F884 /* EventsDataSourceAndDelegate.m in Sources */,
+				BAE0253F1C5B6928002EBF3D /* MensaListViewController.m in Sources */,
 				65F5343A1C11F9B100433136 /* AboutViewController.m in Sources */,
 				6564ED251C0DE9C000FA650D /* main.m in Sources */,
+				BAE025401C5B6928002EBF3D /* MensaListTableViewCell.m in Sources */,
+				BAE025421C5B69AD002EBF3D /* MensaItem.m in Sources */,
 				65F5343D1C11FDD800433136 /* SettingsViewController.m in Sources */,
 				65F44AC31C1701530036F884 /* NewsSource.m in Sources */,
 			);
