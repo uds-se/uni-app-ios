@@ -83,6 +83,11 @@
 		65F534401C1202C500433136 /* HomeAboutIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F5343E1C1202C500433136 /* HomeAboutIcon.png */; };
 		65F534411C1202C500433136 /* HomeSettingIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F5343F1C1202C500433136 /* HomeSettingIcon.png */; };
 		65F6423A1C5A917F00E460F3 /* iCalEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = E27CD78E15B869C900DB7A0E /* iCalEmpty.png */; };
+		65F80B621C5FEECE005D6A0A /* yellow_hom.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F80B5E1C5FEECE005D6A0A /* yellow_hom.png */; };
+		65F80B631C5FEECE005D6A0A /* orange_hom.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F80B5F1C5FEECE005D6A0A /* orange_hom.png */; };
+		65F80B641C5FEECE005D6A0A /* green_hom.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F80B601C5FEECE005D6A0A /* green_hom.png */; };
+		65F80B651C5FEECE005D6A0A /* blue_hom.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F80B611C5FEECE005D6A0A /* blue_hom.png */; };
+		65F80B671C5FF0B1005D6A0A /* campus_homburg.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F80B661C5FF0B1005D6A0A /* campus_homburg.png */; };
 		65FA9FCA1C5BB1DE00B4662E /* campus.png in Resources */ = {isa = PBXBuildFile; fileRef = 65FA9FC91C5BB1DE00B4662E /* campus.png */; };
 		65FF57FC1C5AA5460051069C /* EventContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FF57F91C5AA5460051069C /* EventContentViewController.m */; };
 		65FF57FD1C5AA5460051069C /* EventsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FF57FB1C5AA5460051069C /* EventsListViewController.m */; };
@@ -523,6 +528,11 @@
 		65F5343C1C11FDD800433136 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		65F5343E1C1202C500433136 /* HomeAboutIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeAboutIcon.png; sourceTree = "<group>"; };
 		65F5343F1C1202C500433136 /* HomeSettingIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeSettingIcon.png; sourceTree = "<group>"; };
+		65F80B5E1C5FEECE005D6A0A /* yellow_hom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow_hom.png; sourceTree = "<group>"; };
+		65F80B5F1C5FEECE005D6A0A /* orange_hom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange_hom.png; sourceTree = "<group>"; };
+		65F80B601C5FEECE005D6A0A /* green_hom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_hom.png; sourceTree = "<group>"; };
+		65F80B611C5FEECE005D6A0A /* blue_hom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_hom.png; sourceTree = "<group>"; };
+		65F80B661C5FF0B1005D6A0A /* campus_homburg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campus_homburg.png; sourceTree = "<group>"; };
 		65FA9FC91C5BB1DE00B4662E /* campus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campus.png; sourceTree = "<group>"; };
 		65FF57F81C5AA5460051069C /* EventContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventContentViewController.h; sourceTree = "<group>"; };
 		65FF57F91C5AA5460051069C /* EventContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventContentViewController.m; sourceTree = "<group>"; };
@@ -940,12 +950,17 @@
 		655F27CD1C0F332B00B3C7BE /* images */ = {
 			isa = PBXGroup;
 			children = (
-				65FA9FC91C5BB1DE00B4662E /* campus.png */,
+				65F80B5E1C5FEECE005D6A0A /* yellow_hom.png */,
+				65F80B5F1C5FEECE005D6A0A /* orange_hom.png */,
+				65F80B601C5FEECE005D6A0A /* green_hom.png */,
+				65F80B611C5FEECE005D6A0A /* blue_hom.png */,
 				6545C5631C5A2EDF00E446CA /* purple.png */,
 				6545C5641C5A2EDF00E446CA /* blue.png */,
 				6545C5651C5A2EDF00E446CA /* yellow.png */,
 				6545C5661C5A2EDF00E446CA /* green.png */,
 				6545C5611C5A26EF00E446CA /* red.png */,
+				65FA9FC91C5BB1DE00B4662E /* campus.png */,
+				65F80B661C5FF0B1005D6A0A /* campus_homburg.png */,
 				655361851C19A8AD00CBF78B /* AppIcon-1024b.png */,
 				6537C3181C11AC3A00F22518 /* HomeEventIcon.png */,
 				6537C3191C11AC3A00F22518 /* HomeKioskIcon.png */,
@@ -1789,14 +1804,18 @@
 				BAE025541C5B6DBE002EBF3D /* location-151669_640.png in Resources */,
 				6564ED311C0DE9C000FA650D /* Main.storyboard in Resources */,
 				6545C5621C5A26EF00E446CA /* red.png in Resources */,
+				65F80B631C5FEECE005D6A0A /* orange_hom.png in Resources */,
 				6545C5671C5A2EDF00E446CA /* purple.png in Resources */,
+				65F80B651C5FEECE005D6A0A /* blue_hom.png in Resources */,
 				6537C3201C11AC3A00F22518 /* HomeMapIcon.png in Resources */,
 				6537B9581C0F0ACC00B24278 /* NewsIcon@2x.png in Resources */,
+				65F80B671C5FF0B1005D6A0A /* campus_homburg.png in Resources */,
 				BAE025511C5B6DBE002EBF3D /* iconGpsPfeil.png in Resources */,
 				6537C31F1C11AC3A00F22518 /* HomeKioskIcon.png in Resources */,
 				6542B4431C58C74800460FA0 /* Settings.bundle in Resources */,
 				65F6423A1C5A917F00E460F3 /* iCalEmpty.png in Resources */,
 				BAE025471C5B6C57002EBF3D /* small_icon_2.png in Resources */,
+				65F80B641C5FEECE005D6A0A /* green_hom.png in Resources */,
 				65F534411C1202C500433136 /* HomeSettingIcon.png in Resources */,
 				6545C5681C5A2EDF00E446CA /* blue.png in Resources */,
 				BAE025521C5B6DBE002EBF3D /* saarbruecken-1.png in Resources */,
@@ -1805,6 +1824,7 @@
 				6537C31E1C11AC3A00F22518 /* HomeEventIcon.png in Resources */,
 				6537C3221C11AC3A00F22518 /* HomeNewsIcon.png in Resources */,
 				6545C5691C5A2EDF00E446CA /* yellow.png in Resources */,
+				65F80B621C5FEECE005D6A0A /* yellow_hom.png in Resources */,
 				65F534401C1202C500433136 /* HomeAboutIcon.png in Resources */,
 				655F27D91C0F340300B3C7BE /* AppIcon-1024.png in Resources */,
 				65FA9FCA1C5BB1DE00B4662E /* campus.png in Resources */,

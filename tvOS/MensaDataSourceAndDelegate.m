@@ -16,12 +16,20 @@
 
 -(void)loadData {
     
-   
+    defaults = [NSUserDefaults standardUserDefaults];
+    NSString *campus_selected = [defaults objectForKey:@"campus_selected"];
+    
+    if ([campus_selected isEqualToString:@"saar"]) {
+        url = @"http://www.studentenwerk-saarland.de/_menu/actual/speiseplan-saarbruecken.xml";
+    }
+    else {
+        url = @"http://www.studentenwerk-saarland.de/_menu/actual/speiseplan-homburg.xml";
+    }
     
     NSInteger day = [self getDay];
     NSString *day2 = [@(day) stringValue];
     NSString *xpath = [NSString stringWithFormat:@"//tag[%@]//description | //tag[%@]//category | //tag[%@]//title  | //tag[%@]//preis1  | //tag[%@]//preis2 | //tag[%@]//preis3  | //tag[%@]//color", day2,day2,day2,day2,day2,day2,day2];
-    MensaContent = [Parser parseWithURL:@"http://www.studentenwerk-saarland.de/_menu/actual/speiseplan-saarbruecken.xml" andWithPath:xpath];
+    MensaContent = [Parser parseWithURL:url andWithPath:xpath];
     
     MensaMenus = [[NSMutableArray alloc] initWithCapacity:0];
     
@@ -113,6 +121,18 @@
     }
     if ([col isEqualToString:@"135,10,194"]) {
         cell.CustomStripe.image = [UIImage imageNamed:@"purple.png"];
+    }
+    if ([col isEqualToString:@"204,235,255"]) {
+        cell.CustomStripe.image = [UIImage imageNamed:@"blue_hom.png"];
+    }
+    if ([col isEqualToString:@"204,255,153"]) {
+        cell.CustomStripe.image = [UIImage imageNamed:@"green_hom.png"];
+    }
+    if ([col isEqualToString:@"255,204,102"]) {
+        cell.CustomStripe.image = [UIImage imageNamed:@"orange_hom.png"];
+    }
+    if ([col isEqualToString:@"255,255,153"]) {
+        cell.CustomStripe.image = [UIImage imageNamed:@"yellow_hom.png"];
     }
     
     return cell;

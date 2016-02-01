@@ -104,7 +104,7 @@
         });
     }
     else {
-        [self showMap];
+        [self showNews1];
     }
     
     
@@ -242,7 +242,7 @@
         [self switchToNextView:@selector(showMensa2)];
     }
     else {
-        [self performSelector:@selector(showMensa2) withObject:nil afterDelay:0];
+        [self performSelector:@selector(showMensa2) withObject:nil afterDelay:1];
     }
     
 }
@@ -268,7 +268,7 @@
         [self switchToNextView:@selector(showMensa3)];
     }
     else {
-        [self performSelector:@selector(showMensa3) withObject:nil afterDelay:0];
+        [self performSelector:@selector(showMensa3) withObject:nil afterDelay:1];
     }
 }
 
@@ -296,7 +296,7 @@
         [self switchToNextView:@selector(showMap)];
     }
     else {
-        [self performSelector:@selector(showMap) withObject:nil afterDelay:0];
+        [self performSelector:@selector(showMap) withObject:nil afterDelay:1];
     }
     
 }
@@ -309,9 +309,20 @@
         KioskModeTitel.alpha = 0;
     } completion:^(BOOL finished) {
         if (finished) {
+            defaults = [NSUserDefaults standardUserDefaults];
+            NSString *campus_selected = [defaults objectForKey:@"campus_selected"];
+            if ([campus_selected isEqualToString:@"hom"]) {
+                CampusMap.image = [UIImage imageNamed:@"campus_homburg.png"];
+            }
             [UIView animateWithDuration:animationSpeed animations:^(){
                 CampusImageView.alpha = 1;
-                KioskModeTitel.text = @"";
+                if ([campus_selected isEqualToString:@"hom"]) {
+                    KioskModeTitel.text = @"Campus Homburg";
+                    KioskModeTitel.alpha = 1;
+                }
+                else {
+                    KioskModeTitel.text = @"";
+                }
             }];
         }
     }];

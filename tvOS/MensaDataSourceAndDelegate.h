@@ -19,7 +19,8 @@
     NSMutableArray *MensaContentMerged;
     NSMutableArray *MensaMenus;
     NSMutableArray *CurrentMenus;
-    
+    NSUserDefaults *defaults;
+    NSString *url;
     
 }
 
