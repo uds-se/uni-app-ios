@@ -34,9 +34,10 @@ struct Building {
     _LocationPointer.hidden = true;
     OverviewTableView.hidden = true;
     BuildingsTableView.hidden = true;
-    _mainView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:1];
+    
     
 //    current Location
+    _CurrentLocationPointer.translatesAutoresizingMaskIntoConstraints = true;
     _CurrentLocationPointer.frame = CGRectMake(1810, 130, 50, 50);
     _CurrentLocationPointer.image = [UIImage imageNamed:@"locButton.png"];
     
@@ -61,7 +62,7 @@ struct Building {
     NSArray *A51 = @[@"A1 5", @775.0f, @490.0f];
     GebA = [[NSArray alloc] initWithObjects:A11, A21, A31, A41, A51, nil];
 
-    NSArray *B11 = @[@"B1 1", @100.0f, @100.1f];
+    NSArray *B11 = @[@"B1 1", @773.0f, @725.1f];
     NSArray *B21 = @[@"B1 2", @200.0f, @200.0f];
     NSArray *B31 = @[@"B1 3", @300.0f, @300.0f];
     NSArray *B41 = @[@"B1 4", @400.0f, @400.0f];

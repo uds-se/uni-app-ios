@@ -27,9 +27,16 @@
 "u8w-bV-7rr.text" = "Mitgliedersuche";
 
 //NewsList
-/* Class = "UILabel"; text = "Staff Search"; ObjectID = "clW-gT-xPc"; */
+/* Class = "UILabel"; text = "News"; ObjectID = "clW-gT-xPc"; */
 "clW-gT-xPc.text" = "Aktuelles";
+
+//EventList
+/* Class = "UILabel"; text = "Events"; ObjectID = "mHJ-YZ-fxe"; */
+"mHJ-YZ-fxe.text" = "Aktuelles";
 
 //Settings
 /* Class = "UILabel"; text = "Staff Search"; ObjectID = "oHt-pg-Ff1"; */
 "oHt-pg-Ff1.text" = "Einstellungen";
+
+
+

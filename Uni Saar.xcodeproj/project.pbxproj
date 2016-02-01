@@ -53,7 +53,6 @@
 		6542B4431C58C74800460FA0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6542B4421C58C74800460FA0 /* Settings.bundle */; };
 		6542B4441C58D8E700460FA0 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = E256EF6315B175BD00F08A50 /* Event.m */; };
 		6542B4491C591D3600460FA0 /* MensaKioskItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6542B4481C591D3600460FA0 /* MensaKioskItem.m */; };
-		6545C55D1C5A052600E446CA /* campus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6545C55C1C5A052600E446CA /* campus.png */; };
 		6545C5601C5A08D400E446CA /* CustomMensaKioskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545C55F1C5A08D400E446CA /* CustomMensaKioskCell.m */; };
 		6545C5621C5A26EF00E446CA /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 6545C5611C5A26EF00E446CA /* red.png */; };
 		6545C5671C5A2EDF00E446CA /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 6545C5631C5A2EDF00E446CA /* purple.png */; };
@@ -84,6 +83,7 @@
 		65F534401C1202C500433136 /* HomeAboutIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F5343E1C1202C500433136 /* HomeAboutIcon.png */; };
 		65F534411C1202C500433136 /* HomeSettingIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F5343F1C1202C500433136 /* HomeSettingIcon.png */; };
 		65F6423A1C5A917F00E460F3 /* iCalEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = E27CD78E15B869C900DB7A0E /* iCalEmpty.png */; };
+		65FA9FCA1C5BB1DE00B4662E /* campus.png in Resources */ = {isa = PBXBuildFile; fileRef = 65FA9FC91C5BB1DE00B4662E /* campus.png */; };
 		65FF57FC1C5AA5460051069C /* EventContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FF57F91C5AA5460051069C /* EventContentViewController.m */; };
 		65FF57FD1C5AA5460051069C /* EventsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FF57FB1C5AA5460051069C /* EventsListViewController.m */; };
 		97B3500515B3611E00497E7A /* ResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 971EF23E15B059510039B06B /* ResultTableViewController.m */; };
@@ -480,7 +480,6 @@
 		6542B4421C58C74800460FA0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		6542B4471C591D3600460FA0 /* MensaKioskItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaKioskItem.h; sourceTree = "<group>"; };
 		6542B4481C591D3600460FA0 /* MensaKioskItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaKioskItem.m; sourceTree = "<group>"; };
-		6545C55C1C5A052600E446CA /* campus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campus.png; sourceTree = "<group>"; };
 		6545C55E1C5A08D400E446CA /* CustomMensaKioskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMensaKioskCell.h; sourceTree = "<group>"; };
 		6545C55F1C5A08D400E446CA /* CustomMensaKioskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMensaKioskCell.m; sourceTree = "<group>"; };
 		6545C5611C5A26EF00E446CA /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
@@ -524,6 +523,7 @@
 		65F5343C1C11FDD800433136 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		65F5343E1C1202C500433136 /* HomeAboutIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeAboutIcon.png; sourceTree = "<group>"; };
 		65F5343F1C1202C500433136 /* HomeSettingIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeSettingIcon.png; sourceTree = "<group>"; };
+		65FA9FC91C5BB1DE00B4662E /* campus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campus.png; sourceTree = "<group>"; };
 		65FF57F81C5AA5460051069C /* EventContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventContentViewController.h; sourceTree = "<group>"; };
 		65FF57F91C5AA5460051069C /* EventContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventContentViewController.m; sourceTree = "<group>"; };
 		65FF57FA1C5AA5460051069C /* EventsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsListViewController.h; sourceTree = "<group>"; };
@@ -940,12 +940,12 @@
 		655F27CD1C0F332B00B3C7BE /* images */ = {
 			isa = PBXGroup;
 			children = (
+				65FA9FC91C5BB1DE00B4662E /* campus.png */,
 				6545C5631C5A2EDF00E446CA /* purple.png */,
 				6545C5641C5A2EDF00E446CA /* blue.png */,
 				6545C5651C5A2EDF00E446CA /* yellow.png */,
 				6545C5661C5A2EDF00E446CA /* green.png */,
 				6545C5611C5A26EF00E446CA /* red.png */,
-				6545C55C1C5A052600E446CA /* campus.png */,
 				655361851C19A8AD00CBF78B /* AppIcon-1024b.png */,
 				6537C3181C11AC3A00F22518 /* HomeEventIcon.png */,
 				6537C3191C11AC3A00F22518 /* HomeKioskIcon.png */,
@@ -1793,7 +1793,6 @@
 				6537C3201C11AC3A00F22518 /* HomeMapIcon.png in Resources */,
 				6537B9581C0F0ACC00B24278 /* NewsIcon@2x.png in Resources */,
 				BAE025511C5B6DBE002EBF3D /* iconGpsPfeil.png in Resources */,
-				6545C55D1C5A052600E446CA /* campus.png in Resources */,
 				6537C31F1C11AC3A00F22518 /* HomeKioskIcon.png in Resources */,
 				6542B4431C58C74800460FA0 /* Settings.bundle in Resources */,
 				65F6423A1C5A917F00E460F3 /* iCalEmpty.png in Resources */,
@@ -1808,6 +1807,7 @@
 				6545C5691C5A2EDF00E446CA /* yellow.png in Resources */,
 				65F534401C1202C500433136 /* HomeAboutIcon.png in Resources */,
 				655F27D91C0F340300B3C7BE /* AppIcon-1024.png in Resources */,
+				65FA9FCA1C5BB1DE00B4662E /* campus.png in Resources */,
 				BAE025451C5B6C42002EBF3D /* background-white-logo-mainscreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

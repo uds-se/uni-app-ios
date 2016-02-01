@@ -18,13 +18,8 @@
     NSMutableArray *NewsElements = [[NSMutableArray alloc] initWithCapacity:0];
     NSData *data;
     data = [NSData dataWithContentsOfURL:url];
+
     
-/*    @try {
-       data = [NSData dataWithContentsOfURL:url];
-    }
-    @catch (NSException *e) {
-        
-    }*/
  
     NSString *html = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     html = [html stringByReplacingOccurrencesOfString:@"<br />" withString:@"\r"]; 

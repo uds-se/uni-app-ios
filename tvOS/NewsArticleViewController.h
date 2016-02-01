@@ -14,6 +14,7 @@
     
     __weak IBOutlet UIActivityIndicatorView *AiArticleView;
     __weak IBOutlet UITextView *ContentTextBox;
+    __weak IBOutlet UILabel *NoInternet;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *TitleView;

@@ -12,6 +12,7 @@
 #import "EventsDataSourceAndDelegate.h"
 #import "MensaDataSourceAndDelegate.h"
 #import "NewsSource.h"
+#import "Reachability.h"
 
 @interface KioskViewController : UIViewController {
     
@@ -21,6 +22,7 @@
     __weak IBOutlet UITextView *NewsTextView;
     __weak IBOutlet UITableView *MensaTableView;
     __weak IBOutlet UIImageView *CampusImageView;
+    __weak IBOutlet UILabel *NoInternet;
     
     EventsDataSourceAndDelegate *EventsTable;
     MensaDataSourceAndDelegate *MensaTable;
@@ -28,6 +30,8 @@
     NSInteger interval;
     NSInteger animationSpeed;
     NSUserDefaults *defaults;
+    NSInteger loopCount;
+
 }
 
 - (void) showNews1;
@@ -39,6 +43,7 @@
 - (void) showMensa2;
 - (void) showMensa3;
 - (void) showMap;
+- (void) checkForRefresh;
 - (void) switchToNextView:(SEL)selector;
 
 @end

@@ -13,6 +13,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NewsArticle.h"
+#import "Reachability.h"
 
 @interface NewsListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate> {
     
@@ -21,6 +22,7 @@
     __weak IBOutlet UITableView *NewsListView;
     __weak IBOutlet UIActivityIndicatorView *AiNewsView;
     __weak IBOutlet UILabel *NewsLabel;
+    __weak IBOutlet UILabel *NoInternet;
 }
 
 - (void) loadNews;

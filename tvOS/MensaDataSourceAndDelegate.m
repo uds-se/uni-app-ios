@@ -11,6 +11,8 @@
 
 @implementation MensaDataSourceAndDelegate
 
+@synthesize Menu1, Menu2, Menu3;
+
 
 -(void)loadData {
     
@@ -64,11 +66,11 @@
     Menu3 = [[NSMutableArray alloc] initWithCapacity:0];
     int i = 0;
     
-    while (i < 5 && [MensaMenus count] >= 5) {
+    while (i < 4 && i < [MensaMenus count] ) {
         [Menu1 addObject:[MensaMenus objectAtIndex:i]];
         i++;
     }
-    while (i < 10 && [MensaMenus count] >= 10) {
+    while (i < 9 && i < [MensaMenus count]) {
         [Menu2 addObject:[MensaMenus objectAtIndex:i]];
         i++;
     }

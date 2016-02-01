@@ -10,3 +10,4 @@
 "News" = "Aktuelles";
 "Events" = "Veranstaltungen";
 "Mensa" = "Mensa";
+"NoInternet" = "Keine Internetverbindung: Inhalt konnte nicht geladen werden. Bitte überprüfen sie Ihre Internetverbindung und versuchen Sie es danach erneut.";

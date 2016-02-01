@@ -11,3 +11,4 @@
 "News" = "News";
 "Events" = "Events";
 "Mensa" = "Mensa";
+"NoInternet" = "No internet conncetion: Content couldn´t be loaded. Please check your internet connection and try again.";

@@ -25,6 +25,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    if ([Reachability hasInternetConnection]) {
+        NoInternet.hidden = true;
+    }
+    else {
+        NoInternet.hidden = false;
+        NoInternet.text = NSLocalizedStringFromTable(@"NoInternet", @"tvosLocalisation", nil);
+        NewsLabel.alpha = 0;
+    }
+    
     [AiNewsView startAnimating];
     AiNewsView.hidden = false;
     NewsListView.estimatedRowHeight = 150.0;

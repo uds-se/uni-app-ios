@@ -18,13 +18,14 @@
     NSMutableArray *MensaContentClean;
     NSMutableArray *MensaContentMerged;
     NSMutableArray *MensaMenus;
-    NSMutableArray *Menu1;
-    NSMutableArray *Menu2;
-    NSMutableArray *Menu3;
     NSMutableArray *CurrentMenus;
     
     
 }
+
+@property NSMutableArray *Menu1;
+@property NSMutableArray *Menu2;
+@property NSMutableArray *Menu3;
 
 - (void) loadData;
 - (void) setData1;

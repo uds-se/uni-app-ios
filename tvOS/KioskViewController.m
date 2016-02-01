@@ -16,6 +16,16 @@
 
 - (void)viewDidLoad {
     
+    if ([Reachability hasInternetConnection]) {
+        NoInternet.hidden = true;
+    }
+    else {
+        NoInternet.hidden = false;
+        NoInternet.text = NSLocalizedStringFromTable(@"NoInternet", @"tvosLocalisation", nil);
+        
+    }
+    
+    
     EventsTable = [[EventsDataSourceAndDelegate alloc]init];
     EventsTableView.dataSource = EventsTable;
     EventsTableView.delegate = EventsTable;
@@ -35,6 +45,7 @@
     KioskModeTitel.hidden = true;
     CampusImageView.alpha = 0;
     animationSpeed = 1;
+    loopCount = 0;
     
     defaults = [NSUserDefaults standardUserDefaults];
     NSString *interval_selected = [defaults objectForKey:@"interval_selected"];
@@ -51,7 +62,7 @@
         [NewsTextSource loadData];
         [MensaTable loadData];
         dispatch_async(dispatch_get_main_queue(), ^(void){
-            [AiKiosk startAnimating];
+            [AiKiosk stopAnimating];
             AiKiosk.hidden = true;
             KioskModeTitel.hidden = false;
             KioskModeTitel.alpha = 0;
@@ -68,6 +79,35 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) checkForRefresh {
+    
+    loopCount++;
+    
+    if (loopCount >= (400/interval)) {
+        CampusImageView.alpha = 0;
+        KioskModeTitel.alpha = 0;
+        [AiKiosk startAnimating];
+        AiKiosk.hidden = false;
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+            [EventsTable loadData];
+            [NewsTextSource loadData];
+            [MensaTable loadData];
+            dispatch_async(dispatch_get_main_queue(), ^(void){
+                [AiKiosk stopAnimating];
+                AiKiosk.hidden = true;
+                KioskModeTitel.hidden = false;
+                [self showNews1];
+                
+            });
+        });
+    }
+    else {
+        [self showMap];
+    }
+    
+    
 }
 
 - (void) showNews1 {
@@ -198,7 +238,13 @@
             }];
         }
     }];
-    [self switchToNextView:@selector(showMensa2)];
+    if ([[MensaTable Menu1] count] > 0) {
+        [self switchToNextView:@selector(showMensa2)];
+    }
+    else {
+        [self performSelector:@selector(showMensa2) withObject:nil afterDelay:0];
+    }
+    
 }
 
 - (void) showMensa2 {
@@ -218,7 +264,12 @@
             }];
         }
     }];
-    [self switchToNextView:@selector(showMensa3)];
+    if ([[MensaTable Menu2] count] > 0) {
+        [self switchToNextView:@selector(showMensa3)];
+    }
+    else {
+        [self performSelector:@selector(showMensa3) withObject:nil afterDelay:0];
+    }
 }
 
 - (void) showMensa3 {
@@ -231,6 +282,9 @@
             [MensaTable setData3];
             [MensaTableView reloadData];
             KioskModeTitel.text = NSLocalizedStringFromTable(@"Mensa", @"tvosLocalisation", nil);
+            if ([[MensaTable Menu3] count] == 0) {
+                KioskModeTitel.text = @"";
+            }
             //            KioskModeTitel.font = [UIFont systemFontOfSize:76];
             [UIView animateWithDuration:animationSpeed animations:^(){
                 MensaTableView.alpha = 1;
@@ -238,7 +292,13 @@
             }];
         }
     }];
-    [self switchToNextView:@selector(showMap)];
+    if ([[MensaTable Menu3] count] > 0) {
+        [self switchToNextView:@selector(showMap)];
+    }
+    else {
+        [self performSelector:@selector(showMap) withObject:nil afterDelay:0];
+    }
+    
 }
 
 - (void) showMap {
@@ -250,11 +310,12 @@
     } completion:^(BOOL finished) {
         if (finished) {
             [UIView animateWithDuration:animationSpeed animations:^(){
-                CampusImageView.alpha = 1;                
+                CampusImageView.alpha = 1;
+                KioskModeTitel.text = @"";
             }];
         }
     }];
-    [self switchToNextView:@selector(showNews1)];
+    [self switchToNextView:@selector(checkForRefresh)];
     
 }
 
