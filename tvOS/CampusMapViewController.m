@@ -15,8 +15,8 @@ struct Building {
     
 };
 */
-
 #import "CampusMapViewController.h"
+#import "TFHpple.h"
 
 @interface CampusMapViewController ()
 
@@ -31,45 +31,171 @@ struct Building {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults synchronize];
+    Campus = [defaults objectForKey:@"campus_selected"];
+    if ([Campus  isEqual: @"hom"]){
+    
+        _MapImage.image = [UIImage imageNamed:@"Campus_Homburg.png"];
+        _Button.hidden = true;
+        _CurrentLocationPointer.hidden = true;
+        _mainView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:1];
+    }
+    else {
+        _MapImage.image = [UIImage imageNamed:@"campus.png"];
+    }
+    
     _LocationPointer.hidden = true;
     OverviewTableView.hidden = true;
     BuildingsTableView.hidden = true;
-    
-    
-//    current Location
-    _CurrentLocationPointer.translatesAutoresizingMaskIntoConstraints = true;
-    _CurrentLocationPointer.frame = CGRectMake(1810, 130, 50, 50);
-    _CurrentLocationPointer.image = [UIImage imageNamed:@"locButton.png"];
+//    _mainView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:1];
+
+
     
 //    
     BuildOverview = [[NSArray alloc] initWithObjects:@"A", @"B", @"C", @"D", @"E", nil];
-    BuildingsA = [[NSArray alloc] initWithObjects:@"A1", @"A2", @"A3", @"A4", @"A5", nil];
-    BuildingsB = [[NSArray alloc] initWithObjects:@"B1", @"B2", @"B3", @"B4", @"B5", @"B6", nil];
-    BuildingsC = [[NSArray alloc] initWithObjects:@"C1", @"C2", @"C3", @"C4", @"C5", nil];
-    BuildingsD = [[NSArray alloc] initWithObjects:@"D1", @"D2", @"D3", @"D4", @"D5", @"D7", nil];
-    BuildingsE = [[NSArray alloc] initWithObjects:@"E1", @"E2", @"E3", @"E4", @"E5", nil];
-
+  
     InitPosition = CGRectMake(100, 100, 50, 50);
-    //BuildingPosition = CGPointMake(xPos, yPos);
-//    float xPosA[] = {100, 200, 300, 400, 500};
-//    float yPosA[] = {100, 200, 300, 400, 500};
-//    self.TextAusgabe.text = BuidingTemp;
-//        xPosi = [[ NSArray alloc] initWithObjects:@100f,@200f , nil]
-    NSArray *A11 = @[@"A1 1", @775.0f, @360.1f];
-    NSArray *A21 = @[@"A1 2", @775.0f, @390.0f];
-    NSArray *A31 = @[@"A1 3", @775.0f, @430.0f];
-    NSArray *A41 = @[@"A1 4", @770.0f, @455.0f];
-    NSArray *A51 = @[@"A1 5", @775.0f, @490.0f];
-    GebA = [[NSArray alloc] initWithObjects:A11, A21, A31, A41, A51, nil];
+    
 
-    NSArray *B11 = @[@"B1 1", @773.0f, @725.1f];
-    NSArray *B21 = @[@"B1 2", @200.0f, @200.0f];
-    NSArray *B31 = @[@"B1 3", @300.0f, @300.0f];
-    NSArray *B41 = @[@"B1 4", @400.0f, @400.0f];
-    NSArray *B51 = @[@"B1 5", @500.0f, @500.0f];
-    NSArray *B61 = @[@"B1 6", @500.0f, @500.0f];
-    GebB = [[NSArray alloc] initWithObjects:B11, B21, B31, B41, B51, B61, nil];
-    GebC = GebE = GebD = GebB;
+    
+    NSArray *A11 = @[@"A1 1", @775.0f, @355.1f];
+    NSArray *A12 = @[@"A1 2", @775.0f, @390.0f];
+    NSArray *A13 = @[@"A1 3", @775.0f, @430.0f];
+    NSArray *A14 = @[@"A1 4", @770.0f, @455.0f];
+    NSArray *A15 = @[@"A1 5", @775.0f, @490.0f];
+    NSArray *A17 = @[@"A1 5", @775.0f, @490.0f];
+    NSArray *A18 = @[@"A1 5", @775.0f, @490.0f];
+    
+    NSArray *A22 = @[@"A2 2", @775.0f, @490.0f];
+    NSArray *A23 = @[@"A2 3", @775.0f, @490.0f];
+    NSArray *A24 = @[@"A2 4", @775.0f, @490.0f];
+ 
+    NSArray *A31 = @[@"A3 1", @775.0f, @490.0f];
+    NSArray *A32 = @[@"A3 2", @775.0f, @490.0f];
+    NSArray *A33 = @[@"A3 3", @775.0f, @490.0f];
+    
+    NSArray *A41 = @[@"A4 1", @775.0f, @490.0f];
+    NSArray *A42 = @[@"A4 2", @775.0f, @490.0f];
+    NSArray *A43 = @[@"A4 3", @775.0f, @490.0f];
+    NSArray *A44 = @[@"A4 4", @775.0f, @490.0f];
+    
+    NSArray *A51 = @[@"A5 1", @775.0f, @490.0f];
+    NSArray *A52 = @[@"A5 2", @775.0f, @490.0f];
+    NSArray *A53 = @[@"A5 3", @775.0f, @490.0f];
+    NSArray *A54 = @[@"A5 4", @775.0f, @490.0f];
+    
+    
+    BuildA = [[NSArray alloc] initWithObjects:A11, A12, A13, A14, A15, A17, A18, A22, A23, A24, A31, A32, A33, A41, A42, A43, A44, A51, A52, A53, A54, nil];
+
+    NSArray *B11 = @[@"B1 1", @100.0f, @100.1f];
+    NSArray *B12 = @[@"B1 2", @200.0f, @200.0f];
+    NSArray *B13 = @[@"B1 3", @300.0f, @300.0f];
+    NSArray *B21 = @[@"B1 4", @400.0f, @400.0f];
+    NSArray *B22 = @[@"B1 5", @500.0f, @500.0f];
+    NSArray *B31 = @[@"B1 6", @500.0f, @500.0f];
+    BuildB = [[NSArray alloc] initWithObjects:B11, B12, B13, B21, B22, B31, nil];
+    
+    
+    NSArray *E11 = @[@"E1 1", @775.0f, @355.1f];
+    NSArray *E12 = @[@"E1 2", @775.0f, @390.0f];
+    NSArray *E13 = @[@"E1 3", @775.0f, @430.0f];
+    NSArray *E14 = @[@"E1 4", @770.0f, @455.0f];
+    NSArray *E15 = @[@"E1 5", @775.0f, @490.0f];
+    NSArray *E16 = @[@"E1 6", @775.0f, @490.0f];
+    NSArray *E17 = @[@"E1 7", @775.0f, @490.0f];
+    
+    NSArray *E21 = @[@"E2 1", @775.0f, @355.1f];
+    NSArray *E22 = @[@"E2 2", @775.0f, @390.0f];
+    NSArray *E23 = @[@"E2 3", @775.0f, @430.0f];
+    NSArray *E24 = @[@"E2 4", @770.0f, @455.0f];
+    NSArray *E25 = @[@"E2 5", @775.0f, @490.0f];
+    NSArray *E26 = @[@"E2 6", @775.0f, @490.0f];
+    NSArray *E27 = @[@"E2 7", @775.0f, @490.0f];
+    NSArray *E28 = @[@"E2 8", @775.0f, @490.0f];
+    NSArray *E29 = @[@"E2 9", @775.0f, @490.0f];
+    
+    NSArray *E31 = @[@"E3 1", @775.0f, @490.0f];
+    NSArray *E71 = @[@"E7 1", @775.0f, @490.0f];
+    NSArray *E72 = @[@"E7 2", @775.0f, @490.0f];
+    NSArray *E81 = @[@"E8 1", @775.0f, @490.0f];
+    NSArray *E91 = @[@"E9 1", @1840.0f, @20.0f];
+    BuildE = @[E11, E12, E13, E14, E15, E16, E17, E21, E22, E21, E22, E23, E24, E25, E26, E27, E28, E29, E31, E71, E72, E81, E91];
+    BuildC = BuildD = BuildB;
+    
+    
+    //    current Location
+    
+
+
+    Location = [defaults objectForKey:@"building_selected"];
+    bool isBuild = true;
+    int i=0;
+    
+    if ([Location containsString:@"A"]) {
+        Temp = BuildA;
+    }
+    else if ([Location containsString:@"B"]){
+        Temp = BuildB;
+    }
+    else if ([Location containsString:@"C"]){
+        Temp = BuildC;
+    }
+    else if ([Location containsString:@"D"]){
+        Temp = BuildD;
+    }
+    else if ([Location containsString:@"E"]){
+        Temp = BuildE;
+    }
+    else {
+        Location = 0;
+    }
+        
+    if (Location != 0) {
+        
+        
+  
+        while (isBuild ) {
+            
+            isBuild =! [[Temp objectAtIndex:i ]  containsObject:Location];
+            
+            i++;
+    }
+  
+    _CurrentLocationPointer.translatesAutoresizingMaskIntoConstraints = true;
+      
+        NSNumber *x;
+        NSNumber *y;
+
+        x = [[Temp objectAtIndex:i-1]objectAtIndex:1];
+        y = [[Temp objectAtIndex:i-1]objectAtIndex:2];
+
+        float xTemp = [x floatValue];
+        float yTemp = [y floatValue];
+
+    _CurrentLocationPointer.frame = CGRectMake(xTemp, yTemp, 40, 64);
+    _CurrentLocationPointer.image = [UIImage imageNamed:@"pin_green"];
+        
+           }
+    else {
+        _CurrentLocationPointer.hidden = true;
+    }
+    
+    
+
+
+    
+    
+    
+//    do {
+//        blabla =! [[BuildA objectAtIndex:i ]  containsObject:@"A1 5"];
+//        
+//        i++;
+//
+//    } while (blabla);
+//    NSUInteger x = [BuildA [objectAtIndex:0]indexOfObject : @"A1 5"];
+    
+    
 //    NSArray *xPosA = @[@100.0f, @200.0f, @300.0f, @400.0f, @500.0f];
 //    NSArray *yPosA = @[@100.0, @200.0, @300.0, @400.0, @500.0];
     
@@ -84,7 +210,7 @@ struct Building {
 //    A1_1.Number = 1.1;
 //    A1_1.xPos = 800;
 //    A1_1.yPos = 500;
-//    
+//
   
     
  //   UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(500, 500, 50, 50)];
@@ -216,7 +342,7 @@ struct Building {
 //                for (NSInteger i=0; i < j; i++) {
 //                    NSArray *GebList = [info objectAtIndex:i];
 //                Buildings = BuildingsA;
-                Buildings = GebA;
+                Buildings = BuildA;
              //   BuildingsTableView.allowsSelection = true ;
 //                BuildingsTableView.accessibilityElementIsFocused;
             
@@ -224,18 +350,18 @@ struct Building {
             case 1:
 //                Buildings = BuildingsB;
                // BuildingsTableView.allowsSelection = YES;
-                Buildings = GebB;
+                Buildings = BuildB;
                 break;
             case 2:
-                Buildings = GebC;
+                Buildings = BuildC;
                // BuildingsTableView.allowsSelection = YES;
                 break;
             case 3:
-                Buildings = GebD;
+                Buildings = BuildD;
                // BuildingsTableView.allowsSelection = YES;
                 break;
             case 4:
-                Buildings = GebE;
+                Buildings = BuildE;
              //   BuildingsTableView.allowsSelection = YES;
             default:
                 break;
@@ -273,7 +399,7 @@ struct Building {
 //        [PointOfInterest setFrame:InitPosition];
 ////        [PointOfInterest setCenter:BuildingPosition];
         
-            _LocationPointer.image = [UIImage imageNamed:@"location-151669_640.png"];
+            _LocationPointer.image = [UIImage imageNamed:@"pin_red"];
 //       Location Pointer from https: //pixabay.com/static/uploads/photo/2013/07/12/17/00/location-151669_960_720.png
             _LocationPointer.translatesAutoresizingMaskIntoConstraints = true;
             
@@ -285,7 +411,7 @@ struct Building {
         xPosA = [xPosition floatValue];
         yPosA = [yPosition floatValue];
 
-        _LocationPointer.frame = CGRectMake(xPosA, yPosA, 30, 60);
+        _LocationPointer.frame = CGRectMake(xPosA, yPosA, 40, 64);
         _LocationPointer.hidden = false;
         _MapImage.hidden = false;
         OverviewTableView.hidden = true;
@@ -361,6 +487,5 @@ struct Building {
 //
 //- (IBAction)SelectBuilding:(id)sender {
 }
-
 
 @end

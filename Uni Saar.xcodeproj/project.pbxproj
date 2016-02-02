@@ -104,14 +104,10 @@
 		BAE025431C5B69B5002EBF3D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BD9A0A1599CD9300432FE9 /* Reachability.m */; };
 		BAE025451C5B6C42002EBF3D /* background-white-logo-mainscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE025441C5B6C42002EBF3D /* background-white-logo-mainscreen.png */; };
 		BAE025471C5B6C57002EBF3D /* small_icon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE025461C5B6C57002EBF3D /* small_icon_2.png */; };
-		BAE0254B1C5B6D97002EBF3D /* CampusMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0254A1C5B6D97002EBF3D /* CampusMapViewController.m */; };
 		BAE025511C5B6DBE002EBF3D /* iconGpsPfeil.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE0254D1C5B6DBE002EBF3D /* iconGpsPfeil.png */; };
 		BAE025521C5B6DBE002EBF3D /* saarbruecken-1.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE0254E1C5B6DBE002EBF3D /* saarbruecken-1.png */; };
 		BAE025531C5B6DBE002EBF3D /* locButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE0254F1C5B6DBE002EBF3D /* locButton.png */; };
 		BAE025541C5B6DBE002EBF3D /* location-151669_640.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE025501C5B6DBE002EBF3D /* location-151669_640.png */; };
-		BAE0255C1C5B6F84002EBF3D /* StaffSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE025571C5B6F83002EBF3D /* StaffSearchViewController.m */; };
-		BAE0255D1C5B6F84002EBF3D /* ResultStaffSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE025591C5B6F83002EBF3D /* ResultStaffSearchViewController.m */; };
-		BAE0255E1C5B6F84002EBF3D /* DetailStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0255B1C5B6F83002EBF3D /* DetailStaff.m */; };
 		BAE0255F1C5B70E3002EBF3D /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BF612B173556D100D54CD4 /* HTMLNode.m */; };
 		BAE025601C5B70E6002EBF3D /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BF612D173556D100D54CD4 /* HTMLParser.m */; };
 		BAF783EA1C6092B600CE5464 /* brown.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF783E61C6092B600CE5464 /* brown.png */; };
@@ -120,6 +116,12 @@
 		BAF783ED1C6092B600CE5464 /* light_cyan.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF783E91C6092B600CE5464 /* light_cyan.png */; };
 		BAF783F21C6092E000CE5464 /* MensaListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF783EF1C6092E000CE5464 /* MensaListViewController.m */; };
 		BAF783F31C6092E000CE5464 /* MensaListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF783F11C6092E000CE5464 /* MensaListTableViewCell.m */; };
+		BAF783F61C60942A00CE5464 /* CampusMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF783F51C60942A00CE5464 /* CampusMapViewController.m */; };
+		BAF783F91C60944000CE5464 /* pin_green.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF783F71C60944000CE5464 /* pin_green.png */; };
+		BAF783FA1C60944000CE5464 /* pin_red.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF783F81C60944000CE5464 /* pin_red.png */; };
+		BAF784011C6095C800CE5464 /* StaffSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF783FC1C6095C800CE5464 /* StaffSearchViewController.m */; };
+		BAF784021C6095C800CE5464 /* ResultStaffSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF783FE1C6095C800CE5464 /* ResultStaffSearchViewController.m */; };
+		BAF784031C6095C800CE5464 /* DetailStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF784001C6095C800CE5464 /* DetailStaff.m */; };
 		E212C094178B4B1300F9B877 /* PartialSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C093178B4B1300F9B877 /* PartialSearchCell.m */; };
 		E212C09A178B4B6700F9B877 /* SearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C099178B4B6700F9B877 /* SearchHistoryCell.m */; };
 		E212C09B178B4B8600F9B877 /* SearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C099178B4B6700F9B877 /* SearchHistoryCell.m */; };
@@ -553,18 +555,10 @@
 		ABEB820E1B9840CE00C28AC9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Uni Saar/Images.xcassets"; sourceTree = "<group>"; };
 		BAE025441C5B6C42002EBF3D /* background-white-logo-mainscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-white-logo-mainscreen.png"; sourceTree = "<group>"; };
 		BAE025461C5B6C57002EBF3D /* small_icon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small_icon_2.png; sourceTree = "<group>"; };
-		BAE025491C5B6D97002EBF3D /* CampusMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampusMapViewController.h; sourceTree = "<group>"; };
-		BAE0254A1C5B6D97002EBF3D /* CampusMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampusMapViewController.m; sourceTree = "<group>"; };
 		BAE0254D1C5B6DBE002EBF3D /* iconGpsPfeil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconGpsPfeil.png; sourceTree = "<group>"; };
 		BAE0254E1C5B6DBE002EBF3D /* saarbruecken-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "saarbruecken-1.png"; sourceTree = "<group>"; };
 		BAE0254F1C5B6DBE002EBF3D /* locButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locButton.png; sourceTree = "<group>"; };
 		BAE025501C5B6DBE002EBF3D /* location-151669_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location-151669_640.png"; sourceTree = "<group>"; };
-		BAE025561C5B6F83002EBF3D /* StaffSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaffSearchViewController.h; sourceTree = "<group>"; };
-		BAE025571C5B6F83002EBF3D /* StaffSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaffSearchViewController.m; sourceTree = "<group>"; };
-		BAE025581C5B6F83002EBF3D /* ResultStaffSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultStaffSearchViewController.h; sourceTree = "<group>"; };
-		BAE025591C5B6F83002EBF3D /* ResultStaffSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultStaffSearchViewController.m; sourceTree = "<group>"; };
-		BAE0255A1C5B6F83002EBF3D /* DetailStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailStaff.h; sourceTree = "<group>"; };
-		BAE0255B1C5B6F83002EBF3D /* DetailStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailStaff.m; sourceTree = "<group>"; };
 		BAF783E61C6092B600CE5464 /* brown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brown.png; sourceTree = "<group>"; };
 		BAF783E71C6092B600CE5464 /* canary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canary.png; sourceTree = "<group>"; };
 		BAF783E81C6092B600CE5464 /* ecru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ecru.png; sourceTree = "<group>"; };
@@ -573,6 +567,16 @@
 		BAF783EF1C6092E000CE5464 /* MensaListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaListViewController.m; sourceTree = "<group>"; };
 		BAF783F01C6092E000CE5464 /* MensaListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaListTableViewCell.h; sourceTree = "<group>"; };
 		BAF783F11C6092E000CE5464 /* MensaListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaListTableViewCell.m; sourceTree = "<group>"; };
+		BAF783F41C60942A00CE5464 /* CampusMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampusMapViewController.h; sourceTree = "<group>"; };
+		BAF783F51C60942A00CE5464 /* CampusMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampusMapViewController.m; sourceTree = "<group>"; };
+		BAF783F71C60944000CE5464 /* pin_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_green.png; sourceTree = "<group>"; };
+		BAF783F81C60944000CE5464 /* pin_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_red.png; sourceTree = "<group>"; };
+		BAF783FB1C6095C800CE5464 /* StaffSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaffSearchViewController.h; sourceTree = "<group>"; };
+		BAF783FC1C6095C800CE5464 /* StaffSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaffSearchViewController.m; sourceTree = "<group>"; };
+		BAF783FD1C6095C800CE5464 /* ResultStaffSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultStaffSearchViewController.h; sourceTree = "<group>"; };
+		BAF783FE1C6095C800CE5464 /* ResultStaffSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultStaffSearchViewController.m; sourceTree = "<group>"; };
+		BAF783FF1C6095C800CE5464 /* DetailStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailStaff.h; sourceTree = "<group>"; };
+		BAF784001C6095C800CE5464 /* DetailStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailStaff.m; sourceTree = "<group>"; };
 		E212C092178B4B1300F9B877 /* PartialSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartialSearchCell.h; sourceTree = "<group>"; };
 		E212C093178B4B1300F9B877 /* PartialSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartialSearchCell.m; sourceTree = "<group>"; };
 		E212C098178B4B6700F9B877 /* SearchHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistoryCell.h; sourceTree = "<group>"; };
@@ -960,6 +964,8 @@
 			children = (
 				65F80B5E1C5FEECE005D6A0A /* yellow_hom.png */,
 				65F80B5F1C5FEECE005D6A0A /* orange_hom.png */,
+				BAF783F71C60944000CE5464 /* pin_green.png */,
+				BAF783F81C60944000CE5464 /* pin_red.png */,
 				65F80B601C5FEECE005D6A0A /* green_hom.png */,
 				65F80B611C5FEECE005D6A0A /* blue_hom.png */,
 				BAF783E61C6092B600CE5464 /* brown.png */,
@@ -1105,9 +1111,9 @@
 		BAE025481C5B6D4A002EBF3D /* Campus */ = {
 			isa = PBXGroup;
 			children = (
+				BAF783F41C60942A00CE5464 /* CampusMapViewController.h */,
+				BAF783F51C60942A00CE5464 /* CampusMapViewController.m */,
 				BAE0254C1C5B6DA2002EBF3D /* images */,
-				BAE025491C5B6D97002EBF3D /* CampusMapViewController.h */,
-				BAE0254A1C5B6D97002EBF3D /* CampusMapViewController.m */,
 			);
 			name = Campus;
 			sourceTree = "<group>";
@@ -1126,12 +1132,12 @@
 		BAE025551C5B6F46002EBF3D /* Staff Search */ = {
 			isa = PBXGroup;
 			children = (
-				BAE025561C5B6F83002EBF3D /* StaffSearchViewController.h */,
-				BAE025571C5B6F83002EBF3D /* StaffSearchViewController.m */,
-				BAE025581C5B6F83002EBF3D /* ResultStaffSearchViewController.h */,
-				BAE025591C5B6F83002EBF3D /* ResultStaffSearchViewController.m */,
-				BAE0255A1C5B6F83002EBF3D /* DetailStaff.h */,
-				BAE0255B1C5B6F83002EBF3D /* DetailStaff.m */,
+				BAF783FB1C6095C800CE5464 /* StaffSearchViewController.h */,
+				BAF783FC1C6095C800CE5464 /* StaffSearchViewController.m */,
+				BAF783FD1C6095C800CE5464 /* ResultStaffSearchViewController.h */,
+				BAF783FE1C6095C800CE5464 /* ResultStaffSearchViewController.m */,
+				BAF783FF1C6095C800CE5464 /* DetailStaff.h */,
+				BAF784001C6095C800CE5464 /* DetailStaff.m */,
 			);
 			name = "Staff Search";
 			sourceTree = "<group>";
@@ -1831,12 +1837,14 @@
 				65F80B641C5FEECE005D6A0A /* green_hom.png in Resources */,
 				BAF783ED1C6092B600CE5464 /* light_cyan.png in Resources */,
 				65F534411C1202C500433136 /* HomeSettingIcon.png in Resources */,
+				BAF783FA1C60944000CE5464 /* pin_red.png in Resources */,
 				6545C5681C5A2EDF00E446CA /* blue.png in Resources */,
 				BAE025521C5B6DBE002EBF3D /* saarbruecken-1.png in Resources */,
 				6590D88A1C1853FA00418278 /* tvosLocalisation.strings in Resources */,
 				6537C3211C11AC3A00F22518 /* HomeMensaIcon.png in Resources */,
 				6537C31E1C11AC3A00F22518 /* HomeEventIcon.png in Resources */,
 				6537C3221C11AC3A00F22518 /* HomeNewsIcon.png in Resources */,
+				BAF783F91C60944000CE5464 /* pin_green.png in Resources */,
 				6545C5691C5A2EDF00E446CA /* yellow.png in Resources */,
 				BAF783EB1C6092B600CE5464 /* canary.png in Resources */,
 				BAF783EA1C6092B600CE5464 /* brown.png in Resources */,
@@ -2109,7 +2117,7 @@
 				6564ED501C0E34D100FA650D /* NewsArticle.m in Sources */,
 				6564ED401C0DFA2800FA650D /* TFHpple.m in Sources */,
 				6542B4441C58D8E700460FA0 /* Event.m in Sources */,
-				BAE0255D1C5B6F84002EBF3D /* ResultStaffSearchViewController.m in Sources */,
+				BAF783F61C60942A00CE5464 /* CampusMapViewController.m in Sources */,
 				6542B4491C591D3600460FA0 /* MensaKioskItem.m in Sources */,
 				65FF57FD1C5AA5460051069C /* EventsListViewController.m in Sources */,
 				BAE025431C5B69B5002EBF3D /* Reachability.m in Sources */,
@@ -2117,12 +2125,9 @@
 				BAF783F21C6092E000CE5464 /* MensaListViewController.m in Sources */,
 				BAE025411C5B699E002EBF3D /* MensaFeedParser.m in Sources */,
 				65F44AC61C1701650036F884 /* MensaDataSourceAndDelegate.m in Sources */,
-				BAE0255E1C5B6F84002EBF3D /* DetailStaff.m in Sources */,
 				6564ED491C0E112200FA650D /* NewsListViewController.m in Sources */,
-				BAE0255C1C5B6F84002EBF3D /* StaffSearchViewController.m in Sources */,
 				6537B9551C0EDE1900B24278 /* NewsArticleViewController.m in Sources */,
 				6564ED2B1C0DE9C000FA650D /* ViewController.m in Sources */,
-				BAE0254B1C5B6D97002EBF3D /* CampusMapViewController.m in Sources */,
 				6564ED511C0E3E6D00FA650D /* NewsTableViewCell.m in Sources */,
 				6564ED2E1C0DE9C000FA650D /* tvOS.xcdatamodeld in Sources */,
 				6564ED281C0DE9C000FA650D /* AppDelegate.m in Sources */,
@@ -2134,7 +2139,10 @@
 				BAE025601C5B70E6002EBF3D /* HTMLParser.m in Sources */,
 				65F5343D1C11FDD800433136 /* SettingsViewController.m in Sources */,
 				BAF783F31C6092E000CE5464 /* MensaListTableViewCell.m in Sources */,
+				BAF784021C6095C800CE5464 /* ResultStaffSearchViewController.m in Sources */,
+				BAF784031C6095C800CE5464 /* DetailStaff.m in Sources */,
 				65F44AC31C1701530036F884 /* NewsSource.m in Sources */,
+				BAF784011C6095C800CE5464 /* StaffSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

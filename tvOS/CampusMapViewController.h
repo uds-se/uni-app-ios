@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface CampusMapViewController : UIViewController<UITableViewDataSource,UITableViewDelegate> {
     
     NSArray *BuildOverview;
@@ -25,16 +24,19 @@
     NSNumber *yPosition;
     CGRect InitPosition;
     CGPoint BuildingPosition;
-    NSArray *GebA;
-    NSArray *GebB;
-    NSArray *GebC;
-    NSArray *GebD;
-    NSArray *GebE;
+    NSArray *BuildA;
+    NSArray *BuildB;
+    NSArray *BuildC;
+    NSArray *BuildD;
+    NSArray *BuildE;
     float xPosA;
     float yPosA;
     NSArray *xPosi;
     NSArray *BuildingsList;
     NSArray *CurrentLocation;
+    NSString *Location;
+    NSArray *Temp;
+    NSString *Campus;
 }
 
 

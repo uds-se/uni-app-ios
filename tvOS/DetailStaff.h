@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DetailStaff.h"
-#import "HTMLNode.h"
-#import "HTMLParser.h"
+#import "TFHpple.h"
 
 
 
@@ -17,6 +16,7 @@
 
 NSURL* fullURL;
 NSOperationQueue* backgroundThread;
+NSMutableArray *DetailsPerson;
     
 }
 
