@@ -330,7 +330,7 @@
             }];
         }
     }];
-    [self switchToNextView:@selector(checkForRefresh)];
+    [self performSelector:@selector(checkForRefresh) withObject:nil afterDelay:interval*3];
     
 }
 
