@@ -19,8 +19,8 @@
     // Do any additional setup after loading the view.
     
     
-    self.TitleView.text = [[self event] title];
-    self.SubTitleView.text = [[self event] subTitle];
+    self.TitleView.text = [[self event] subTitle];
+    self.SubTitleView.text = [[self event] title];
     
     
     [AiEventContent startAnimating];
