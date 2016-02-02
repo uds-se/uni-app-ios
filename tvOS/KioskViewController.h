@@ -24,6 +24,7 @@
     __weak IBOutlet UIImageView *CampusImageView;
     __weak IBOutlet UILabel *NoInternet;
     __weak IBOutlet UIImageView *CampusMap;
+    __weak IBOutlet UIImageView *BackgroundLogo;
     
     EventsDataSourceAndDelegate *EventsTable;
     MensaDataSourceAndDelegate *MensaTable;

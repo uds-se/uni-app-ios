@@ -33,6 +33,6 @@
 - (void) setData2;
 - (void) setData3;
 - (void) splitMenus;
-- (NSInteger) getDay;
+- (NSString*) getDay;
 
 @end

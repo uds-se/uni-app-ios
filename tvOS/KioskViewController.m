@@ -46,6 +46,7 @@
     CampusImageView.alpha = 0;
     animationSpeed = 1;
     loopCount = 0;
+    BackgroundLogo.hidden = true;
     
     defaults = [NSUserDefaults standardUserDefaults];
     NSString *interval_selected = [defaults objectForKey:@"interval_selected"];
@@ -88,6 +89,7 @@
     if (loopCount >= (400/interval)) {
         CampusImageView.alpha = 0;
         KioskModeTitel.alpha = 0;
+        BackgroundLogo.alpha = 0.05;
         [AiKiosk startAnimating];
         AiKiosk.hidden = false;
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
@@ -128,6 +130,7 @@
             [UIView animateWithDuration:animationSpeed animations:^(){
                 NewsTextView.alpha = 1;
                 KioskModeTitel.alpha = 1;
+                BackgroundLogo.alpha = 0.05;
             }];
         }
     }];
@@ -230,7 +233,7 @@
         if (finished) {
             [MensaTable setData1];
             [MensaTableView reloadData];
-            KioskModeTitel.text = NSLocalizedStringFromTable(@"Mensa", @"tvosLocalisation", nil);
+            KioskModeTitel.text = [NSLocalizedStringFromTable(@"Mensa", @"tvosLocalisation", nil) stringByAppendingString:@" 1/3"];
             //            KioskModeTitel.font = [UIFont systemFontOfSize:76];
             [UIView animateWithDuration:animationSpeed animations:^(){
                 MensaTableView.alpha = 1;
@@ -256,7 +259,7 @@
         if (finished) {
             [MensaTable setData2];
             [MensaTableView reloadData];
-            KioskModeTitel.text = NSLocalizedStringFromTable(@"Mensa", @"tvosLocalisation", nil);
+            KioskModeTitel.text = [NSLocalizedStringFromTable(@"Mensa", @"tvosLocalisation", nil) stringByAppendingString:@" 2/3"];
             //            KioskModeTitel.font = [UIFont systemFontOfSize:76];
             [UIView animateWithDuration:animationSpeed animations:^(){
                 MensaTableView.alpha = 1;
@@ -281,7 +284,7 @@
         if (finished) {
             [MensaTable setData3];
             [MensaTableView reloadData];
-            KioskModeTitel.text = NSLocalizedStringFromTable(@"Mensa", @"tvosLocalisation", nil);
+            KioskModeTitel.text = [NSLocalizedStringFromTable(@"Mensa", @"tvosLocalisation", nil) stringByAppendingString:@" 3/3"];
             if ([[MensaTable Menu3] count] == 0) {
                 KioskModeTitel.text = @"";
             }
@@ -307,6 +310,7 @@
     [UIView animateWithDuration:animationSpeed animations:^(){
         MensaTableView.alpha = 0;
         KioskModeTitel.alpha = 0;
+        BackgroundLogo.alpha = 0;
     } completion:^(BOOL finished) {
         if (finished) {
             defaults = [NSUserDefaults standardUserDefaults];

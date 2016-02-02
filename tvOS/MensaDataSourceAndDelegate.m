@@ -26,17 +26,28 @@
         url = @"http://www.studentenwerk-saarland.de/_menu/actual/speiseplan-homburg.xml";
     }
     
-    NSInteger day = [self getDay];
-    NSString *day2 = [@(day) stringValue];
-    NSString *xpath = [NSString stringWithFormat:@"//tag[%@]//description | //tag[%@]//category | //tag[%@]//title  | //tag[%@]//preis1  | //tag[%@]//preis2 | //tag[%@]//preis3  | //tag[%@]//color", day2,day2,day2,day2,day2,day2,day2];
-    MensaContent = [Parser parseWithURL:url andWithPath:xpath];
+    NSDate *now = [NSDate date];
+    NSString *dayOfWeek = [self getDay];
+    if ([@"6" isEqualToString:dayOfWeek]) {
+        now = [now dateByAddingTimeInterval:60*60*24*2];
+    }
+    else if ([@"0" isEqualToString:dayOfWeek]) {
+        now = [now dateByAddingTimeInterval:60*60*24*1];
+    }
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:now];
+    [components setHour:0];
+    NSString *day = [[NSNumber numberWithDouble:[[calendar dateFromComponents:components] timeIntervalSince1970]] stringValue];
     
+    NSString *xpath = [NSString stringWithFormat:@"//tag[@timestamp='%@']//description | //tag[@timestamp='%@']//category | //tag[@timestamp='%@']//title  | //tag[@timestamp='%@']//preis1  | //tag[@timestamp='%@']//preis2 | //tag[@timestamp='%@']//preis3  | //tag[@timestamp='%@']//color", day, day, day, day, day, day, day];
+    
+    MensaContent = [Parser parseWithURL:url andWithPath:xpath];
     MensaMenus = [[NSMutableArray alloc] initWithCapacity:0];
     
     for (int i = 0; i < [MensaContent count]; i=i+7) {
         NSString *food = [[MensaContent objectAtIndex:i+1] stringByAppendingString:@" "];
         food = [food stringByAppendingString:[MensaContent objectAtIndex:i+2]];
-        [MensaMenus addObject:[[MensaKioskItem alloc] initWithFood:food category:[MensaContent objectAtIndex:i] price1:[@"Student: " stringByAppendingString:[MensaContent objectAtIndex:i+3]] price2:[@"Empolyee: " stringByAppendingString:[MensaContent objectAtIndex:i+4]] price3:[@"Visitor: " stringByAppendingString:[MensaContent objectAtIndex:i+5]] high:[MensaContent objectAtIndex:i+6]]];
+        [MensaMenus addObject:[[MensaKioskItem alloc] initWithFood:food category:[MensaContent objectAtIndex:i] price1:[[NSLocalizedStringFromTable(@"Student", @"tvosLocalisation", nil) stringByAppendingString:[MensaContent objectAtIndex:i+3]] stringByAppendingString:@" €"] price2:[[NSLocalizedStringFromTable(@"Employee", @"tvosLocalisation", nil) stringByAppendingString:[MensaContent objectAtIndex:i+4]] stringByAppendingString:@" €"] price3:[[NSLocalizedStringFromTable(@"Guest", @"tvosLocalisation", nil) stringByAppendingString:[MensaContent objectAtIndex:i+5]] stringByAppendingString:@" €"] high:[MensaContent objectAtIndex:i+6]]];
     }
     
     
@@ -44,17 +55,13 @@
     
 }
 
-- (NSInteger) getDay {
+- (NSString*) getDay {
     NSDate *today = [NSDate date];
     NSDateFormatter *myFormatter = [[NSDateFormatter alloc] init];
     [myFormatter setDateFormat:@"c"];
     NSString *dayOfWeek = [myFormatter stringFromDate:today];
-    
-    NSInteger day = [dayOfWeek integerValue]-1;
-    if (day == 0 || day == 6) {
-        day = 1;
-    }
-    return day;
+
+    return dayOfWeek;
 }
 
 - (void) setData1 {

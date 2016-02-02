@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -511,7 +511,7 @@
                                         <rect key="frame" x="0.0" y="54" width="1660" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QQI-TS-8iU" id="p4f-aA-bf7">
-                                            <rect key="frame" x="0.0" y="0.0" width="1644" height="66"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1660" height="66"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1e-Vd-h0N">
@@ -545,9 +545,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d10-pP-Z55" userLabel="Stripe">
-                                                    <rect key="frame" x="3" y="8" width="5" height="50"/>
+                                                    <rect key="frame" x="3" y="8" width="10" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="5" id="Gwe-a9-d81"/>
+                                                        <constraint firstAttribute="width" constant="10" id="Gwe-a9-d81"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -587,19 +587,25 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.050000000000000003" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon-1024b.png" translatesAutoresizingMaskIntoConstraints="NO" id="aoS-rh-KVj">
+                                <rect key="frame" x="90" y="0.0" width="1740" height="1080"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2OB-B6-f5b" firstAttribute="top" secondItem="vmk-N7-Wt3" secondAttribute="bottom" constant="60" id="08n-vb-wS9"/>
                             <constraint firstItem="eNO-rr-p0w" firstAttribute="centerY" secondItem="wxI-2j-MaF" secondAttribute="centerY" id="2yI-Oq-A2w"/>
                             <constraint firstItem="NQ7-Yy-1ZX" firstAttribute="centerX" secondItem="wxI-2j-MaF" secondAttribute="centerX" id="3D8-SZ-CzG"/>
+                            <constraint firstAttribute="bottom" secondItem="aoS-rh-KVj" secondAttribute="bottom" id="7xh-G2-x6b"/>
                             <constraint firstItem="2OB-B6-f5b" firstAttribute="leading" secondItem="wxI-2j-MaF" secondAttribute="leading" constant="175" id="CJY-GQ-UnU"/>
                             <constraint firstItem="NQ7-Yy-1ZX" firstAttribute="centerY" secondItem="wxI-2j-MaF" secondAttribute="centerY" id="HwP-3E-uEt"/>
+                            <constraint firstItem="aoS-rh-KVj" firstAttribute="leading" secondItem="wxI-2j-MaF" secondAttribute="leading" constant="90" id="IRi-FP-2dG"/>
                             <constraint firstItem="tTd-6b-NIc" firstAttribute="top" secondItem="utK-UA-Iq1" secondAttribute="bottom" constant="60" id="IhL-fX-7Zq"/>
                             <constraint firstItem="JMC-vD-pPr" firstAttribute="leading" secondItem="wxI-2j-MaF" secondAttribute="leadingMargin" constant="150" id="KDk-KE-hps"/>
                             <constraint firstAttribute="trailing" secondItem="utK-UA-Iq1" secondAttribute="trailing" constant="90" id="Q6b-F6-pCx"/>
                             <constraint firstItem="utK-UA-Iq1" firstAttribute="top" secondItem="2OB-B6-f5b" secondAttribute="bottom" constant="200" id="S3g-RK-056"/>
                             <constraint firstItem="JMC-vD-pPr" firstAttribute="top" secondItem="wxI-2j-MaF" secondAttribute="top" constant="200" id="SGI-1y-BAM"/>
+                            <constraint firstAttribute="trailing" secondItem="aoS-rh-KVj" secondAttribute="trailing" constant="90" id="V83-qn-mRc"/>
                             <constraint firstItem="3Eq-xE-6ga" firstAttribute="centerY" secondItem="wxI-2j-MaF" secondAttribute="centerY" id="cIW-aB-4K8"/>
                             <constraint firstAttribute="trailing" secondItem="2OB-B6-f5b" secondAttribute="trailing" constant="90" id="e6X-LP-pJ4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JMC-vD-pPr" secondAttribute="trailing" constant="70" id="fB2-oE-0Ta"/>
@@ -608,6 +614,7 @@
                             <constraint firstItem="tTd-6b-NIc" firstAttribute="top" secondItem="kGI-CS-YbH" secondAttribute="bottom" constant="60" id="mKz-yP-Arj"/>
                             <constraint firstItem="tTd-6b-NIc" firstAttribute="top" secondItem="JMC-vD-pPr" secondAttribute="bottom" constant="60" id="pX6-b4-hWo"/>
                             <constraint firstItem="3Eq-xE-6ga" firstAttribute="centerX" secondItem="wxI-2j-MaF" secondAttribute="centerX" id="qLs-mn-4bd"/>
+                            <constraint firstItem="aoS-rh-KVj" firstAttribute="top" secondItem="wxI-2j-MaF" secondAttribute="top" id="sY6-WG-fvy"/>
                             <constraint firstAttribute="trailing" secondItem="kGI-CS-YbH" secondAttribute="trailing" constant="90" id="sZ4-AU-Zr9"/>
                             <constraint firstItem="kGI-CS-YbH" firstAttribute="top" secondItem="wxI-2j-MaF" secondAttribute="top" constant="200" id="u1i-eV-9ZO"/>
                             <constraint firstItem="eNO-rr-p0w" firstAttribute="centerX" secondItem="wxI-2j-MaF" secondAttribute="centerX" id="w5h-XW-0rd"/>
@@ -615,6 +622,7 @@
                     </view>
                     <connections>
                         <outlet property="AiKiosk" destination="3Eq-xE-6ga" id="tT5-WC-Zsc"/>
+                        <outlet property="BackgroundLogo" destination="aoS-rh-KVj" id="aOv-4c-x1b"/>
                         <outlet property="CampusImageView" destination="NQ7-Yy-1ZX" id="MA9-Gz-UZu"/>
                         <outlet property="CampusMap" destination="NQ7-Yy-1ZX" id="1my-Am-dd1"/>
                         <outlet property="EventsTableView" destination="JMC-vD-pPr" id="PWT-td-ucj"/>
@@ -1088,7 +1096,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="jZU-De-Vrf" secondAttribute="trailing" constant="70" id="PlV-dT-oaF"/>
                             <constraint firstItem="9vy-cG-vgA" firstAttribute="top" secondItem="jZU-De-Vrf" secondAttribute="bottom" constant="80" id="cSr-Gs-jqP"/>
@@ -1212,7 +1220,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="BuildingsTableView" destination="b8E-aJ-RB5" id="yCp-iU-eyC"/>

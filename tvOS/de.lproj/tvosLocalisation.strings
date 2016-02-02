@@ -9,5 +9,9 @@
 //Kiosk Mode
 "News" = "Aktuelles";
 "Events" = "Veranstaltungen";
-"Mensa" = "Mensa";
+"Mensa" = "Mensa - Heute";
 "NoInternet" = "Keine Internetverbindung: Inhalt konnte nicht geladen werden. Bitte überprüfen sie Ihre Internetverbindung und versuchen Sie es danach erneut.";
+"NoContent" = "Für diese News steht kein Inhalt zur Verfügung!";
+"Student" = "Studierende: ";
+"Employee" = "Bedienstete: ";
+"Guest" = "Gäste: ";

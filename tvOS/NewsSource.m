@@ -29,13 +29,30 @@
     }
     @try {
     News = [Parser parseWithURL:[[ArticleElements objectAtIndex:0] article] andWithPath:@"//div[@class='newscontent']/p/b[1]"];
-    [News1 addObject:[News objectAtIndex:0]];
+        if ([News count] > 0) {
+            [News1 addObject:[News objectAtIndex:0]];
+        }
+        else {
+            [News1 addObject:NSLocalizedStringFromTable(@"NoContent", @"tvosLocalisation", nil)];
+        }
     [News1 addObject:[[ArticleElements objectAtIndex:0] title]];
+        
     News = [Parser parseWithURL:[[ArticleElements objectAtIndex:1] article] andWithPath:@"//div[@class='newscontent']/p/b[1]"];
-    [News2 addObject:[News objectAtIndex:0]];
+        if ([News count] > 0) {
+            [News2 addObject:[News objectAtIndex:0]];
+        }
+        else {
+            [News2 addObject:NSLocalizedStringFromTable(@"NoContent", @"tvosLocalisation", nil)];
+        }
     [News2 addObject:[[ArticleElements objectAtIndex:1] title]];
+        
     News = [Parser parseWithURL:[[ArticleElements objectAtIndex:2] article] andWithPath:@"//div[@class='newscontent']/p/b[1]"];
-    [News3 addObject:[News objectAtIndex:0]];
+        if ([News count] > 0) {
+            [News3 addObject:[News objectAtIndex:0]];
+        }
+        else {
+            [News3 addObject:NSLocalizedStringFromTable(@"NoContent", @"tvosLocalisation", nil)];
+        }
     [News3 addObject:[[ArticleElements objectAtIndex:2] title]];
     }
     @catch (NSException *e) {

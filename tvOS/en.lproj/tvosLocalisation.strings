@@ -10,5 +10,9 @@
 //Kiosk Mode
 "News" = "News";
 "Events" = "Events";
-"Mensa" = "Mensa";
+"Mensa" = "Mensa - Today";
 "NoInternet" = "No internet conncetion: Content couldn´t be loaded. Please check your internet connection and try again.";
+"NoContent" = "No content for this news available!";
+"Student" = "Student: ";
+"Employee" = "Employee: ";
+"Guest" = "Guest: ";
