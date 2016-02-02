@@ -11,13 +11,9 @@
 @interface MensaListTableViewCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UILabel *Gericht_Art;
 @property (nonatomic, weak) IBOutlet UILabel *Gericht_Name;
-@property (nonatomic, weak) IBOutlet UILabel *Details;
-@property (nonatomic, weak) IBOutlet UILabel *Preise;
-@property (nonatomic, weak) IBOutlet UILabel *Tag;
-@property (nonatomic, weak) IBOutlet UIImage *colors;
-
-//@property (nonatomic) NSMutableArray *contentForTables;
-//@property (nonatomic) NSMutableArray *contentForHeaders;
-//@property (nonatomic) NSMutableArray *contentForFooters;
+@property (nonatomic, weak) IBOutlet UILabel *Preis1;
+@property (nonatomic, weak) IBOutlet UILabel *Preis2;
+@property (nonatomic, weak) IBOutlet UILabel *Preis3;
+@property (weak, nonatomic) IBOutlet UIImageView *colors;
 
 @end

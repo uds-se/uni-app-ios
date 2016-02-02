@@ -14,14 +14,14 @@
 @interface MensaListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property NSUInteger pageIndex;
 @property MensaItem *mensaitem;
+@property NSUserDefaults *defaults;
 @property IBOutlet UITableView *tableview;
 @property (nonatomic, retain) IBOutlet UILabel *Tag;
 @property (nonatomic) BOOL parsingSuccessful;
 @property (nonatomic) NSMutableDictionary *days_dict;
 @property (nonatomic) UIPageControl *pageControl;
--(void)slideToRightWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer;
-
--(void)slideToLeftWithGestureRecognizer:(UISwipeGestureRecognizer *)gestureRecognizer;
+-(IBAction)handleSwipeRight:(UISwipeGestureRecognizer *)gestureRecognizer;
+-(IBAction)handleSwipeLeft:(UISwipeGestureRecognizer *)gestureRecognizer;
 
 //- (void) loadMensa;
 

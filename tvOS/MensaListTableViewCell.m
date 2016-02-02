@@ -11,9 +11,9 @@
 @implementation MensaListTableViewCell
 
 @synthesize Gericht_Art = _Gericht_Art;
-@synthesize Details = _Details;
-@synthesize Preise = _Preise;
-@synthesize Tag = _Tag;
+@synthesize Preis1 = _Preis1;
+@synthesize Preis2 = _Preis2;
+@synthesize Preis3 = _Preis3;
 @synthesize colors = _colors;
 @synthesize Gericht_Name = _Gericht_Name;
 

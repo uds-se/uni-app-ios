@@ -99,8 +99,6 @@
 		ABA0D62E183149C600A10087 /* MensaTabIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA0D62C183149C600A10087 /* MensaTabIcon.png */; };
 		ABA0D62F183149C600A10087 /* MensaTabIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA0D62D183149C600A10087 /* MensaTabIcon@2x.png */; };
 		ABEB820F1B9840CE00C28AC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABEB820E1B9840CE00C28AC9 /* Images.xcassets */; };
-		BAE0253F1C5B6928002EBF3D /* MensaListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0253C1C5B6928002EBF3D /* MensaListViewController.m */; };
-		BAE025401C5B6928002EBF3D /* MensaListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0253E1C5B6928002EBF3D /* MensaListTableViewCell.m */; };
 		BAE025411C5B699E002EBF3D /* MensaFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D4E708159CADDA00876317 /* MensaFeedParser.m */; };
 		BAE025421C5B69AD002EBF3D /* MensaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EF328E1598F21F00D65D13 /* MensaItem.m */; };
 		BAE025431C5B69B5002EBF3D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BD9A0A1599CD9300432FE9 /* Reachability.m */; };
@@ -116,6 +114,12 @@
 		BAE0255E1C5B6F84002EBF3D /* DetailStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0255B1C5B6F83002EBF3D /* DetailStaff.m */; };
 		BAE0255F1C5B70E3002EBF3D /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BF612B173556D100D54CD4 /* HTMLNode.m */; };
 		BAE025601C5B70E6002EBF3D /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BF612D173556D100D54CD4 /* HTMLParser.m */; };
+		BAF783EA1C6092B600CE5464 /* brown.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF783E61C6092B600CE5464 /* brown.png */; };
+		BAF783EB1C6092B600CE5464 /* canary.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF783E71C6092B600CE5464 /* canary.png */; };
+		BAF783EC1C6092B600CE5464 /* ecru.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF783E81C6092B600CE5464 /* ecru.png */; };
+		BAF783ED1C6092B600CE5464 /* light_cyan.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF783E91C6092B600CE5464 /* light_cyan.png */; };
+		BAF783F21C6092E000CE5464 /* MensaListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF783EF1C6092E000CE5464 /* MensaListViewController.m */; };
+		BAF783F31C6092E000CE5464 /* MensaListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF783F11C6092E000CE5464 /* MensaListTableViewCell.m */; };
 		E212C094178B4B1300F9B877 /* PartialSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C093178B4B1300F9B877 /* PartialSearchCell.m */; };
 		E212C09A178B4B6700F9B877 /* SearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C099178B4B6700F9B877 /* SearchHistoryCell.m */; };
 		E212C09B178B4B8600F9B877 /* SearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C099178B4B6700F9B877 /* SearchHistoryCell.m */; };
@@ -547,10 +551,6 @@
 		ABA0D62C183149C600A10087 /* MensaTabIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MensaTabIcon.png; path = SaarlandUniversityAppB/MensaTabIcon.png; sourceTree = "<group>"; };
 		ABA0D62D183149C600A10087 /* MensaTabIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MensaTabIcon@2x.png"; path = "SaarlandUniversityAppB/MensaTabIcon@2x.png"; sourceTree = "<group>"; };
 		ABEB820E1B9840CE00C28AC9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Uni Saar/Images.xcassets"; sourceTree = "<group>"; };
-		BAE0253B1C5B6928002EBF3D /* MensaListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaListViewController.h; sourceTree = "<group>"; };
-		BAE0253C1C5B6928002EBF3D /* MensaListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaListViewController.m; sourceTree = "<group>"; };
-		BAE0253D1C5B6928002EBF3D /* MensaListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaListTableViewCell.h; sourceTree = "<group>"; };
-		BAE0253E1C5B6928002EBF3D /* MensaListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaListTableViewCell.m; sourceTree = "<group>"; };
 		BAE025441C5B6C42002EBF3D /* background-white-logo-mainscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-white-logo-mainscreen.png"; sourceTree = "<group>"; };
 		BAE025461C5B6C57002EBF3D /* small_icon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small_icon_2.png; sourceTree = "<group>"; };
 		BAE025491C5B6D97002EBF3D /* CampusMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampusMapViewController.h; sourceTree = "<group>"; };
@@ -565,6 +565,14 @@
 		BAE025591C5B6F83002EBF3D /* ResultStaffSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultStaffSearchViewController.m; sourceTree = "<group>"; };
 		BAE0255A1C5B6F83002EBF3D /* DetailStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailStaff.h; sourceTree = "<group>"; };
 		BAE0255B1C5B6F83002EBF3D /* DetailStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailStaff.m; sourceTree = "<group>"; };
+		BAF783E61C6092B600CE5464 /* brown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brown.png; sourceTree = "<group>"; };
+		BAF783E71C6092B600CE5464 /* canary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canary.png; sourceTree = "<group>"; };
+		BAF783E81C6092B600CE5464 /* ecru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ecru.png; sourceTree = "<group>"; };
+		BAF783E91C6092B600CE5464 /* light_cyan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light_cyan.png; sourceTree = "<group>"; };
+		BAF783EE1C6092E000CE5464 /* MensaListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaListViewController.h; sourceTree = "<group>"; };
+		BAF783EF1C6092E000CE5464 /* MensaListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaListViewController.m; sourceTree = "<group>"; };
+		BAF783F01C6092E000CE5464 /* MensaListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaListTableViewCell.h; sourceTree = "<group>"; };
+		BAF783F11C6092E000CE5464 /* MensaListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaListTableViewCell.m; sourceTree = "<group>"; };
 		E212C092178B4B1300F9B877 /* PartialSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartialSearchCell.h; sourceTree = "<group>"; };
 		E212C093178B4B1300F9B877 /* PartialSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartialSearchCell.m; sourceTree = "<group>"; };
 		E212C098178B4B6700F9B877 /* SearchHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistoryCell.h; sourceTree = "<group>"; };
@@ -954,6 +962,10 @@
 				65F80B5F1C5FEECE005D6A0A /* orange_hom.png */,
 				65F80B601C5FEECE005D6A0A /* green_hom.png */,
 				65F80B611C5FEECE005D6A0A /* blue_hom.png */,
+				BAF783E61C6092B600CE5464 /* brown.png */,
+				BAF783E71C6092B600CE5464 /* canary.png */,
+				BAF783E81C6092B600CE5464 /* ecru.png */,
+				BAF783E91C6092B600CE5464 /* light_cyan.png */,
 				6545C5631C5A2EDF00E446CA /* purple.png */,
 				6545C5641C5A2EDF00E446CA /* blue.png */,
 				6545C5651C5A2EDF00E446CA /* yellow.png */,
@@ -1082,10 +1094,10 @@
 		BAE0253A1C5B68D5002EBF3D /* Mensa */ = {
 			isa = PBXGroup;
 			children = (
-				BAE0253B1C5B6928002EBF3D /* MensaListViewController.h */,
-				BAE0253C1C5B6928002EBF3D /* MensaListViewController.m */,
-				BAE0253D1C5B6928002EBF3D /* MensaListTableViewCell.h */,
-				BAE0253E1C5B6928002EBF3D /* MensaListTableViewCell.m */,
+				BAF783EE1C6092E000CE5464 /* MensaListViewController.h */,
+				BAF783EF1C6092E000CE5464 /* MensaListViewController.m */,
+				BAF783F01C6092E000CE5464 /* MensaListTableViewCell.h */,
+				BAF783F11C6092E000CE5464 /* MensaListTableViewCell.m */,
 			);
 			name = Mensa;
 			sourceTree = "<group>";
@@ -1798,6 +1810,7 @@
 			files = (
 				6545C56A1C5A2EDF00E446CA /* green.png in Resources */,
 				655361861C19A8AD00CBF78B /* AppIcon-1024b.png in Resources */,
+				BAF783EC1C6092B600CE5464 /* ecru.png in Resources */,
 				6537C3231C11AC3A00F22518 /* HomeStaffIcon.png in Resources */,
 				6564ED331C0DE9C000FA650D /* Assets.xcassets in Resources */,
 				BAE025531C5B6DBE002EBF3D /* locButton.png in Resources */,
@@ -1816,6 +1829,7 @@
 				65F6423A1C5A917F00E460F3 /* iCalEmpty.png in Resources */,
 				BAE025471C5B6C57002EBF3D /* small_icon_2.png in Resources */,
 				65F80B641C5FEECE005D6A0A /* green_hom.png in Resources */,
+				BAF783ED1C6092B600CE5464 /* light_cyan.png in Resources */,
 				65F534411C1202C500433136 /* HomeSettingIcon.png in Resources */,
 				6545C5681C5A2EDF00E446CA /* blue.png in Resources */,
 				BAE025521C5B6DBE002EBF3D /* saarbruecken-1.png in Resources */,
@@ -1824,6 +1838,8 @@
 				6537C31E1C11AC3A00F22518 /* HomeEventIcon.png in Resources */,
 				6537C3221C11AC3A00F22518 /* HomeNewsIcon.png in Resources */,
 				6545C5691C5A2EDF00E446CA /* yellow.png in Resources */,
+				BAF783EB1C6092B600CE5464 /* canary.png in Resources */,
+				BAF783EA1C6092B600CE5464 /* brown.png in Resources */,
 				65F80B621C5FEECE005D6A0A /* yellow_hom.png in Resources */,
 				65F534401C1202C500433136 /* HomeAboutIcon.png in Resources */,
 				655F27D91C0F340300B3C7BE /* AppIcon-1024.png in Resources */,
@@ -2098,6 +2114,7 @@
 				65FF57FD1C5AA5460051069C /* EventsListViewController.m in Sources */,
 				BAE025431C5B69B5002EBF3D /* Reachability.m in Sources */,
 				65FF57FC1C5AA5460051069C /* EventContentViewController.m in Sources */,
+				BAF783F21C6092E000CE5464 /* MensaListViewController.m in Sources */,
 				BAE025411C5B699E002EBF3D /* MensaFeedParser.m in Sources */,
 				65F44AC61C1701650036F884 /* MensaDataSourceAndDelegate.m in Sources */,
 				BAE0255E1C5B6F84002EBF3D /* DetailStaff.m in Sources */,
@@ -2110,14 +2127,13 @@
 				6564ED2E1C0DE9C000FA650D /* tvOS.xcdatamodeld in Sources */,
 				6564ED281C0DE9C000FA650D /* AppDelegate.m in Sources */,
 				65F44AC01C16FD9C0036F884 /* EventsDataSourceAndDelegate.m in Sources */,
-				BAE0253F1C5B6928002EBF3D /* MensaListViewController.m in Sources */,
 				BAE0255F1C5B70E3002EBF3D /* HTMLNode.m in Sources */,
 				65F5343A1C11F9B100433136 /* AboutViewController.m in Sources */,
 				6564ED251C0DE9C000FA650D /* main.m in Sources */,
-				BAE025401C5B6928002EBF3D /* MensaListTableViewCell.m in Sources */,
 				BAE025421C5B69AD002EBF3D /* MensaItem.m in Sources */,
 				BAE025601C5B70E6002EBF3D /* HTMLParser.m in Sources */,
 				65F5343D1C11FDD800433136 /* SettingsViewController.m in Sources */,
+				BAF783F31C6092E000CE5464 /* MensaListTableViewCell.m in Sources */,
 				65F44AC31C1701530036F884 /* NewsSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,7 +24,7 @@
         self.pageIndex=self.pageIndex-1;
         //[self.tableView reloadData];
         self.pageControl.currentPage=self.pageIndex;
-        [self.tableview reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableview reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationRight];
     }
 }
 
@@ -33,17 +33,16 @@
         self.pageIndex=self.pageIndex+1;
         self.pageControl.currentPage=self.pageIndex;
         //[self.tableView reloadData];
-        [self.tableview reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableview reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationLeft];
         
     }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.defaults = [NSUserDefaults standardUserDefaults];
     days_dict = [[NSMutableDictionary alloc] init];
     [self parseFeeds];
-    self.view.backgroundColor = [UIColor lightGrayColor];
     self.tableview.bounces = YES;
     self.tableview.estimatedRowHeight = 150.0;
     self.tableview.rowHeight = UITableViewAutomaticDimension;
@@ -74,8 +73,17 @@
 - (void) parseFeeds
 {
     // source urls of menus
-    NSURL *mensaFeed =[NSURL URLWithString:@"http://studentenwerk.netzindianer.net/_menu/actual/speiseplan-saarbruecken.xml"];
-    MensaFeedParser *mensaParser = [MensaFeedParser alloc];
+    NSString *campus_selected = [self.defaults objectForKey:@"campus_selected"];
+    //saar hom
+    NSURL *mensaFeed = nil;
+    if ([campus_selected isEqualToString:@"saar"]) {
+    mensaFeed =[NSURL URLWithString:@"http://studentenwerk.netzindianer.net/_menu/actual/speiseplan-saarbruecken.xml"];
+    }
+    if ([campus_selected isEqualToString:@"hom"]) {
+        mensaFeed =[NSURL URLWithString:@"http://studentenwerk.netzindianer.net/_menu/actual/speiseplan-homburg.xml"];
+    }
+    
+        MensaFeedParser *mensaParser = [MensaFeedParser alloc];
     @try {
         [mensaParser initParser:mensaFeed withDict:days_dict andDelegate:self];
         parsingSuccessful = YES;
@@ -94,31 +102,48 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MensaListCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-    //self.mensaitem.desc
-    //RSSEntry *entry = [_AllElements objectAtIndex:indexPath.row];
-    /*category = @"";
-    title = @"";
-    desc = @"";
-    kennzeichnungen = @"";
-    beilagen = @"";
-    preis1 = @"";
-    preis2 = @"";
-    preis3 = @"";
-    color = @"";*/
     NSMutableArray* keysArr = days_dict.allKeys.mutableCopy;
     [keysArr sortUsingSelector:@selector(compare:)];
     NSArray* currentDay = [days_dict objectForKey:[keysArr objectAtIndex:self.pageIndex]];
     MensaItem*blub = [currentDay objectAtIndex:indexPath.row];
+    NSString *food_details = [blub.title stringByAppendingString:@"\n"];
     cell.Gericht_Art.text = blub.category;
-    cell.Gericht_Name.text = blub.title;
-    cell.Details.text = blub.desc;
-    cell.Preise.text = blub.preis1;
-    
+    cell.Gericht_Name.text =[food_details stringByAppendingString:blub.desc];
+    cell.Preis1.text = [@"Student: " stringByAppendingString: blub.preis1];
+    cell.Preis2.text = [@"Mitarbeiter: " stringByAppendingString: blub.preis2];
+    cell.Preis3.text = [@"Besucher: " stringByAppendingString: blub.preis3];
     NSString *dateString = [NSDateFormatter localizedStringFromDate:blub.tag
-                                                          dateStyle:NSDateFormatterShortStyle
-                                                          timeStyle:NSDateFormatterFullStyle];
+                                                          dateStyle:NSDateIntervalFormatterLongStyle
+                                                          timeStyle:NSDateFormatterNoStyle];
     self.Tag.text = dateString;
-    //cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", articleDateString, entry.Gericht_Art];
+    NSString *col = blub.color;
+    if ([col isEqualToString:@"217,38,26"]) {
+        cell.colors.image = [UIImage imageNamed:@"red.png"];
+    }
+    if ([col isEqualToString:@"21,135,207"]) {
+        cell.colors.image = [UIImage imageNamed:@"blue.png"];
+    }
+    if ([col isEqualToString:@"245,204,43"]) {
+        cell.colors.image = [UIImage imageNamed:@"yellow.png"];
+    }
+    if ([col isEqualToString:@"16,107,10"]) {
+        cell.colors.image = [UIImage imageNamed:@"green.png"];
+    }
+    if ([col isEqualToString:@"135,10,194"]) {
+        cell.colors.image = [UIImage imageNamed:@"purple.png"];
+    }
+    if ([col isEqualToString:@"204,235,255"]) {
+        cell.colors.image = [UIImage imageNamed:@"light_cyan.png"];
+    }
+    if ([col isEqualToString:@"204,255,153"]) {
+        cell.colors.image = [UIImage imageNamed:@"canary.png"];
+    }
+    if ([col isEqualToString:@"255,204,102"]) {
+        cell.colors.image = [UIImage imageNamed:@"brown.png"];
+    }
+    if ([col isEqualToString:@"255,255,153"]) {
+        cell.colors.image = [UIImage imageNamed:@"ecru.png"];
+    }
     
     
     return cell;
