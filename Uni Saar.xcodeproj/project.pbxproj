@@ -90,8 +90,6 @@
 		65F80B651C5FEECE005D6A0A /* blue_hom.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F80B611C5FEECE005D6A0A /* blue_hom.png */; };
 		65F80B671C5FF0B1005D6A0A /* campus_homburg.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F80B661C5FF0B1005D6A0A /* campus_homburg.png */; };
 		65FA9FCA1C5BB1DE00B4662E /* campus.png in Resources */ = {isa = PBXBuildFile; fileRef = 65FA9FC91C5BB1DE00B4662E /* campus.png */; };
-		65FF57FC1C5AA5460051069C /* EventContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FF57F91C5AA5460051069C /* EventContentViewController.m */; };
-		65FF57FD1C5AA5460051069C /* EventsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FF57FB1C5AA5460051069C /* EventsListViewController.m */; };
 		97B3500515B3611E00497E7A /* ResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 971EF23E15B059510039B06B /* ResultTableViewController.m */; };
 		97B3500715B3612500497E7A /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 971EF24115B059760039B06B /* ResultTableViewCell.m */; };
 		97F3FBAC15A8208500325941 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F3FBAA15A8208500325941 /* SearchViewController.m */; };
@@ -112,6 +110,12 @@
 		BA7AC53C1C6B8993001F5EC0 /* ResultStaffSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5361C6B8993001F5EC0 /* ResultStaffSearchViewController.m */; };
 		BA7AC53D1C6B8993001F5EC0 /* DetailStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5381C6B8993001F5EC0 /* DetailStaff.m */; };
 		BA7AC53E1C6B8993001F5EC0 /* DetailStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5381C6B8993001F5EC0 /* DetailStaff.m */; };
+		BA7AC5471C6B99B6001F5EC0 /* EventContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5421C6B99B6001F5EC0 /* EventContentViewController.m */; };
+		BA7AC5481C6B99B6001F5EC0 /* EventContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5421C6B99B6001F5EC0 /* EventContentViewController.m */; };
+		BA7AC5491C6B99B6001F5EC0 /* EventsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5441C6B99B6001F5EC0 /* EventsListViewController.m */; };
+		BA7AC54A1C6B99B6001F5EC0 /* EventsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5441C6B99B6001F5EC0 /* EventsListViewController.m */; };
+		BA7AC54B1C6B99B6001F5EC0 /* EventsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5461C6B99B6001F5EC0 /* EventsListTableViewCell.m */; };
+		BA7AC54C1C6B99B6001F5EC0 /* EventsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5461C6B99B6001F5EC0 /* EventsListTableViewCell.m */; };
 		BAE025421C5B69AD002EBF3D /* MensaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EF328E1598F21F00D65D13 /* MensaItem.m */; };
 		BAE025431C5B69B5002EBF3D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BD9A0A1599CD9300432FE9 /* Reachability.m */; };
 		BAE025451C5B6C42002EBF3D /* background-white-logo-mainscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE025441C5B6C42002EBF3D /* background-white-logo-mainscreen.png */; };
@@ -541,10 +545,6 @@
 		65F80B611C5FEECE005D6A0A /* blue_hom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_hom.png; sourceTree = "<group>"; };
 		65F80B661C5FF0B1005D6A0A /* campus_homburg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campus_homburg.png; sourceTree = "<group>"; };
 		65FA9FC91C5BB1DE00B4662E /* campus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campus.png; sourceTree = "<group>"; };
-		65FF57F81C5AA5460051069C /* EventContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventContentViewController.h; sourceTree = "<group>"; };
-		65FF57F91C5AA5460051069C /* EventContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventContentViewController.m; sourceTree = "<group>"; };
-		65FF57FA1C5AA5460051069C /* EventsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsListViewController.h; sourceTree = "<group>"; };
-		65FF57FB1C5AA5460051069C /* EventsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsListViewController.m; sourceTree = "<group>"; };
 		971EF23D15B059510039B06B /* ResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewController.h; sourceTree = "<group>"; };
 		971EF23E15B059510039B06B /* ResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewController.m; sourceTree = "<group>"; };
 		971EF24015B059760039B06B /* ResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewCell.h; sourceTree = "<group>"; };
@@ -568,6 +568,12 @@
 		BA7AC5361C6B8993001F5EC0 /* ResultStaffSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultStaffSearchViewController.m; sourceTree = "<group>"; };
 		BA7AC5371C6B8993001F5EC0 /* DetailStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailStaff.h; sourceTree = "<group>"; };
 		BA7AC5381C6B8993001F5EC0 /* DetailStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailStaff.m; sourceTree = "<group>"; };
+		BA7AC5411C6B99B6001F5EC0 /* EventContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventContentViewController.h; sourceTree = "<group>"; };
+		BA7AC5421C6B99B6001F5EC0 /* EventContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventContentViewController.m; sourceTree = "<group>"; };
+		BA7AC5431C6B99B6001F5EC0 /* EventsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsListViewController.h; sourceTree = "<group>"; };
+		BA7AC5441C6B99B6001F5EC0 /* EventsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsListViewController.m; sourceTree = "<group>"; };
+		BA7AC5451C6B99B6001F5EC0 /* EventsListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsListTableViewCell.h; sourceTree = "<group>"; };
+		BA7AC5461C6B99B6001F5EC0 /* EventsListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsListTableViewCell.m; sourceTree = "<group>"; };
 		BAE025441C5B6C42002EBF3D /* background-white-logo-mainscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-white-logo-mainscreen.png"; sourceTree = "<group>"; };
 		BAE025461C5B6C57002EBF3D /* small_icon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small_icon_2.png; sourceTree = "<group>"; };
 		BAF783E61C6092B600CE5464 /* brown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brown.png; sourceTree = "<group>"; };
@@ -1090,10 +1096,12 @@
 		65FF57F71C5AA4910051069C /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				65FF57F81C5AA5460051069C /* EventContentViewController.h */,
-				65FF57F91C5AA5460051069C /* EventContentViewController.m */,
-				65FF57FA1C5AA5460051069C /* EventsListViewController.h */,
-				65FF57FB1C5AA5460051069C /* EventsListViewController.m */,
+				BA7AC5411C6B99B6001F5EC0 /* EventContentViewController.h */,
+				BA7AC5421C6B99B6001F5EC0 /* EventContentViewController.m */,
+				BA7AC5431C6B99B6001F5EC0 /* EventsListViewController.h */,
+				BA7AC5441C6B99B6001F5EC0 /* EventsListViewController.m */,
+				BA7AC5451C6B99B6001F5EC0 /* EventsListTableViewCell.h */,
+				BA7AC5461C6B99B6001F5EC0 /* EventsListTableViewCell.m */,
 			);
 			name = Events;
 			sourceTree = "<group>";
@@ -2106,22 +2114,23 @@
 				6542B4441C58D8E700460FA0 /* Event.m in Sources */,
 				BA7AC5321C6B8652001F5EC0 /* CampusMapViewController.m in Sources */,
 				6542B4491C591D3600460FA0 /* MensaKioskItem.m in Sources */,
-				65FF57FD1C5AA5460051069C /* EventsListViewController.m in Sources */,
 				BAE025431C5B69B5002EBF3D /* Reachability.m in Sources */,
-				65FF57FC1C5AA5460051069C /* EventContentViewController.m in Sources */,
 				BA7AC5291C6B83D0001F5EC0 /* MensaListViewController.m in Sources */,
 				65F44AC61C1701650036F884 /* MensaDataSourceAndDelegate.m in Sources */,
 				BA7AC52E1C6B8508001F5EC0 /* MensaFeedParser.m in Sources */,
 				6564ED491C0E112200FA650D /* NewsListViewController.m in Sources */,
+				BA7AC54C1C6B99B6001F5EC0 /* EventsListTableViewCell.m in Sources */,
 				6537B9551C0EDE1900B24278 /* NewsArticleViewController.m in Sources */,
 				6564ED2B1C0DE9C000FA650D /* ViewController.m in Sources */,
 				6564ED511C0E3E6D00FA650D /* NewsTableViewCell.m in Sources */,
 				6564ED2E1C0DE9C000FA650D /* tvOS.xcdatamodeld in Sources */,
 				6564ED281C0DE9C000FA650D /* AppDelegate.m in Sources */,
+				BA7AC5481C6B99B6001F5EC0 /* EventContentViewController.m in Sources */,
 				65F44AC01C16FD9C0036F884 /* EventsDataSourceAndDelegate.m in Sources */,
 				BAE0255F1C5B70E3002EBF3D /* HTMLNode.m in Sources */,
 				65F5343A1C11F9B100433136 /* AboutViewController.m in Sources */,
 				6564ED251C0DE9C000FA650D /* main.m in Sources */,
+				BA7AC54A1C6B99B6001F5EC0 /* EventsListViewController.m in Sources */,
 				BAE025421C5B69AD002EBF3D /* MensaItem.m in Sources */,
 				BAE025601C5B70E6002EBF3D /* HTMLParser.m in Sources */,
 				65F5343D1C11FDD800433136 /* SettingsViewController.m in Sources */,
@@ -2141,6 +2150,7 @@
 				E212C09C178B4B8600F9B877 /* PartialSearchCell.m in Sources */,
 				E2467A0F15B4095000BFC774 /* NewsTableViewController.m in Sources */,
 				BA7AC53D1C6B8993001F5EC0 /* DetailStaff.m in Sources */,
+				BA7AC54B1C6B99B6001F5EC0 /* EventsListTableViewCell.m in Sources */,
 				E2467A0E15B408AE00BFC774 /* EventTableViewController.m in Sources */,
 				E2467A0D15B408A100BFC774 /* RSSFeed.m in Sources */,
 				E2B0EB6A15AF6CB900ECC1BD /* FeedItem.m in Sources */,
@@ -2183,7 +2193,9 @@
 				BA7AC53B1C6B8993001F5EC0 /* ResultStaffSearchViewController.m in Sources */,
 				E22C3FD917181004003C039F /* Database.m in Sources */,
 				E22C3FDE171811F2003C039F /* PointOfInterest.m in Sources */,
+				BA7AC5491C6B99B6001F5EC0 /* EventsListViewController.m in Sources */,
 				E2C92B9B1719A436002B55CB /* CategorieTableViewController.m in Sources */,
+				BA7AC5471C6B99B6001F5EC0 /* EventContentViewController.m in Sources */,
 				E2C92BA4171ABC8E002B55CB /* UILabel+UILabel_AutoHeight.m in Sources */,
 				E2C92BB1171AE37E002B55CB /* AppSettings.m in Sources */,
 				E2428B521722E1AD00D98047 /* BusTableViewController.m in Sources */,

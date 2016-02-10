@@ -11,6 +11,8 @@
 #import "TFHpple.h"
 #import "Parser.h"
 #import "EventContentViewController.h"
+#import "EventsListTableViewCell.h"
+
 
 @interface EventsListViewController ()
 
@@ -20,6 +22,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if ([Reachability hasInternetConnection]) {
+        NoInternet.hidden = true;
+    }
+    else{
+    NoInternet.hidden = false;
+    NoInternet.text = NSLocalizedStringFromTable(@"NoInternet", @"tvosLocalisation", nil);
+    EventsLabel.alpha = 0;
+    }
     
     [AiEventsView startAnimating];
     AiEventsView.hidden = false;
@@ -33,6 +44,7 @@
         
         EventElements = [[NSMutableArray alloc] initWithCapacity:0];
         [self loadEvents];
+        
         
         dispatch_async(dispatch_get_main_queue(), ^(void){
             [EventsListView reloadData];
@@ -73,12 +85,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"EventsListCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    EventsListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    cell.textLabel.text = [[EventElements objectAtIndex:indexPath.row] title];
-    cell.detailTextLabel.text = [[EventElements objectAtIndex:indexPath.row] pubDate];
-    
-    
+    cell.EventTitleView.text = [[EventElements objectAtIndex:indexPath.row] title];
+    cell.EventSubTitleView.text = [[EventElements objectAtIndex:indexPath.row] pubDate];
+    [cell setDate: [[EventElements objectAtIndex:indexPath.row] pubDate]];
+    [cell setDateImage];
+     
     
     return cell;
     
@@ -91,7 +104,6 @@
         PageCounter = PageCounter + 1;
         [AiEventsView startAnimating];
         AiEventsView.hidden = false;
-        
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
             [self loadEvents];
             dispatch_async(dispatch_get_main_queue(), ^(void){

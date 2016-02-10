@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "Event.h"
 #import "Parser.h"
+#import "Reachability.h"
 
 @interface EventContentViewController : UIViewController{
 
 
 
+    __weak IBOutlet UILabel *NoInternet;
     __weak IBOutlet UIActivityIndicatorView *AiEventContent;
 
 }

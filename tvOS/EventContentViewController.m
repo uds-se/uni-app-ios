@@ -19,6 +19,18 @@
     // Do any additional setup after loading the view.
     
     
+    if ([Reachability hasInternetConnection]) {
+        NoInternet.hidden = true;
+    }
+    else {
+        NoInternet.hidden = false;
+        NoInternet.text = NSLocalizedStringFromTable(@"NoInternet", @"tvosLocalisation", nil);
+        self.TitleView.alpha = 0;
+        self.SubTitleView.alpha = 0;
+    }
+
+   
+    
     self.TitleView.text = [[self event] subTitle];
     self.SubTitleView.text = [[self event] title];
     
