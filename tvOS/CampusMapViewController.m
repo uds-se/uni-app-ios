@@ -29,8 +29,7 @@
     [defaults synchronize];
     SelectedCampus = [defaults objectForKey:@"campus_selected"];
     
-    NSString *test = Person;
- 
+
 
     
     _CurrentLocationPointer.translatesAutoresizingMaskIntoConstraints = true;

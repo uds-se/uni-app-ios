@@ -812,7 +812,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campus.png" translatesAutoresizingMaskIntoConstraints="NO" id="9w3-dJ-tZj">
-                                <rect key="frame" x="260" y="0.0" width="1660" height="1080"/>
+                                <rect key="frame" x="260" y="0.0" width="1680" height="1080"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tD6-LH-r0Y">
@@ -821,8 +821,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin_red.png" translatesAutoresizingMaskIntoConstraints="NO" id="2dL-0O-bCG">
-                                <rect key="frame" x="485" y="141" width="400" height="64"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pin_red.png" translatesAutoresizingMaskIntoConstraints="NO" id="2dL-0O-bCG">
+                                <rect key="frame" x="485" y="141" width="45" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="AAr-9S-7ic"/>
                                 </constraints>
@@ -914,8 +914,8 @@
                                     <constraint firstAttribute="width" constant="37" id="IYb-P8-pSi"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin_green.png" translatesAutoresizingMaskIntoConstraints="NO" id="7OA-Io-1xO">
-                                <rect key="frame" x="940" y="141" width="45" height="64"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pin_green.png" translatesAutoresizingMaskIntoConstraints="NO" id="7OA-Io-1xO">
+                                <rect key="frame" x="548" y="141" width="45" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="Cyd-OP-G6g"/>
                                 </constraints>
@@ -927,7 +927,7 @@
                             <constraint firstItem="irC-lP-ydH" firstAttribute="top" secondItem="zIK-mi-4dx" secondAttribute="bottom" constant="627" id="6ei-df-zkI"/>
                             <constraint firstItem="9w3-dJ-tZj" firstAttribute="top" secondItem="zIK-mi-4dx" secondAttribute="bottom" id="9sN-gb-Srg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="u6M-5P-coT" secondAttribute="trailing" constant="38" id="AQr-oO-8bf"/>
-                            <constraint firstAttribute="trailing" secondItem="9w3-dJ-tZj" secondAttribute="trailing" id="ByE-gH-Wpi"/>
+                            <constraint firstAttribute="trailing" secondItem="9w3-dJ-tZj" secondAttribute="trailing" constant="-20" id="ByE-gH-Wpi"/>
                             <constraint firstItem="vKw-1l-YG6" firstAttribute="leading" secondItem="85n-7m-2fH" secondAttribute="leadingMargin" constant="74" id="Bze-E9-vrc"/>
                             <constraint firstItem="vKw-1l-YG6" firstAttribute="top" secondItem="NoN-8g-gOX" secondAttribute="bottom" constant="19" id="FDC-qT-0qU"/>
                             <constraint firstItem="u6M-5P-coT" firstAttribute="centerY" secondItem="irC-lP-ydH" secondAttribute="centerY" id="H3d-VL-YfD"/>
@@ -946,7 +946,7 @@
                             <constraint firstItem="tD6-LH-r0Y" firstAttribute="top" secondItem="u6M-5P-coT" secondAttribute="bottom" constant="42" id="dcD-xU-ZAj"/>
                             <constraint firstItem="9w3-dJ-tZj" firstAttribute="leading" secondItem="vKw-1l-YG6" secondAttribute="trailing" constant="35" id="gLW-Ut-QGy"/>
                             <constraint firstItem="u6M-5P-coT" firstAttribute="leading" secondItem="irC-lP-ydH" secondAttribute="trailing" constant="26" id="hBM-xU-iue"/>
-                            <constraint firstItem="7OA-Io-1xO" firstAttribute="leading" secondItem="2dL-0O-bCG" secondAttribute="trailing" constant="55" id="iGK-M4-wp4"/>
+                            <constraint firstItem="7OA-Io-1xO" firstAttribute="leading" secondItem="2dL-0O-bCG" secondAttribute="trailing" constant="18" id="iGK-M4-wp4"/>
                             <constraint firstItem="NoN-8g-gOX" firstAttribute="top" secondItem="zIK-mi-4dx" secondAttribute="bottom" constant="128" id="pc0-n1-Tmh"/>
                             <constraint firstItem="irC-lP-ydH" firstAttribute="leading" secondItem="k6i-GC-Brb" secondAttribute="leading" id="rLC-YO-7Xu"/>
                             <constraint firstItem="k6i-GC-Brb" firstAttribute="top" secondItem="irC-lP-ydH" secondAttribute="bottom" constant="15" id="sh7-Se-tMz"/>
