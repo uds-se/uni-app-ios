@@ -87,7 +87,7 @@
         } else {
             self.no_internet.hidden=false;
             self.current_date.text = @"";
-            self.no_internet.text = NSLocalizedStringFromTable(@"ParsingError", @"tvosLocalisation", nil);
+            self.no_internet.text = NSLocalizedStringFromTable(@"NoContent", @"tvosLocalisation", nil);
         }
     } else {
         self.current_date.text = @"";

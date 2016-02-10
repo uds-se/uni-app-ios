@@ -12,8 +12,17 @@
 "Mensa" = "Mensa - Heute";
 "NoInternet" = "Keine Internetverbindung: Inhalt konnte nicht geladen werden. Bitte überprüfen sie Ihre Internetverbindung und versuchen Sie es danach erneut.";
 "NoContent" = "Für diese News steht kein Inhalt zur Verfügung!";
-"ParsingError" = "Fehler beim parsen der Website. Bitte versuchen Sie es später erneut.";
 "Student" = "Studierende: ";
 "Employee" = "Bedienstete: ";
 "Guest" = "Gäste: ";
+
+//Mensa
+"ParsingError" = "Fehler beim parsen der Website. Bitte versuchen Sie es später erneut.";
 "not Available" = "nicht Verfügbar";
+
+//Campus Map
+"Search Building" = "Gebäude suchen";
+"Your location" = "Ihr Standort: ";
+"Destination" = "Ziel: ";
+"No location configured" = "Kein Standort gewählt";
+"Building not found" = "Gebäude nicht gefunden";

@@ -12,10 +12,18 @@
 "Events" = "Events";
 "Mensa" = "Mensa - Today";
 "NoInternet" = "No internet conncetion: Content couldn´t be loaded. Please check your internet connection and try again.";
-"ParsingError"="Parsing Failure: Remote Website is not available or could not be parsed. Please try again in a few minutes.";
-
 "NoContent" = "No content for this news available!";
 "Student" = "Student: ";
 "Employee" = "Employee: ";
 "Guest" = "Guest: ";
+
+//Mensa
+"ParsingError"="Parsing Failure: Remote Website is not available or could not be parsed. Please try again in a few minutes.";
 "not Available" = "not Available";
+
+//Campus Map
+"Search Building" = "Search Building";
+"Your location" = "Your location: ";
+"Destination" = "Destination: ";
+"No location configured" = "No location configured";
+"Building not found" = "Building not found";
