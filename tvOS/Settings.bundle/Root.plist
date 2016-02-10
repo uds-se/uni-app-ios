@@ -10,7 +10,7 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Settings &quot;Uni Saar&quot;</string>
+			<string>Settings Uni Saar App</string>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -36,7 +36,7 @@
 			<key>Type</key>
 			<string>PSMultiValueSpecifier</string>
 			<key>Title</key>
-			<string>Kiosk Model Interval</string>
+			<string>Kiosk Mode Interval</string>
 			<key>Key</key>
 			<string>interval_selected</string>
 			<key>DefaultValue</key>
@@ -180,6 +180,8 @@
 				<string>E3 1</string>
 				<string>E7 1</string>
 				<string>E7 2</string>
+				<string>E8 1</string>
+				<string>E9 1</string>
 			</array>
 			<key>Values</key>
 			<array>
@@ -296,7 +298,23 @@
 				<string>E3 1</string>
 				<string>E7 1</string>
 				<string>E7 2</string>
+				<string>E8 1</string>
+				<string>E9 1</string>
 			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Info</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+			<key>Title</key>
+			<string>Info</string>
+			<key>File</key>
+			<string>app_info</string>
 		</dict>
 	</array>
 </dict>

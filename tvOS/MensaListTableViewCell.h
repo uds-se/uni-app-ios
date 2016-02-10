@@ -14,6 +14,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *Preis1;
 @property (nonatomic, weak) IBOutlet UILabel *Preis2;
 @property (nonatomic, weak) IBOutlet UILabel *Preis3;
-@property (weak, nonatomic) IBOutlet UIImageView *colors;
+@property (nonatomic, weak) IBOutlet UIImageView *colors;
 
 @end

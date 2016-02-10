@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>FooterText</key>
+			<string>Main Tiles made by Freepik (http://www.freepik.com) from www.flaticon.com, licenced by CC BY 3.0 (http://creativecommons.org/licenses/by/3.0/).                                                                              Map Icons made by pixabay.com, licenced by CC BY 1.0 (http://creativecommons.org/licenses/by/1.0/). </string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Developers</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Robin Diener</string>
+			<key>Key</key>
+			<string>rd</string>
+			<key>DefaultValue</key>
+			<string> </string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Karsten Fritzen</string>
+			<key>Key</key>
+			<string>kf</string>
+			<key>DefaultValue</key>
+			<string> </string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Steffen Klein</string>
+			<key>Key</key>
+			<string>sk</string>
+			<key>DefaultValue</key>
+			<string> </string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Henrik Lensch</string>
+			<key>Key</key>
+			<string>hl</string>
+			<key>DefaultValue</key>
+			<string> </string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Daniel Schorer</string>
+			<key>Key</key>
+			<string>ds</string>
+			<key>DefaultValue</key>
+			<string> </string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Main Tiles made by Freepik (http://www.freepik.com) from www.flaticon.com, licenced by CC BY 3.0 (http://creativecommons.org/licenses/by/3.0/).                                                                              Map Icons made by pixabay.com, licenced by CC BY 1.0 (http://creativecommons.org/licenses/by/1.0/). </string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Supported By</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Prof. Andreas Zeller</string>
+			<key>Key</key>
+			<string>az</string>
+			<key>DefaultValue</key>
+			<string> </string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Rafaella Antonyan</string>
+			<key>Key</key>
+			<string>ra</string>
+			<key>DefaultValue</key>
+			<string> </string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Main Tiles made by Freepik (http://www.freepik.com) from www.flaticon.com, licenced by CC BY 3.0 (http://creativecommons.org/licenses/by/3.0/).                                                                              Map Icons made by pixabay.com, licenced by CC BY 1.0 (http://creativecommons.org/licenses/by/1.0/). </string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Contact / Feedback</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>uniapp@uni-saarland.de</string>
+			<key>Key</key>
+			<string>web</string>
+			<key>DefaultValue</key>
+			<string> </string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>© Universität des Saarlandes</string>
+			<key>Key</key>
+			<string>copyright</string>
+			<key>DefaultValue</key>
+			<string> </string>
+		</dict>
+	</array>
+	<key>StringsTable</key>
+	<string>app_info</string>
+</dict>
+</plist>

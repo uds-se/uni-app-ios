@@ -7,9 +7,7 @@
 //
 #import <Foundation/Foundation.h>
 #import "MensaListViewController.h"
-#import "MensaListTableViewCell.h"
-#import "Reachability.h"
-#import "MensaItem.h"
+
 
 @interface MensaListViewController ()
 
@@ -17,65 +15,124 @@
 
 
 @implementation MensaListViewController
+
+
 @synthesize days_dict, parsingSuccessful, pageIndex;
 
+//decreases page index (highlighted dot moved one dot to the left) and reloads displayed tablview at index pageIndex
 - (IBAction)handleSwipeRight:(UISwipeGestureRecognizer *)sender {
     if (pageIndex!=0) {
         self.pageIndex=self.pageIndex-1;
-        //[self.tableView reloadData];
         self.pageControl.currentPage=self.pageIndex;
         [self.tableview reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationRight];
     }
 }
 
+//increases page index (highlighted dot moved one dot to the right) and reloads displayed tablview at index pageIndex
 - (IBAction)handleSwipeLeft:(UISwipeGestureRecognizer *)sender {
     if (pageIndex+1 !=[days_dict count]) {
         self.pageIndex=self.pageIndex+1;
         self.pageControl.currentPage=self.pageIndex;
-        //[self.tableView reloadData];
         [self.tableview reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationLeft];
         
     }
 }
 
+//get current date
+-(double )getTimestampOfTodayAt0am{
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:now];
+    [components setHour:0];
+    
+    return [[calendar dateFromComponents:components] timeIntervalSince1970];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.defaults = [NSUserDefaults standardUserDefaults];
-    days_dict = [[NSMutableDictionary alloc] init];
-    [self parseFeeds];
-    self.tableview.bounces = YES;
-    self.tableview.estimatedRowHeight = 150.0;
-    self.tableview.rowHeight = UITableViewAutomaticDimension;
-    self.Tag.text = @"None";
-    self.pageControl = [[UIPageControl alloc] init];
-    self.pageControl.frame = CGRectMake(162,1008,1580,100);
-    self.pageControl.numberOfPages = [days_dict count];
-    self.pageControl.currentPage = 0;
-    [self.view addSubview:self.pageControl];
-    self.pageControl.backgroundColor = [UIColor lightGrayColor];
+    
+    //check internet connection
+    if ([Reachability hasInternetConnection]) {
+        
+        //hide "no internet" label
+        self.no_internet.hidden=true;
+        
+        //initiliaize menu dictionary and user defaults
+        self.defaults = [NSUserDefaults standardUserDefaults];
+        days_dict = [[NSMutableDictionary alloc] init];
+        
+        //parse Feeds
+        [self parseFeeds];
+        
+        //checks if days dict is empty
+        if (parsingSuccessful==true) {
+            
+            
+            //Set view options for tableview cells
+            self.tableview.bounces = YES;
+            self.tableview.estimatedRowHeight = 150.0;
+            self.tableview.rowHeight = UITableViewAutomaticDimension;
+            self.current_date.text = @"";
+            
+            // NSMutableArray* keysArr = days_dict.allKeys.mutableCopy;
+            //[keysArr sortUsingSelector:@selector(compare:)];
+            self.pageControl = [[UIPageControl alloc] init];
+            self.pageControl.frame = CGRectMake(162,1008,1580,100);
+            self.pageControl.numberOfPages = [self.sorted_days count];
+            self.pageControl.currentPage = 0;
+            [self.view addSubview:self.pageControl];
+            self.pageControl.backgroundColor = [UIColor lightGrayColor];
+        
+        } else {
+            self.no_internet.hidden=false;
+            self.current_date.text = @"";
+            self.no_internet.text = NSLocalizedStringFromTable(@"ParsingError", @"tvosLocalisation", nil);
+        }
+    } else {
+        self.current_date.text = @"";
+        self.no_internet.text = NSLocalizedStringFromTable(@"NoInternet", @"tvosLocalisation", nil);
+    }
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 
     // Dispose of any resources that can be recreated.
 }
+
+
 -(void)parsingDidEnd:(NSMutableDictionary *)parsedDictionary
 {
-    // the new dictionary
-    days_dict = parsedDictionary;
-    //[self performSelectorOnMainThread:@selector(updateModel) withObject:nil waitUntilDone:NO];
-    
-    parsingSuccessful = YES;
-    //[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    //if the parsed dictionary is empty, the parsing failed else parsing is successful and the dict can be sorted
+    if ([parsedDictionary count] == 0) {
+        parsingSuccessful=false;
+        
+    } else {
+        parsingSuccessful=true;
+        //Sort dictionary and delete menus from the past days if there are any.
+        NSMutableArray* keysArr = parsedDictionary.allKeys.mutableCopy;
+        [keysArr sortUsingSelector:@selector(compare:)];
+        NSMutableArray *days = [[NSMutableArray alloc] init];
+        double yesterday = [self getTimestampOfTodayAt0am];
+        for (int i=0; i<[parsedDictionary count]; i++) {
+            MensaItem *item = [parsedDictionary objectForKey:[keysArr objectAtIndex:i]];
+            if (yesterday <= [[keysArr objectAtIndex:i] doubleValue]) {
+                [days addObject:item];
+            }
+        }
+        self.sorted_days=days;
+    }
 }
 
 - (void) parseFeeds
 {
     // source urls of menus
     NSString *campus_selected = [self.defaults objectForKey:@"campus_selected"];
-    //saar hom
     NSURL *mensaFeed = nil;
+    
+    //select url depending on selecetd campus
     if ([campus_selected isEqualToString:@"saar"]) {
     mensaFeed =[NSURL URLWithString:@"http://studentenwerk.netzindianer.net/_menu/actual/speiseplan-saarbruecken.xml"];
     }
@@ -83,40 +140,56 @@
         mensaFeed =[NSURL URLWithString:@"http://studentenwerk.netzindianer.net/_menu/actual/speiseplan-homburg.xml"];
     }
     
-        MensaFeedParser *mensaParser = [MensaFeedParser alloc];
-    @try {
-        [mensaParser initParser:mensaFeed withDict:days_dict andDelegate:self];
-        parsingSuccessful = YES;
-    }
-    @catch (NSException *exception) {
-        parsingSuccessful = NO;
-        NSLog(@"Mensa parser failed");
-    }
+    //Parse Menus
+    MensaFeedParser *mensaParser = [MensaFeedParser alloc];
+    [mensaParser initParser:mensaFeed withDict:days_dict andDelegate:self];
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //create custom cell of type "MensaListCell"
     static NSString *CellIdentifier = @"MensaListCell";
     MensaListTableViewCell *cell = (MensaListTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MensaListCell" owner:self options:nil];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-    NSMutableArray* keysArr = days_dict.allKeys.mutableCopy;
-    [keysArr sortUsingSelector:@selector(compare:)];
-    NSArray* currentDay = [days_dict objectForKey:[keysArr objectAtIndex:self.pageIndex]];
-    MensaItem*blub = [currentDay objectAtIndex:indexPath.row];
-    NSString *food_details = [blub.title stringByAppendingString:@"\n"];
-    cell.Gericht_Art.text = blub.category;
-    cell.Gericht_Name.text =[food_details stringByAppendingString:blub.desc];
-    cell.Preis1.text = [@"Student: " stringByAppendingString: blub.preis1];
-    cell.Preis2.text = [@"Mitarbeiter: " stringByAppendingString: blub.preis2];
-    cell.Preis3.text = [@"Besucher: " stringByAppendingString: blub.preis3];
-    NSString *dateString = [NSDateFormatter localizedStringFromDate:blub.tag
-                                                          dateStyle:NSDateIntervalFormatterLongStyle
-                                                          timeStyle:NSDateFormatterNoStyle];
-    self.Tag.text = dateString;
-    NSString *col = blub.color;
+    
+    //select Mensa Menu of the day at pageindex
+    MensaItem* current_menu = [[self.sorted_days objectAtIndex:pageIndex] objectAtIndex:indexPath.row];
+    
+    //Format Strings to fit in the Cells
+    NSString * food_details = [current_menu.title stringByAppendingString:@"\n"];
+    cell.Gericht_Art.text = current_menu.category;
+    cell.Gericht_Name.text =[food_details stringByAppendingString:current_menu.desc];
+    
+    
+    //if the price of the menu is not available, the empty string gets replaced by n.A.
+    if ([current_menu.preis1 isEqualToString:@""]) {
+        cell.Preis1.text = NSLocalizedStringFromTable(@"not Available", @"tvosLocalisation", nil);
+    }else {
+        cell.Preis1.text = [[NSLocalizedStringFromTable(@"Student", @"tvosLocalisation", nil) stringByAppendingString: current_menu.preis1] stringByAppendingString:@" €"];
+    }
+    
+    if ([current_menu.preis2 isEqualToString:@""]) {
+        cell.Preis2.text = NSLocalizedStringFromTable(@"not Available", @"tvosLocalisation", nil);
+    }else {
+        cell.Preis2.text = [[NSLocalizedStringFromTable(@"Employee", @"tvosLocalisation", nil) stringByAppendingString: current_menu.preis2] stringByAppendingString:@" €"];
+    }
+    
+    if ([current_menu.preis3 isEqualToString:@""]) {
+        cell.Preis3.text = NSLocalizedStringFromTable(@"not Available", @"tvosLocalisation", nil);
+    }else {
+        cell.Preis3.text = [[NSLocalizedStringFromTable(@"Guest", @"tvosLocalisation", nil) stringByAppendingString: current_menu.preis3] stringByAppendingString:@" €"];
+    }
+ 
+    //formats the date
+    NSString *dateString = [NSDateFormatter localizedStringFromDate:current_menu.tag dateStyle:NSDateFormatterFullStyle timeStyle:NSDateFormatterNoStyle];
+    self.current_date.text = dateString;
+    
+    //sets the beautiful color stripe on the left
+    NSString *col = current_menu.color;
     if ([col isEqualToString:@"217,38,26"]) {
         cell.colors.image = [UIImage imageNamed:@"red.png"];
     }
@@ -144,16 +217,17 @@
     if ([col isEqualToString:@"255,255,153"]) {
         cell.colors.image = [UIImage imageNamed:@"ecru.png"];
     }
-    
-    
     return cell;
-    
 }
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSMutableArray* keysArr = days_dict.allKeys.mutableCopy;
-    [keysArr sortUsingSelector:@selector(compare:)];
-    NSArray* currentDay = [days_dict objectForKey:[keysArr objectAtIndex:self.pageIndex]];
-    return [currentDay count];
+    if ([days_dict count] == 0) {
+        return 0;
+    }
+    else {
+        return [[self.sorted_days objectAtIndex:pageIndex] count];
+    }
 }
 
 @end
