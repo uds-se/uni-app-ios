@@ -10,11 +10,13 @@
 #import "HTMLNode.h"
 #import "HTMLParser.h"
 #import "DetailStaff.h"
+#import "Reachability.h"
 
 @interface ResultStaffSearchViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
     NSIndexPath* selectedIndexPath;
     NSMutableArray *names;
     NSMutableArray *links;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
@@ -26,5 +28,9 @@
 @property (nonatomic) NSString* fullURL;
 @property (nonatomic) NSString* searchParam;
 @property NSOperationQueue* backgroudnThread;
+@property (weak, nonatomic) IBOutlet UIView *noresult;
+@property (weak, nonatomic) IBOutlet UIView *nointernet;
+@property (weak, nonatomic) IBOutlet UILabel *ergebnislabel;
+
 
 @end

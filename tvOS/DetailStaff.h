@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DetailStaff.h"
 #import "TFHpple.h"
-
+#import "Reachability.h"
 
 
 @interface DetailStaff : UIViewController{
@@ -30,6 +30,19 @@ NSMutableArray *DetailsPerson;
 @property (weak, nonatomic) IBOutlet UILabel *email;
 @property (weak, nonatomic) IBOutlet UIView *loadingView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UILabel *nointernet;
+@property (weak, nonatomic) IBOutlet UILabel *detailslabel;
+@property (weak, nonatomic) IBOutlet UILabel *namelabel;
+@property (weak, nonatomic) IBOutlet UILabel *geschlechtlabel;
+@property (weak, nonatomic) IBOutlet UILabel *akadlabel;
+@property (weak, nonatomic) IBOutlet UILabel *gebäudelabel;
+@property (weak, nonatomic) IBOutlet UILabel *raumlabel;
+@property (weak, nonatomic) IBOutlet UILabel *telefonlabel;
+@property (weak, nonatomic) IBOutlet UILabel *faxlabel;
+@property (weak, nonatomic) IBOutlet UILabel *emaillabel;
+@property (weak, nonatomic) IBOutlet UIButton *button;
+
+
 
 @property NSURL* fullURL;
 

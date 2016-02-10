@@ -1,0 +1,186 @@
+
+/* Class = "UILabel"; text = "Price1"; ObjectID = "1bh-rv-aNe"; */
+"1bh-rv-aNe.text" = "Price1";
+
+/* Class = "UILabel"; text = "KioskModeTitel"; ObjectID = "2OB-B6-f5b"; */
+"2OB-B6-f5b.text" = "KioskModeTitel";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "34r-fI-tIB"; */
+"34r-fI-tIB.text" = "Title";
+
+/* Class = "UILabel"; text = "Price1"; ObjectID = "5ik-0F-qLR"; */
+"5ik-0F-qLR.text" = "Price1";
+
+/* Class = "UIViewController"; title = "NewsListView"; ObjectID = "6Cd-YS-8Yo"; */
+"6Cd-YS-8Yo.title" = "NewsListView";
+
+/* Class = "UILabel"; text = "Price3"; ObjectID = "6Sj-aU-Qq1"; */
+"6Sj-aU-Qq1.text" = "Price3";
+
+/* Class = "UIButton"; normalTitle = "Suche"; ObjectID = "7Tb-q1-POZ"; */
+"7Tb-q1-POZ.normalTitle" = "Suche";
+
+/* Class = "UILabel"; text = "Name:"; ObjectID = "7nv-7D-d5X"; */
+"7nv-7D-d5X.text" = "Name:";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "83q-ds-iAZ"; */
+"83q-ds-iAZ.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Food"; ObjectID = "8zj-H7-NBP"; */
+"8zj-H7-NBP.text" = "Food";
+
+/* Class = "UILabel"; text = "Raum:"; ObjectID = "Cnk-UR-iHG"; */
+"Cnk-UR-iHG.text" = "Raum:";
+
+/* Class = "UILabel"; text = "Telefon:"; ObjectID = "D4g-tK-v8G"; */
+"D4g-tK-v8G.text" = "Telefon:";
+
+/* Class = "UILabel"; text = "Details Person"; ObjectID = "E0E-ou-N1f"; */
+"E0E-ou-N1f.text" = "Details Person";
+
+/* Class = "UILabel"; text = "Staff Search"; ObjectID = "EIE-5g-pTR"; */
+"EIE-5g-pTR.text" = "Staff Search";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "ESf-JN-IfN"; */
+"ESf-JN-IfN.text" = "Subtitle";
+
+/* Class = "UIButton"; normalTitle = "zum Gebäude"; ObjectID = "GZt-Ge-e4Z"; */
+"GZt-Ge-e4Z.normalTitle" = "zum Gebäude";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "Jva-J5-qDT"; */
+"Jva-J5-qDT.text" = "Category";
+
+/* Class = "UILabel"; text = "Ergebnisse Personensuche"; ObjectID = "LK6-GB-89X"; */
+"LK6-GB-89X.text" = "Ergebnisse Personensuche";
+
+/* Class = "UISegmentedControl"; LaC-H4-nig.segmentTitles[0] = "Nur Professoren"; ObjectID = "LaC-H4-nig"; */
+"LaC-H4-nig.segmentTitles[0]" = "Nur Professoren";
+
+/* Class = "UISegmentedControl"; LaC-H4-nig.segmentTitles[1] = "Alle"; ObjectID = "LaC-H4-nig"; */
+"LaC-H4-nig.segmentTitles[1]" = "Alle";
+
+/* Class = "UILabel"; text = "Mensa"; ObjectID = "Loh-zZ-qAc"; */
+"Loh-zZ-qAc.text" = "Mensa";
+
+/* Class = "UILabel"; text = "Events"; ObjectID = "Lzq-9f-Xtm"; */
+"Lzq-9f-Xtm.text" = "Events";
+
+/* Class = "UILabel"; text = "No Internet"; ObjectID = "MZW-fh-74y"; */
+"MZW-fh-74y.text" = "No Internet";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "NfJ-uM-gUk"; */
+"NfJ-uM-gUk.text" = "Subtitle";
+
+/* Class = "UIButton"; normalTitle = "Gebäude suchen"; ObjectID = "NoN-8g-gOX"; */
+"NoN-8g-gOX.normalTitle" = "Gebäude suchen";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Pdf-Mp-9Qs"; */
+"Pdf-Mp-9Qs.text" = "Title";
+
+/* Class = "UILabel"; text = "Hinweis: Für die Suche unter \"Alle\" werden mindestens 3 Zeichen benötigt"; ObjectID = "TfR-PM-f86"; */
+"TfR-PM-f86.text" = "Hinweis: Für die Suche unter \"Alle\" werden mindestens 3 Zeichen benötigt";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "U1e-Vd-h0N"; */
+"U1e-Vd-h0N.text" = "Category";
+
+/* Class = "UILabel"; text = "Akademischer Titel:"; ObjectID = "WiR-CA-wRZ"; */
+"WiR-CA-wRZ.text" = "Akademischer Titel:";
+
+/* Class = "UILabel"; text = "Geschlecht:"; ObjectID = "Wtz-2F-3NL"; */
+"Wtz-2F-3NL.text" = "Geschlecht:";
+
+/* Class = "UILabel"; text = "No Internet"; ObjectID = "YSJ-rS-bfL"; */
+"YSJ-rS-bfL.text" = "No Internet";
+
+/* Class = "UILabel"; text = "No Internet"; ObjectID = "aXP-17-a5J"; */
+"aXP-17-a5J.text" = "No Internet";
+
+/* Class = "UILabel"; text = "Fax:"; ObjectID = "b3q-Em-gId"; */
+"b3q-Em-gId.text" = "Fax:";
+
+/* Class = "UILabel"; text = "Price2"; ObjectID = "bkm-YG-J2H"; */
+"bkm-YG-J2H.text" = "Price2";
+
+/* Class = "UILabel"; text = "News"; ObjectID = "clW-gT-xPc"; */
+"clW-gT-xPc.text" = "News";
+
+/* Class = "UILabel"; text = "No Internet"; ObjectID = "eNO-rr-p0w"; */
+"eNO-rr-p0w.text" = "No Internet";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "fkL-AR-Zii"; */
+"fkL-AR-Zii.text" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "g5a-mx-9jW"; */
+"g5a-mx-9jW.text" = "Label";
+
+/* Class = "UILabel"; text = "News"; ObjectID = "gtU-Wd-dhz"; */
+"gtU-Wd-dhz.text" = "News";
+
+/* Class = "UILabel"; text = "Vorname"; ObjectID = "hhP-4G-j0R"; */
+"hhP-4G-j0R.text" = "Vorname";
+
+/* Class = "UILabel"; text = "Kiosk Mode"; ObjectID = "hl2-aN-zvX"; */
+"hl2-aN-zvX.text" = "Kiosk Mode";
+
+/* Class = "UILabel"; text = "Gebäude:"; ObjectID = "hvz-gO-YVH"; */
+"hvz-gO-YVH.text" = "Gebäude:";
+
+/* Class = "UILabel"; text = "Price2"; ObjectID = "jnc-Tu-lTo"; */
+"jnc-Tu-lTo.text" = "Price2";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lBf-dy-inW"; */
+"lBf-dy-inW.text" = "Label";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "lYz-ea-tSg"; */
+"lYz-ea-tSg.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Campus Map"; ObjectID = "lbB-Ev-zMF"; */
+"lbB-Ev-zMF.text" = "Campus Map";
+
+/* Class = "UILabel"; text = "Events"; ObjectID = "mHJ-YZ-fxe"; */
+"mHJ-YZ-fxe.text" = "Events";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "qyz-S0-6sH"; */
+"qyz-S0-6sH.text" = "Title";
+
+/* Class = "UILabel"; text = "Nachname"; ObjectID = "rzh-rj-eCx"; */
+"rzh-rj-eCx.text" = "Nachname";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "s4A-CL-A89"; */
+"s4A-CL-A89.text" = "Title";
+
+/* Class = "UILabel"; text = "No Internet"; ObjectID = "tBs-2o-yQA"; */
+"tBs-2o-yQA.text" = "No Internet";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "tD6-LH-r0Y"; */
+"tD6-LH-r0Y.text" = "Label";
+
+/* Class = "UILabel"; text = "No Internet"; ObjectID = "tcQ-UE-kA9"; */
+"tcQ-UE-kA9.text" = "No Internet";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "u6M-5P-coT"; */
+"u6M-5P-coT.text" = "Label";
+
+/* Class = "UILabel"; text = "Staff Search"; ObjectID = "u8w-bV-7rr"; */
+"u8w-bV-7rr.text" = "Staff Search";
+
+/* Class = "UILabel"; text = "Price3"; ObjectID = "uLz-Dg-wpN"; */
+"uLz-Dg-wpN.text" = "Price3";
+
+/* Class = "UILabel"; text = "Food"; ObjectID = "uaa-bv-6pP"; */
+"uaa-bv-6pP.text" = "Food";
+
+/* Class = "UILabel"; text = "current date"; ObjectID = "vqA-c4-xri"; */
+"vqA-c4-xri.text" = "current date";
+
+/* Class = "UILabel"; text = "NoInternet"; ObjectID = "wkI-8G-BWs"; */
+"wkI-8G-BWs.text" = "NoInternet";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "wvp-dA-kk8"; */
+"wvp-dA-kk8.text" = "Title";
+
+/* Class = "UILabel"; text = "Keine Ergebnisse"; ObjectID = "zIy-A2-lq8"; */
+"zIy-A2-lq8.text" = "Keine Ergebnisse";
+
+/* Class = "UILabel"; text = "E-Mail:"; ObjectID = "zLP-H3-4Id"; */
+"zLP-H3-4Id.text" = "E-Mail:";

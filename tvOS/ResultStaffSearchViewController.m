@@ -19,14 +19,15 @@
 {
     [super viewDidLoad];
     
+   
+    
+    
     names = [NSMutableArray new];
-
-    
     backgroudnThread = [NSOperationQueue new];
-    
-    
     [self refresh];
-    
+    [self.noresult setHidden:YES];
+    [self.nointernet setHidden:YES];
+
 }
 -(void)refresh{
         [self.loadingView setHidden:NO];
@@ -37,8 +38,13 @@
     }
 
 
+
+
 -(void)loadTable{
     
+    if ([Reachability hasInternetConnection]) {
+        
+        
         NSError *error = nil;
         NSString *html = [NSString stringWithContentsOfURL:[NSURL URLWithString:self.fullURL] encoding:NSUTF8StringEncoding error:NULL];
         
@@ -79,6 +85,15 @@
         });
         
         }
+    
+    else {
+        [self.nointernet setHidden:NO];
+        [self.noresult setHidden:YES];
+        [self.tableView setHidden:YES];
+        [self.loadingView setHidden:YES];
+        [self.ergebnislabel setHidden:YES];
+    }
+}
 
 -(void)parseData:(HTMLParser *)parser{
     
@@ -113,7 +128,15 @@
         }
     }
     
-    
+    if (names.count == 0){
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+        
+        [self.tableView setHidden:YES];
+        [self.noresult setHidden:NO];
+            
+        });
+    }
 }
 
 #pragma mark - Table view data source
@@ -160,17 +183,6 @@
 }
 
 
-- (void)viewDidUnload
-{
-    
-    [self setLoadingView:nil];
-    [self setActivityIndicator:nil];
-    [self setTableView:nil];
-    [super viewDidUnload];
-    self.backgroudnThread = nil;
-    self.fullURL = nil;
-    self.selectedIndexPath = nil;
-    
-}
+
 
 @end

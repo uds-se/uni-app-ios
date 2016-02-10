@@ -38,5 +38,48 @@
 /* Class = "UILabel"; text = "Staff Search"; ObjectID = "oHt-pg-Ff1"; */
 "oHt-pg-Ff1.text" = "Einstellungen";
 
+//staff search
+"EIE-5g-pTR.text" = "Mitgliedersuche";
+
+//first name
+"hhP-4G-j0R.text" = "Vorname";
+
+//last name
+"rzh-rj-eCx.text" = "Nachname";
+
+//Results Staff Search
+"LK6-GB-89X.text" = "Ergebnisse Personensuche";
+
+//Details Staff Search
+"E0E-ou-N1f.text" = "Details Person";
+
+//Name
+"7nv-7D-d5X.text" = "Name:";
+
+//Geschlecht
+"Wtz-2F-3NL.text" = "Geschlecht:";
+
+//Akademischer Titel
+"WiR-CA-wRZ.text"= "Akademischer Titel:";
+
+//Gebäude
+"hvz-gO-YVH.text" = "Gebäude:";
+
+//Raum
+"Cnk-UR-iHG.text" = "Raum:";
+
+//Telefon
+"D4g-tK-v8G.text" = "Telefon:";
+
+
+
+
+
+
+
+
+
+
+
 
 

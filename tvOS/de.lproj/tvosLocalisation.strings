@@ -26,3 +26,11 @@
 "Destination" = "Ziel: ";
 "No location configured" = "Kein Standort gewählt";
 "Building not found" = "Gebäude nicht gefunden";
+
+
+//Staff search
+"Professors" = "Professoren";
+"All" = "Alle";
+"Search" = "Suche starten";
+"show building" = "zum Gebäude";
+

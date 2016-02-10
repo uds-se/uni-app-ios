@@ -22,9 +22,15 @@
     [parseOperation setQueuePriority:NSOperationQueuePriorityVeryHigh];
     [backgroundThread addOperation:parseOperation];
     
+    [self.loadingView setHidden:NO];
+    [self.activityIndicator startAnimating];
+    [self.nointernet setHidden:YES];
+    [self.button setTitle:NSLocalizedStringFromTable(@"show building", @"tvosLocalisation", nil) forState:0] ;    
 }
 
 -(void) parseInformations{
+    
+    if ([Reachability hasInternetConnection]){
     
     NSData *data = [NSData dataWithContentsOfURL:fullURL];
     NSString *html = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
@@ -86,38 +92,71 @@
             mail = [DetailsPerson objectAtIndex:i+1];
         }
         
-        if ([[DetailsPerson objectAtIndex:i] isEqualToString:@"Raum"]) {
+        if ([[DetailsPerson objectAtIndex:i] isEqualToString:@"Dienstzimmer"]) {
             room = [DetailsPerson objectAtIndex:i+1];
+            if (room.length >= 5){
+            NSRange range = NSMakeRange(1, 8);
+            room = [room stringByReplacingCharactersInRange:range withString:@""];
+            }
         }
         
         if ([[DetailsPerson objectAtIndex:i] isEqualToString:@"Gebäude"]) {
             building = [DetailsPerson objectAtIndex:i+1];
+            building = [building stringByReplacingOccurrencesOfString:@"-->" withString:@""];
         }
         
         
+        NSString* completeName = @"";
+        if (firstName) {
+            completeName = [completeName stringByAppendingString:firstName];
+        }
+        
+        if (familyName) {
+            completeName = [completeName stringByAppendingFormat:@" %@",familyName];
+        };
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.loadingView setHidden:YES];
+            [self.activityIndicator stopAnimating];
+            self.name.text = completeName;
+            self.Telefon.text = phone;
+            self.akad.text = aka;
+            self.geschlecht.text = sex;
+            self.fax.text = faxx;
+            self.email.text = mail;
+            self.raum.text = room;
+            self.gebäude.text = building;    
+        });
+        
+        
+        
         
     }
-    
-    
-    NSString* completeName = @"";
-    if (firstName) {
-        completeName = [completeName stringByAppendingString:firstName];
     }
     
-    if (familyName) {
-        completeName = [completeName stringByAppendingFormat:@" %@",familyName];
-    };
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.name.text = completeName;
-        self.Telefon.text = phone;
-        self.akad.text = aka;
-        self.geschlecht.text = sex;
-        self.fax.text = faxx;
-        self.email.text = mail;
-        self.raum.text = room;
-        self.gebäude.text = building;    
-    });
+    else {
+        [self.nointernet setHidden:NO];
+        [self.name setHidden:YES];
+        [self.Telefon setHidden:YES];
+        [self.akad setHidden:YES];
+        [self.geschlecht setHidden:YES];
+        [self.fax setHidden:YES];
+        [self.email setHidden:YES];
+        [self.raum setHidden:YES];
+        [self.gebäude setHidden:YES];
+        [self.namelabel setHidden:YES];
+        [self.detailslabel setHidden:YES];
+        [self.telefonlabel setHidden:YES];
+        [self.akadlabel setHidden:YES];
+        [self.emaillabel setHidden:YES];
+        [self.geschlechtlabel setHidden:YES];
+        [self.gebäudelabel setHidden:YES];
+        [self.raumlabel setHidden:YES];
+        [self.faxlabel setHidden:YES];
+        [self.loadingView setHidden:YES];
+        [self.button setHidden:YES];
+    }
+   
     
     
     

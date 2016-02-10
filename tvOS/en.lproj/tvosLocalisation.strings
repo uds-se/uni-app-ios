@@ -27,3 +27,10 @@
 "Destination" = "Destination: ";
 "No location configured" = "No location configured";
 "Building not found" = "Building not found";
+
+//Staff search
+"Professors" = "Professors";
+"All" = "All";
+"Search" = "Search";
+"show building"= "show building";
+
