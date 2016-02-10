@@ -330,7 +330,7 @@
             }];
         }
     }];
-    [self performSelector:@selector(checkForRefresh) withObject:nil afterDelay:interval*3];
+    [self performSelector:@selector(checkForRefresh) withObject:nil afterDelay:(interval*3)];
     
 }
 

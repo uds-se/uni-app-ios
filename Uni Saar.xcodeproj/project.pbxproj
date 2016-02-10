@@ -75,6 +75,8 @@
 		6564ED501C0E34D100FA650D /* NewsArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B0EB5015AF6BA500ECC1BD /* NewsArticle.m */; };
 		6564ED511C0E3E6D00FA650D /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B0EB5415AF6BA500ECC1BD /* NewsTableViewCell.m */; };
 		6590D88A1C1853FA00418278 /* tvosLocalisation.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6590D88C1C1853FA00418278 /* tvosLocalisation.strings */; };
+		6598C8B61C6B2A8D0023354F /* uni_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6598C8B51C6B2A8D0023354F /* uni_logo.png */; };
+		6598C8B81C6B2E150023354F /* uni_logo_breit.png in Resources */ = {isa = PBXBuildFile; fileRef = 6598C8B71C6B2E150023354F /* uni_logo_breit.png */; };
 		65F44AC01C16FD9C0036F884 /* EventsDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F44ABF1C16FD9C0036F884 /* EventsDataSourceAndDelegate.m */; };
 		65F44AC31C1701530036F884 /* NewsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F44AC21C1701530036F884 /* NewsSource.m */; };
 		65F44AC61C1701650036F884 /* MensaDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F44AC51C1701650036F884 /* MensaDataSourceAndDelegate.m */; };
@@ -522,6 +524,8 @@
 		657469CF1C183AC50039FB7A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		6590D88B1C1853FA00418278 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/tvosLocalisation.strings; sourceTree = "<group>"; };
 		6590D88D1C1853FC00418278 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/tvosLocalisation.strings; sourceTree = "<group>"; };
+		6598C8B51C6B2A8D0023354F /* uni_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uni_logo.png; sourceTree = "<group>"; };
+		6598C8B71C6B2E150023354F /* uni_logo_breit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uni_logo_breit.png; sourceTree = "<group>"; };
 		65F44ABE1C16FD9C0036F884 /* EventsDataSourceAndDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDataSourceAndDelegate.h; sourceTree = "<group>"; };
 		65F44ABF1C16FD9C0036F884 /* EventsDataSourceAndDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsDataSourceAndDelegate.m; sourceTree = "<group>"; };
 		65F44AC11C1701530036F884 /* NewsSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsSource.h; sourceTree = "<group>"; };
@@ -962,6 +966,8 @@
 		655F27CD1C0F332B00B3C7BE /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6598C8B71C6B2E150023354F /* uni_logo_breit.png */,
+				6598C8B51C6B2A8D0023354F /* uni_logo.png */,
 				65F80B5E1C5FEECE005D6A0A /* yellow_hom.png */,
 				65F80B5F1C5FEECE005D6A0A /* orange_hom.png */,
 				BAF783F71C60944000CE5464 /* pin_green.png */,
@@ -1831,6 +1837,7 @@
 				65F80B671C5FF0B1005D6A0A /* campus_homburg.png in Resources */,
 				BAE025511C5B6DBE002EBF3D /* iconGpsPfeil.png in Resources */,
 				6537C31F1C11AC3A00F22518 /* HomeKioskIcon.png in Resources */,
+				6598C8B81C6B2E150023354F /* uni_logo_breit.png in Resources */,
 				6542B4431C58C74800460FA0 /* Settings.bundle in Resources */,
 				65F6423A1C5A917F00E460F3 /* iCalEmpty.png in Resources */,
 				BAE025471C5B6C57002EBF3D /* small_icon_2.png in Resources */,
@@ -1853,6 +1860,7 @@
 				655F27D91C0F340300B3C7BE /* AppIcon-1024.png in Resources */,
 				65FA9FCA1C5BB1DE00B4662E /* campus.png in Resources */,
 				BAE025451C5B6C42002EBF3D /* background-white-logo-mainscreen.png in Resources */,
+				6598C8B61C6B2A8D0023354F /* uni_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
