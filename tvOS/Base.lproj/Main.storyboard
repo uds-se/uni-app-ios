@@ -1341,7 +1341,7 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="zum Gebäude"/>
                                 <connections>
-                                    <segue destination="7M3-rI-Ged" kind="show" id="ggv-Cn-kj7"/>
+                                    <segue destination="7M3-rI-Ged" kind="show" identifier="showBuilding" id="ggv-Cn-kj7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CS4-l1-kfl" userLabel="Raum">
@@ -1708,6 +1708,6 @@
         <image name="uni_logo_breit.png" width="1500" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JCk-Ls-W8f"/>
+        <segue reference="ggv-Cn-kj7"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,6 +10,7 @@
 #import "DetailStaff.h"
 #import "TFHpple.h"
 #import "Reachability.h"
+#import "CampusMapViewController.h"
 
 
 @interface DetailStaff : UIViewController{
@@ -50,5 +51,7 @@ NSMutableArray *DetailsPerson;
 
 
 -(void) parseInformations;
+
+- (IBAction)buttonPressed:(id)sender;
 
 @end

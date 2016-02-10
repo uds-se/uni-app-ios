@@ -24,7 +24,7 @@
     NSString *SelectedCampus;
     float xOffset;
     float yOffset;
-    NSString *Person;
+//    NSString *Person;
     NSArray *Test;
     NSString *TestA;
     float PinSizeX;
@@ -32,7 +32,7 @@
 
 }
 
-
+@property (weak,nonatomic) NSString *Person;
 @property (weak, nonatomic) IBOutlet UITableView *OverviewTableView;
 
 @property (weak, nonatomic) IBOutlet UITableView *BuildingsTableView;

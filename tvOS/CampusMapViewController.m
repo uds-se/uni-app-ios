@@ -17,6 +17,7 @@
 @implementation CampusMapViewController
 @synthesize OverviewTableView;
 @synthesize BuildingsTableView;
+@synthesize Person;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,6 +29,7 @@
     [defaults synchronize];
     SelectedCampus = [defaults objectForKey:@"campus_selected"];
     
+    NSString *test = Person;
  
 
     
@@ -202,7 +204,7 @@
     // staff search inclusion dummy
     
     //Person = @"E9 2";
-    Person = 0;
+//    Person = 0;
     if (Person ==0) {
         
     }

@@ -103,6 +103,7 @@
         if ([[DetailsPerson objectAtIndex:i] isEqualToString:@"Gebäude"]) {
             building = [DetailsPerson objectAtIndex:i+1];
             building = [building stringByReplacingOccurrencesOfString:@"-->" withString:@""];
+            building = [building stringByReplacingOccurrencesOfString:@"Gebäude " withString:@""];
         }
         
         
@@ -162,6 +163,16 @@
     
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    CampusMapViewController* cMap = segue.destinationViewController;
+    [cMap setPerson:self.gebäude.text];    
+}
+
+- (IBAction)buttonPressed:(id)sender {
+    
+    [self performSegueWithIdentifier:@"showBuilding" sender:self];
+    
+}
 
 
 @end
