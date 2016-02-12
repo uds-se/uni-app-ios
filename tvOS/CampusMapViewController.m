@@ -17,6 +17,7 @@
 @implementation CampusMapViewController
 @synthesize OverviewTableView;
 @synthesize BuildingsTableView;
+//@synthesize BuildingsHomTableView;
 @synthesize Person;
 
 - (void)viewDidLoad {
@@ -40,6 +41,9 @@
     _DestinationPointer.hidden = true;
     OverviewTableView.hidden = true;
     BuildingsTableView.hidden = true;
+    
+    //HOM
+   
     _DestinationLabel.hidden = true;
     _LocationImage.image =[UIImage imageNamed:@"pin_green.png"];
     _DestinationImage.hidden = true;
@@ -59,11 +63,308 @@
     PinSizeY = 64;
 
 
+//Buildings Homburg
+    
+    BuildOverviewHom = @[@"Chirurgisches Zentrum", @"Zentrum für Innere Medizin", @"Interdisziplinäres Zentrum", @"Zentrum für Infektionskrankheiten", @"Zentrum für Frauen, Kinder und Adoleszente", @"Neuro-Zentrum", @"Radiologisches Zentrum", @"Zentrum für Zahn-, Mund- und Kieferheilkunde", @"Zentrum für Pathologie und Rechtsmedizin", @"Spezielle Kompetenzen", @"Gesundheitsbereiche im staatlichen Auftrag", @"Schulzentrum und Schulen", @"Einrichtungen der Universität des Saarlandes", @"Institute der theoretischen Medizin, Biowissenschaften und der Klinischen Medizin", @"Sonstige Einrichtungen"];
+    
+//Chirurgisches Zentrum
+    
+    NSArray *a57 = @[@"Gemeinsame Notaufnahme von Chirurgie / Innere Medizin", @1118.0f, @458.0f];
+    NSArray *b57 = @[@"Anästhesiologie und Intensivmedizin und Intensivstation", @1118.0f, @458.0f];
+    NSArray *a56 = @[@"Simulatorzentrum", @1179, @436.0f];
+    NSArray *c57 = @[@"Allgemeine Chirurgie, Abdominal- und Gefäß-Chirurgie, Kinder-Chirurgie", @1118.0f, @458.0f];
+    NSArray *d57 = @[@"Unfall-, Hand- und Wiederherstellungs-Chirurgie", @1118.0f, @458.0f];
+    NSArray *e57 = @[@"Thorax- und Herz-Gefäß-Chirurgie", @1118.0f, @458.0f];
+    
+    NSArray *a37_38 = @[@"Orthopädie und orthopädische Chirurgie", @1200.0f, @670.0f];
+    NSArray *a33 = @[@"Krankengymnastik – Bäderabteilung", @1169.0f, @721.0f];
+    NSArray *a90_5 = @[@"Neurochirurgie", @790.0f, @382.0f];
+    NSArray *a65_66 = @[@"Experimentelle Chirurgie", @754.0f, @530.0f];
+    NSArray *a1 = @[@"Klinische Hämostaseologie und Transfusions medizin", @1291.0f, @1078.0f];
+    NSArray *b1 = @[@"Blutspendedienst", @1291.0f, @1078.0f];
+    NSArray *c1 = @[@"Hämophilie-Zentrum für Erwachsene", @1291.0f, @1078.0f];
+    NSArray *d1 = @[@"Hämostaseologische Ambulanz", @1291.0f, @1078.0f];
+    NSArray *f57 = @[@"Blutbank / Immunhämatologisches Labor", @1291.0f, @1078.0f];
+    
+    ChirZen = @[a57, b57, a56, c57, d57, e57, a37_38, a33, a90_5, a65_66, a1, b1, c1, d1, f57];
+    
+   
+//Zentrum für Innere Medizin
+    
+    NSArray *a41 = @[@"Internistische Intensivstation ICU", @1134.0f, @543.0f];
+    NSArray *b41 = @[@"Innere Medizin I", @1134.0f, @543.0f];
+    NSArray *a77 = @[@"Gastroenterologie, Hepatologie, Endokrinologie, Diabetologie und Ernährungsmedizin Hochschulambulanzen und Stationen", @1327.0f, @324.0f];
+    NSArray *a57_3 = @[@"Endoskopie", @1137.0f, @408.0f];
+    NSArray *c41a = @[@"Kardiologie, Angiologie und internistische Intensivmedizin Hochschulambulanzen", @1134.0f, @543.0f];
+    NSArray *c41b = @[@"Innere Medizin III Stationen", @1134.0f, @543.0f];
+    NSArray *a40_2 = @[@"Nieren- und Hochdruckkrankheiten Hochschulambulanzen", @1205.0f, @623.0f];
+    NSArray *b40_2 = @[@"Innere Medizin IV Stationen", @1205.0f, @623.0f];
+	NSArray *c40_2 = @[@"Bei Entgiftung", @1205.0f, @623.0f];
+    NSArray *a91 = @[@"Pneumologie, Allerg ologie, Beatmungs- u. Umweltmedizin Hochschulambulanzen", @1035.0f,@197.0f];
+    NSArray *b91 = @[@"Innere Medizin V Stationen", @1035.0f, @197.0f];
+    
+    ZenInMed = @[a41, b41, a77, a57_3, c41a, c41b, a40_2, b40_2, c40_2, a91, b91];
+    
+
+//Interdisziplinäres Zentrum
+    
+    NSArray *a22 = @[@"Augenheilkunde", @1330.0f, @714.0f];
+    NSArray *a6 = @[@"Hals-Nasen-Ohren-Heilkunde", @1321.0f, @870.0f];
+    NSArray *b6 = @[@"Pädaudiologie", @1321.0f, @870.0f];
+    NSArray *a27 = @[@"Cochlea Implant Centrum (CIC)", @1525.0f, @549.0f];
+    NSArray *c6 = @[@"Urologie und Kinderurologie", @1321.0f, @870.0f];
+    NSArray *a6_7 = @[@"Dermatologie Hochschulambulanz", @1351.0f, @895.0f];
+    NSArray *d6 = @[@"Dermatologie Privatambulanz / Station D03", @1321.0f, @870.0f];
+    NSArray *a18 = @[@"Dermatologie Station", @1137.0f, @782.0f];
+    
+    IntZen = @[a22, a6, b6, a27, c6, a6_7, d6, a18];
+  
+    
+//Zentrum für Infektionskrankheiten
+    
+    NSArray *a43 = @[@"Medizinische Mikrobakteriologie und Hygiene", @1055.0f, @611.0f];
+    NSArray *a47 = @[@"Virologie", @1016.0f, @574.0f];
+    
+    ZenInf = @[a43, a47];
     
     
-//BUILDINGS
     
-    BuildOverview = @[@"A", @"B", @"C", @"D", @"E"];
+    //BIS HIER KOORDINATEN
+    
+    
+//Zentrum für Frauen, Kinder und Adoleszente
+    
+    
+    
+
+    
+    NSArray *a9 = @[@"Allgemeine Pädiatrie und Neonatologie, Pädiatrische Kardiologie, Pädiatrische Onkologie und Hämatologie", @1260.0f, @770.0f];
+    NSArray *b9 = @[@"Frauenheilkunde, Geburtsmedizin und Reproduktionsmedizin", @1260.0f, @770.0f];
+    NSArray *a68 = @[@"Humangenetische Beratungsstelle", @1030.0f, @440.0f];
+    NSArray *a23 = @[@"Ronald McDonald Haus – Einrichtung für Familien kranker Kinder", @1334.0f, @765.0f];
+    
+    NSArray *c9 = @[@"Villa Kunterbunt", @798.0f, @442.0f];
+    NSArray *b33 = @[@"Elterninitiative Krebskranker Kinder im Saarland e.V.", @798.0f, @442.0f];
+    NSArray *c33 = @[@"Villa Regenbogen und Elterninitiative Herzkrankes Kind Homburg/Saar e.V.", @798.0f, @442.0f];
+    NSArray *a69 = @[@"Palliativmedizin und Kinderschmerztherapie", @798.0f, @442.0f];
+    NSArray *a90_2 = @[@"Kinder- und Jugendpsychiatrie, Psychosomatik und Psychotherapie", @798.0f, @442.0f];
+    NSArray *a90_9 = @[@"Kinder- und Jugendpsychiatrie, Psychosomatik und Psychotherapie", @798.0f, @442.0f];
+    NSArray *d33 = @[@"Johanniterhaus des UKS – Tagesklinik für Kinder- und Jugendpsychiatrie, Psychosomatik und Psychotherapie", @798.0f, @442.0f];
+    NSArray *b68 = @[@"Ambulanz", @798.0f, @442.0f];
+    NSArray *a28 = @[@"Spezialambulanzen (Kleinkinder- / Säuglings-Ambulanz, Autismus-Ambulanz)", @798.0f, @442.0f];
+    
+    ZenFrKiAd = @[a9, b9, a68, a23, c9, b33, c33, a69, a90_2, a90_9, d33, b68, a28];
+    
+    
+//Neuro-Zentrum
+    
+    NSArray *a90 = @[@"Gemeinsame Notaufnahme des Neurozentrums", @798.0f, @442.0f];
+    NSArray *a90_1 = @[@"Neurologie", @798.0f, @442.0f];
+    NSArray *b90 = @[@"Deutsches Institut für Demenzprävention", @798.0f, @442.0f];
+    NSArray *b90_1 = @[@"Psychiatrie und Psychotherapie", @798.0f, @442.0f];
+    NSArray *a2_1 = @[@"Tagesklinik der Psychiatrie und Psychotherapie, Arbeitstherapie, Übergangsklinik", @798.0f, @442.0f];
+    NSArray *c90 = @[@"Suchtentgiftung", @798.0f, @442.0f];
+    NSArray *g57 = @[@"Neurochemie", @798.0f, @442.0f];
+    NSArray *a95_5 = @[@"Neurochirugie und stereotaktische Neurochirugie", @798.0f, @442.0f];
+    NSArray *d90 = @[@"Neuropathologie", @798.0f, @442.0f];
+    
+    NeuZen = @[a90, a90_1,b90, b90_1, a2_1, c90, g57, a95_5,d90];
+    
+    
+//Radiologisches Zentrum
+    
+    NSArray *a50_1 = @[@"Diagnostische und Interventionelle Radiologie (Direktion)", @1188.0f, @485.0f];
+    NSArray *b50_1 = @[@"Angiographie", @1188.0f, @485.0f];
+    NSArray *d41 = @[@"Computertomographie (CT) + Röntgen + Durchleuchtung", @1135.0f, @544.0f];
+    NSArray *c50_1 = @[@"Kernspintomographie (MRT)", @1188.0f, @485.0f];
+    NSArray *d9 = @[@"Mammographie / Röntgen (Kinder)", @1260.0f, @770.0f];
+    NSArray *e6 = @[@"Röntgen (Urologie / HNO)", @1321.0f, @870.0f];
+    NSArray *b77 = @[@"Durchleuchtung, Studienbüro, Forschung / Labor", @1326.0f, @324.0f];
+    NSArray *a65 = @[@"Forschung - Kernspintomographie (MRT)", @756.0f, @529.0f];
+    NSArray *a6_5 = @[@"Strahlentherapie und Radioonkologie", @1222.0f, @908.0f];
+    NSArray *a50 = @[@"Nuklearmedizin", @1184.0f, @512.0f];
+    NSArray *e90 = @[@"Diagnostische und Interventionelle Neuroradiologie", @834.0f, @361.0f];
+    
+    RadZen = @[a50_1, b50_1, d41,c50_1, d9, e6, b77, a65, a6_5, a50, e90];
+    
+    
+//Zentrum für Zahn-, Mund- und Kieferheilkunde
+    
+    NSArray *b56 = @[@"Kieferorthopädie", @1174.0f, @446.0f];
+    NSArray *a71_2 = @[@"Zahnärztliche Prothetik und Werkstoffkunde", @1161.0f, @339.0f];
+    NSArray *a71_1 = @[@"Mund-, Kiefer- und Gesichts-Chirurgie", @1138.0f, @398.0f];
+    NSArray *a73 = @[@"Zahnerhaltung, Parodontologie und präventive Zahnheilkunde", @1182.0f, @369.0f];
+
+    ZenZaMuKi = @[b56, a71_2, a71_1, a73];
+    
+
+//Zentrum für Pathologie und Rechtsmedizin
+    
+    NSArray *a80_2 = @[@"Rechtsmedizin", @1413.0f, @282.0f];
+    NSArray *a26 = @[@"Pathologie", @1467.0f, @700.0f];
+    
+    ZenPaRe = @[a80_2, a26];
+    
+    
+//Spezielle Kompetenzen
+    
+    NSArray *e1 = @[@"Ambulantes Onkologie-Zentrum (AOZ)", @1291.0f, @1078.0f];
+    NSArray *a52 = @[@"Saarländische Krebszentrale – Tumorzentrum", @1297.0f, @562.0f];
+    NSArray *i57 = @[@"Zentrallabor", @1106.0f, @474.0f];
+    NSArray *a61_4 = @[@"Interdiziplinäres Forschungs- und Laborgebäude", @907.0f, @588.0f];
+    NSArray *e9 = @[@"Christiane-Herzog-Mukoviszidose-Zentrum", @1258.0f, @771.0f];
+    NSArray *f9 = @[@"Interdiszipl. Marfan-Spezial-Ambulanz", @1258.0f, @771.0f];
+    NSArray *c77 = @[@"Diabetes-Zentrum", @1326.0f, @325.0f];
+    NSArray *g9 = @[@"Zertifiziertes Brustzentrum", @1258.0f, @771.0f];
+    
+    
+    SpeKom = @[e1, a52, i57, a61_4, e9, f9, c77, g9];
+    
+    
+//Gesundheitsbereiche im staatlichen Auftrag
+    
+    NSArray *c68 = @[@"Rechtsmedizin, Untersuchungsstelle für Verkehrstauglichkeit", @1029.0f, @441.0f];
+    NSArray *f90 = @[@"Gerichtliche Psychologie und Psychiatrie", @862.0f, @351.0f];
+    NSArray *h9 = @[@"Informations- und Behandlungszentrum für Vergiftungen des Bundeslandes Saarland", @1258.0f, @771.0f];
+    NSArray *i9 = @[@"Giftinformationszentrale (Kinder)", @1258.0f, @771.0f];
+    NSArray *b28 = @[@"Zentrum für Kindervorsorge", @1573.0f, @473.0f];
+    NSArray *b47 = @[@"Trinkwasserlabor der Virologie", @1013.0f, @576.0f];
+    NSArray *b43 = @[@"Staatliche Untersuchungsstelle (SMU) der Mikrobiologie", @1052.0f, @606.0f];
+    NSArray *a76 = @[@"Radioaktivitätsmessstelle der UdS", @1289.0f, @375.0f];
+    
+    GesStAuf = @[c68, f90, h9, i9, b28, b47, b43, a76];
+ 
+    
+//Schulzentrum und Schulen
+    
+    NSArray *a53 = @[@"Leitung des Schulzentrums, Referat für Fort-und Weiterbildung", @1359.0f, @542.0f];
+    NSArray *b53 = @[@"Schule für Gesundheits- und Krankenpflege / Kinderkrankenpflege (staatl. anerkannt)", @1359.0f, @542.0f];
+    NSArray *c53 = @[@"Schule für Schule für", @1169.0f, @721.0f];
+    NSArray *d53 = @[@"Schule für Diätassistenten / Diätassistentinnen (staatl. anerkannt)", @1359.0f, @542.0f];
+    NSArray *e53 = @[@"Schule für Operationstechnische Assistenten /Assistentinnen (staatl. anerkannt)", @1359.0f, @542.0f];
+    NSArray *a21 = @[@"Schule für Med.-Techn. Laboratoriumsassistenten/innen (staatl. anerkannt)", @1278.0f, @734.0f];
+    NSArray *b21 = @[@"Schule für Pharmazeutisch-Technische Assistenten/innen (staatl. anerkannt)", @1278.0f, @734.0f];
+    NSArray *a51 = @[@"Schule für Med.-Techn. Assistenten/innen für Funktionsdiagnostik (staatl. anerkannt)", @1230.0f, @562.0f];
+    NSArray *b51 = @[@"Schule für Med.-Techn. Radiologie-Assistenten/innen (staatl. anerkannt)", @1230.0f, @562.0f];
+    NSArray *a37 = @[@"Schule für Physiotherapie (staatl. anerkannt)", @1205.0f, @666.0f];
+    NSArray *b27 = @[@"Krankenhaus- und Hausunterricht", @1525.0f, @548.0f];
+    NSArray *a84 = @[@"(Staatl. Förderschule für körperliche und motorische Entwicklung)", @1433.0f, @195.0f];
+
+    
+    Schu = @[a53, b53, c53, d53, e53, a21, b21, a51, b51, a37, b27, a84 ];
+    
+    
+//Einrichtungen der Universität des Saarlandes
+    
+    NSArray *a15 = @[@"Dekanat und Medizinische Fakultät",@963.0f,@770.0f];
+    NSArray *a16 = @[@"Universität des Saarlandes, Facility Management Homburg",@947.0f,@739.0f];
+    NSArray *a34 = @[@"Medizinische Bibliothek",@1230.0f,@325.0f];
+    NSArray *a74 = @[@"Mensa, AStA – Außenstelle, Fachschaft Medizin, Studentenwerk, Hochschulgemeinden ESG und KHG, Hochschulsportzentrums – Außenstelle",@1233.0f,@328.0f];
+    NSArray *a7  = @[@"Starterzentrum III / Uni-Shop",@1402.0f,@839.0f];
+    NSArray *a64 = @[@"Tierschutzbeauftragte",@805.0f,@552.0f];
+    
+    EinUdS = @[a15, a16, a34, a74, a7, a64];
+    
+    
+//Institute der theoretischen Medizin, Biowissenschaften und der Klinischen Medizin
+    
+    NSArray *a61	 =@[@"Anatomie und Zellbiologie",@878.0f,@541.0f];
+    NSArray *a48_1   =@[@"Biophysik und physikalische Grundlagen der Medizin",@891.0f,@684.0f];
+    NSArray *a44	 =@[@"Medizinische Biochemie und Molekularbiologie",@992.0f,@648.0f];
+    NSArray *a45	 =@[@"Experimentelle und klinische Pharmakologie und Toxikologie",@975.0f,@624.0f];
+    NSArray *b48_1   =@[@"Physiologie",@891.0f,@684.0f];
+    NSArray *b80_2        =@[@"Zentrum Allgemeinmedizin",@1404.0f,@281.0f];
+    NSArray *a86	 =@[@"Medizinische Biometrie, Epidemiologie und Informatik (IMBEI)",@1320.0f,@264.0f];
+    NSArray *b26	     =@[@"Allgemeine, Spezielle und Neuropathologie",@1468.0f,@699.0f];
+    NSArray *a45_3        =@[@"José-Carreras-Zentrum für Immuntherapie",@950.0f,@650.0f];
+    NSArray *a60	     =@[@"Humangenetik",@943.0f,@540.0f];
+    NSArray *d68	     =@[@"Experimentelle Neurochirurgie",@1412.0f,@640.0f];
+    NSArray *g90	     =@[@"Medizinische und Klinische Psychologie",@846.0f,@334.0f];
+    
+    
+    InsThMed = @[a61, a48_1, a44, a45, b48_1, b80_2, a86, b26, a45_3, a60, d68, g90];
+    
+    
+//Sonstige Einrichtungen
+    
+    NSArray *a4	 =@[@"Apotheke",@1080.0f,@871.0f];
+    NSArray *a3	 =@[@"Besprechungsräume",@1051.0f,@853.0f];
+    NSArray *b4    =@[@"Briefkasten",@1098.0f,@871.0f];
+    NSArray *a31	 =@[@"Evangelisches Pfarramt",@1401.0f,@577.0f];
+    NSArray *a11	 =@[@"Geldautomat",@1080.0f,@795.0f];
+    NSArray *c51	 =@[@"Katholisches Pfarramt",@1220.0f,@554.0f];
+    NSArray *a55	 =@[@"Klinikkirche",@1272.0f,@478.0f];
+    NSArray *d51	 =@[@"Patientenbibliothek und Kapelle",@1220.0f,@554.0f];
+    NSArray *b11	 =@[@"Telefonzentrale AVAYA",@1080.0f,@795.0f];
+    NSArray *c27	 =@[@"Wohnhochhaus I",@1518.0f,@542.0f];
+    NSArray *c28	 =@[@"Wohnhochhaus II",@1573.0f,@468.0f];
+    
+    SonstEin = @[a4, a3, b4, a31, a11, c51, a55, d51, b11, c27, c28];
+    
+    
+//Direktion, Verwaltung, Wirtschaft, Technik
+    
+    NSArray *c11 = @[@"Vorstand/Ärztliche Direktion/Kaufmännische Direktion/Pflegedirektion",@1080.0f,@795.0f];
+    NSArray *d11	 = 	 @[@"Dezernat I – Personal",@1080.0f,@795.0f];
+    
+    //Dezernat II - Finanzen
+    NSArray *a17	 = 	 @[@"Dezernat II – Finanzen", @1048.0f,@760.0f];
+    NSArray *a12	 = 	 @[@"Krankenhausbetrieb und Patientenmanagement", @1009.0f,@806.0f];
+    
+    //Dezernat III - Wirtschaft
+    NSArray *a79	 = 	 @[@"Dezernat III – Wirtschaft", @1426.0f,@338.0f];
+    NSArray *b79	 = 	 @[@"Zentraleinkauf – Materialwirtschaft", @1426.0f,@338.0f];
+    NSArray *c79	 = 	 @[@"Versorgungszentrum – Ärztliches-, Wirtschaftliches- und Technisches Zentrallager", @1426.0f,@338.0f];
+    NSArray *a79_1	 = @[@"Investitionen und Wirtschaftsbetriebe", @1473.0f,@375.0f];
+    NSArray *d79	 = 	 @[@"Näherei, Wäscherei, Schutzkleidungsausgabe", @1426.0f,@338.0f];
+    NSArray *a32	 =	 @[@"Personalkasino mit Bistro", @1346.0f,@606.0f];
+    NSArray *b32	 =	 @[@"Küche und Lebensmittelmagazin", @1346.0f,@606.0f];
+    NSArray *b31	 =	 @[@"Bäckerei, Metzgerei", @1401.0f,@577.0f];
+    NSArray *e79	 = 	 @[@"Logistik – Klinikinterne Patiententransporte, Klinikumsversorgung", @1426.0f,@338.0f];
+    NSArray *a78	 =	 @[@"KFZ-Werkstatt", @1357.0f,@342.0f];
+    NSArray *b79_1	 = @[@"Zentrales Sterilgutmanagement", @1473.0f,@375.0f];
+    
+    //Dezernat IV - Technik
+    
+    NSArray *j57    = @[@"Dezernat IV – Technik", @798.0f, @442.0f];
+    NSArray *k57    =	 @[@"Technik / Medizintechnik", @1106.0f,@471.0f];
+    NSArray *d27	 =	 @[@"ZMT (Zentrum für Medizintechnik)", @1518.0f,@542.0f];
+    NSArray *f79	 =	 @[@"Technik und Werkstätten", @1426.0f,@338.0f];
+    NSArray *b78	 =	 @[@"Sanitär- und Installationsdienst", @1357.0f,@342.0f];
+    NSArray *c78	 = @[@"FM-Dienst", @1357.0f,@342.0f];
+    
+    //Dezernat V
+    NSArray *a10	 = @[@"Dezernat V – Recht und Verwaltung", @1158.0f,@832.0f];
+    NSArray *b52	 =	 @[@"Postverteilerstelle", @1305.0f,@577.0f];
+    
+    //Sonstiges
+    NSArray *c56	 =	 @[@"Bereitschaftsdienste", @1172.0f, @436.0f];
+    NSArray *d77	 =	 @[@"Betriebsarzt", @1328.0f,@315.0f];
+    NSArray *c47	 =	 @[@"Büro Neubauprojekte", @1010.0f,@560.0f];
+    NSArray *a80_3	 =   @[@"DRK-Rettungswache", @1504.0f,@237.0f];
+    NSArray *e33	 =	 @[@"Frauenbeauftragte", @1162.0f,@709.0f];
+    NSArray *a62	 =   @[@"FlexiMedKids (Kinderbetreuung)", @817.0f,@567.0f];
+    NSArray *a80_1	 =   @[@"Gärtnerei", @1473.0f,@289.0f];
+    NSArray *b10	 =   @[@"Info-Zentrum", @1158.0f,@832.0f];
+    NSArray *c52	 =	 @[@"Innenrevision", @1305.0f,@577.0f];
+    NSArray *f11	 =   @[@"Klinik-Apotheke des UKS", @1080.0f,@795.0f];
+    NSArray *e27	 =   @[@"Landesamt für Zentrale Dienste, Amt für Bau- und Liegenschaften",  @1518.0f,@542.0f];
+    NSArray *b17	 =	 @[@"Medizin-Controlling",@1048.0f,@760.0f];
+    NSArray *b3      =	 @[@"Patientenfürsprecher", @1057.0f,@851.0f];
+    NSArray *b74	 =	 @[@"Personalrat", @1233.0f,@328.0f];
+    NSArray *g11	 =	 @[@"Presse- und Öffentlichkeitsarbeit", @1080.0f,@795.0f];
+    NSArray *f27	 =	 @[@"Projektsteuerungsbüro beim Vorstand (PSB)", @1518.0f,@542.0f];
+    NSArray *g27	 =	 @[@"UKS Service GmbH", @1518.0f,@542.0f];
+    NSArray *b86	 =	 @[@"ZIK (Zentrum für Informations- und Kommunikationstechnik)", @1320.0f, @264.0f];
+    
+    DiVeWiTe = @[c11, d11, a17, a12, a79, b79, c79, a79_1, d79, a32, b32, b31, e79, a78, b79_1, j57, k57, d27, f79, b78, c78, a10, b52, c56, d77, c47, a80_3, e33, a62, a80_1, b10, c52, f11, e27, b17, b3, b74, g11, f27, g27, b86];
+
+    
+//BUILDINGS Saarbrücken
+    
+    BuildOverviewSaar = @[@"A", @"B", @"C", @"D", @"E"];
+
+    
     
     NSArray *A11 = @[@"A1 1", @798.0f, @405.0f];
     NSArray *A12 = @[@"A1 2", @798.0f, @442.0f];
@@ -200,10 +501,8 @@
   
 
     
-    // staff search inclusion dummy
-    
-    //Person = @"E9 2";
-//    Person = 0;
+    // staff search inclusion
+
     if (Person ==0) {
         
     }
@@ -233,21 +532,32 @@
 -(void) SelectCampus: (NSString*) Campus
 {
     if ([Campus  isEqual: @"hom"]){
-        _MapImage.image = [UIImage imageNamed:@"campus_homburg.png"];
-        _Button.hidden = true;
+//        _MapImage.image = [UIImage imageNamed:@"campus_homburg.png"];
+//        _Button.hidden = true;
         _CurrentLocationPointer.hidden = true;
-//        _mainView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:1];
         _LocationImage.hidden = true;
         _LocationLabel.hidden = true;
+
         _DestinationImage.hidden = true;
         _DestinationLabel.hidden = true;
-        _DestinationPointer.hidden = true;
-        Person = 0;
+//        _DestinationPointer.hidden = true;
+//        Person = 0;
+//        //        _mainView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:1];
         
+        
+        
+        _MapImage.image = [UIImage imageNamed:@"campus_homburg.png"];
+        BuildOverview = BuildOverviewHom;
+        Camp = true;
+//        OverviewTableView.autoresizesSubviews = true;
+//        OverviewTableView.sizeToFit;
+     
         
     }
     else {
         _MapImage.image = [UIImage imageNamed:@"campus.png"];
+        BuildOverview = BuildOverviewSaar;
+        Camp = false;
     }
 }
 
@@ -271,9 +581,9 @@
 }
 
 // get cordinates as float from an array
-float getCoordinates (NSArray *Blablubb, int i)
+float getCoordinates (NSArray *TempCoord, int i)
 {
-    id Temp = [Blablubb objectAtIndex:i];
+    id Temp = [TempCoord objectAtIndex:i];
     float Coordinate = [Temp floatValue];
     return Coordinate;
 }
@@ -291,13 +601,22 @@ float getCoordinates (NSArray *Blablubb, int i)
     }
     else {
         
-        
+        if (Camp == true) {
+            _DestinationLabel.text = [NSLocalizedStringFromTable(@"Destination", @"tvosLocalisation", nil) stringByAppendingString:[Dest objectAtIndex:0]];
+            _DestinationLabel.hidden = true;
+            _DestinationImage.image = [UIImage imageNamed:@"pin_red.png"];
+            _DestinationImage.hidden = true;
+            _DestinationPointer.frame = CGRectMake(getCoordinates(Dest,1)-xOffset, getCoordinates(Dest,2)-yOffset, PinSizeX, PinSizeY);
+            _DestinationPointer.hidden = false;
+        }
+        else{
         _DestinationLabel.text = [NSLocalizedStringFromTable(@"Destination", @"tvosLocalisation", nil) stringByAppendingString:[Dest objectAtIndex:0]];
         _DestinationLabel.hidden = false;
         _DestinationImage.image = [UIImage imageNamed:@"pin_red.png"];
         _DestinationImage.hidden = false;
         _DestinationPointer.frame = CGRectMake(getCoordinates(Dest,1)-xOffset, getCoordinates(Dest,2)-yOffset, PinSizeX, PinSizeY);
         _DestinationPointer.hidden = false;
+      }
     }
 }
 
@@ -402,12 +721,14 @@ float getCoordinates (NSArray *Blablubb, int i)
         return cell;
     }
     else {
-        
+       
+   
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BuildingCell"];
-
+            cell.textLabel.text = [[Buildings objectAtIndex:indexPath.row]objectAtIndex:0];
+            return cell;
         
-        cell.textLabel.text = [[Buildings objectAtIndex:indexPath.row]objectAtIndex:0];
-        return cell;
+        
+       
     }
 
 }
@@ -416,22 +737,79 @@ float getCoordinates (NSArray *Blablubb, int i)
         OverviewCurrentlyAt = indexPath;
         switch (indexPath.row) {
             case 0:
-                Buildings = BuildA;
+                if (Camp ==1) {
+                    Buildings = ChirZen;
+                }
+                else {
+                 Buildings = BuildA;
+                }
                 break;
             case 1:
+                if (Camp ==1) {
+                    Buildings = ZenInMed;
+                }
+                else
+
                 Buildings = BuildB;
                 break;
             case 2:
+                if (Camp ==1) {
+                    Buildings = IntZen;
+                }
+                else
                 Buildings = BuildC;
                   break;
             case 3:
+                if (Camp ==1) {
+                    Buildings = ZenInf;
+                }
+                else
                 Buildings = BuildD;
                  break;
             case 4:
+                if (Camp ==1) {
+                    Buildings = ZenFrKiAd;
+                }
+                else
                 Buildings = BuildE;
-                  default:
                 break;
+            case 5:
+                    Buildings = NeuZen;
+                break;
+            case 6:
+                    Buildings = RadZen;
+                break;
+            case 7:
+                    Buildings = ZenZaMuKi;
+                break;
+            case 8:
+                    Buildings = ZenPaRe;
+                break;
+            case 9:
+                    Buildings = SpeKom;
+                break;
+            case 10:
+                    Buildings = GesStAuf;
+                break;
+            case 11:
+                    Buildings = Schu;
+                break;
+            case 12:
+                    Buildings = EinUdS;
+                break;
+            case 13:
+                    Buildings = InsThMed;
+                break;
+            case 14:
+                Buildings = SonstEin;
+                break;
+            case 15:
+                Buildings = DiVeWiTe;
+                break;
+             
         }
+        
+       
         [BuildingsTableView reloadData];
         
     }
@@ -442,10 +820,10 @@ float getCoordinates (NSArray *Blablubb, int i)
         [self setDestination:[Buildings objectAtIndex:indexPath.row]];
         OverviewTableView.hidden = true;
         BuildingsTableView.hidden = true;
+       
         _MapImage.alpha = 1;
-        
-
-        
+        [self setNeedsFocusUpdate];
+ 
         
         
     }

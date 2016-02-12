@@ -10,6 +10,8 @@
 @interface CampusMapViewController : UIViewController<UITableViewDataSource,UITableViewDelegate> {
 
     NSArray *BuildOverview;
+    NSArray *BuildOverviewSaar;
+    NSArray *BuildOverviewHom;
     NSArray *Buildings;
 
 
@@ -29,14 +31,31 @@
     NSString *TestA;
     float PinSizeX;
     float PinSizeY;
-
+    
+    BOOL Camp;
+    NSArray *ChirZen;
+    NSArray *ZenInMed;
+    NSArray *IntZen;
+    NSArray *ZenInf;
+    NSArray *ZenFrKiAd;
+    NSArray *NeuZen;
+    NSArray *RadZen;
+    NSArray *ZenZaMuKi;
+    NSArray *ZenPaRe;
+    NSArray *SpeKom;
+    NSArray *GesStAuf;
+    NSArray *Schu;
+    NSArray *EinUdS;
+    NSArray *InsThMed;
+    NSArray *SonstEin;
+    NSArray *DiVeWiTe;
+    
 }
 
 @property (weak,nonatomic) NSString *Person;
 @property (weak, nonatomic) IBOutlet UITableView *OverviewTableView;
 
 @property (weak, nonatomic) IBOutlet UITableView *BuildingsTableView;
-
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *MapImage;
@@ -48,9 +67,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *DestinationLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *DestinationImage;
 @property (weak, nonatomic) IBOutlet UIImageView *LocationImage;
-float getCoordinates (NSArray *Blablubb, int i);
+float getCoordinates (NSArray *TempCoord, int i);
 - (IBAction)SearchButton:(id)sender;
 - (NSArray*)getBuildingInfo: (NSString*) BuildingName;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *BuildingTablePos;
 
 
 

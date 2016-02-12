@@ -100,8 +100,6 @@
 		BA7AC52A1C6B83D0001F5EC0 /* MensaListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5281C6B83D0001F5EC0 /* MensaListTableViewCell.m */; };
 		BA7AC52D1C6B8508001F5EC0 /* MensaFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC52C1C6B8508001F5EC0 /* MensaFeedParser.m */; };
 		BA7AC52E1C6B8508001F5EC0 /* MensaFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC52C1C6B8508001F5EC0 /* MensaFeedParser.m */; };
-		BA7AC5311C6B8652001F5EC0 /* CampusMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5301C6B8652001F5EC0 /* CampusMapViewController.m */; };
-		BA7AC5321C6B8652001F5EC0 /* CampusMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5301C6B8652001F5EC0 /* CampusMapViewController.m */; };
 		BA7AC5471C6B99B6001F5EC0 /* EventContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5421C6B99B6001F5EC0 /* EventContentViewController.m */; };
 		BA7AC5481C6B99B6001F5EC0 /* EventContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5421C6B99B6001F5EC0 /* EventContentViewController.m */; };
 		BA7AC5491C6B99B6001F5EC0 /* EventsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5441C6B99B6001F5EC0 /* EventsListViewController.m */; };
@@ -125,6 +123,7 @@
 		D811FF4D1C6E39FC0079F9A4 /* DetailStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = D811FF4A1C6E39FC0079F9A4 /* DetailStaff.m */; };
 		D813E1521C6DF445004DFAAD /* MensaDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D813E1511C6DF445004DFAAD /* MensaDataSourceAndDelegate.m */; };
 		D813E1541C6DF65E004DFAAD /* EventsDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D813E1531C6DF65E004DFAAD /* EventsDataSourceAndDelegate.m */; };
+		D8D685111C6E8229001EB36C /* CampusMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D685101C6E8229001EB36C /* CampusMapViewController.m */; };
 		E212C094178B4B1300F9B877 /* PartialSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C093178B4B1300F9B877 /* PartialSearchCell.m */; };
 		E212C09A178B4B6700F9B877 /* SearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C099178B4B6700F9B877 /* SearchHistoryCell.m */; };
 		E212C09B178B4B8600F9B877 /* SearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C099178B4B6700F9B877 /* SearchHistoryCell.m */; };
@@ -555,8 +554,6 @@
 		BA7AC5281C6B83D0001F5EC0 /* MensaListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaListTableViewCell.m; sourceTree = "<group>"; };
 		BA7AC52B1C6B8508001F5EC0 /* MensaFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaFeedParser.h; sourceTree = "<group>"; };
 		BA7AC52C1C6B8508001F5EC0 /* MensaFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaFeedParser.m; sourceTree = "<group>"; };
-		BA7AC52F1C6B8652001F5EC0 /* CampusMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampusMapViewController.h; sourceTree = "<group>"; };
-		BA7AC5301C6B8652001F5EC0 /* CampusMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampusMapViewController.m; sourceTree = "<group>"; };
 		BA7AC5411C6B99B6001F5EC0 /* EventContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventContentViewController.h; sourceTree = "<group>"; };
 		BA7AC5421C6B99B6001F5EC0 /* EventContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventContentViewController.m; sourceTree = "<group>"; };
 		BA7AC5431C6B99B6001F5EC0 /* EventsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsListViewController.h; sourceTree = "<group>"; };
@@ -579,6 +576,8 @@
 		D811FF4A1C6E39FC0079F9A4 /* DetailStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailStaff.m; sourceTree = "<group>"; };
 		D813E1511C6DF445004DFAAD /* MensaDataSourceAndDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaDataSourceAndDelegate.m; sourceTree = "<group>"; };
 		D813E1531C6DF65E004DFAAD /* EventsDataSourceAndDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsDataSourceAndDelegate.m; sourceTree = "<group>"; };
+		D8D6850F1C6E8229001EB36C /* CampusMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampusMapViewController.h; sourceTree = "<group>"; };
+		D8D685101C6E8229001EB36C /* CampusMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampusMapViewController.m; sourceTree = "<group>"; };
 		E212C092178B4B1300F9B877 /* PartialSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartialSearchCell.h; sourceTree = "<group>"; };
 		E212C093178B4B1300F9B877 /* PartialSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartialSearchCell.m; sourceTree = "<group>"; };
 		E212C098178B4B6700F9B877 /* SearchHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistoryCell.h; sourceTree = "<group>"; };
@@ -1117,8 +1116,8 @@
 		BAE025481C5B6D4A002EBF3D /* Campus */ = {
 			isa = PBXGroup;
 			children = (
-				BA7AC52F1C6B8652001F5EC0 /* CampusMapViewController.h */,
-				BA7AC5301C6B8652001F5EC0 /* CampusMapViewController.m */,
+				D8D6850F1C6E8229001EB36C /* CampusMapViewController.h */,
+				D8D685101C6E8229001EB36C /* CampusMapViewController.m */,
 			);
 			name = Campus;
 			sourceTree = "<group>";
@@ -2110,7 +2109,6 @@
 				6564ED501C0E34D100FA650D /* NewsArticle.m in Sources */,
 				6564ED401C0DFA2800FA650D /* TFHpple.m in Sources */,
 				6542B4441C58D8E700460FA0 /* Event.m in Sources */,
-				BA7AC5321C6B8652001F5EC0 /* CampusMapViewController.m in Sources */,
 				6542B4491C591D3600460FA0 /* MensaKioskItem.m in Sources */,
 				BAE025431C5B69B5002EBF3D /* Reachability.m in Sources */,
 				BA7AC5291C6B83D0001F5EC0 /* MensaListViewController.m in Sources */,
@@ -2122,6 +2120,7 @@
 				6537B9551C0EDE1900B24278 /* NewsArticleViewController.m in Sources */,
 				6564ED2B1C0DE9C000FA650D /* ViewController.m in Sources */,
 				6564ED511C0E3E6D00FA650D /* NewsTableViewCell.m in Sources */,
+				D8D685111C6E8229001EB36C /* CampusMapViewController.m in Sources */,
 				6564ED2E1C0DE9C000FA650D /* tvOS.xcdatamodeld in Sources */,
 				6564ED281C0DE9C000FA650D /* AppDelegate.m in Sources */,
 				BA7AC5481C6B99B6001F5EC0 /* EventContentViewController.m in Sources */,
@@ -2171,7 +2170,6 @@
 				E2BD98FB1599C71900432FE9 /* MensaItem.m in Sources */,
 				E2BD98FC1599C71900432FE9 /* MensaViewController.m in Sources */,
 				E5EF308E1598F10700D65D13 /* main.m in Sources */,
-				BA7AC5311C6B8652001F5EC0 /* CampusMapViewController.m in Sources */,
 				E5EF30921598F10700D65D13 /* AppDelegate.m in Sources */,
 				BA7AC52D1C6B8508001F5EC0 /* MensaFeedParser.m in Sources */,
 				97F3FBAC15A8208500325941 /* SearchViewController.m in Sources */,
