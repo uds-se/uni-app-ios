@@ -29,7 +29,7 @@
 @property (nonatomic) NSString* searchParam;
 @property NSOperationQueue* backgroudnThread;
 @property (weak, nonatomic) IBOutlet UIView *noresult;
-@property (weak, nonatomic) IBOutlet UIView *nointernet;
+@property (weak, nonatomic) IBOutlet UILabel *nointernet;
 @property (weak, nonatomic) IBOutlet UILabel *ergebnislabel;
 
 

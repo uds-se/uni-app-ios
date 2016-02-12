@@ -17,6 +17,7 @@
 {
     [super viewDidLoad];
     
+    self.defaults = [NSUserDefaults standardUserDefaults];
     backgroundThread = [NSOperationQueue new];
     NSInvocationOperation *parseOperation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(parseInformations) object:nil];
     [parseOperation setQueuePriority:NSOperationQueuePriorityVeryHigh];
@@ -25,7 +26,9 @@
     [self.loadingView setHidden:NO];
     [self.activityIndicator startAnimating];
     [self.nointernet setHidden:YES];
-    [self.button setTitle:NSLocalizedStringFromTable(@"show building", @"tvosLocalisation", nil) forState:0] ;    
+    [self.button setHidden:YES];
+    [self.button setTitle:NSLocalizedStringFromTable(@"show building", @"tvosLocalisation", nil) forState:0];
+    
 }
 
 -(void) parseInformations{
@@ -49,7 +52,7 @@
     NSString *mail;
     NSString *room;
     NSString *building;
-    
+    NSString *campus_selected = [self.defaults objectForKey:@"campus_selected"];
     
     for (TFHppleElement *elem in Nodes){
         //if (!([[elem content] isEqual:@""])) {
@@ -104,6 +107,9 @@
             building = [DetailsPerson objectAtIndex:i+1];
             building = [building stringByReplacingOccurrencesOfString:@"-->" withString:@""];
             building = [building stringByReplacingOccurrencesOfString:@"Gebäude " withString:@""];
+            
+          
+            
         }
         
         
@@ -126,12 +132,20 @@
             self.fax.text = faxx;
             self.email.text = mail;
             self.raum.text = room;
-            self.gebäude.text = building;    
+            self.gebäude.text = building;
+            
+            
+            
+            if ([campus_selected isEqualToString:@"saar"]) {
+                    
+            if ([building containsString:@"A"] || [building containsString:@"B"] || [building containsString:@"C"] || [building containsString:@"D"]|| [building containsString:@"E"] ){
+                
+                [self.button setHidden:NO];
+                
+            }
+            }
+            
         });
-        
-        
-        
-        
     }
     }
     
@@ -156,6 +170,8 @@
         [self.faxlabel setHidden:YES];
         [self.loadingView setHidden:YES];
         [self.button setHidden:YES];
+        self.nointernet.text = NSLocalizedStringFromTable(@"NoInternet", @"tvosLocalisation", nil);
+        
     }
    
     

@@ -18,10 +18,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-   
-    
-    
     names = [NSMutableArray new];
     backgroudnThread = [NSOperationQueue new];
     [self refresh];
@@ -46,10 +42,9 @@
         
         
         NSError *error = nil;
-        NSString *html = [NSString stringWithContentsOfURL:[NSURL URLWithString:self.fullURL] encoding:NSUTF8StringEncoding error:NULL];
-        
-        HTMLParser *parser = [[HTMLParser alloc] initWithString:html error:&error];
-        
+        NSString* html = [[NSString stringWithFormat:self.fullURL] stringByAddingPercentEscapesUsingEncoding : NSUTF8StringEncoding];
+        NSURL *url_of_string = [NSURL URLWithString:html] ;
+        HTMLParser *parser = [[HTMLParser alloc] initWithContentsOfURL:url_of_string error:&error];
         if (error) {
             NSLog(@"Error: %@", error);
             return;
@@ -64,9 +59,10 @@
         if([searchParam isEqualToString:@"Profs"]){
             self.fullURL = [self.fullURL stringByReplacingOccurrencesOfString:@"171" withString:@"166"];
             error = nil;
-            html = [NSString stringWithContentsOfURL:[NSURL URLWithString:self.fullURL] encoding:NSUTF8StringEncoding error:NULL];
+            html = [[NSString stringWithFormat:self.fullURL] stringByAddingPercentEscapesUsingEncoding : NSUTF8StringEncoding];
+            url_of_string = [NSURL URLWithString:html] ;
             
-            parser = [[HTMLParser alloc] initWithString:html error:&error];
+            parser = [[HTMLParser alloc] initWithContentsOfURL:url_of_string error:&error];
             
             if (error) {
                 NSLog(@"Error: %@", error);
@@ -92,6 +88,8 @@
         [self.tableView setHidden:YES];
         [self.loadingView setHidden:YES];
         [self.ergebnislabel setHidden:YES];
+         self.nointernet.text = NSLocalizedStringFromTable(@"NoInternet", @"tvosLocalisation", nil);
+        
     }
 }
 

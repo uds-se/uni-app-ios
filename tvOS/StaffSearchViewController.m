@@ -24,7 +24,7 @@
     
     if ([Reachability hasInternetConnection]){
         [self.nointernet setHidden:YES];
-    }
+         }
     
     
     else {
@@ -37,7 +37,8 @@
         [self.vorname setHidden:YES];
         [self.nachname setHidden:YES];
         [self.nnamelabel setHidden:YES];
-        
+        self.nointernet.text = NSLocalizedStringFromTable(@"NoInternet", @"tvosLocalisation", nil);
+        [self.stafflabel setHidden:YES];
         
     }
     
@@ -47,7 +48,7 @@
    //if there are no inputs in the Textfields
     if (self.vorname.text.length<=0 && self.nachname.text.length<=0) {
         
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Keine Eingabe" message:@"Bitte mindestens ein Suchfeld ausfüllen" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle: NSLocalizedStringFromTable(@"Staffnoinput", @"tvosLocalisation", nil) message:NSLocalizedStringFromTable(@"Staffnoinputmessage", @"tvosLocalisation", nil) preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {}];
     
@@ -57,7 +58,7 @@
     // if 'all' is selected and there are not enough inputs
     else if (self.segmentedControl.selectedSegmentIndex == 1 && self.vorname.text.length<=2 && self.nachname.text.length<=2) {
         
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Zu wenig Information" message:@"Bei der Suche unter 'Alle' bitte mindestens ein Suchfeld mit mindestens 3 Buchstaben ausfüllen" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedStringFromTable(@"Staffmoreinputneeded", @"tvosLocalisation", nil) message:NSLocalizedStringFromTable(@"Staffmoreinputneededmessage", @"tvosLocalisation", nil) preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {}];
         

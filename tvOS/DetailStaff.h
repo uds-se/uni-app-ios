@@ -46,7 +46,7 @@ NSMutableArray *DetailsPerson;
 
 
 @property NSURL* fullURL;
-
+@property NSUserDefaults *defaults;
 @property NSOperationQueue* backgroundThread;
 
 

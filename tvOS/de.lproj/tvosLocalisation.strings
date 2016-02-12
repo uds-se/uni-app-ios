@@ -1,10 +1,10 @@
-/* 
-  tvosLocalization.strings
-  Uni Saar
-
-  Created by Daniel on 09/12/15.
-  Copyright © 2015 Universität des Saarlandes. All rights reserved.
-*/
+/*
+ tvosLocalization.strings
+ Uni Saar
+ 
+ Created by Daniel on 09/12/15.
+ Copyright © 2015 Universität des Saarlandes. All rights reserved.
+ */
 
 //Kiosk Mode
 "News" = "Aktuelles";
@@ -27,12 +27,15 @@
 "No location configured" = "Kein Standort gewählt";
 "Building not found" = "Gebäude nicht gefunden";
 
-
 //Staff search
 "Professors" = "Professoren";
 "All" = "Alle";
 "Search" = "Suche starten";
 "show building" = "zum Gebäude";
+"Staffnoinput" = "Keine Eingabe";
+"Staffnoinputmessage" = "Bitte mindestens ein Suchfeld ausfüllen";
+"Staffmoreinputneeded" = "Mehr Informationen werden benötigt";
+"Staffmoreinputneededmessage" = "Für eine Suche unter 'Alle' werden mindestens 3 Buchstaben in einem Suchfeld benötigt";
 
 //events
 "January"="Januar";

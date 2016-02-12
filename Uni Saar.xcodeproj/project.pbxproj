@@ -102,12 +102,6 @@
 		BA7AC52E1C6B8508001F5EC0 /* MensaFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC52C1C6B8508001F5EC0 /* MensaFeedParser.m */; };
 		BA7AC5311C6B8652001F5EC0 /* CampusMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5301C6B8652001F5EC0 /* CampusMapViewController.m */; };
 		BA7AC5321C6B8652001F5EC0 /* CampusMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5301C6B8652001F5EC0 /* CampusMapViewController.m */; };
-		BA7AC5391C6B8993001F5EC0 /* StaffSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5341C6B8993001F5EC0 /* StaffSearchViewController.m */; };
-		BA7AC53A1C6B8993001F5EC0 /* StaffSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5341C6B8993001F5EC0 /* StaffSearchViewController.m */; };
-		BA7AC53B1C6B8993001F5EC0 /* ResultStaffSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5361C6B8993001F5EC0 /* ResultStaffSearchViewController.m */; };
-		BA7AC53C1C6B8993001F5EC0 /* ResultStaffSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5361C6B8993001F5EC0 /* ResultStaffSearchViewController.m */; };
-		BA7AC53D1C6B8993001F5EC0 /* DetailStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5381C6B8993001F5EC0 /* DetailStaff.m */; };
-		BA7AC53E1C6B8993001F5EC0 /* DetailStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5381C6B8993001F5EC0 /* DetailStaff.m */; };
 		BA7AC5471C6B99B6001F5EC0 /* EventContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5421C6B99B6001F5EC0 /* EventContentViewController.m */; };
 		BA7AC5481C6B99B6001F5EC0 /* EventContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5421C6B99B6001F5EC0 /* EventContentViewController.m */; };
 		BA7AC5491C6B99B6001F5EC0 /* EventsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5441C6B99B6001F5EC0 /* EventsListViewController.m */; };
@@ -126,6 +120,9 @@
 		BAF783ED1C6092B600CE5464 /* light_cyan.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF783E91C6092B600CE5464 /* light_cyan.png */; };
 		BAF783F91C60944000CE5464 /* pin_green.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF783F71C60944000CE5464 /* pin_green.png */; };
 		BAF783FA1C60944000CE5464 /* pin_red.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF783F81C60944000CE5464 /* pin_red.png */; };
+		D811FF4B1C6E39FC0079F9A4 /* StaffSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D811FF461C6E39FC0079F9A4 /* StaffSearchViewController.m */; };
+		D811FF4C1C6E39FC0079F9A4 /* ResultStaffSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D811FF481C6E39FC0079F9A4 /* ResultStaffSearchViewController.m */; };
+		D811FF4D1C6E39FC0079F9A4 /* DetailStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = D811FF4A1C6E39FC0079F9A4 /* DetailStaff.m */; };
 		D813E1521C6DF445004DFAAD /* MensaDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D813E1511C6DF445004DFAAD /* MensaDataSourceAndDelegate.m */; };
 		D813E1541C6DF65E004DFAAD /* EventsDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D813E1531C6DF65E004DFAAD /* EventsDataSourceAndDelegate.m */; };
 		E212C094178B4B1300F9B877 /* PartialSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E212C093178B4B1300F9B877 /* PartialSearchCell.m */; };
@@ -560,12 +557,6 @@
 		BA7AC52C1C6B8508001F5EC0 /* MensaFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaFeedParser.m; sourceTree = "<group>"; };
 		BA7AC52F1C6B8652001F5EC0 /* CampusMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampusMapViewController.h; sourceTree = "<group>"; };
 		BA7AC5301C6B8652001F5EC0 /* CampusMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampusMapViewController.m; sourceTree = "<group>"; };
-		BA7AC5331C6B8993001F5EC0 /* StaffSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaffSearchViewController.h; sourceTree = "<group>"; };
-		BA7AC5341C6B8993001F5EC0 /* StaffSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaffSearchViewController.m; sourceTree = "<group>"; };
-		BA7AC5351C6B8993001F5EC0 /* ResultStaffSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultStaffSearchViewController.h; sourceTree = "<group>"; };
-		BA7AC5361C6B8993001F5EC0 /* ResultStaffSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultStaffSearchViewController.m; sourceTree = "<group>"; };
-		BA7AC5371C6B8993001F5EC0 /* DetailStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailStaff.h; sourceTree = "<group>"; };
-		BA7AC5381C6B8993001F5EC0 /* DetailStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailStaff.m; sourceTree = "<group>"; };
 		BA7AC5411C6B99B6001F5EC0 /* EventContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventContentViewController.h; sourceTree = "<group>"; };
 		BA7AC5421C6B99B6001F5EC0 /* EventContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventContentViewController.m; sourceTree = "<group>"; };
 		BA7AC5431C6B99B6001F5EC0 /* EventsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsListViewController.h; sourceTree = "<group>"; };
@@ -580,6 +571,12 @@
 		BAF783E91C6092B600CE5464 /* light_cyan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light_cyan.png; sourceTree = "<group>"; };
 		BAF783F71C60944000CE5464 /* pin_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_green.png; sourceTree = "<group>"; };
 		BAF783F81C60944000CE5464 /* pin_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_red.png; sourceTree = "<group>"; };
+		D811FF451C6E39FC0079F9A4 /* StaffSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaffSearchViewController.h; sourceTree = "<group>"; };
+		D811FF461C6E39FC0079F9A4 /* StaffSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaffSearchViewController.m; sourceTree = "<group>"; };
+		D811FF471C6E39FC0079F9A4 /* ResultStaffSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultStaffSearchViewController.h; sourceTree = "<group>"; };
+		D811FF481C6E39FC0079F9A4 /* ResultStaffSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultStaffSearchViewController.m; sourceTree = "<group>"; };
+		D811FF491C6E39FC0079F9A4 /* DetailStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailStaff.h; sourceTree = "<group>"; };
+		D811FF4A1C6E39FC0079F9A4 /* DetailStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailStaff.m; sourceTree = "<group>"; };
 		D813E1511C6DF445004DFAAD /* MensaDataSourceAndDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaDataSourceAndDelegate.m; sourceTree = "<group>"; };
 		D813E1531C6DF65E004DFAAD /* EventsDataSourceAndDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsDataSourceAndDelegate.m; sourceTree = "<group>"; };
 		E212C092178B4B1300F9B877 /* PartialSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartialSearchCell.h; sourceTree = "<group>"; };
@@ -1129,12 +1126,12 @@
 		BAE025551C5B6F46002EBF3D /* Staff Search */ = {
 			isa = PBXGroup;
 			children = (
-				BA7AC5331C6B8993001F5EC0 /* StaffSearchViewController.h */,
-				BA7AC5341C6B8993001F5EC0 /* StaffSearchViewController.m */,
-				BA7AC5351C6B8993001F5EC0 /* ResultStaffSearchViewController.h */,
-				BA7AC5361C6B8993001F5EC0 /* ResultStaffSearchViewController.m */,
-				BA7AC5371C6B8993001F5EC0 /* DetailStaff.h */,
-				BA7AC5381C6B8993001F5EC0 /* DetailStaff.m */,
+				D811FF451C6E39FC0079F9A4 /* StaffSearchViewController.h */,
+				D811FF461C6E39FC0079F9A4 /* StaffSearchViewController.m */,
+				D811FF471C6E39FC0079F9A4 /* ResultStaffSearchViewController.h */,
+				D811FF481C6E39FC0079F9A4 /* ResultStaffSearchViewController.m */,
+				D811FF491C6E39FC0079F9A4 /* DetailStaff.h */,
+				D811FF4A1C6E39FC0079F9A4 /* DetailStaff.m */,
 			);
 			name = "Staff Search";
 			sourceTree = "<group>";
@@ -2119,6 +2116,8 @@
 				BA7AC52E1C6B8508001F5EC0 /* MensaFeedParser.m in Sources */,
 				6564ED491C0E112200FA650D /* NewsListViewController.m in Sources */,
 				BA7AC54C1C6B99B6001F5EC0 /* EventsListTableViewCell.m in Sources */,
+				D811FF4B1C6E39FC0079F9A4 /* StaffSearchViewController.m in Sources */,
+				D811FF4D1C6E39FC0079F9A4 /* DetailStaff.m in Sources */,
 				6537B9551C0EDE1900B24278 /* NewsArticleViewController.m in Sources */,
 				6564ED2B1C0DE9C000FA650D /* ViewController.m in Sources */,
 				6564ED511C0E3E6D00FA650D /* NewsTableViewCell.m in Sources */,
@@ -2135,10 +2134,8 @@
 				BAE025601C5B70E6002EBF3D /* HTMLParser.m in Sources */,
 				65F5343D1C11FDD800433136 /* SettingsViewController.m in Sources */,
 				65F44AC31C1701530036F884 /* NewsSource.m in Sources */,
-				BA7AC53C1C6B8993001F5EC0 /* ResultStaffSearchViewController.m in Sources */,
-				BA7AC53E1C6B8993001F5EC0 /* DetailStaff.m in Sources */,
+				D811FF4C1C6E39FC0079F9A4 /* ResultStaffSearchViewController.m in Sources */,
 				BA7AC52A1C6B83D0001F5EC0 /* MensaListTableViewCell.m in Sources */,
-				BA7AC53A1C6B8993001F5EC0 /* StaffSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2149,7 +2146,6 @@
 				E212C09B178B4B8600F9B877 /* SearchHistoryCell.m in Sources */,
 				E212C09C178B4B8600F9B877 /* PartialSearchCell.m in Sources */,
 				E2467A0F15B4095000BFC774 /* NewsTableViewController.m in Sources */,
-				BA7AC53D1C6B8993001F5EC0 /* DetailStaff.m in Sources */,
 				BA7AC54B1C6B99B6001F5EC0 /* EventsListTableViewCell.m in Sources */,
 				E2467A0E15B408AE00BFC774 /* EventTableViewController.m in Sources */,
 				E2467A0D15B408A100BFC774 /* RSSFeed.m in Sources */,
@@ -2190,7 +2186,6 @@
 				E22C3F2B17155535003C039F /* PanelView.m in Sources */,
 				E22C3F2C17155535003C039F /* PanelsViewController.m in Sources */,
 				E22C3F2F17155611003C039F /* MensaView.m in Sources */,
-				BA7AC53B1C6B8993001F5EC0 /* ResultStaffSearchViewController.m in Sources */,
 				E22C3FD917181004003C039F /* Database.m in Sources */,
 				E22C3FDE171811F2003C039F /* PointOfInterest.m in Sources */,
 				BA7AC5491C6B99B6001F5EC0 /* EventsListViewController.m in Sources */,
@@ -2199,7 +2194,6 @@
 				E2C92BA4171ABC8E002B55CB /* UILabel+UILabel_AutoHeight.m in Sources */,
 				E2C92BB1171AE37E002B55CB /* AppSettings.m in Sources */,
 				E2428B521722E1AD00D98047 /* BusTableViewController.m in Sources */,
-				BA7AC5391C6B8993001F5EC0 /* StaffSearchViewController.m in Sources */,
 				E2428B561722F4B700D98047 /* AboutViewController.m in Sources */,
 				E2FDA328172C5770005924AD /* ODRefreshControl.m in Sources */,
 				E2FDA332172D6FBA005924AD /* NSString+HTMLCleaner.m in Sources */,
