@@ -8,6 +8,7 @@
 
 #import "EventsDataSourceAndDelegate.h"
 
+
 @implementation EventsDataSourceAndDelegate
 
 -(void)loadData {
@@ -56,11 +57,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"EventsTableViewCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    EventsListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    cell.textLabel.text = [[EventsTableViewContent objectAtIndex:indexPath.row] title];
-    cell.detailTextLabel.text = [[EventsTableViewContent objectAtIndex:indexPath.row] pubDate];
-    
+    cell.EventTitleView.text = [[EventsTableViewContent objectAtIndex:indexPath.row] title];
+    cell.EventSubTitleView.text = [[EventsTableViewContent objectAtIndex:indexPath.row] pubDate];
+    [cell setDate: [[EventsTableViewContent objectAtIndex:indexPath.row] pubDate]];
+    [cell setDateImage];
     return cell;
     
 }

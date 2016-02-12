@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Parser.h"
 #import "Event.h"
-
+#import "EventsListTableViewCell.h"
 @interface EventsDataSourceAndDelegate : UITableView<UITableViewDataSource,UITableViewDelegate> {
     
     NSMutableArray *EventsTableViewContent;

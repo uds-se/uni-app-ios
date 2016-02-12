@@ -47,10 +47,26 @@
     for (int i = 0; i < [MensaContent count]; i=i+7) {
         NSString *food = [[MensaContent objectAtIndex:i+1] stringByAppendingString:@" "];
         food = [food stringByAppendingString:[MensaContent objectAtIndex:i+2]];
-        [MensaMenus addObject:[[MensaKioskItem alloc] initWithFood:food category:[MensaContent objectAtIndex:i] price1:[[NSLocalizedStringFromTable(@"Student", @"tvosLocalisation", nil) stringByAppendingString:[MensaContent objectAtIndex:i+3]] stringByAppendingString:@" €"] price2:[[NSLocalizedStringFromTable(@"Employee", @"tvosLocalisation", nil) stringByAppendingString:[MensaContent objectAtIndex:i+4]] stringByAppendingString:@" €"] price3:[[NSLocalizedStringFromTable(@"Guest", @"tvosLocalisation", nil) stringByAppendingString:[MensaContent objectAtIndex:i+5]] stringByAppendingString:@" €"] high:[MensaContent objectAtIndex:i+6]]];
+        NSString *prices = [[MensaContent objectAtIndex:i+3] stringByAppendingString:@" €"];
+        NSString *pricee = [[MensaContent objectAtIndex:i+4] stringByAppendingString:@" €"];
+        NSString *pricev = [[MensaContent objectAtIndex:i+5] stringByAppendingString:@" €"];
+        
+        if ([[MensaContent objectAtIndex:i+3] isEqualToString:@""]) {
+            prices = NSLocalizedStringFromTable(@"not Available", @"tvosLocalisation", nil);
+        }
+        if ([[MensaContent objectAtIndex:i+4] isEqualToString:@""]) {
+            pricee = NSLocalizedStringFromTable(@"not Available", @"tvosLocalisation", nil);
+        }
+        if ([[MensaContent objectAtIndex:i+5] isEqualToString:@""]) {
+            pricev = NSLocalizedStringFromTable(@"not Available", @"tvosLocalisation", nil);
+        }
+        [MensaMenus addObject:[[MensaKioskItem alloc] initWithFood:food
+                                                          category:[MensaContent objectAtIndex:i]
+                                                            price1:[NSLocalizedStringFromTable(@"Student", @"tvosLocalisation", nil) stringByAppendingString:prices]
+                                                            price2:[NSLocalizedStringFromTable(@"Employee", @"tvosLocalisation", nil) stringByAppendingString:pricee]
+                                                            price3:[NSLocalizedStringFromTable(@"Guest", @"tvosLocalisation", nil) stringByAppendingString:pricev]
+                                                              high:[MensaContent objectAtIndex:i+6]]];
     }
-    
-    
     [self splitMenus];
     
 }

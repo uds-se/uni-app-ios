@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "tv",
+      "filename" : "eule_app_icon_large.png",
       "scale" : "1x"
     }
   ],

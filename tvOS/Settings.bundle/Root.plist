@@ -43,10 +43,10 @@
 			<string>20</string>
 			<key>Titles</key>
 			<array>
-				<string>10 sec</string>
-				<string>20 sec</string>
-				<string>30 sec</string>
-				<string>60 sec</string>
+				<string>10 s</string>
+				<string>20 s</string>
+				<string>30 s</string>
+				<string>60 s</string>
 			</array>
 			<key>Values</key>
 			<array>
