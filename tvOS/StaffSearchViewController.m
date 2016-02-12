@@ -13,12 +13,32 @@
 
 -(void)viewDidLoad{
     
-    [self.nointernet setHidden:YES];
-    [self.segmentedControl setTitle: NSLocalizedStringFromTable(@"Professors", @"tvosLocalisation", nil) forSegmentAtIndex:0];
-    [self.segmentedControl setTitle: NSLocalizedStringFromTable(@"All", @"tvosLocalisation", nil) forSegmentAtIndex:1];
-    [self.button setTitle:NSLocalizedStringFromTable(@"Search", @"tvosLocalisation", nil) forState:0] ;
-    [self.vorname setPlaceholder:NSLocalizedStringFromTable(@"First name", @"tvosLocalisation", nil)];
-    [self.nachname setPlaceholder:NSLocalizedStringFromTable(@"Last name", @"tvosLocalisation", nil)];
+      if ([Reachability hasInternetConnection]){
+          [self.nointernet setHidden:YES];
+          [self.segmentedControl setTitle: NSLocalizedStringFromTable(@"Professors", @"tvosLocalisation", nil) forSegmentAtIndex:0];
+          [self.segmentedControl setTitle: NSLocalizedStringFromTable(@"All", @"tvosLocalisation", nil) forSegmentAtIndex:1];
+          [self.button setTitle:NSLocalizedStringFromTable(@"Search", @"tvosLocalisation", nil) forState:0] ;
+          [self.vorname setPlaceholder:NSLocalizedStringFromTable(@"First name", @"tvosLocalisation", nil)];
+          [self.nachname setPlaceholder:NSLocalizedStringFromTable(@"Last name", @"tvosLocalisation", nil)];
+
+    }
+    
+    
+    else {
+        
+        [self.nointernet setHidden:NO];
+        [self.stafflabel setHidden:YES];
+        [self.vnamelabel setHidden:YES];
+        [self.button setHidden:YES];
+        [self.segmentedControl setHidden:YES];
+        [self.vorname setHidden:YES];
+        [self.nachname setHidden:YES];
+        [self.nnamelabel setHidden:YES];
+        self.nointernet.text = NSLocalizedStringFromTable(@"NoInternet", @"tvosLocalisation", nil);
+        [self.stafflabel setHidden:YES];
+        
+    }
+
 }
 
 // check internetconnection when view appears
@@ -26,7 +46,7 @@
     
     if ([Reachability hasInternetConnection]){
         [self.nointernet setHidden:YES];
-         }
+    }
     
     
     else {

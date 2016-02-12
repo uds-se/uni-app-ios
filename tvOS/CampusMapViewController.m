@@ -444,7 +444,8 @@ float getCoordinates (NSArray *Blablubb, int i)
         BuildingsTableView.hidden = true;
         _MapImage.alpha = 1;
         
- 
+
+        
         
         
     }
