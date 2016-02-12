@@ -28,10 +28,10 @@
     
     NSDate *now = [NSDate date];
     NSString *dayOfWeek = [self getDay];
-    if ([@"6" isEqualToString:dayOfWeek]) {
+    if ([@"7" isEqualToString:dayOfWeek]) {
         now = [now dateByAddingTimeInterval:60*60*24*2];
     }
-    else if ([@"0" isEqualToString:dayOfWeek]) {
+    else if ([@"1" isEqualToString:dayOfWeek]) {
         now = [now dateByAddingTimeInterval:60*60*24*1];
     }
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
