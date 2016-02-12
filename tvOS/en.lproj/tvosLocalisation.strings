@@ -36,6 +36,8 @@
 "Staffnoinputmessage" = "Please fill at least one searchfield";
 "Staffmoreinputneeded" = "More input is needed";
 "Staffmoreinputneededmessage" = "At least 3 characters in one searchfield are needed if parameter 'All' is selected";
+"First name" = "First name";
+"Last name" = "Last name";
 
 //events
 "January"="January";

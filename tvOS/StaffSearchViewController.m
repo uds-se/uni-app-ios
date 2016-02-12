@@ -17,6 +17,8 @@
     [self.segmentedControl setTitle: NSLocalizedStringFromTable(@"Professors", @"tvosLocalisation", nil) forSegmentAtIndex:0];
     [self.segmentedControl setTitle: NSLocalizedStringFromTable(@"All", @"tvosLocalisation", nil) forSegmentAtIndex:1];
     [self.button setTitle:NSLocalizedStringFromTable(@"Search", @"tvosLocalisation", nil) forState:0] ;
+    [self.vorname setPlaceholder:NSLocalizedStringFromTable(@"First name", @"tvosLocalisation", nil)];
+    [self.nachname setPlaceholder:NSLocalizedStringFromTable(@"Last name", @"tvosLocalisation", nil)];
 }
 
 // check internetconnection when view appears

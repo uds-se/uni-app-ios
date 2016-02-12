@@ -36,6 +36,8 @@
 "Staffnoinputmessage" = "Bitte mindestens ein Suchfeld ausfüllen";
 "Staffmoreinputneeded" = "Mehr Informationen werden benötigt";
 "Staffmoreinputneededmessage" = "Für eine Suche unter 'Alle' werden mindestens 3 Buchstaben in einem Suchfeld benötigt";
+"First name" = "Vorname";
+"Last name" = "Nachname";
 
 //events
 "January"="Januar";
