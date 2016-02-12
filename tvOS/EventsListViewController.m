@@ -32,11 +32,14 @@
     EventsLabel.alpha = 0;
     }
     
+    AiEventsView.color= [UIColor blackColor];
+
     [AiEventsView startAnimating];
     AiEventsView.hidden = false;
     EventsListView.estimatedRowHeight = 150.0;
     EventsListView.rowHeight = UITableViewAutomaticDimension;
     EventsLabel.hidden = true;
+    
     
     PageCounter = 0;
     

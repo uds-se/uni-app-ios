@@ -33,7 +33,8 @@
         NoInternet.text = NSLocalizedStringFromTable(@"NoInternet", @"tvosLocalisation", nil);
         NewsLabel.alpha = 0;
     }
-    
+    AiNewsView.color= [UIColor blackColor];
+
     [AiNewsView startAnimating];
     AiNewsView.hidden = false;
     NewsListView.estimatedRowHeight = 150.0;

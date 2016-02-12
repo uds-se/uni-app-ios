@@ -34,7 +34,8 @@
     self.TitleView.text = [[self event] subTitle];
     self.SubTitleView.text = [[self event] title];
     
-    
+    AiEventContent.color= [UIColor blackColor];
+
     [AiEventContent startAnimating];
     AiEventContent.hidden = false;
    

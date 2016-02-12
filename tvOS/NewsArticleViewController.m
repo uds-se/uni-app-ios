@@ -34,7 +34,8 @@
     
     self.TitleView.text = [[self article] title];
     self.SubTitleView.text = [[self article] subTitle];
-    
+    AiArticleView.color= [UIColor blackColor];
+
     [AiArticleView startAnimating];
     AiArticleView.hidden = false;
     

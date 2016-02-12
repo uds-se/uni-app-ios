@@ -10,7 +10,7 @@
 
 @implementation DetailStaff
 
-@synthesize fullURL,backgroundThread;
+@synthesize fullURL,backgroundThread, activityIndicator;
 
 
 - (void)viewDidLoad
@@ -23,6 +23,7 @@
     [parseOperation setQueuePriority:NSOperationQueuePriorityVeryHigh];
     [backgroundThread addOperation:parseOperation];
     
+    activityIndicator.color=[UIColor blackColor];
     [self.loadingView setHidden:NO];
     [self.activityIndicator startAnimating];
     [self.nointernet setHidden:YES];

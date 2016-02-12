@@ -40,6 +40,7 @@
     EventsTableView.rowHeight = UITableViewAutomaticDimension;
     MensaTableView.estimatedRowHeight = 150.0;
     MensaTableView.rowHeight = UITableViewAutomaticDimension;
+    AiKiosk.color= [UIColor blackColor];
     [AiKiosk startAnimating];
     AiKiosk.hidden = false;
     KioskModeTitel.hidden = true;

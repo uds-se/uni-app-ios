@@ -1239,8 +1239,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtH-68-uRl">
                                 <rect key="frame" x="182" y="328" width="1563" height="636"/>
                                 <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DcI-hg-Xls">
-                                        <rect key="frame" x="764" y="206" width="20" height="20"/>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="DcI-hg-Xls">
+                                        <rect key="frame" x="742" y="184" width="64" height="64"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <constraints>
@@ -1450,8 +1450,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vpg-sn-jos">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                                 <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="NVP-dm-Pkl">
-                                        <rect key="frame" x="950" y="530" width="20" height="20"/>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="NVP-dm-Pkl">
+                                        <rect key="frame" x="928" y="508" width="64" height="64"/>
                                     </activityIndicatorView>
                                 </subviews>
                             </view>

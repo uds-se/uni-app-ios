@@ -13,7 +13,7 @@
 
 
 
-@synthesize selectedIndexPath,fullURL,searchParam,backgroudnThread;
+@synthesize selectedIndexPath,fullURL,searchParam,backgroudnThread, activityIndicator;
 
 - (void)viewDidLoad
 {
@@ -26,6 +26,7 @@
 
 }
 -(void)refresh{
+        activityIndicator.color=[UIColor blackColor];
         [self.loadingView setHidden:NO];
         [self.activityIndicator startAnimating];
         NSInvocationOperation *loadTableOperation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(loadTable) object:nil];
