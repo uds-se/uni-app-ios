@@ -322,7 +322,7 @@
             [UIView animateWithDuration:animationSpeed animations:^(){
                 CampusImageView.alpha = 1;
                 if ([campus_selected isEqualToString:@"hom"]) {
-                    KioskModeTitel.text = @"Campus Homburg";
+                    KioskModeTitel.text = @"Homburg";
                     KioskModeTitel.alpha = 1;
                 }
                 else {

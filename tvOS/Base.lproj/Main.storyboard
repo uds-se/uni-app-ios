@@ -279,7 +279,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utK-UA-Iq1" userLabel="News Text View">
-                                <rect key="frame" x="170" y="351" width="1660" height="669"/>
+                                <rect key="frame" x="170" y="301" width="1660" height="719"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -449,7 +449,7 @@
                             <constraint firstItem="tTd-6b-NIc" firstAttribute="top" secondItem="utK-UA-Iq1" secondAttribute="bottom" constant="60" id="IhL-fX-7Zq"/>
                             <constraint firstItem="JMC-vD-pPr" firstAttribute="leading" secondItem="wxI-2j-MaF" secondAttribute="leadingMargin" constant="150" id="KDk-KE-hps"/>
                             <constraint firstAttribute="trailing" secondItem="utK-UA-Iq1" secondAttribute="trailing" constant="90" id="Q6b-F6-pCx"/>
-                            <constraint firstItem="utK-UA-Iq1" firstAttribute="top" secondItem="2OB-B6-f5b" secondAttribute="bottom" constant="200" id="S3g-RK-056"/>
+                            <constraint firstItem="utK-UA-Iq1" firstAttribute="top" secondItem="2OB-B6-f5b" secondAttribute="bottom" constant="150" id="S3g-RK-056"/>
                             <constraint firstItem="JMC-vD-pPr" firstAttribute="top" secondItem="wxI-2j-MaF" secondAttribute="top" constant="200" id="SGI-1y-BAM"/>
                             <constraint firstAttribute="trailing" secondItem="aoS-rh-KVj" secondAttribute="trailing" constant="90" id="V83-qn-mRc"/>
                             <constraint firstItem="3Eq-xE-6ga" firstAttribute="centerY" secondItem="wxI-2j-MaF" secondAttribute="centerY" id="cIW-aB-4K8"/>
