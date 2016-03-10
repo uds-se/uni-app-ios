@@ -100,11 +100,8 @@
 		BA7AC52A1C6B83D0001F5EC0 /* MensaListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5281C6B83D0001F5EC0 /* MensaListTableViewCell.m */; };
 		BA7AC52D1C6B8508001F5EC0 /* MensaFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC52C1C6B8508001F5EC0 /* MensaFeedParser.m */; };
 		BA7AC52E1C6B8508001F5EC0 /* MensaFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC52C1C6B8508001F5EC0 /* MensaFeedParser.m */; };
-		BA7AC5471C6B99B6001F5EC0 /* EventContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5421C6B99B6001F5EC0 /* EventContentViewController.m */; };
 		BA7AC5481C6B99B6001F5EC0 /* EventContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5421C6B99B6001F5EC0 /* EventContentViewController.m */; };
-		BA7AC5491C6B99B6001F5EC0 /* EventsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5441C6B99B6001F5EC0 /* EventsListViewController.m */; };
 		BA7AC54A1C6B99B6001F5EC0 /* EventsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5441C6B99B6001F5EC0 /* EventsListViewController.m */; };
-		BA7AC54B1C6B99B6001F5EC0 /* EventsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5461C6B99B6001F5EC0 /* EventsListTableViewCell.m */; };
 		BA7AC54C1C6B99B6001F5EC0 /* EventsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC5461C6B99B6001F5EC0 /* EventsListTableViewCell.m */; };
 		BAE025421C5B69AD002EBF3D /* MensaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EF328E1598F21F00D65D13 /* MensaItem.m */; };
 		BAE025431C5B69B5002EBF3D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BD9A0A1599CD9300432FE9 /* Reachability.m */; };
@@ -2146,7 +2143,6 @@
 				E212C09B178B4B8600F9B877 /* SearchHistoryCell.m in Sources */,
 				E212C09C178B4B8600F9B877 /* PartialSearchCell.m in Sources */,
 				E2467A0F15B4095000BFC774 /* NewsTableViewController.m in Sources */,
-				BA7AC54B1C6B99B6001F5EC0 /* EventsListTableViewCell.m in Sources */,
 				E2467A0E15B408AE00BFC774 /* EventTableViewController.m in Sources */,
 				E2467A0D15B408A100BFC774 /* RSSFeed.m in Sources */,
 				E2B0EB6A15AF6CB900ECC1BD /* FeedItem.m in Sources */,
@@ -2187,9 +2183,7 @@
 				E22C3F2F17155611003C039F /* MensaView.m in Sources */,
 				E22C3FD917181004003C039F /* Database.m in Sources */,
 				E22C3FDE171811F2003C039F /* PointOfInterest.m in Sources */,
-				BA7AC5491C6B99B6001F5EC0 /* EventsListViewController.m in Sources */,
 				E2C92B9B1719A436002B55CB /* CategorieTableViewController.m in Sources */,
-				BA7AC5471C6B99B6001F5EC0 /* EventContentViewController.m in Sources */,
 				E2C92BA4171ABC8E002B55CB /* UILabel+UILabel_AutoHeight.m in Sources */,
 				E2C92BB1171AE37E002B55CB /* AppSettings.m in Sources */,
 				E2428B521722E1AD00D98047 /* BusTableViewController.m in Sources */,
